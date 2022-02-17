@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-.body {
-  width: 100vh;
-}
-
 .container {
   /* padding: 1.5rem; */
   display: grid;
