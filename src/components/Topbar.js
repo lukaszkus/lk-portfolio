@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoint from "../utils/breakpoints";
 
 import Logo from "./Logo";
 import Menu from "./Menu";
 
 const TopbarContainer = styled.div`
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   padding: 1rem;
@@ -14,8 +15,8 @@ const TopbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: 600px) {
-    padding: 1.25rem 2rem;
+  @media ${breakpoint.device.tablet} {
+    padding: 2rem;
   }
 `;
 

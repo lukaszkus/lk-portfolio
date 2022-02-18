@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assets/ksu.svg";
 
-const LogoContainer = styled.div`
-  font-size: 3rem;
-  color: white;
-  opacity: 0.9;
-`;
+const LogoContainer = styled.div``;
 
 const LogoImg = styled.img.attrs({
   src: `${logo}`,
