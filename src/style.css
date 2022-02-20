@@ -66,7 +66,7 @@ body {
 }
 
 .box-1 {
-  background-color: aquamarine;
+  background-image: linear-gradient(45deg, #b721ff 0%, #21d4fd 100%);
 }
 
 .box-2 {

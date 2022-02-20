@@ -9,6 +9,15 @@ function App() {
       <Header />
       <div className="container">
         <div className="box box-1">
+          <img className="photo" src="./images/todo.png" alt="" />
+          <div className="overlay">
+            <div className="text">
+              <h2>Todo App</h2>
+              <p>Front-end / Web app</p>
+            </div>
+          </div>
+        </div>
+        <div className="box box-5">
           <img className="photo" src="./images/fon.png" alt="" />
           <div className="overlay">
             <div className="text">

@@ -72,7 +72,7 @@ const moveDesktop = keyframes`
 
 const SubtitleWrapper = styled.div`
   height: 100%;
-  animation: ${move} 5s ease-in-out infinite alternate;
+  animation: ${move} 8s ease-in-out infinite alternate;
   animation-delay: 1.5s;
 
   @media ${breakpoint.device.tablet} {
