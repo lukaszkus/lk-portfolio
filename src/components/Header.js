@@ -5,13 +5,6 @@ import breakpoint from "../utils/breakpoints";
 const HeaderContainer = styled.header`
   height: 100vh;
   width: 100%;
-  // background: #c9ccd3;
-  // background-image: linear-gradient(
-  //   135deg,
-  //   rgba(255, 255, 255, 0.5) 0%,
-  //   rgba(0, 0, 0, 0.5) 100%
-  // );
-  // background-blend-mode: lighten;
   padding: 2rem;
   display: flex;
   justify-content: center;
