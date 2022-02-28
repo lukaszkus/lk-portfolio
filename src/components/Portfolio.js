@@ -26,7 +26,7 @@ const PBox = styled.article`
   background: ${(props) => props.bgColor};
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.95;
   }
 `;
 
@@ -48,7 +48,7 @@ const PBoxOverlay = styled.div`
   background-color: ${(props) => props.overlayColor};
 
   &:hover {
-    opacity: 0.9;
+    opacity: 0.95;
   }
 `;
 
