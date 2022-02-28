@@ -55,6 +55,14 @@ const portfolioItems = [
     bgColor: "linear-gradient(to top, #00c6fb 0%, #005bea 100%)",
     overlayColor: "#005bea",
   },
+  {
+    id: 8,
+    title: "Informatyk na godziny",
+    category: "Front-end / Landing page",
+    url: "./images/informatyk.png",
+    bgColor: "#b3c1ed",
+    overlayColor: "#2e1e5c",
+  },
 ];
 
 export default portfolioItems;

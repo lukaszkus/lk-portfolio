@@ -45,7 +45,7 @@ const PBoxOverlay = styled.div`
   width: 100%;
   opacity: 0;
   transition: 0.3s ease;
-  background-color: ${(props) => props.overlayColor};
+  background: ${(props) => props.overlayColor};
 
   &:hover {
     opacity: 0.95;
