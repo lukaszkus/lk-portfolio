@@ -4,6 +4,7 @@ import breakpoint from "../utils/breakpoints";
 
 const HeaderContainer = styled.header`
   height: 100vh;
+  position: relative;
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -12,7 +13,17 @@ const HeaderContainer = styled.header`
   background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 `;
 
-const TitleContainer = styled.div``;
+const TitleContainer = styled.div`
+  &:before {
+    content: "";
+    position absolute;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid red;
+  }`;
 
 const HeaderTitle = styled.h1`
   font-size: 3.5rem;
