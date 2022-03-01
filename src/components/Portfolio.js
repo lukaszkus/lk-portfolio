@@ -5,7 +5,7 @@ import portfolioItems from "../utils/portfolioItems";
 
 const PContainer = styled.section`
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem 1rem;
   overflow: hidden;
 
