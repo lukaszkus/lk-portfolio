@@ -24,6 +24,8 @@ const PBox = styled.article`
   overflow: hidden;
   position: relative;
   background: ${(props) => props.bgColor};
+  display: flex;
+  justify-content: center;
 
   &:hover {
     opacity: 0.95;
