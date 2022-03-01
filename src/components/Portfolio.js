@@ -5,8 +5,9 @@ import portfolioItems from "../utils/portfolioItems";
 
 const PContainer = styled.section`
   display: grid;
-  // gap: 1px;
-  // padding: 1px;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  overflow: hidden;
 
   @media ${breakpoint.device.tablet} {
     grid-template-columns: repeat(2, 1fr);
@@ -18,7 +19,7 @@ const PContainer = styled.section`
 `;
 
 const PBox = styled.article`
-  height: 50vh;
+  height: ${(props) => props.height};
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -26,9 +27,11 @@ const PBox = styled.article`
   background: ${(props) => props.bgColor};
   display: flex;
   justify-content: center;
+  transform: ${(props) => props.transform};
 
   &:hover {
     opacity: 0.95;
+    z-index: 999;
   }
 `;
 
@@ -76,7 +79,12 @@ function Portfolio() {
   return (
     <PContainer>
       {portfolioItems.map((item) => (
-        <PBox key={item.id} bgColor={item.bgColor}>
+        <PBox
+          key={item.id}
+          bgColor={item.bgColor}
+          transform={item.transform}
+          height={item.height}
+        >
           <PBoxImg src={item.url} alt={item.title}></PBoxImg>
           <PBoxOverlay overlayColor={item.overlayColor}>
             <PBoxText>

@@ -10,20 +10,52 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  // background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  overflow: hidden;
 `;
 
 const TitleContainer = styled.div`
-  &:before {
+  &::after {
     content: "";
-    position absolute;
-    width: calc(100% - 200px);
-    height: calc(100% - 200px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 10px solid red;
-  }`;
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    top: 23%;
+    left: -8%;
+    background-image: linear-gradient(
+      to right,
+      #f78ca0 0%,
+      #f9748f 19%,
+      #fd868c 60%,
+      #fe9a8b 100%
+    );
+    transform: skew(20deg) rotate(-10deg);
+
+    @media ${breakpoint.device.tablet} {
+      left: 10%;
+    }
+
+    @media ${breakpoint.device.desktop} {
+      left: 15%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 200px;
+    top: 40%;
+    left: 70%;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    transform: skew(-38deg) rotate(25deg);
+
+    @media ${breakpoint.device.desktop} {
+      width: 320px;
+      height: 246px;
+    }
+  }
+`;
 
 const HeaderTitle = styled.h1`
   font-size: 3.5rem;
