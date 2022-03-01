@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/ksu.svg";
+import darkLogo from "../assets/ksu.svg";
+import lightLogo from "../assets/ksu-light.svg";
 
 const LogoContainer = styled.div``;
 
-const LogoImg = styled.img.attrs({
-  src: `${logo}`,
+const LogoDark = styled.img.attrs({
+  src: `${darkLogo}`,
 })`
   height: 22px;
 
@@ -14,12 +15,12 @@ const LogoImg = styled.img.attrs({
   }
 `;
 
-function Logo() {
-  return (
-    <LogoContainer>
-      <LogoImg />
-    </LogoContainer>
-  );
+const LogoLight = styled(LogoDark).attrs({
+  src: `${lightLogo}`,
+})``;
+
+function Logo({ isOpen }) {
+  return <LogoContainer>{isOpen ? <LogoLight /> : <LogoDark />}</LogoContainer>;
 }
 
 export default Logo;

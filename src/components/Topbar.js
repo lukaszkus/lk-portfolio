@@ -23,7 +23,7 @@ const TopbarContainer = styled.div`
 function Topbar({ isOpen, toggle }) {
   return (
     <TopbarContainer>
-      <Logo />
+      <Logo isOpen={isOpen} />
       <MenuBtn isOpen={isOpen} toggle={toggle} />
     </TopbarContainer>
   );
