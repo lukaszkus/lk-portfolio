@@ -5,8 +5,8 @@ import portfolioItems from "../utils/portfolioItems";
 
 const PContainer = styled.section`
   display: grid;
-  gap: 1px;
-  padding: 1px;
+  // gap: 1px;
+  // padding: 1px;
 
   @media ${breakpoint.device.tablet} {
     grid-template-columns: repeat(2, 1fr);

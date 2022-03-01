@@ -3,7 +3,7 @@ import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
 import Logo from "./Logo";
-import Menu from "./Menu";
+import MenuBtn from "./MenuBtn";
 
 const TopbarContainer = styled.div`
   width: 100%;
@@ -20,11 +20,11 @@ const TopbarContainer = styled.div`
   }
 `;
 
-function Topbar() {
+function Topbar({ isOpen, toggle }) {
   return (
     <TopbarContainer>
       <Logo />
-      <Menu />
+      <MenuBtn isOpen={isOpen} toggle={toggle} />
     </TopbarContainer>
   );
 }
