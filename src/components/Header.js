@@ -173,11 +173,17 @@ function Header() {
         <HeaderTitle data-aos="fade-up">Hi, I'm Kusiu.</HeaderTitle>
         <HeaderSubtitle>
           <SubtitleWrapper>
-            <SubtitleItem data-aos="fade-up">FRONT-END DEVELOPER</SubtitleItem>
-            <SubtitleItem data-aos="fade-up">& GRAPHIC DESIGNER</SubtitleItem>
+            <SubtitleItem data-aos="fade-up" data-aos-duration="500">
+              FRONT-END DEVELOPER
+            </SubtitleItem>
+            <SubtitleItem data-aos="fade-up" data-aos-duration="1000">
+              & GRAPHIC DESIGNER
+            </SubtitleItem>
           </SubtitleWrapper>
         </HeaderSubtitle>
-        <HeaderCTA>Get in touch</HeaderCTA>
+        <HeaderCTA data-aos="fade-up" data-aos-duration="1500">
+          Get in touch
+        </HeaderCTA>
       </TitleContainer>
     </HeaderContainer>
   );

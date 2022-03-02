@@ -40,10 +40,10 @@ function Menu({ isOpen, toggle }) {
         <MenuItem data-aos="fade-up">
           <MenuLink>Work</MenuLink>
         </MenuItem>
-        <MenuItem data-aos="fade-up">
+        <MenuItem data-aos="fade-up" data-aos-duration="500">
           <MenuLink>About</MenuLink>
         </MenuItem>
-        <MenuItem data-aos="fade-up">
+        <MenuItem data-aos="fade-up" data-aos-duration="1000">
           <MenuLink>Contact</MenuLink>
         </MenuItem>
       </MenuList>

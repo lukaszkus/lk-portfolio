@@ -19,7 +19,12 @@ const PContainer = styled.section`
   }
 `;
 
-const Div = styled.div``;
+const PBoxContainer = styled.div`
+  &:hover {
+    opacity: 0.95;
+    z-index: 999;
+  }
+`;
 
 const PBox = styled.article`
   height: ${(props) => props.height};
@@ -32,11 +37,6 @@ const PBox = styled.article`
   display: flex;
   justify-content: center;
   transform: ${(props) => props.transform};
-
-  &:hover {
-    opacity: 0.95;
-    z-index: 999;
-  }
 `;
 
 const PBoxImg = styled.img`
@@ -83,7 +83,7 @@ function Portfolio() {
   return (
     <PContainer>
       {portfolioItems.map((item) => (
-        <Div data-aos="fade-up">
+        <PBoxContainer data-aos="fade-up">
           <PBox
             key={item.id}
             bgColor={item.bgColor}
@@ -97,7 +97,7 @@ function Portfolio() {
               </PBoxText>
             </PBoxOverlay>
           </PBox>
-        </Div>
+        </PBoxContainer>
       ))}
     </PContainer>
   );
