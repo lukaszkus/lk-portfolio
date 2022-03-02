@@ -14,58 +14,76 @@ const HeaderContainer = styled.header`
   overflow: hidden;
 `;
 
-const TitleContainer = styled.div`
-  &::after {
-    content: "";
-    position: absolute;
-    width: 80px;
-    height: 50px;
-    top: 23%;
-    left: -8%;
-    background-image: linear-gradient(
-      to right,
-      #f78ca0 0%,
-      #f9748f 19%,
-      #fd868c 60%,
-      #fe9a8b 100%
-    );
-    transform: skew(20deg) rotate(-10deg);
+const TitleContainer = styled.div``;
 
-    @media ${breakpoint.device.tablet} {
-      left: 10%;
-    }
+const rotateA = keyframes`
+100% {transform: skew(40deg) rotate(360deg) scale(3)  translateX(30px) translateY(-50px);
+filter: blur(15px);}
+`;
 
-    @media ${breakpoint.device.desktop} {
-      left: 15%;
-    }
+const rotateB = keyframes`
+100% {transform: skew(10deg) rotate(-135deg) scale(3) translateX(50px) translateY(100px);
+filter: blur(35px);
+// border-radius: 50%;}
+`;
+
+const A = styled.div`
+  content: "";
+  position: fixed;
+  width: 80px;
+  height: 50px;
+  top: 23%;
+  left: -5%;
+  background-image: linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
+  transform: skew(20deg) rotate(-10deg);
+  filter: blur(5px);
+  animation: ${rotateA} 20s infinite alternate;
+
+  @media ${breakpoint.device.tablet} {
+    left: 20%;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 260px;
-    height: 200px;
-    top: 40%;
-    left: 70%;
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-    transform: skew(-38deg) rotate(25deg);
+  @media ${breakpoint.device.desktop} {
+    // left: 35%;
+  }
+`;
 
-    @media ${breakpoint.device.desktop} {
-      width: 320px;
-      height: 246px;
-    }
+const B = styled.div`
+  content: "";
+  position: fixed;
+  width: 260px;
+  height: 200px;
+  top: 45%;
+  left: 60%;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  transform: skew(-38deg) rotate(25deg);
+  filter: blur(15px);
+  animation: ${rotateB} 30s infinite alternate;
+
+  @media ${breakpoint.device.desktop} {
+    width: 320px;
+    height: 246px;
   }
 `;
 
 const HeaderTitle = styled.h1`
   font-size: 3.5rem;
+  line-height: 1;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
+  margin-bottom: 10px;
 
   @media ${breakpoint.device.tablet} {
     font-size: 4.5rem;
+    margin-bottom: 20px;
   }
 
   @media ${breakpoint.device.desktop} {
@@ -74,60 +92,19 @@ const HeaderTitle = styled.h1`
 `;
 
 const HeaderSubtitle = styled.div`
-  height: 30px;
-  overflow: hidden;
+  position: relative;
   margin-bottom: 50px;
-
-  @media ${breakpoint.device.tablet} {
-    height: 55px;
-  }
-
-  @media ${breakpoint.device.desktop} {
-    height: 70px;
-  }
 `;
 
-const move = keyframes`
-100% {transform: translateY(-30px);}
-
-@media ${breakpoint.device.tablet} {
-  100% {transform: translateY(-55px);}
-}
-
-@media ${breakpoint.device.desktop} {
-  100% {transform: translateY(-70px);}
-}
-`;
-
-const moveTablet = keyframes`
-100% {transform: translateY(-55px);}
-`;
-
-const moveDesktop = keyframes`
-100% {transform: translateY(-70px);}
-`;
-
-const SubtitleWrapper = styled.div`
-  height: 100%;
-  animation: ${move} 8s ease-in-out infinite alternate;
-  animation-delay: 1.5s;
-
-  @media ${breakpoint.device.tablet} {
-    animation-name: ${moveTablet};
-  }
-
-  @media ${breakpoint.device.desktop} {
-    animation-name: ${moveDesktop};
-  }
-`;
+const SubtitleWrapper = styled.div``;
 
 const SubtitleItem = styled.div`
-  height: 30px;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  display: flex;
-  align-items: center;
+  line-height: 1;
+  margin-bottom: 5px;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -149,12 +126,11 @@ const SubtitleItem = styled.div`
 
   @media ${breakpoint.device.tablet} {
     font-size: 3rem;
-    height: 55px;
+    margin-bottom: 10px;
   }
 
   @media ${breakpoint.device.desktop} {
     font-size: 4rem;
-    height: 70px;
   }
 `;
 
@@ -166,6 +142,7 @@ const HeaderCTA = styled.a`
   padding: 0.9rem 2rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 2.25rem;
+  position: relative;
 
   &:hover {
     transition: all 0.5s ease-in-out;
@@ -187,11 +164,13 @@ function Header() {
   return (
     <HeaderContainer>
       <TitleContainer>
+        <A />
+        <B />
         <HeaderTitle>Hi, I'm Kusiu.</HeaderTitle>
         <HeaderSubtitle>
           <SubtitleWrapper>
             <SubtitleItem>FRONT-END DEVELOPER</SubtitleItem>
-            <SubtitleItem>GRAPHIC DESIGNER</SubtitleItem>
+            <SubtitleItem>& GRAPHIC DESIGNER</SubtitleItem>
           </SubtitleWrapper>
         </HeaderSubtitle>
         <HeaderCTA>Get in touch</HeaderCTA>

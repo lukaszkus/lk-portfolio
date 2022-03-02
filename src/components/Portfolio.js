@@ -11,15 +11,18 @@ const PContainer = styled.section`
 
   @media ${breakpoint.device.tablet} {
     grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 1rem;
   }
 
   @media ${breakpoint.device.desktop} {
     grid-template-columns: repeat(3, 1fr);
+    padding: 4rem 1rem;
   }
 `;
 
 const PBox = styled.article`
   height: ${(props) => props.height};
+  // height: 50vh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -83,8 +86,7 @@ function Portfolio() {
           key={item.id}
           bgColor={item.bgColor}
           transform={item.transform}
-          height={item.height}
-        >
+          height={item.height}>
           <PBoxImg src={item.url} alt={item.title}></PBoxImg>
           <PBoxOverlay overlayColor={item.overlayColor}>
             <PBoxText>
