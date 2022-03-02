@@ -16,14 +16,17 @@ const HeaderContainer = styled.header`
 const TitleContainer = styled.div``;
 
 const rotateA = keyframes`
-100% {transform: skew(40deg) rotate(360deg) scale(3)  translateX(30px) translateY(-50px);
-filter: blur(15px);}
+  100% {
+    transform: skew(40deg) rotate(360deg) scale(3) translateX(30px) translateY(-50px);
+    filter: blur(15px);
+  }
 `;
 
 const rotateB = keyframes`
-100% {transform: skew(10deg) rotate(-135deg) scale(3) translateX(50px) translateY(100px);
-filter: blur(35px);
-// border-radius: 50%;}
+  100% {
+    transform: skew(10deg) rotate(-135deg) scale(3) translateX(50px) translateY(100px);
+    filter: blur(35px);
+  }
 `;
 
 const A = styled.div`
@@ -47,10 +50,6 @@ const A = styled.div`
   @media ${breakpoint.device.tablet} {
     left: 20%;
   }
-
-  @media ${breakpoint.device.desktop} {
-    // left: 35%;
-  }
 `;
 
 const B = styled.div`
@@ -71,11 +70,6 @@ const B = styled.div`
   }
 `;
 
-// const Button = styled.button.attrs(props => ({
-//   type: props.type || 'button'
-//   // Every <Button /> will now have type="button" as default
-// }))`
-
 const HeaderTitle = styled.h1`
   font-size: 3.5rem;
   line-height: 1;
@@ -83,7 +77,7 @@ const HeaderTitle = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   @media ${breakpoint.device.tablet} {
     font-size: 4.5rem;
@@ -108,7 +102,6 @@ const SubtitleItem = styled.div`
   font-weight: 600;
   line-height: 1;
   margin-bottom: 5px;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 

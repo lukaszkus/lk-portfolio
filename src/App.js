@@ -3,9 +3,11 @@ import AOS from "aos";
 
 import "./style.css";
 import Topbar from "./components/Topbar";
+import Menu from "./components/Menu";
 import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
-import Menu from "./components/Menu";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +26,8 @@ function App() {
       {isOpen && <Menu isOpen={isOpen} toggle={toggle} />}
       <Header />
       <Portfolio />
+      <Contact />
+      <Footer />
     </>
   );
 }
