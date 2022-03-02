@@ -4,19 +4,19 @@ import portfolioItems from "../utils/portfolioItems";
 
 const PContainer = styled.section`
   display: grid;
-  // gap: 1rem;
-  // padding: 2rem 1rem;
+  gap: 1rem;
+  padding: 2rem 1rem;
   overflow: hidden;
-  // margin-bottom: 60px;
+  margin-bottom: 60px;
 
   @media ${breakpoint.device.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    // padding: 3rem 1rem;
+    padding: 3rem 1rem;
   }
 
   @media ${breakpoint.device.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    // padding: 4rem 1rem;
+    padding: 4rem 1rem;
   }
 `;
 
@@ -28,8 +28,8 @@ const PBoxContainer = styled.div`
 `;
 
 const PBox = styled.article`
-  // height: ${(props) => props.height};
-  height: 50vh;
+  height: ${(props) => props.height};
+  // height: 50vh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -37,7 +37,7 @@ const PBox = styled.article`
   background: ${(props) => props.bgColor};
   display: flex;
   justify-content: center;
-  // transform: ${(props) => props.transform};
+  transform: ${(props) => props.transform};
 `;
 
 const PBoxImg = styled.img`

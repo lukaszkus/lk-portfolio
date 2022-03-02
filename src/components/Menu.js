@@ -37,14 +37,11 @@ function Menu({ isOpen, toggle }) {
   return (
     <MenuContainer isOpen={isOpen}>
       <MenuList>
-        <MenuItem data-aos="fade-up" data-aos-duration="200">
+        <MenuItem data-aos="fade-up" data-aos-duration="300">
           <MenuLink>Work</MenuLink>
         </MenuItem>
-        <MenuItem data-aos="fade-up" data-aos-duration="400">
-          <MenuLink>About</MenuLink>
-        </MenuItem>
         <MenuItem data-aos="fade-up" data-aos-duration="600">
-          <MenuLink>Contact</MenuLink>
+          <MenuLink>About</MenuLink>
         </MenuItem>
       </MenuList>
     </MenuContainer>

@@ -9,7 +9,7 @@ const FContainer = styled.footer`
   display: flex;
 
   @media ${breakpoint.device.tablet} {
-    padding: 4rem 6rem;
+    padding: 6rem;
   }
 `;
 
@@ -41,7 +41,6 @@ const FBoxTitle = styled.p`
 const FBoxContent = styled.p`
   font-size: 0.875rem;
   font-weight: 300;
-  // color: #6a11cb;
 `;
 
 function Footer() {
@@ -50,15 +49,14 @@ function Footer() {
   return (
     <FContainer>
       <FBoxContainer>
-        <FBox>
+        <FBox data-aos="fade-down" data-aos-duration="300">
           <FBoxTitle>Łukasz Kuś</FBoxTitle>
           <FBoxContent>&copy; {date} All Rights Reserved</FBoxContent>
         </FBox>
-        <FBox>
+        <FBox data-aos="fade-down" data-aos-duration="500">
           <FBoxTitle>Contact</FBoxTitle>
-          <FBoxContent>email</FBoxContent>
+          <FBoxContent>LinkedIn</FBoxContent>
         </FBox>
-        <FBox>3</FBox>
       </FBoxContainer>
     </FContainer>
   );
