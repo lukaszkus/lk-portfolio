@@ -170,13 +170,15 @@ function Header() {
       <TitleContainer>
         <A />
         <B />
-        <HeaderTitle data-aos="fade-up">Hi, I'm Kusiu.</HeaderTitle>
+        <HeaderTitle data-aos="fade-up" data-aos-duration="300">
+          Hi, I'm Kusiu.
+        </HeaderTitle>
         <HeaderSubtitle>
           <SubtitleWrapper>
-            <SubtitleItem data-aos="fade-up" data-aos-duration="500">
+            <SubtitleItem data-aos="fade-up" data-aos-duration="600">
               FRONT-END DEVELOPER
             </SubtitleItem>
-            <SubtitleItem data-aos="fade-up" data-aos-duration="1000">
+            <SubtitleItem data-aos="fade-up" data-aos-duration="900">
               & GRAPHIC DESIGNER
             </SubtitleItem>
           </SubtitleWrapper>
