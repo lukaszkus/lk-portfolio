@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
@@ -71,6 +70,11 @@ const B = styled.div`
     height: 246px;
   }
 `;
+
+// const Button = styled.button.attrs(props => ({
+//   type: props.type || 'button'
+//   // Every <Button /> will now have type="button" as default
+// }))`
 
 const HeaderTitle = styled.h1`
   font-size: 3.5rem;
@@ -166,11 +170,11 @@ function Header() {
       <TitleContainer>
         <A />
         <B />
-        <HeaderTitle>Hi, I'm Kusiu.</HeaderTitle>
+        <HeaderTitle data-aos="fade-up">Hi, I'm Kusiu.</HeaderTitle>
         <HeaderSubtitle>
           <SubtitleWrapper>
-            <SubtitleItem>FRONT-END DEVELOPER</SubtitleItem>
-            <SubtitleItem>& GRAPHIC DESIGNER</SubtitleItem>
+            <SubtitleItem data-aos="fade-up">FRONT-END DEVELOPER</SubtitleItem>
+            <SubtitleItem data-aos="fade-up">& GRAPHIC DESIGNER</SubtitleItem>
           </SubtitleWrapper>
         </HeaderSubtitle>
         <HeaderCTA>Get in touch</HeaderCTA>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
 
 import "./style.css";
 import Topbar from "./components/Topbar";
@@ -8,6 +9,10 @@ import Menu from "./components/Menu";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const toggle = () => {
     setIsOpen(!isOpen);

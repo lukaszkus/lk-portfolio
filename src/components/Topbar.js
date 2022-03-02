@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
@@ -22,7 +21,7 @@ const TopbarContainer = styled.div`
 
 function Topbar({ isOpen, toggle }) {
   return (
-    <TopbarContainer>
+    <TopbarContainer data-aos="fade-down">
       <Logo isOpen={isOpen} />
       <MenuBtn isOpen={isOpen} toggle={toggle} />
     </TopbarContainer>

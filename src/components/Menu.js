@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
@@ -38,13 +37,13 @@ function Menu({ isOpen, toggle }) {
   return (
     <MenuContainer isOpen={isOpen}>
       <MenuList>
-        <MenuItem>
+        <MenuItem data-aos="fade-up">
           <MenuLink>Work</MenuLink>
         </MenuItem>
-        <MenuItem>
+        <MenuItem data-aos="fade-up">
           <MenuLink>About</MenuLink>
         </MenuItem>
-        <MenuItem>
+        <MenuItem data-aos="fade-up">
           <MenuLink>Contact</MenuLink>
         </MenuItem>
       </MenuList>

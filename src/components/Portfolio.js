@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
@@ -19,6 +18,8 @@ const PContainer = styled.section`
     padding: 4rem 1rem;
   }
 `;
+
+const Div = styled.div``;
 
 const PBox = styled.article`
   height: ${(props) => props.height};
@@ -82,19 +83,21 @@ function Portfolio() {
   return (
     <PContainer>
       {portfolioItems.map((item) => (
-        <PBox
-          key={item.id}
-          bgColor={item.bgColor}
-          transform={item.transform}
-          height={item.height}>
-          <PBoxImg src={item.url} alt={item.title}></PBoxImg>
-          <PBoxOverlay overlayColor={item.overlayColor}>
-            <PBoxText>
-              <PBoxTitle>{item.title}</PBoxTitle>
-              <PBoxCat>{item.category}</PBoxCat>
-            </PBoxText>
-          </PBoxOverlay>
-        </PBox>
+        <Div data-aos="fade-up">
+          <PBox
+            key={item.id}
+            bgColor={item.bgColor}
+            transform={item.transform}
+            height={item.height}>
+            <PBoxImg src={item.url} alt={item.title}></PBoxImg>
+            <PBoxOverlay overlayColor={item.overlayColor}>
+              <PBoxText>
+                <PBoxTitle>{item.title}</PBoxTitle>
+                <PBoxCat>{item.category}</PBoxCat>
+              </PBoxText>
+            </PBoxOverlay>
+          </PBox>
+        </Div>
       ))}
     </PContainer>
   );
