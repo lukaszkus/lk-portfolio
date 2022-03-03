@@ -18,13 +18,14 @@ const CBox = styled.div`
   &::before {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 500px;
+    width: 120%;
+    height: 80%;
     background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
     transform: skew(21deg) rotate(2deg);
 
     @media ${breakpoint.device.tablet} {
-      width: 1000px;
+      width: 90%;
+      height: 90%;
     }
   }
 

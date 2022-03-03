@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin.svg";
+
 const FContainer = styled.footer`
   min-height: 50vh;
   position: relative;
@@ -43,6 +46,24 @@ const FBoxContent = styled.p`
   font-weight: 300;
 `;
 
+const FLink = styled.a.attrs((props) => ({
+  href: props.path,
+}))``;
+
+const FIcon = styled.img.attrs((props) => ({
+  src: props.icon,
+}))`
+  height: 1.25rem;
+
+  &:first-child {
+    padding-right: 10px;
+  }
+
+  @media ${breakpoint.device.tablet} {
+    height: 1.5rem;
+  }
+`;
+
 function Footer() {
   const date = new Date().getFullYear();
 
@@ -56,6 +77,14 @@ function Footer() {
         <FBox data-aos="fade-down" data-aos-duration="500">
           <FBoxTitle>Contact</FBoxTitle>
           <FBoxContent>LinkedIn</FBoxContent>
+        </FBox>
+        <FBox data-aos="fade-down" data-aos-duration="700">
+          <FLink path="https://github.com/lukaszkus">
+            <FIcon icon={github} />
+          </FLink>
+          <FLink path="https://www.linkedin.com/in/lukasz-kus/">
+            <FIcon icon={linkedin} />
+          </FLink>
         </FBox>
       </FBoxContainer>
     </FContainer>

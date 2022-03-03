@@ -4,19 +4,19 @@ import portfolioItems from "../utils/portfolioItems";
 
 const PContainer = styled.section`
   display: grid;
-  gap: 1rem;
-  padding: 2rem 1rem;
+  gap: 2rem;
+  padding: 2rem 2rem;
   overflow: hidden;
   margin-bottom: 60px;
 
   @media ${breakpoint.device.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    padding: 3rem 1rem;
+    padding: 3rem 4rem;
   }
 
   @media ${breakpoint.device.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    padding: 4rem 1rem;
+    padding: 4rem 6rem;
   }
 `;
 
@@ -89,8 +89,7 @@ function Portfolio() {
             key={item.id}
             bgColor={item.bgColor}
             transform={item.transform}
-            height={item.height}
-          >
+            height={item.height}>
             <PBoxImg src={item.url} alt={item.title}></PBoxImg>
             <PBoxOverlay overlayColor={item.overlayColor}>
               <PBoxText>
