@@ -84,7 +84,7 @@ const HeaderTitle = styled.h1`
     margin-bottom: 20px;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.device.desktopXL} {
     font-size: 6.5rem;
   }
 `;
@@ -126,36 +126,30 @@ const SubtitleItem = styled.div`
     margin-bottom: 10px;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.device.desktopXL} {
     font-size: 4rem;
   }
 `;
 
-const HeaderCTA = styled.a`
-  color: rgba(0, 0, 0, 0.3);
-  font-family: "Poppins", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 300;
-  padding: 0.9rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 2.25rem;
-  position: relative;
+// const HeaderLink = styled.a`
+//   font-family: "Poppins", sans-serif;
+//   // font-size: 0.9rem;
+//   // font-weight: 300;
+//   position: relative;
+//   color: #6a11cb;
 
-  &:hover {
-    transition: all 0.5s ease-in-out;
-    color: rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-  }
+//   &:hover {
+//     cursor: pointer;
+//   }
 
-  @media ${breakpoint.device.tablet} {
-    font-size: 1rem;
-  }
+//   // @media ${breakpoint.device.tablet} {
+//   //   font-size: 1rem;
+//   // }
 
-  @media ${breakpoint.device.desktop} {
-    font-size: 1.25rem;
-  }
-`;
+//   // @media ${breakpoint.device.desktop} {
+//   //   font-size: 1.25rem;
+//   // }
+// `;
 
 function Header() {
   return (
@@ -171,14 +165,14 @@ function Header() {
             <SubtitleItem data-aos="fade-up" data-aos-duration="600">
               FRONT-END DEVELOPER
             </SubtitleItem>
-            <SubtitleItem data-aos="fade-up" data-aos-duration="900">
+            <SubtitleItem data-aos="fade-up" data-aos-duration="800">
               & GRAPHIC DESIGNER
             </SubtitleItem>
           </SubtitleWrapper>
         </HeaderSubtitle>
-        <HeaderCTA data-aos="fade-up" data-aos-duration="1500">
-          Get in touch
-        </HeaderCTA>
+        {/* <HeaderLink data-aos="fade-up" data-aos-duration="1500">
+          View my work.
+        </HeaderLink> */}
       </TitleContainer>
     </HeaderContainer>
   );

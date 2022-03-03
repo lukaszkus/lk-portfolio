@@ -5,39 +5,43 @@ import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 
 const FContainer = styled.footer`
-  min-height: 50vh;
+  min-height: 40vh;
   position: relative;
   width: 100%;
   padding: 2rem;
   display: flex;
 
   @media ${breakpoint.device.tablet} {
+    padding: 4rem;
+  }
+
+  @media ${breakpoint.device.desktop} {
     padding: 6rem;
   }
 `;
 
 const FBoxContainer = styled.div`
-  display: grid;
   width: 100%;
   border-top: 1px solid #6a11cb;
   padding: 2rem 0;
 
   @media ${breakpoint.device.tablet} {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    // justify-content: space-between;
+    gap: 4rem;
   }
 
   @media ${breakpoint.device.desktop} {
-    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
 const FBox = styled.div`
   font-family: "Poppins", sans-serif;
+  padding-bottom: 2rem;
 `;
 
 const FBoxTitle = styled.p`
   font-weight: 600;
-  margin-bottom: 6px;
   color: #6a11cb;
 `;
 
@@ -48,19 +52,23 @@ const FBoxContent = styled.p`
 
 const FLink = styled.a.attrs((props) => ({
   href: props.path,
-}))``;
+}))`
+  &:first-child {
+    padding-right: 20px;
+
+    @media ${breakpoint.device.tablet} {
+      padding-right: 15px;
+    }
+  }
+`;
 
 const FIcon = styled.img.attrs((props) => ({
   src: props.icon,
 }))`
-  height: 1.25rem;
+  height: 1.5rem;
 
-  &:first-child {
-    padding-right: 10px;
-  }
-
-  @media ${breakpoint.device.tablet} {
-    height: 1.5rem;
+  &:hover {
+    transform: scale(1.1);
   }
 `;
 
@@ -75,10 +83,6 @@ function Footer() {
           <FBoxContent>&copy; {date} All Rights Reserved</FBoxContent>
         </FBox>
         <FBox data-aos="fade-down" data-aos-duration="500">
-          <FBoxTitle>Contact</FBoxTitle>
-          <FBoxContent>LinkedIn</FBoxContent>
-        </FBox>
-        <FBox data-aos="fade-down" data-aos-duration="700">
           <FLink path="https://github.com/lukaszkus">
             <FIcon icon={github} />
           </FLink>

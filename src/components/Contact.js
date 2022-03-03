@@ -22,6 +22,7 @@ const CBox = styled.div`
     height: 80%;
     background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
     transform: skew(21deg) rotate(2deg);
+    opacity: 0.9;
 
     @media ${breakpoint.device.tablet} {
       width: 90%;
@@ -36,16 +37,36 @@ const CBox = styled.div`
 
 const CTitle = styled.h2`
   position: relative;
-  font-size: 3rem;
-  // padding: 1rem 0;
+  font-size: 2.5rem;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media ${breakpoint.device.tablet} {
+    font-size: 3rem;
+  }
 `;
 
-const CContent = styled.p`
+const CText = styled.p`
+  text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
+  padding-bottom: 10px;
+`;
+
+const CLink = styled.a.attrs((props) => ({
+  href: props.mail,
+}))`
+  color: #000;
+  text-align: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+    color: #6a11cb;
+  }
 `;
 
 function Contact() {
@@ -55,9 +76,16 @@ function Contact() {
         <CTitle data-aos="fade-up" data-aos-duration="600">
           Get in Touch
         </CTitle>
-        <CContent data-aos="fade-up" data-aos-duration="800">
-          Bla bla bla emajl
-        </CContent>
+        <CText data-aos="fade-up" data-aos-duration="800">
+          I’m open to job and project opportunities.
+        </CText>
+        <CLink
+          mail="mailto:lukasz.kus84@outlook.com"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          Drop me a line.
+        </CLink>
       </CBox>
     </CContainer>
   );

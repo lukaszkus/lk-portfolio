@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import breakpoint from "../utils/breakpoints";
+
 import darkLogo from "../assets/ksu.svg";
 import lightLogo from "../assets/ksu-light.svg";
 
@@ -10,7 +12,7 @@ const LogoDark = styled.img.attrs({
 })`
   height: 22px;
 
-  @media (min-width: 600px) {
+  @media ${breakpoint.device.desktop} {
     height: 30px;
   }
 `;

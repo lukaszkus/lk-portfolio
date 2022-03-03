@@ -14,7 +14,7 @@ const TopbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.device.desktop} {
     padding: 2rem;
   }
 `;

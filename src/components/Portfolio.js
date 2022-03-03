@@ -4,19 +4,23 @@ import portfolioItems from "../utils/portfolioItems";
 
 const PContainer = styled.section`
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem 2rem;
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 2rem;
 
   @media ${breakpoint.device.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    padding: 3rem 4rem;
+    padding: 2rem;
   }
 
   @media ${breakpoint.device.desktop} {
     grid-template-columns: repeat(3, 1fr);
     padding: 4rem 6rem;
+  }
+
+  @media ${breakpoint.device.desktopXL} {
+    gap: 2rem;
   }
 `;
 
@@ -37,7 +41,7 @@ const PBox = styled.article`
   background: ${(props) => props.bgColor};
   display: flex;
   justify-content: center;
-  transform: ${(props) => props.transform};
+  // transform: ${(props) => props.transform};
 `;
 
 const PBoxImg = styled.img`
@@ -89,7 +93,8 @@ function Portfolio() {
             key={item.id}
             bgColor={item.bgColor}
             transform={item.transform}
-            height={item.height}>
+            height={item.height}
+          >
             <PBoxImg src={item.url} alt={item.title}></PBoxImg>
             <PBoxOverlay overlayColor={item.overlayColor}>
               <PBoxText>
