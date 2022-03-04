@@ -22,7 +22,6 @@ const CBox = styled.div`
     height: 80%;
     background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
     transform: skew(21deg) rotate(2deg);
-    opacity: 0.9;
 
     @media ${breakpoint.device.tablet} {
       width: 90%;
@@ -82,8 +81,7 @@ function Contact() {
         <CLink
           mail="mailto:lukasz.kus84@outlook.com"
           data-aos="fade-up"
-          data-aos-duration="800"
-        >
+          data-aos-duration="800">
           Drop me a line.
         </CLink>
       </CBox>

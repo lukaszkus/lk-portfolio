@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styled from "styled-components";
 import AOS from "aos";
 
 import "./style.css";
@@ -8,6 +9,8 @@ import Header from "./components/Header";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
+const Main = styled.main``;
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +28,10 @@ function App() {
       <Topbar isOpen={isOpen} toggle={toggle} />
       {isOpen && <Menu isOpen={isOpen} toggle={toggle} />}
       <Header />
-      <Portfolio />
-      <Contact />
+      <Main>
+        <Portfolio />
+        <Contact />
+      </Main>
       <Footer />
     </>
   );
