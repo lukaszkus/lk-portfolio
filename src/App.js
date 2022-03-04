@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 
 import "./style.css";
+
+//Pages
 import Home from "./pages/Home";
+import About from "./pages/About";
+//Components
 import Topbar from "./components/Topbar";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+//Work
+import TodoApp from "./work/TodoApp";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +27,13 @@ function App() {
 
   return (
     <>
-      <Topbar isOpen={isOpen} toggle={toggle} />
       {isOpen && <Menu isOpen={isOpen} toggle={toggle} />}
-      <Home />
+      <Topbar isOpen={isOpen} toggle={toggle} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="work/todo-app" element={<TodoApp />} />
+      </Routes>
       <Footer />
     </>
   );

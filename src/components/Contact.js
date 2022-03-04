@@ -61,6 +61,7 @@ const CLink = styled.a.attrs((props) => ({
   position: relative;
   font-family: "Poppins", sans-serif;
   text-decoration: underline;
+  transition: 0.3s ease;
 
   &:hover {
     cursor: pointer;
@@ -81,7 +82,8 @@ function Contact() {
         <CLink
           mail="mailto:lukasz.kus84@outlook.com"
           data-aos="fade-up"
-          data-aos-duration="800">
+          data-aos-duration="800"
+        >
           Drop me a line.
         </CLink>
       </CBox>

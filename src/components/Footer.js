@@ -66,6 +66,7 @@ const FIcon = styled.img.attrs((props) => ({
   src: props.icon,
 }))`
   height: 1.5rem;
+  transition: 0.3s ease;
 
   &:hover {
     transform: scale(1.1);

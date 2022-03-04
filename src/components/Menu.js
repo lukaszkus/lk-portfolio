@@ -36,14 +36,14 @@ const MenuItem = styled.li``;
 
 function Menu({ isOpen, toggle }) {
   return (
-    <MenuContainer isOpen={isOpen}>
+    <MenuContainer isOpen={isOpen} onClick={toggle}>
       <MenuList>
         <MenuItem data-aos="fade-up" data-aos-duration="300">
           <Link to="/">Work</Link>
         </MenuItem>
 
         <MenuItem data-aos="fade-up" data-aos-duration="600">
-          <Link to="work/todo-app">About</Link>
+          <Link to="about">About</Link>
         </MenuItem>
       </MenuList>
     </MenuContainer>
