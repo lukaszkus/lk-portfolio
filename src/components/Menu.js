@@ -1,3 +1,4 @@
+import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
@@ -29,19 +30,20 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li``;
 
-const MenuLink = styled.a`
-  color: #c3cfe2;
-`;
+// const MenuLink = styled.a`
+//   color: #c3cfe2;
+// `;
 
 function Menu({ isOpen, toggle }) {
   return (
     <MenuContainer isOpen={isOpen}>
       <MenuList>
         <MenuItem data-aos="fade-up" data-aos-duration="300">
-          <MenuLink>Work</MenuLink>
+          <Link to="/">Work</Link>
         </MenuItem>
+
         <MenuItem data-aos="fade-up" data-aos-duration="600">
-          <MenuLink>About</MenuLink>
+          <Link to="work/todo-app">About</Link>
         </MenuItem>
       </MenuList>
     </MenuContainer>

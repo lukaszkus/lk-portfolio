@@ -1,3 +1,4 @@
+import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
@@ -62,7 +63,7 @@ const PBoxOverlay = styled.div`
   background: ${(props) => props.overlayColor};
 
   &:hover {
-    opacity: 0.95;
+    opacity: 1;
   }
 `;
 
@@ -88,21 +89,21 @@ function Portfolio() {
   return (
     <PContainer>
       {portfolioItems.map((item) => (
-        <PBoxContainer data-aos="fade-up">
-          <PBox
-            key={item.id}
-            bgColor={item.bgColor}
-            transform={item.transform}
-            height={item.height}
-          >
-            <PBoxImg src={item.url} alt={item.title}></PBoxImg>
-            <PBoxOverlay overlayColor={item.overlayColor}>
-              <PBoxText>
-                <PBoxTitle>{item.title}</PBoxTitle>
-                <PBoxCat>{item.category}</PBoxCat>
-              </PBoxText>
-            </PBoxOverlay>
-          </PBox>
+        <PBoxContainer key={item.id} data-aos="fade-up">
+          <Link to={item.path}>
+            <PBox
+              bgColor={item.bgColor}
+              transform={item.transform}
+              height={item.height}>
+              <PBoxImg src={item.url} alt={item.title}></PBoxImg>
+              <PBoxOverlay overlayColor={item.overlayColor}>
+                <PBoxText>
+                  <PBoxTitle>{item.title}</PBoxTitle>
+                  <PBoxCat>{item.category}</PBoxCat>
+                </PBoxText>
+              </PBoxOverlay>
+            </PBox>
+          </Link>
         </PBoxContainer>
       ))}
     </PContainer>

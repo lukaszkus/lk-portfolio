@@ -8,6 +8,7 @@ const portfolioItems = [
     overlayColor: "#b721ff",
     transform: "skew(20deg) rotate(-8deg)",
     height: "48vh",
+    path: "work/todo-app",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const portfolioItems = [
     overlayColor: "#fee140",
     transform: "skew(15deg) rotate(7deg)",
     height: "42vh",
+    path: "ice-cream",
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const portfolioItems = [
     overlayColor: "#a1c4fd",
     transform: "skew(-14deg) rotate(-4deg)",
     height: "55vh",
+    path: "bulb",
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const portfolioItems = [
     overlayColor: "#e6b980",
     transform: "skew(10deg) rotate(17deg)",
     height: "40vh",
+    path: "gun",
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const portfolioItems = [
     overlayColor: "grey",
     transform: "skew(-10deg) rotate(7deg)",
     height: "50vh",
+    path: "drinks",
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ const portfolioItems = [
     overlayColor: "violet",
     transform: "skew(21deg) rotate(2deg)",
     height: "40vh",
+    path: "nice-view",
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const portfolioItems = [
     overlayColor: "#005bea",
     transform: "skew(26deg) rotate(-4deg)",
     height: "55vh",
+    path: "smartphone",
   },
   {
     id: 8,
@@ -78,6 +85,7 @@ const portfolioItems = [
     overlayColor: "#2e1e5c",
     transform: "skew(-18deg) rotate(-5deg)",
     height: "50vh",
+    path: "informatyk",
   },
 ];
 
