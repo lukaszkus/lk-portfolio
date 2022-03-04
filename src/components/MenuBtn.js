@@ -1,17 +1,9 @@
-import React from "react";
+import { Pivot as Hamburger } from "hamburger-react";
 
 function MenuBtn({ isOpen, toggle }) {
-  const changeColor = isOpen ? "white" : null;
+  const clr = isOpen === true ? "#c3cfe2" : "#000";
 
-  return (
-    <div className="menu-icon" onClick={toggle}>
-      <input className="menu-icon__cheeckbox" type="checkbox" />
-      <div>
-        <span className={changeColor}></span>
-        <span className={changeColor}></span>
-      </div>
-    </div>
-  );
+  return <Hamburger toggled={isOpen} toggle={toggle} size={28} color={clr} />;
 }
 
 export default MenuBtn;
