@@ -14,6 +14,11 @@ const MenuContainer = styled.nav`
   font-size: 2.5rem;
   opacity: ${(props) => (props.isOpen ? 1 : 0)};
 
+  a {
+    color: #c3cfe2;
+    text-decoration: none;
+  }
+
   @media ${breakpoint.device.tablet} {
     justify-content: center;
     font-size: 3.5rem;
@@ -30,10 +35,6 @@ const MenuList = styled.ul`
 
 const MenuItem = styled.li``;
 
-// const MenuLink = styled.a`
-//   color: #c3cfe2;
-// `;
-
 function Menu({ isOpen, toggle }) {
   return (
     <MenuContainer isOpen={isOpen} onClick={toggle}>
@@ -41,7 +42,6 @@ function Menu({ isOpen, toggle }) {
         <MenuItem data-aos="fade-up" data-aos-duration="300">
           <Link to="/">Work</Link>
         </MenuItem>
-
         <MenuItem data-aos="fade-up" data-aos-duration="600">
           <Link to="about">About</Link>
         </MenuItem>
