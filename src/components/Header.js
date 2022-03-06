@@ -13,7 +13,13 @@ const HeaderContainer = styled.header`
   overflow: hidden;
 `;
 
-const TitleContainer = styled.div``;
+const TitleContainer = styled.div`
+  padding-top: 2rem;
+
+  @media ${breakpoint.device.tablet} {
+    padding-top: 4rem;
+  }
+`;
 
 const rotateA = keyframes`
   100% {

@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
@@ -22,7 +22,11 @@ const LogoLight = styled(LogoDark).attrs({
 })``;
 
 function Logo({ isOpen }) {
-  return <LogoContainer>{isOpen ? <LogoLight /> : <LogoDark />}</LogoContainer>;
+  return (
+    <Link to="/">
+      <LogoContainer>{isOpen ? <LogoLight /> : <LogoDark />}</LogoContainer>
+    </Link>
+  );
 }
 
 export default Logo;

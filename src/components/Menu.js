@@ -33,7 +33,11 @@ const MenuList = styled.ul`
   list-style: none;
 `;
 
-const MenuItem = styled.li``;
+const MenuItem = styled.li`
+  &:first-child {
+    padding-bottom: 10px;
+  }
+`;
 
 function Menu({ isOpen, toggle }) {
   return (
