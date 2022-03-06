@@ -19,7 +19,7 @@ const portfolioItems = [
     overlayColor: "#fee140",
     transform: "skew(15deg) rotate(7deg)",
     height: "42vh",
-    path: "ice-cream",
+    path: "work/ice-cream",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const portfolioItems = [
     overlayColor: "#a1c4fd",
     transform: "skew(-14deg) rotate(-4deg)",
     height: "55vh",
-    path: "bulb",
+    path: "work/bulb",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const portfolioItems = [
     overlayColor: "#e6b980",
     transform: "skew(10deg) rotate(17deg)",
     height: "40vh",
-    path: "gun",
+    path: "work/gun",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const portfolioItems = [
     overlayColor: "grey",
     transform: "skew(-10deg) rotate(7deg)",
     height: "50vh",
-    path: "drinks",
+    path: "work/drinks",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const portfolioItems = [
     overlayColor: "violet",
     transform: "skew(21deg) rotate(2deg)",
     height: "40vh",
-    path: "nice-view",
+    path: "work/nice-view",
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const portfolioItems = [
     overlayColor: "#005bea",
     transform: "skew(26deg) rotate(-4deg)",
     height: "55vh",
-    path: "smartphone",
+    path: "work/smartphone",
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const portfolioItems = [
     overlayColor: "#2e1e5c",
     transform: "skew(-18deg) rotate(-5deg)",
     height: "50vh",
-    path: "informatyk",
+    path: "work/informatyk",
   },
 ];
 
