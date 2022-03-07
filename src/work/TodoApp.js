@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
 const Hero = styled.header`
@@ -29,7 +30,27 @@ const HeroImg = styled.img.attrs((props) => ({
 `;
 
 const Project = styled.main`
-  height: 100vh;
+  padding: 2rem;
+
+  @media ${breakpoint.device.tablet} {
+    padding: 4rem 6rem;
+  }
+
+  @media ${breakpoint.device.desktop} {
+    padding: 4rem 10rem;
+  }
+`;
+
+const Title = styled.h2`
+  font-size: 2rem;
+
+  @media ${breakpoint.device.tablet} {
+    font-size: 2.5rem;
+  }
+
+  @media ${breakpoint.device.desktopXL} {
+    font-size: 4rem;
+  }
 `;
 
 function TodoApp({ offset }) {
@@ -45,7 +66,9 @@ function TodoApp({ offset }) {
         <h2 className="sub-headline">{category}</h2>
       </div> */}
       </Hero>
-      <Project></Project>
+      <Project>
+        <Title>{title}</Title>
+      </Project>
     </>
   );
 }

@@ -28,7 +28,7 @@ const ScrollButton = styled.button`
 
   @media ${breakpoint.device.tablet} {
     bottom: 2rem;
-    right: 2rem;
+    right: 2.5rem;
   }
 `;
 

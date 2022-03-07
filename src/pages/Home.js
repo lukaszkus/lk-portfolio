@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Header from "../components/Header";
 import Portfolio from "../components/Portfolio";
-import Contact from "../components/Contact";
+// import Contact from "../components/Contact";
 
 const Main = styled.main``;
 
@@ -12,7 +12,7 @@ function Home() {
       <Header />
       <Main>
         <Portfolio />
-        <Contact />
+        {/* <Contact /> */}
       </Main>
     </>
   );
