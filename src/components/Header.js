@@ -1,6 +1,8 @@
 import styled, { keyframes } from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
+import chevron from "../assets/chevron.svg";
+
 const HeaderContainer = styled.header`
   height: 100vh;
   position: relative;
@@ -97,7 +99,7 @@ const HeaderTitle = styled.h1`
 
 const HeaderSubtitle = styled.div`
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 `;
 
 const SubtitleWrapper = styled.div``;
@@ -137,25 +139,20 @@ const SubtitleItem = styled.div`
   }
 `;
 
-// const HeaderLink = styled.a`
-//   font-family: "Poppins", sans-serif;
-//   // font-size: 0.9rem;
-//   // font-weight: 300;
-//   position: relative;
-//   color: #6a11cb;
+const HeaderLinkContainer = styled.div``;
 
-//   &:hover {
-//     cursor: pointer;
-//   }
+const HeaderLink = styled.a``;
 
-//   // @media ${breakpoint.device.tablet} {
-//   //   font-size: 1rem;
-//   // }
-
-//   // @media ${breakpoint.device.desktop} {
-//   //   font-size: 1.25rem;
-//   // }
-// `;
+const Arrow = styled.img.attrs({
+  src: `${chevron}`,
+})`
+  width: 35px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(5px);
+  }
+`;
 
 function Header() {
   return (
@@ -176,9 +173,14 @@ function Header() {
             </SubtitleItem>
           </SubtitleWrapper>
         </HeaderSubtitle>
-        {/* <HeaderLink data-aos="fade-up" data-aos-duration="1500">
-          View my work.
-        </HeaderLink> */}
+        <HeaderLinkContainer
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1500">
+          <HeaderLink>
+            <Arrow />
+          </HeaderLink>
+        </HeaderLinkContainer>
       </TitleContainer>
     </HeaderContainer>
   );

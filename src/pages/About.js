@@ -3,13 +3,13 @@ import breakpoint from "../utils/breakpoints";
 // import me from "../assets/me.jpg";
 
 const AboutContainer = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 8rem 2rem 2rem 2rem;
-  display: grid;
+  // display: flex;
 
   @media ${breakpoint.device.tablet} {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     padding: 8rem 4rem 4rem 4rem;
   }
 
@@ -22,6 +22,7 @@ const AboutBox = styled.article`
   width: 100%;
 
   @media ${breakpoint.device.tablet} {
+    width: 50%;
   }
 `;
 
