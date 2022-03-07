@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Topbar from "./components/Topbar";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import ScrollBtn from "./components/ScrollBtn";
 //Work
 import TodoApp from "./work/TodoApp";
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="work/todo-app" element={<TodoApp />} />
       </Routes>
       <Footer />
+      <ScrollBtn />
     </>
   );
 }

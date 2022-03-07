@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-scroll";
 import breakpoint from "../utils/breakpoints";
 
 import chevron from "../assets/chevron.svg";
@@ -141,16 +142,16 @@ const SubtitleItem = styled.div`
 
 const HeaderLinkContainer = styled.div``;
 
-const HeaderLink = styled.a``;
+// const HeaderLink = styled.a``;
 
 const Arrow = styled.img.attrs({
   src: `${chevron}`,
 })`
-  width: 35px;
+  width: 30px;
   transition: 0.3s ease-in-out;
   &:hover {
     cursor: pointer;
-    transform: translateY(5px);
+    transform: translateY(10px);
   }
 `;
 
@@ -177,9 +178,14 @@ function Header() {
           data-aos="fade-up"
           data-aos-duration="500"
           data-aos-delay="1500">
-          <HeaderLink>
+          <Link
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}>
             <Arrow />
-          </HeaderLink>
+          </Link>
         </HeaderLinkContainer>
       </TitleContainer>
     </HeaderContainer>

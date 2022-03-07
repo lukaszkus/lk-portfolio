@@ -3,7 +3,9 @@ import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
-const PContainer = styled.section`
+const PContainer = styled.section.attrs((props) => ({
+  id: props.id,
+}))`
   display: grid;
   gap: 1rem;
   padding: 2rem 2rem;
@@ -87,15 +89,14 @@ const PBoxCat = styled.p`
 
 function Portfolio() {
   return (
-    <PContainer>
+    <PContainer id="portfolio">
       {portfolioItems.map((item) => (
         <PBoxContainer key={item.id} data-aos="fade-up">
           <Link to={item.path}>
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}
-            >
+              height={item.height}>
               <PBoxImg src={item.url} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>
