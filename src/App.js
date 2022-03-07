@@ -17,14 +17,30 @@ import TodoApp from "./work/TodoApp";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [offset, setOffset] = useState(0);
 
+  //Animate On Scroll
   useEffect(() => {
     AOS.init();
   }, []);
 
+  //Menu toggle
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  //Parallax effect
+  useEffect(() => {
+    function handleScroll() {
+      setOffset(window.pageYOffset);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [offset]);
 
   return (
     <>
@@ -33,7 +49,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="work/todo-app" element={<TodoApp />} />
+        <Route path="work/todo-app" element={<TodoApp offset={offset} />} />
       </Routes>
       <Footer />
       <ScrollBtn />
