@@ -3,6 +3,13 @@ const portfolioItems = [
     id: 1,
     title: "Todo App",
     category: "Front-end / Web app",
+    project: {
+      description:
+        "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
+      details:
+        "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
+      technology: ["React.js", "Styled Components", "Firebase", "RWD"],
+    },
     url: "../images/todo.png",
     bgColor: "linear-gradient(45deg, #b721ff 0%, #21d4fd 100%)",
     overlayColor: "#b721ff",

@@ -44,11 +44,10 @@ const PBox = styled.article`
   background: ${(props) => props.bgColor};
   display: flex;
   justify-content: center;
-  // transform: ${(props) => props.transform};
 `;
 
 const PBoxImg = styled.img`
-  max-width: 100%;
+  width: 100%;
   height: auto;
 `;
 
