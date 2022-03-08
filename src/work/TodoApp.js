@@ -77,6 +77,13 @@ const Description = styled.div`
   }
 `;
 
+const ListWrapper = styled.div`
+  @media ${breakpoint.device.tablet} {
+    display: flex;
+    gap: 15%;
+  }
+`;
+
 const List = styled.ul`
   list-style: none;
   font-family: "Poppins", sans-serif;
@@ -85,6 +92,15 @@ const List = styled.ul`
 
   p {
     font-weight: 400;
+  }
+
+  a {
+    color: #000;
+
+    &:hover {
+      // cursor: pointer;
+      color: #6a11cb;
+    }
   }
 
   @media ${breakpoint.device.tablet} {
@@ -117,12 +133,29 @@ function TodoApp({ offset }) {
             <p>{project.details}</p>
           </Description>
 
-          <List>
-            <p>Technology</p>
-            {project.technology.map((item) => (
-              <li>{item}</li>
-            ))}
-          </List>
+          <ListWrapper>
+            <List>
+              <p>My role:</p>
+              {project.role.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </List>
+            <List>
+              <p>Technology used:</p>
+              {project.technology.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </List>
+            <List>
+              <p>Links:</p>
+              <li>
+                <a href={project.links.liveSite}>Live site</a>
+              </li>
+              <li>
+                <a href={project.links.github}>Github</a>
+              </li>
+            </List>
+          </ListWrapper>
         </DescContainer>
       </Project>
     </>
