@@ -11,12 +11,11 @@ const Hero = styled.header`
   position: relative;
   overflow: hidden;
   background-image: ${(props) => props.bgColor};
-  // background-size: cover;
   z-index: -1;
 `;
 
 const HeroImg = styled.img.attrs((props) => ({
-  src: props.url,
+  src: props.cover,
   alt: props.alt,
 }))`
   width: 100%;
@@ -53,10 +52,6 @@ const Heading = styled.div`
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 400;
-
-    @media ${breakpoint.tablet} {
-      font-size: 1.2rem;
-    }
   }
 `;
 
@@ -70,10 +65,6 @@ const Description = styled.div`
     font-size: 1rem;
     font-weight: 300;
     padding: 1rem 0;
-
-    @media ${breakpoint.tablet} {
-      font-size: 1.2rem;
-    }
   }
 `;
 
@@ -98,24 +89,66 @@ const List = styled.ul`
     color: #000;
 
     &:hover {
-      // cursor: pointer;
       color: #6a11cb;
     }
   }
+`;
+
+const Grid = styled.section`
+  display: grid;
+  gap: 2rem;
+  padding: 0 2rem 4rem 2rem;
 
   @media ${breakpoint.tablet} {
-    font-size: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+const GridItem = styled.figure`
+  display: grid;
+  place-items: center;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  figcaption {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 1rem 0;
+  }
+`;
+
+const Animation = styled.section`
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  background: ${(props) => props.overlayColor};
+  @media ${breakpoint.tablet} {
+    padding: 6rem;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    @media ${breakpoint.tablet} {
+      width: 80%;
+    }
+  }
+  figcaption {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
   }
 `;
 
 function TodoApp({ offset }) {
   const item = portfolioItems[0];
-  const { title, category, project, url, bgColor } = item;
+  const { title, category, project, cover, bgColor, overlayColor } = item;
 
   return (
     <>
       <Hero bgColor={bgColor}>
-        <HeroImg offset={offset} url={url} alt={`${title} - ${category}`} />
+        <HeroImg offset={offset} cover={cover} alt={`${title} - ${category}`} />
         {/* <div className="text-wrapper">
         <h1 className="headline">{title}</h1>
         <h2 className="sub-headline">{category}</h2>
@@ -158,6 +191,20 @@ function TodoApp({ offset }) {
           </ListWrapper>
         </DescContainer>
       </Project>
+      <Grid>
+        <GridItem>
+          <img src="../images/todo/light-mode.png" alt="Todo App light mode" />
+          <figcaption>Todo App light mode</figcaption>
+        </GridItem>
+        <GridItem>
+          <img src="../images/todo/dark-mode.png" alt="Todo App dark mode" />
+          <figcaption>Todo App dark mode</figcaption>
+        </GridItem>
+      </Grid>
+      <Animation overlayColor={overlayColor}>
+        <figcaption>Create Read Update Delete operations</figcaption>
+        <img src="../images/todo/todo-animation.gif" alt="Todo App in action" />
+      </Animation>
     </>
   );
 }

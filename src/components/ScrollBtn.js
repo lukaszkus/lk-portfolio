@@ -15,20 +15,22 @@ to {
 const ScrollButton = styled.button`
   position: fixed;
   bottom: 2rem;
-  right: 1.5rem;
+  right: 1.2rem;
+  padding: 5px;
   background: none;
   border: none;
   animation: ${fadeIn} 700ms ease-in-out 0.2s both;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   transform: rotate(180deg);
+  z-index: 1000;
   &:hover {
-    transform: rotate(180deg) translateY(10px);
+    transform: rotate(180deg) scale(1.1);
   }
 
   @media ${breakpoint.tablet} {
     bottom: 2rem;
-    right: 2.5rem;
+    right: 2.2rem;
   }
 `;
 

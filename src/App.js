@@ -45,6 +45,7 @@ function App() {
 
   return (
     <>
+      <ScrollBtn />
       {isOpen && <Menu isOpen={isOpen} toggle={toggle} />}
       <Topbar isOpen={isOpen} toggle={toggle} />
       <Routes>
@@ -54,7 +55,6 @@ function App() {
       </Routes>
       <Contact />
       <Footer />
-      <ScrollBtn />
     </>
   );
 }

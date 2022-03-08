@@ -12,7 +12,6 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   overflow: hidden;
 `;
 
@@ -142,16 +141,16 @@ const SubtitleItem = styled.div`
 
 const HeaderLinkContainer = styled.div``;
 
-// const HeaderLink = styled.a``;
-
 const Arrow = styled.img.attrs({
   src: `${chevron}`,
 })`
   width: 30px;
   transition: 0.3s ease-in-out;
+  position: relative;
+  z-indx: 1000;
   &:hover {
     cursor: pointer;
-    transform: translateY(10px);
+    transform: scale(1.1);
   }
 `;
 

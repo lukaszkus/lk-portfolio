@@ -97,7 +97,7 @@ function Portfolio() {
               transform={item.transform}
               height={item.height}
             >
-              <PBoxImg src={item.url} alt={item.title}></PBoxImg>
+              <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>
                   <PBoxTitle>{item.title}</PBoxTitle>
