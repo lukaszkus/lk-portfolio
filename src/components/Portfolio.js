@@ -12,17 +12,17 @@ const PContainer = styled.section.attrs((props) => ({
   overflow: hidden;
   margin-bottom: 2rem;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
     grid-template-columns: repeat(3, 1fr);
     padding: 4rem 6rem;
   }
 
-  @media ${breakpoint.device.desktopXL} {
+  @media ${breakpoint.desktopXL} {
     gap: 2rem;
   }
 `;
@@ -95,7 +95,8 @@ function Portfolio() {
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}>
+              height={item.height}
+            >
               <PBoxImg src={item.url} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>

@@ -23,13 +23,13 @@ const CBox = styled.div`
     background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
     transform: skew(21deg) rotate(2deg);
 
-    @media ${breakpoint.device.tablet} {
+    @media ${breakpoint.tablet} {
       width: 90%;
       height: 90%;
     }
   }
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     height: 100vh;
   }
 `;
@@ -41,7 +41,7 @@ const CTitle = styled.h2`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     font-size: 3rem;
   }
 `;

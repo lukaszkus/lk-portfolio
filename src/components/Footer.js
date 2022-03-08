@@ -11,11 +11,11 @@ const FContainer = styled.footer`
   padding: 2rem;
   display: flex;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     padding: 4rem;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
     padding: 6rem;
   }
 `;
@@ -25,13 +25,13 @@ const FBoxContainer = styled.div`
   border-top: 1px solid #6a11cb;
   padding: 2rem 0;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     display: flex;
     // justify-content: space-between;
     gap: 4rem;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
   }
 `;
 
@@ -56,7 +56,7 @@ const FLink = styled.a.attrs((props) => ({
   &:first-child {
     padding-right: 20px;
 
-    @media ${breakpoint.device.tablet} {
+    @media ${breakpoint.tablet} {
       padding-right: 15px;
     }
   }

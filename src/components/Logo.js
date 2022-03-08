@@ -12,7 +12,7 @@ const LogoDark = styled.img.attrs({
 })`
   height: 22px;
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
     height: 30px;
   }
 `;

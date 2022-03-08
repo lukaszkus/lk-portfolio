@@ -8,12 +8,12 @@ const AboutContainer = styled.section`
   padding: 8rem 2rem 2rem 2rem;
   // display: flex;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     display: flex;
     padding: 8rem 4rem 4rem 4rem;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
     padding: 8rem 6rem 4rem 6rem;
   }
 `;
@@ -21,7 +21,7 @@ const AboutContainer = styled.section`
 const AboutBox = styled.article`
   width: 100%;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     width: 50%;
   }
 `;
@@ -46,7 +46,7 @@ const AboutText = styled.p`
   padding: 2rem 0;
   color: #6a11cb;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     border-top: 1px solid #6a11cb;
   }
 `;

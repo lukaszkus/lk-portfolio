@@ -40,11 +40,11 @@ const Heading = styled.div`
     font-size: 2rem;
     padding: 2rem 0;
 
-    @media ${breakpoint.device.tablet} {
+    @media ${breakpoint.tablet} {
       font-size: 2.5rem;
     }
 
-    @media ${breakpoint.device.desktopXL} {
+    @media ${breakpoint.desktopXL} {
       font-size: 4rem;
     }
   }
@@ -54,7 +54,7 @@ const Heading = styled.div`
     font-size: 1rem;
     font-weight: 400;
 
-    @media ${breakpoint.device.tablet} {
+    @media ${breakpoint.tablet} {
       font-size: 1.2rem;
     }
   }
@@ -71,14 +71,14 @@ const Description = styled.div`
     font-weight: 300;
     padding: 1rem 0;
 
-    @media ${breakpoint.device.tablet} {
+    @media ${breakpoint.tablet} {
       font-size: 1.2rem;
     }
   }
 `;
 
 const ListWrapper = styled.div`
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     display: flex;
     gap: 15%;
   }
@@ -103,7 +103,7 @@ const List = styled.ul`
     }
   }
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     font-size: 1.2rem;
   }
 `;

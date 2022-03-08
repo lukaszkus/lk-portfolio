@@ -19,7 +19,7 @@ const HeaderContainer = styled.header`
 const TitleContainer = styled.div`
   padding-top: 2rem;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     padding-top: 4rem;
   }
 `;
@@ -56,7 +56,7 @@ const A = styled.div`
   filter: blur(5px);
   animation: ${rotateA} 20s infinite alternate;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     left: 20%;
   }
 `;
@@ -73,7 +73,7 @@ const B = styled.div`
   filter: blur(15px);
   animation: ${rotateB} 30s infinite alternate;
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
     width: 320px;
     height: 246px;
   }
@@ -88,12 +88,12 @@ const HeaderTitle = styled.h1`
   position: relative;
   margin-bottom: 5px;
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     font-size: 4.5rem;
     margin-bottom: 20px;
   }
 
-  @media ${breakpoint.device.desktopXL} {
+  @media ${breakpoint.desktopXL} {
     font-size: 6.5rem;
   }
 `;
@@ -130,12 +130,12 @@ const SubtitleItem = styled.div`
     background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
   }
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     font-size: 3rem;
     margin-bottom: 10px;
   }
 
-  @media ${breakpoint.device.desktopXL} {
+  @media ${breakpoint.desktopXL} {
     font-size: 4rem;
   }
 `;
@@ -177,13 +177,15 @@ function Header() {
         <HeaderLinkContainer
           data-aos="fade-up"
           data-aos-duration="500"
-          data-aos-delay="1500">
+          data-aos-delay="1500"
+        >
           <Link
             to="portfolio"
             spy={true}
             smooth={true}
             offset={-80}
-            duration={500}>
+            duration={500}
+          >
             <Arrow />
           </Link>
         </HeaderLinkContainer>

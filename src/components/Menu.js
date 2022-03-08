@@ -19,12 +19,12 @@ const MenuContainer = styled.nav`
     text-decoration: none;
   }
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     justify-content: center;
     font-size: 3.5rem;
   }
 
-  @media ${breakpoint.device.desktop} {
+  @media ${breakpoint.desktop} {
     font-size: 4.5rem;
   }
 `;

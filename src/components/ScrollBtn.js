@@ -26,7 +26,7 @@ const ScrollButton = styled.button`
     transform: rotate(180deg) translateY(10px);
   }
 
-  @media ${breakpoint.device.tablet} {
+  @media ${breakpoint.tablet} {
     bottom: 2rem;
     right: 2.5rem;
   }
