@@ -28,7 +28,7 @@ const HeroImg = styled.img.attrs((props) => ({
 `;
 
 const Project = styled.main`
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 4rem 2rem;
 `;

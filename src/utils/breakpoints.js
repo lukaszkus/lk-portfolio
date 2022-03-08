@@ -10,4 +10,4 @@ const device = {
   desktopXL: `(min-width: ${size.desktopXL})`,
 };
 
-export default { size, device };
+export { size, device as default };
