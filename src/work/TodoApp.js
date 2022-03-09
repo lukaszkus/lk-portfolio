@@ -1,7 +1,9 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
+import chevron from "../assets/chevron.svg";
 import icon from "../assets/mobile-first.svg";
 
 const Hero = styled.header`
@@ -13,7 +15,7 @@ const Hero = styled.header`
   position: relative;
   overflow: hidden;
   background-image: ${(props) => props.bgColor};
-  z-index: -1;
+  // z-index: -1;
 `;
 
 const HeroImg = styled.img.attrs((props) => ({
@@ -24,11 +26,29 @@ const HeroImg = styled.img.attrs((props) => ({
   height: 100%;
   display: block;
   object-fit: contain;
-  z-index: -1;
+  // z-index: 1;
   transform: translateY(${(props) => props.offset / 4}px);
 `;
 
-const Section = styled.section`
+const Arrow = styled.img.attrs({
+  src: `${chevron}`,
+})`
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - (30px / 2));
+  // transform: translate(-50%);
+  width: 30px;
+  transition: 0.3s ease-in-out;
+  z-indx: 9999;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+`;
+
+const Section = styled.section.attrs((props) => ({
+  id: props.id,
+}))`
   padding: 4rem 2rem;
   background-image: ${(props) => (props.bgColor ? props.bgColor : null)};
 
@@ -56,9 +76,8 @@ const Heading = styled.div`
     }
   }
 
-  p {
+  h3 {
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
     font-weight: 400;
   }
 `;
@@ -139,13 +158,12 @@ const TextItem = styled.article`
   color: #fff;
   padding: 1rem 0;
   line-height: 1.8;
+  font-family: "Poppins", sans-serif;
 
   h3 {
-    // font-size: 1rem;
     font-weight: 400;
   }
   p {
-    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 300;
     padding: 1rem 0;
@@ -161,9 +179,13 @@ const Icon = styled.img.attrs((props) => ({
   src: props.icon,
   alt: props.alt,
 }))`
-  width: 80%;
+  width: 100%;
   height: auto;
   padding-top: 1rem;
+
+  @media ${breakpoint.tablet} {
+    width: 80%;
+  }
 `;
 
 function TodoApp({ offset }) {
@@ -174,13 +196,22 @@ function TodoApp({ offset }) {
     <>
       <Hero bgColor={bgColor}>
         <HeroImg offset={offset} cover={cover} alt={`${title} - ${category}`} />
+        <Link
+          to="section"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+        >
+          <Arrow />
+        </Link>
       </Hero>
 
-      <Section>
+      <Section id="section">
         <Container>
           <Heading data-aos="fade-up">
             <h2>{title}</h2>
-            <p>{category}</p>
+            <h3>{category}</h3>
           </Heading>
 
           <Description>

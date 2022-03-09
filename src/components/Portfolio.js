@@ -70,7 +70,6 @@ const PBoxOverlay = styled.div`
 
 const PBoxText = styled.div`
   color: white;
-  font-size: 20px;
   position: absolute;
   top: 0;
   left: 0;
@@ -78,12 +77,16 @@ const PBoxText = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-size: 1.2rem;
 `;
 
-const PBoxTitle = styled.h2``;
+const PBoxTitle = styled.h2`
+  padding: 5px;
+`;
 
 const PBoxCat = styled.p`
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
 `;
 
 function Portfolio() {
