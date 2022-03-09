@@ -10,7 +10,7 @@ import About from "./pages/About";
 //Components
 import Topbar from "./components/Topbar";
 import Menu from "./components/Menu";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 //Work
@@ -53,7 +53,6 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="work/todo-app" element={<TodoApp offset={offset} />} />
       </Routes>
-      <Contact />
       <Footer />
     </>
   );
