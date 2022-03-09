@@ -2,6 +2,8 @@ import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
+import icon from "../assets/mobile-first.svg";
+
 const Hero = styled.header`
   width: 100%;
   height: 100vh;
@@ -26,9 +28,13 @@ const HeroImg = styled.img.attrs((props) => ({
   transform: translateY(${(props) => props.offset / 4}px);
 `;
 
-const FullWidth = styled.section`
+const Section = styled.section`
   padding: 4rem 2rem;
   background-image: ${(props) => (props.bgColor ? props.bgColor : null)};
+
+  &:first-of-type {
+    padding-bottom: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -57,42 +63,41 @@ const Heading = styled.div`
   }
 `;
 
-const DescContainer = styled.div`
-  line-height: 1.8;
-`;
-
 const Description = styled.div`
-  p {
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    padding: 1rem 0;
+  line-height: 1.8;
+  div {
+    p {
+      font-family: "Poppins", sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      padding: 1rem 0;
+    }
   }
 `;
 
-const ListWrapper = styled.div`
+const List = styled.div`
+  ul {
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    padding: 1rem 0;
+
+    p {
+      font-weight: 400;
+    }
+
+    a {
+      color: #000;
+
+      &:hover {
+        color: #6a11cb;
+      }
+    }
+  }
+
   @media ${breakpoint.tablet} {
     display: flex;
     gap: 15%;
-  }
-`;
-
-const List = styled.ul`
-  list-style: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  padding: 1rem 0;
-
-  p {
-    font-weight: 400;
-  }
-
-  a {
-    color: #000;
-
-    &:hover {
-      color: #6a11cb;
-    }
   }
 `;
 
@@ -111,7 +116,7 @@ const Grid = styled.div`
   }
 `;
 
-const GridItem = styled.figure`
+const ImageItem = styled.figure`
   display: grid;
   place-items: center;
   img {
@@ -128,22 +133,20 @@ const GridItem = styled.figure`
 `;
 
 const TextItem = styled.article`
-  font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: #c3cfe2;
+  color: #fff;
   padding: 1rem 0;
   line-height: 1.8;
-  text-align: center;
 
   h3 {
-    font-size: 1rem;
+    // font-size: 1rem;
     font-weight: 400;
   }
   p {
     font-family: "Poppins", sans-serif;
+    font-size: 1rem;
     font-weight: 300;
     padding: 1rem 0;
   }
@@ -152,6 +155,15 @@ const TextItem = styled.article`
     align-items: flex-start;
     text-align: left;
   }
+`;
+
+const Icon = styled.img.attrs((props) => ({
+  src: props.icon,
+  alt: props.alt,
+}))`
+  width: 80%;
+  height: auto;
+  padding-top: 1rem;
 `;
 
 function TodoApp({ offset }) {
@@ -164,33 +176,33 @@ function TodoApp({ offset }) {
         <HeroImg offset={offset} cover={cover} alt={`${title} - ${category}`} />
       </Hero>
 
-      <FullWidth>
+      <Section>
         <Container>
           <Heading data-aos="fade-up">
             <h2>{title}</h2>
             <p>{category}</p>
           </Heading>
 
-          <DescContainer>
-            <Description data-aos="fade-up">
+          <Description>
+            <div data-aos="fade-up">
               <p>{project.description}</p>
               <p>{project.details}</p>
-            </Description>
+            </div>
 
-            <ListWrapper>
-              <List data-aos="fade-up">
+            <List>
+              <ul data-aos="fade-up">
                 <p>My role:</p>
                 {project.role.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
-              </List>
-              <List data-aos="fade-up">
+              </ul>
+              <ul data-aos="fade-up">
                 <p>Technology used:</p>
                 {project.technology.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
-              </List>
-              <List data-aos="fade-up">
+              </ul>
+              <ul data-aos="fade-up">
                 <p>Links:</p>
                 <li>
                   <a href={project.links.liveSite}>Live site</a>
@@ -198,29 +210,29 @@ function TodoApp({ offset }) {
                 <li>
                   <a href={project.links.github}>Github</a>
                 </li>
-              </List>
-            </ListWrapper>
-          </DescContainer>
+              </ul>
+            </List>
+          </Description>
         </Container>
-      </FullWidth>
+      </Section>
 
-      <FullWidth>
+      <Section>
         <Grid>
-          <GridItem data-aos="fade-up">
+          <ImageItem data-aos="fade-up">
             <img
               src="../images/todo/light-mode.png"
               alt="Todo App light mode"
             />
             <figcaption>Todo App light mode</figcaption>
-          </GridItem>
-          <GridItem data-aos="fade-up">
+          </ImageItem>
+          <ImageItem data-aos="fade-up">
             <img src="../images/todo/dark-mode.png" alt="Todo App dark mode" />
             <figcaption>Todo App dark mode</figcaption>
-          </GridItem>
+          </ImageItem>
         </Grid>
-      </FullWidth>
+      </Section>
 
-      <FullWidth bgColor={bgColor} data-aos="fade-up">
+      <Section bgColor={bgColor} data-aos="fade-up">
         <Container>
           <Grid>
             <TextItem data-aos="fade-up">
@@ -230,16 +242,17 @@ function TodoApp({ offset }) {
                 (Responisve Web Design) method that enables web to fit the
                 screens of different devices automatically.
               </p>
+              <Icon icon={icon} alt="Mobile first" />
             </TextItem>
-            <GridItem data-aos="fade-up">
+            <ImageItem data-aos="fade-up">
               <img
                 src="../images/todo/todo-mobile.png"
                 alt="Todo App mobile screen"
               />
-            </GridItem>
+            </ImageItem>
           </Grid>
         </Container>
-      </FullWidth>
+      </Section>
     </>
   );
 }
