@@ -35,8 +35,9 @@ const PBoxContainer = styled.div`
 `;
 
 const PBox = styled.article`
-  height: ${(props) => props.height};
-  // height: 50vh;
+  // max-height: ${(props) => props.height};
+  object-fit: cover;
+  max-height: 50vh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -98,8 +99,7 @@ function Portfolio() {
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}
-            >
+              height={item.height}>
               <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>

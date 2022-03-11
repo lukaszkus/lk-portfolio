@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 //Work
 import TodoApp from "./work/TodoApp";
+import WildnSlow from "./work/WildnSlow";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="work/todo-app" element={<TodoApp offset={offset} />} />
+        <Route
+          path="work/wild-n-slow"
+          element={<WildnSlow offset={offset} />}
+        />
       </Routes>
       <Footer />
     </>
