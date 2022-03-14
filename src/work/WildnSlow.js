@@ -201,7 +201,8 @@ function WildnSlow({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}>
+          duration={500}
+        >
           <Arrow />
         </Link>
       </Hero>

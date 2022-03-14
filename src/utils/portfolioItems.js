@@ -48,9 +48,9 @@ const portfolioItems = [
         github: "https://github.com/lukaszkus/todo-app",
       },
     },
-    cover: "../images/wns/wns-cover.jpg",
-    bgColor: "linear-gradient(45deg, #b721ff 0%, #21d4fd 100%)",
-    overlayColor: "#b721ff",
+    cover: "../images/wns/wns-cover.png",
+    bgColor: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
+    overlayColor: "#4158D0",
     path: "work/wild-n-slow",
   },
   {
