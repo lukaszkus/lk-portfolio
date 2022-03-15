@@ -5,7 +5,7 @@ import breakpoint from "../utils/breakpoints";
 import darkLogo from "../assets/ksu.svg";
 import lightLogo from "../assets/ksu-light.svg";
 
-const LogoContainer = styled.div``;
+// const LogoContainer = styled.div``;
 
 const LogoDark = styled.img.attrs({
   src: `${darkLogo}`,
@@ -24,7 +24,8 @@ const LogoLight = styled(LogoDark).attrs({
 function Logo({ isOpen }) {
   return (
     <Link to="/">
-      <LogoContainer>{isOpen ? <LogoLight /> : <LogoDark />}</LogoContainer>
+      {/* <LogoContainer>{isOpen ? <LogoLight /> : <LogoDark />}</LogoContainer> */}
+      <LogoLight />
     </Link>
   );
 }

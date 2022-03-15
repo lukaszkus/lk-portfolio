@@ -49,8 +49,8 @@ const portfolioItems = [
       },
     },
     cover: "../images/wns/wns-cover.png",
-    bgColor: "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)",
-    overlayColor: "#4158D0",
+    bgColor: "linear-gradient(45deg, #0235a8 0%, #26d5c9 100%)",
+    overlayColor: "#26d5c9",
     path: "work/wild-n-slow",
   },
   {

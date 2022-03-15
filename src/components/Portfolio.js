@@ -7,7 +7,7 @@ const PContainer = styled.section.attrs((props) => ({
   id: props.id,
 }))`
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem 2rem;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -99,8 +99,7 @@ function Portfolio() {
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}
-            >
+              height={item.height}>
               <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>
