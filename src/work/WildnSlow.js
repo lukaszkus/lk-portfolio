@@ -4,7 +4,7 @@ import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
 import chevron from "../assets/chevron.svg";
-import icon from "../assets/mobile-first.svg";
+// import icon from "../assets/mobile-first.svg";
 
 const Hero = styled.header`
   width: 100%;
@@ -175,18 +175,18 @@ const TextItem = styled.article`
   }
 `;
 
-const Icon = styled.img.attrs((props) => ({
-  src: props.icon,
-  alt: props.alt,
-}))`
-  width: 100%;
-  height: auto;
-  padding-top: 1rem;
+// const Icon = styled.img.attrs((props) => ({
+//   src: props.icon,
+//   alt: props.alt,
+// }))`
+//   width: 100%;
+//   height: auto;
+//   padding-top: 1rem;
 
-  @media ${breakpoint.tablet} {
-    width: 80%;
-  }
-`;
+//   @media ${breakpoint.tablet} {
+//     width: 80%;
+//   }
+// `;
 
 function WildnSlow({ offset }) {
   const item = portfolioItems[1];
@@ -227,21 +227,6 @@ function WildnSlow({ offset }) {
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-              <ul data-aos="fade-up">
-                <p>Technology used:</p>
-                {project.technology.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-              <ul data-aos="fade-up">
-                <p>Links:</p>
-                <li>
-                  <a href={project.links.liveSite}>Live site</a>
-                </li>
-                <li>
-                  <a href={project.links.github}>Github</a>
-                </li>
-              </ul>
             </List>
           </Description>
         </Container>
@@ -250,15 +235,12 @@ function WildnSlow({ offset }) {
       <Section>
         <Grid>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/todo/light-mode.png"
-              alt="Todo App light mode"
-            />
-            <figcaption>Todo App light mode</figcaption>
+            <img src="../images/wns/wns-tag.jpg" alt="Label" />
+            <figcaption>Label</figcaption>
           </ImageItem>
           <ImageItem data-aos="fade-up">
-            <img src="../images/todo/dark-mode.png" alt="Todo App dark mode" />
-            <figcaption>Todo App dark mode</figcaption>
+            <img src="../images/wns/wns-box.jpg" alt="Bos sticker" />
+            <figcaption>Box sticker</figcaption>
           </ImageItem>
         </Grid>
       </Section>
@@ -267,21 +249,17 @@ function WildnSlow({ offset }) {
         <Container>
           <Grid>
             <TextItem data-aos="fade-up">
-              <h3>Mobile screens</h3>
+              <h3>Badges</h3>
               <p>
                 The application is built with the Mobile First approach and RWD
                 (Responisve Web Design) method that enables web to fit the
                 screens of different devices automatically.
               </p>
-              <Icon icon={icon} alt="Mobile first" />
             </TextItem>
-            <ImageItem data-aos="fade-up">
-              <img
-                src="../images/todo/todo-mobile.png"
-                alt="Todo App mobile screen"
-              />
-            </ImageItem>
           </Grid>
+          <ImageItem data-aos="fade-up">
+            <img src="../images/wns/wns-badges.png" alt="Badges" />
+          </ImageItem>
         </Container>
       </Section>
     </>

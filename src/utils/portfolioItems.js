@@ -42,11 +42,7 @@ const portfolioItems = [
         "RWD - Responsive Web Design",
         "Mobile first approach",
       ],
-      role: ["Web development"],
-      links: {
-        liveSite: "https://todo-fm.netlify.app/",
-        github: "https://github.com/lukaszkus/todo-app",
-      },
+      role: ["Branding & identity", "Marketing design", "Photography"],
     },
     cover: "../images/wns/wns-cover.png",
     bgColor: "linear-gradient(45deg, #0235a8 0%, #26d5c9 100%)",
