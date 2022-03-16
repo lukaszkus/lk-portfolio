@@ -16,6 +16,7 @@ import ScrollBtn from "./components/ScrollBtn";
 //Work
 import TodoApp from "./work/TodoApp";
 import WildnSlow from "./work/WildnSlow";
+import FrontendMentor from "./work/FrontendMentor";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,6 +57,10 @@ function App() {
         <Route
           path="work/wild-n-slow"
           element={<WildnSlow offset={offset} />}
+        />
+        <Route
+          path="work/fm-solutions"
+          element={<FrontendMentor offset={offset} />}
         />
       </Routes>
       <Footer />

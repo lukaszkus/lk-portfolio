@@ -50,6 +50,32 @@ const portfolioItems = [
     path: "work/wild-n-slow",
   },
   {
+    id: 10,
+    title: "Frontend Mentor - Solutions",
+    category: "Front-end / Misc",
+    project: {
+      description:
+        "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
+      details:
+        "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
+      technology: [
+        "JavaScript ES6",
+        "Sass",
+        "RWD - Responsive Web Design",
+        "Mobile first approach",
+      ],
+      role: ["Web development"],
+      links: {
+        liveSite: "https://todo-fm.netlify.app/",
+        github: "https://github.com/lukaszkus/todo-app",
+      },
+    },
+    cover: "../images/fm/fm-cover.png",
+    bgColor: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+    overlayColor: "#c5c9cc",
+    path: "work/fm-solutions",
+  },
+  {
     id: 2,
     title: "Ice Cream",
     category: "Graphic design",

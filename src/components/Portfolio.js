@@ -72,6 +72,8 @@ const PBoxOverlay = styled.div`
 const PBoxText = styled.div`
   color: white;
   position: absolute;
+  width: 100%;
+  height: auto;
   top: 0;
   left: 0;
   top: 50%;
@@ -99,7 +101,8 @@ function Portfolio() {
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}>
+              height={item.height}
+            >
               <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>
