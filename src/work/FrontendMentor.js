@@ -35,7 +35,6 @@ const Arrow = styled.img.attrs({
   position: absolute;
   bottom: 30px;
   left: calc(50% - (30px / 2));
-  // transform: translate(-50%);
   width: 30px;
   transition: 0.3s ease-in-out;
   z-indx: 9999;
@@ -122,15 +121,15 @@ const List = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  gap: 2rem;
+  // gap: 2rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    // gap: 2rem;
   }
 
   @media ${breakpoint.desktop} {
-    gap: 4rem;
+    // gap: 4rem;
     // padding: 2rem 0;
   }
 `;
@@ -141,7 +140,6 @@ const ImageItem = styled.figure`
   img {
     width: 100%;
     height: auto;
-    // filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
   }
   figcaption {
     font-family: "Poppins", sans-serif;
@@ -149,32 +147,44 @@ const ImageItem = styled.figure`
     font-weight: 300;
     padding: 1rem 0;
   }
+
+  @media ${breakpoint.tablet} {
+    padding-inline: 2rem;
+  }
+
+  @media ${breakpoint.desktop} {
+    padding-inline: 4rem;
+  }
 `;
 
 const TextItem = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: ${(props) => (props.color ? props.color : "#000")};
   padding: 1rem 0;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
 
-  ul {
-    list-style: none;
-  }
-
-  h3,
-  ul {
+  h3 {
     font-weight: 400;
   }
-  p,
-  li {
+
+  p {
     font-size: 1rem;
     font-weight: 300;
-  }
-  p {
     padding: 1rem 0;
+  }
+
+  ul {
+    list-style: none;
+    font-weight: 400;
+    padding-bottom: 2rem;
+  }
+
+  li {
+    font-size: 0.875rem;
+    font-weight: 300;
   }
 
   @media ${breakpoint.tablet} {
@@ -185,6 +195,29 @@ const TextItem = styled.article`
 
   @media ${breakpoint.desktop} {
     padding-inline: 4rem;
+  }
+`;
+
+const BtnContainer = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+const Btn = styled.a.attrs((props) => ({
+  href: props.href,
+}))`
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => props.bgColor};
+    background-color: #000;
   }
 `;
 
@@ -201,7 +234,8 @@ function FrontendMentor({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}>
+          duration={500}
+        >
           <Arrow />
         </Link>
       </Hero>
@@ -270,6 +304,20 @@ function FrontendMentor({ offset }) {
               <li>Flexbox</li>
               <li>Mobile first approach</li>
             </ul>
+            <BtnContainer>
+              <Btn
+                href="https://lukaszkus.github.io/base-apparel-coming-soon/"
+                bgColor="#edd3d3"
+              >
+                View live site
+              </Btn>
+              <Btn
+                href="https://github.com/lukaszkus/base-apparel-coming-soon"
+                bgColor="#edd3d3"
+              >
+                View code
+              </Btn>
+            </BtnContainer>
           </TextItem>
         </Grid>
       </Section>
@@ -277,7 +325,7 @@ function FrontendMentor({ offset }) {
       <Section data-aos="fade-up">
         <Grid>
           <TextItem data-aos="fade-up">
-            <h3>Easybank landingpPage</h3>
+            <h3>Easybank landing page</h3>
             <p>
               The application is built with the Mobile First approach and RWD
               (Responisve Web Design) method that enables web to fit the screens
@@ -301,7 +349,7 @@ function FrontendMentor({ offset }) {
               alt="Social media dashboard"
             />
           </ImageItem>
-          <TextItem data-aos="fade-up">
+          <TextItem color="#fff" data-aos="fade-up">
             <h3>Social media dashboard</h3>
             <p>
               The application is built with the Mobile First approach and RWD
@@ -352,7 +400,7 @@ function FrontendMentor({ offset }) {
 
       <Section bgColor="#7d82e4" data-aos="fade-up">
         <Grid>
-          <TextItem data-aos="fade-up">
+          <TextItem color="#fff" data-aos="fade-up">
             <h3>Pricing component</h3>
             <p>
               The application is built with the Mobile First approach and RWD
@@ -390,7 +438,7 @@ function FrontendMentor({ offset }) {
 
       <Section bgColor="#559ca1" data-aos="fade-up">
         <Grid>
-          <TextItem data-aos="fade-up">
+          <TextItem color="#fff" data-aos="fade-up">
             <h3>3 column component</h3>
             <p>
               The application is built with the Mobile First approach and RWD
