@@ -160,12 +160,20 @@ const TextItem = styled.article`
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
 
-  h3 {
+  ul {
+    list-style: none;
+  }
+
+  h3,
+  ul {
     font-weight: 400;
   }
-  p {
+  p,
+  li {
     font-size: 1rem;
     font-weight: 300;
+  }
+  p {
     padding: 1rem 0;
   }
 
@@ -240,16 +248,28 @@ function FrontendMentor({ offset }) {
           <ImageItem data-aos="fade-up">
             <img
               src="../images/fm/fm-base-apparel.png"
-              alt="Base Apparel landing page"
+              alt="Base Apparel comming soon page"
             />
           </ImageItem>
           <TextItem data-aos="fade-up">
-            <h3>Base Apparel landing page</h3>
+            <h3>Base Apparel comming soon page</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              A great project to practice responsive layout building and simple
+              form validation.
+              <br />
+              Users should be able to view the optimal layout depending on their
+              device's screen size, see hover states for all interactive
+              elements, receive an error message when the form is submitted.
             </p>
+            <ul>
+              Build with:
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>Vanilla JS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>Mobile first approach</li>
+            </ul>
           </TextItem>
         </Grid>
       </Section>
@@ -295,17 +315,17 @@ function FrontendMentor({ offset }) {
       <Section bgColor="#b2c1eb" data-aos="fade-up">
         <Grid>
           <TextItem data-aos="fade-up">
-            <h3>Order component</h3>
+            <h3>Order summary component</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              It is a simple component build to practice layout skills.
+              <br /> Users should be able to see hover states for interactive
+              elements.
             </p>
           </TextItem>
           <ImageItem data-aos="fade-up">
             <img
               src="../images/fm/fm-order-component.png"
-              alt="Order component"
+              alt="Order summary component"
             />
           </ImageItem>
         </Grid>
