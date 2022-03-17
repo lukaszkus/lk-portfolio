@@ -66,13 +66,12 @@ const portfolioItems = [
       ],
       role: ["Web development"],
       links: {
-        liveSite: "https://todo-fm.netlify.app/",
         github: "https://github.com/lukaszkus/todo-app",
       },
     },
     cover: "../images/fm/fm-cover.png",
-    bgColor: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
-    overlayColor: "#c5c9cc",
+    bgColor: "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)",
+    overlayColor: "#8ec5fc",
     path: "work/fm-solutions",
   },
   {

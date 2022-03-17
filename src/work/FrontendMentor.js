@@ -4,7 +4,6 @@ import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
 import chevron from "../assets/chevron.svg";
-import icon from "../assets/mobile-first.svg";
 
 const Hero = styled.header`
   width: 100%;
@@ -51,10 +50,11 @@ const Section = styled.section.attrs((props) => ({
 }))`
   padding: 4rem 2rem;
   background-image: ${(props) => (props.bgColor ? props.bgColor : null)};
+  background-color: ${(props) => (props.bgColor ? props.bgColor : null)};
 
-  &:first-of-type {
-    padding-bottom: 0;
-  }
+  // &:first-of-type {
+  //   padding-bottom: 0;
+  // }
 `;
 
 const Container = styled.div`
@@ -172,19 +172,11 @@ const TextItem = styled.article`
   @media ${breakpoint.tablet} {
     align-items: flex-start;
     text-align: left;
+    padding-inline: 2rem;
   }
-`;
 
-const Icon = styled.img.attrs((props) => ({
-  src: props.icon,
-  alt: props.alt,
-}))`
-  width: 100%;
-  height: auto;
-  padding-top: 1rem;
-
-  @media ${breakpoint.tablet} {
-    width: 80%;
+  @media ${breakpoint.desktop} {
+    padding-inline: 4rem;
   }
 `;
 
@@ -201,8 +193,7 @@ function FrontendMentor({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>
@@ -236,9 +227,6 @@ function FrontendMentor({ offset }) {
               <ul data-aos="fade-up">
                 <p>Links:</p>
                 <li>
-                  <a href={project.links.liveSite}>Live site</a>
-                </li>
-                <li>
                   <a href={project.links.github}>Github</a>
                 </li>
               </ul>
@@ -247,42 +235,156 @@ function FrontendMentor({ offset }) {
         </Container>
       </Section>
 
-      <Section>
+      <Section bgColor="#edd3d3" data-aos="fade-up">
         <Grid>
           <ImageItem data-aos="fade-up">
             <img
-              src="../images/todo/light-mode.png"
-              alt="Todo App light mode"
+              src="../images/fm/fm-base-apparel.png"
+              alt="Base Apparel landing page"
             />
-            <figcaption>Todo App light mode</figcaption>
           </ImageItem>
+          <TextItem data-aos="fade-up">
+            <h3>Base Apparel landing page</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+        </Grid>
+      </Section>
+
+      <Section data-aos="fade-up">
+        <Grid>
+          <TextItem data-aos="fade-up">
+            <h3>Easybank landingpPage</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
           <ImageItem data-aos="fade-up">
-            <img src="../images/todo/dark-mode.png" alt="Todo App dark mode" />
-            <figcaption>Todo App dark mode</figcaption>
+            <img
+              src="../images/fm/fm-easybank-landing.png"
+              alt="Easybank landing page"
+            />
           </ImageItem>
         </Grid>
       </Section>
 
-      <Section bgColor={bgColor} data-aos="fade-up">
-        <Container>
-          <Grid>
-            <TextItem data-aos="fade-up">
-              <h3>Mobile screens</h3>
-              <p>
-                The application is built with the Mobile First approach and RWD
-                (Responisve Web Design) method that enables web to fit the
-                screens of different devices automatically.
-              </p>
-              <Icon icon={icon} alt="Mobile first" />
-            </TextItem>
-            <ImageItem data-aos="fade-up">
-              <img
-                src="../images/todo/todo-mobile.png"
-                alt="Todo App mobile screen"
-              />
-            </ImageItem>
-          </Grid>
-        </Container>
+      <Section bgColor="#252a41" data-aos="fade-up">
+        <Grid>
+          <ImageItem data-aos="fade-up">
+            <img
+              src="../images/fm/fm-social-dashboard.png"
+              alt="Social media dashboard"
+            />
+          </ImageItem>
+          <TextItem data-aos="fade-up">
+            <h3>Social media dashboard</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+        </Grid>
+      </Section>
+
+      <Section bgColor="#b2c1eb" data-aos="fade-up">
+        <Grid>
+          <TextItem data-aos="fade-up">
+            <h3>Order component</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+          <ImageItem data-aos="fade-up">
+            <img
+              src="../images/fm/fm-order-component.png"
+              alt="Order component"
+            />
+          </ImageItem>
+        </Grid>
+      </Section>
+
+      <Section data-aos="fade-up">
+        <Grid>
+          <ImageItem data-aos="fade-up">
+            <img
+              src="../images/fm/fm-huddle-landing.png"
+              alt="Huddle landing page"
+            />
+          </ImageItem>
+          <TextItem data-aos="fade-up">
+            <h3>Huddle landing page</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+        </Grid>
+      </Section>
+
+      <Section bgColor="#7d82e4" data-aos="fade-up">
+        <Grid>
+          <TextItem data-aos="fade-up">
+            <h3>Pricing component</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+          <ImageItem data-aos="fade-up">
+            <img
+              src="../images/fm/fm-pricing-component.png"
+              alt="Pricing component"
+            />
+          </ImageItem>
+        </Grid>
+      </Section>
+
+      <Section data-aos="fade-up">
+        <Grid>
+          <ImageItem data-aos="fade-up">
+            <img
+              src="../images/fm/fm-time-tracking-dashboard.png"
+              alt="Time tracking dashboard"
+            />
+          </ImageItem>
+          <TextItem data-aos="fade-up">
+            <h3>Time tracking dashboard</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+        </Grid>
+      </Section>
+
+      <Section bgColor="#559ca1" data-aos="fade-up">
+        <Grid>
+          <TextItem data-aos="fade-up">
+            <h3>3 column component</h3>
+            <p>
+              The application is built with the Mobile First approach and RWD
+              (Responisve Web Design) method that enables web to fit the screens
+              of different devices automatically.
+            </p>
+          </TextItem>
+          <ImageItem data-aos="fade-up">
+            <img
+              src="../images/fm/fm-3-column-component.png"
+              alt="3 column component"
+            />
+          </ImageItem>
+        </Grid>
       </Section>
     </>
   );
