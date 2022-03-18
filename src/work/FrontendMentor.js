@@ -206,18 +206,18 @@ const BtnContainer = styled.div`
 const Btn = styled.a.attrs((props) => ({
   href: props.href,
 }))`
-  border: 1px solid #000;
+  border: 1px solid ${(props) => props.mainColor};
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 300;
-  color: #000;
+  color: ${(props) => props.mainColor};
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
-    color: ${(props) => props.bgColor};
-    background-color: #000;
+    color: ${(props) => props.hoverColor};
+    background-color: ${(props) => props.mainColor};
   }
 `;
 
@@ -234,8 +234,7 @@ function FrontendMentor({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>
@@ -285,13 +284,13 @@ function FrontendMentor({ offset }) {
               alt="Base Apparel comming soon page"
             />
           </ImageItem>
-          <TextItem data-aos="fade-up">
+          <TextItem color="#935653" data-aos="fade-up">
             <h3>Base Apparel comming soon page</h3>
             <p>
               A great project to practice responsive layout building and simple
               form validation.
               <br />
-              Users should be able to view the optimal layout depending on their
+              Users are able to view the optimal layout depending on their
               device's screen size, see hover states for all interactive
               elements, receive an error message when the form is submitted.
             </p>
@@ -307,14 +306,14 @@ function FrontendMentor({ offset }) {
             <BtnContainer>
               <Btn
                 href="https://lukaszkus.github.io/base-apparel-coming-soon/"
-                bgColor="#edd3d3"
-              >
+                mainColor="#935653"
+                hoverColor="#fff2f2">
                 View live site
               </Btn>
               <Btn
                 href="https://github.com/lukaszkus/base-apparel-coming-soon"
-                bgColor="#edd3d3"
-              >
+                mainColor="#935653"
+                hoverColor="#fff2f2">
                 View code
               </Btn>
             </BtnContainer>
