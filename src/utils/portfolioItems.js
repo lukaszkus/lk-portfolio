@@ -55,18 +55,24 @@ const portfolioItems = [
     category: "Front-end / Misc",
     project: {
       description:
-        "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
+        "Frontend Mentor is a platfrom where you can  improve your front-end coding skills by building real projects.",
       details:
-        "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
+        "They are my solutions to several challenges on this platform. Here you will find responsive landing pages and dashboards, simple card components and applications. The solutions are based only on graphic design and jpg files and have been built using various technologies. See the challenge for more details.",
       technology: [
-        "JavaScript ES6",
+        "React.js",
+        "JavaScript",
+        "Css",
         "Sass",
+        "Styled Components",
+        "HTML",
+        "BEM methodology",
         "RWD - Responsive Web Design",
         "Mobile first approach",
       ],
       role: ["Web development"],
       links: {
-        github: "https://github.com/lukaszkus/todo-app",
+        github: "https://github.com/lukaszkus/frontend-mentor-aio",
+        frontendMentor: "https://www.frontendmentor.io/profile/lukaszkus",
       },
     },
     cover: "../images/fm/fm-cover.png",

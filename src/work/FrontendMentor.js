@@ -161,7 +161,7 @@ const TextItem = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: ${(props) => (props.color ? props.color : "#000")};
+  color: ${(props) => (props.bgColor ? props.bgColor : "#000")};
   padding: 1rem 0;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
@@ -180,11 +180,17 @@ const TextItem = styled.article`
     list-style: none;
     font-weight: 400;
     padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   li {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 300;
+    padding: 0.3rem 0.8rem;
+    border-radius: 25px;
+    background-color: ${(props) => props.color};
   }
 
   @media ${breakpoint.tablet} {
@@ -234,7 +240,8 @@ function FrontendMentor({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}>
+          duration={500}
+        >
           <Arrow />
         </Link>
       </Hero>
@@ -270,6 +277,9 @@ function FrontendMentor({ offset }) {
                 <li>
                   <a href={project.links.github}>Github</a>
                 </li>
+                <li>
+                  <a href={project.links.frontendMentor}>Frontend Mentor</a>
+                </li>
               </ul>
             </List>
           </Description>
@@ -284,7 +294,7 @@ function FrontendMentor({ offset }) {
               alt="Base Apparel comming soon page"
             />
           </ImageItem>
-          <TextItem color="#935653" data-aos="fade-up">
+          <TextItem color="#fff2f2" bgColor="#935653" data-aos="fade-up">
             <h3>Base Apparel comming soon page</h3>
             <p>
               A great project to practice responsive layout building and simple
@@ -294,26 +304,29 @@ function FrontendMentor({ offset }) {
               device's screen size, see hover states for all interactive
               elements, receive an error message when the form is submitted.
             </p>
+            <p>Build with:</p>
             <ul>
-              Build with:
               <li>Semantic HTML5 markup</li>
               <li>SCSS</li>
               <li>Vanilla JS</li>
               <li>BEM methodology</li>
               <li>Flexbox</li>
+              <li>RWD</li>
               <li>Mobile first approach</li>
             </ul>
             <BtnContainer>
               <Btn
                 href="https://lukaszkus.github.io/base-apparel-coming-soon/"
                 mainColor="#935653"
-                hoverColor="#fff2f2">
+                hoverColor="#fff2f2"
+              >
                 View live site
               </Btn>
               <Btn
                 href="https://github.com/lukaszkus/base-apparel-coming-soon"
                 mainColor="#935653"
-                hoverColor="#fff2f2">
+                hoverColor="#fff2f2"
+              >
                 View code
               </Btn>
             </BtnContainer>
