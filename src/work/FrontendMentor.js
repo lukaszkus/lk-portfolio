@@ -137,6 +137,8 @@ const Grid = styled.div`
 const ImageItem = styled.figure`
   display: grid;
   place-items: center;
+  order: 1;
+
   img {
     width: 100%;
     height: auto;
@@ -150,6 +152,7 @@ const ImageItem = styled.figure`
 
   @media ${breakpoint.tablet} {
     padding-inline: 2rem;
+    order: 0;
   }
 
   @media ${breakpoint.desktop} {
@@ -161,7 +164,8 @@ const TextItem = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: ${(props) => (props.bgColor ? props.bgColor : "#000")};
+  order: 2;
+  color: ${(props) => (props.color ? props.color : "#000")};
   padding: 1rem 0;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
@@ -190,13 +194,14 @@ const TextItem = styled.article`
     font-weight: 300;
     padding: 0.3rem 0.8rem;
     border-radius: 25px;
-    background-color: ${(props) => props.color};
+    background-color: ${(props) => props.bgColor};
   }
 
   @media ${breakpoint.tablet} {
     align-items: flex-start;
     text-align: left;
     padding-inline: 2rem;
+    order: 0;
   }
 
   @media ${breakpoint.desktop} {
@@ -204,26 +209,18 @@ const TextItem = styled.article`
   }
 `;
 
-const BtnContainer = styled.div`
+const LinkContainer = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
-const Btn = styled.a.attrs((props) => ({
+const LinkItem = styled.a.attrs((props) => ({
   href: props.href,
 }))`
-  border: 1px solid ${(props) => props.mainColor};
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 300;
-  color: ${(props) => props.mainColor};
-  text-decoration: none;
-  cursor: pointer;
+  color: ${(props) => props.color};
 
   &:hover {
-    color: ${(props) => props.hoverColor};
-    background-color: ${(props) => props.mainColor};
+    text-decoration: none;
   }
 `;
 
@@ -240,8 +237,7 @@ function FrontendMentor({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>
@@ -294,7 +290,7 @@ function FrontendMentor({ offset }) {
               alt="Base Apparel comming soon page"
             />
           </ImageItem>
-          <TextItem color="#fff2f2" bgColor="#935653" data-aos="fade-up">
+          <TextItem color="#935653" bgColor="#efdddd" data-aos="fade-up">
             <h3>Base Apparel comming soon page</h3>
             <p>
               A great project to practice responsive layout building and simple
@@ -302,7 +298,9 @@ function FrontendMentor({ offset }) {
               <br />
               Users are able to view the optimal layout depending on their
               device's screen size, see hover states for all interactive
-              elements, receive an error message when the form is submitted.
+              elements, receive an error message when the form is submitted (if
+              the input field is empty or email address is not formatted
+              correctly).
             </p>
             <p>Build with:</p>
             <ul>
@@ -314,35 +312,56 @@ function FrontendMentor({ offset }) {
               <li>RWD</li>
               <li>Mobile first approach</li>
             </ul>
-            <BtnContainer>
-              <Btn
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
                 href="https://lukaszkus.github.io/base-apparel-coming-soon/"
-                mainColor="#935653"
-                hoverColor="#fff2f2"
-              >
-                View live site
-              </Btn>
-              <Btn
+                color="#935653">
+                Live site
+              </LinkItem>
+              <LinkItem
                 href="https://github.com/lukaszkus/base-apparel-coming-soon"
-                mainColor="#935653"
-                hoverColor="#fff2f2"
-              >
-                View code
-              </Btn>
-            </BtnContainer>
+                color="#935653">
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
         </Grid>
       </Section>
 
       <Section data-aos="fade-up">
         <Grid>
-          <TextItem data-aos="fade-up">
+          <TextItem color="#2d314d" bgColor="#edf2fa" data-aos="fade-up">
             <h3>Easybank landing page</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              A responisve landing page with mobile navigation menu toggle.
+              <br /> Users are able to view the optimal layout for the site
+              depending on their device's screen size, see hover states for all
+              interactive elements on the page.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>Vanilla JS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
+                href="https://lukaszkus.github.io/easybank-landing-page"
+                color="#2d314d">
+                Live site
+              </LinkItem>
+              <LinkItem
+                href="https://github.com/lukaszkus/easybank-landing-page"
+                color="#2d314d">
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
             <img
@@ -361,13 +380,36 @@ function FrontendMentor({ offset }) {
               alt="Social media dashboard"
             />
           </ImageItem>
-          <TextItem color="#fff" data-aos="fade-up">
+          <TextItem color="#8b97c6" bgColor="#303651" data-aos="fade-up">
             <h3>Social media dashboard</h3>
             <p>
               The application is built with the Mobile First approach and RWD
               (Responisve Web Design) method that enables web to fit the screens
               of different devices automatically.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>Vanilla JS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
+                href="https://lukaszkus.github.io/social-media-dashboard/"
+                color="#8b97c6">
+                Live site
+              </LinkItem>
+              <LinkItem
+                href="https://github.com/lukaszkus/social-media-dashboard"
+                color="#8b97c6">
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
         </Grid>
       </Section>
