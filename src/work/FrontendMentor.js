@@ -217,7 +217,7 @@ const LinkContainer = styled.div`
 const LinkItem = styled.a.attrs((props) => ({
   href: props.href,
 }))`
-  color: ${(props) => props.color};
+  color: ${(props) => (props.color ? props.color : "#000")};
 
   &:hover {
     text-decoration: none;
@@ -291,13 +291,17 @@ function FrontendMentor({ offset }) {
               alt="Base Apparel comming soon page"
             />
           </ImageItem>
-          <TextItem color="#935653" bgColor="#efdddd" data-aos="fade-up">
+          <TextItem
+            color="#935653"
+            bgColor="rgba(255, 255, 255, 0.2)"
+            data-aos="fade-up"
+          >
             <h3>Base Apparel comming soon page</h3>
             <p>
               A great project to practice responsive layout building and simple
               form validation.
               <br />
-              Users are able to view the optimal layout depending on their
+              Users are able to: view the optimal layout depending on their
               device's screen size, see hover states for all interactive
               elements, receive an error message when the form is submitted (if
               the input field is empty or email address is not formatted
@@ -316,7 +320,7 @@ function FrontendMentor({ offset }) {
             <p>Go to:</p>
             <LinkContainer>
               <LinkItem
-                href="https://lukaszkus.github.io/base-apparel-coming-soon/"
+                href="https://lukaszkus.github.io/base-apparel-coming-soon"
                 color="#935653"
               >
                 Live site
@@ -334,11 +338,15 @@ function FrontendMentor({ offset }) {
 
       <Section data-aos="fade-up">
         <Grid>
-          <TextItem color="#2d314d" bgColor="#edf2fa" data-aos="fade-up">
+          <TextItem
+            color="#2d314d"
+            bgColor="rgba(255, 255, 255, 0.3)"
+            data-aos="fade-up"
+          >
             <h3>Easybank landing page</h3>
             <p>
               A responisve landing page with mobile navigation menu toggle.
-              <br /> Users are able to view the optimal layout for the site
+              <br /> Users are able to: view the optimal layout for the site
               depending on their device's screen size, see hover states for all
               interactive elements on the page.
             </p>
@@ -385,16 +393,19 @@ function FrontendMentor({ offset }) {
               alt="Social media dashboard"
             />
           </ImageItem>
-          <TextItem color="#8b97c6" bgColor="#303651" data-aos="fade-up">
+          <TextItem
+            color="#8b97c6"
+            bgColor="rgba(0, 0, 0, 0.2)"
+            data-aos="fade-up"
+          >
             <h3>Social media dashboard</h3>
             <p>
-              It is a perfect responsive dashboard challenge good to practice
-              Grid or Flexbox skills. The color theme switcher also adds a nice
-              additional test.
+              It is a responsive dashboard layout with color theme switcher. A
+              perfect challenge to practice Grid or Flexbox skills.
               <br />
-              Users are able to: view the optimal layout for the site depending
-              on their device's screen size, see hover states for all
-              interactive elements on the page, toggle color theme to their
+              Users are able to: see hover states for all interactive elements
+              on the page, view the optimal layout for the site depending on
+              their device's screen size, toggle color theme to their
               preference.
             </p>
             <p>Build with:</p>
@@ -410,7 +421,7 @@ function FrontendMentor({ offset }) {
             <p>Go to:</p>
             <LinkContainer>
               <LinkItem
-                href="https://lukaszkus.github.io/social-media-dashboard/"
+                href="https://lukaszkus.github.io/social-media-dashboard"
                 color="#8b97c6"
               >
                 Live site
@@ -428,13 +439,31 @@ function FrontendMentor({ offset }) {
 
       <Section bgColor="#b2c1eb" data-aos="fade-up">
         <Grid>
-          <TextItem data-aos="fade-up">
+          <TextItem bgColor="rgba(255, 255, 255, 0.2)" data-aos="fade-up">
             <h3>Order summary component</h3>
             <p>
               It is a simple component build to practice layout skills.
-              <br /> Users should be able to see hover states for interactive
+              <br /> Users are able to see hover states for interactive
               elements.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem href="https://lukaszkus.github.io/order-component">
+                Live site
+              </LinkItem>
+              <LinkItem href="https://github.com/lukaszkus/order-component">
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
             <img
@@ -453,26 +482,85 @@ function FrontendMentor({ offset }) {
               alt="Huddle landing page"
             />
           </ImageItem>
-          <TextItem data-aos="fade-up">
+          <TextItem
+            color="#674baf"
+            bgColor="rgba(255, 255, 255, 0.2)"
+            data-aos="fade-up"
+          >
             <h3>Huddle landing page</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              A responisve landing page where users are able to: view the
+              optimal layout for the site depending on their device's screen
+              size and see hover states for all interactive elements on the
+              page.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
+                href="https://lukaszkus.github.io/huddle-landing-page"
+                color="#674baf"
+              >
+                Live site
+              </LinkItem>
+              <LinkItem
+                href="https://github.com/lukaszkus/huddle-landing-page"
+                color="#674baf"
+              >
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
         </Grid>
       </Section>
 
       <Section bgColor="#7d82e4" data-aos="fade-up">
         <Grid>
-          <TextItem color="#fff" data-aos="fade-up">
+          <TextItem
+            color="#f6f6fe"
+            bgColor="rgba(255, 255, 255, 0.1)"
+            data-aos="fade-up"
+          >
             <h3>Pricing component</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              Responsive pricing component where users are able to toggle
+              monthly to annual prices, view the optimal layout for the site
+              depending on their device's screen size and see hover states for
+              all interactive elements on the page.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>Vanilla JS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
+                href="https://lukaszkus.github.io/pricing-component"
+                color="#f6f6fe"
+              >
+                Live site
+              </LinkItem>
+              <LinkItem
+                href="https://github.com/lukaszkus/pricing-component"
+                color="#f6f6fe"
+              >
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
             <img
@@ -491,26 +579,89 @@ function FrontendMentor({ offset }) {
               alt="Time tracking dashboard"
             />
           </ImageItem>
-          <TextItem data-aos="fade-up">
+          <TextItem
+            color="#1c1f4a"
+            bgColor="rgba(255, 255, 255, 0.2)"
+            data-aos="fade-up"
+          >
             <h3>Time tracking dashboard</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              Dashboard layout build with CSS Grid. The data is pull from local
+              <i> data.json</i> file.
+              <br />
+              Users are able to: switch between viewing Daily, Weekly, and
+              Monthly stats, see hover states for all interactive elements on
+              the page and view the optimal layout for the site depending on
+              their device's screen size.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>Vanilla JS</li>
+              <li>BEM methodology</li>
+              <li>CSS Grid</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
+                href="https://lukaszkus.github.io/time-tracking-dashboard"
+                color="#1c1f4a"
+              >
+                Live site
+              </LinkItem>
+              <LinkItem
+                href="https://github.com/lukaszkus/time-tracking-dashboard"
+                color="#1c1f4a"
+              >
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
         </Grid>
       </Section>
 
       <Section bgColor="#559ca1" data-aos="fade-up">
         <Grid>
-          <TextItem color="#fff" data-aos="fade-up">
+          <TextItem
+            color="#f2f2f2"
+            bgColor="rgba(255, 255, 255, 0.1)"
+            data-aos="fade-up"
+          >
             <h3>3 column component</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              Simple, responsive column component. Users are able to: view the
+              optimal layout for the site depending on their device's screen
+              size and see hover states for all interactive elements on the
+              page.
             </p>
+            <p>Build with:</p>
+            <ul>
+              <li>Semantic HTML5 markup</li>
+              <li>SCSS</li>
+              <li>BEM methodology</li>
+              <li>Flexbox</li>
+              <li>RWD</li>
+              <li>Mobile first approach</li>
+            </ul>
+            <p>Go to:</p>
+            <LinkContainer>
+              <LinkItem
+                href="https://lukaszkus.github.io/3-column-component"
+                color="#f2f2f2"
+              >
+                Live site
+              </LinkItem>
+              <LinkItem
+                href="https://github.com/lukaszkus/3-column-component"
+                color="#f2f2f2"
+              >
+                Github repository
+              </LinkItem>
+            </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
             <img
