@@ -37,7 +37,7 @@ const Arrow = styled.img.attrs({
   left: calc(50% - (30px / 2));
   width: 30px;
   transition: 0.3s ease-in-out;
-  z-indx: 9999;
+  z-indx: 999;
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -237,7 +237,8 @@ function FrontendMentor({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}>
+          duration={500}
+        >
           <Arrow />
         </Link>
       </Hero>
@@ -316,12 +317,14 @@ function FrontendMentor({ offset }) {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/base-apparel-coming-soon/"
-                color="#935653">
+                color="#935653"
+              >
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/base-apparel-coming-soon"
-                color="#935653">
+                color="#935653"
+              >
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -353,12 +356,14 @@ function FrontendMentor({ offset }) {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/easybank-landing-page"
-                color="#2d314d">
+                color="#2d314d"
+              >
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/easybank-landing-page"
-                color="#2d314d">
+                color="#2d314d"
+              >
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -383,9 +388,14 @@ function FrontendMentor({ offset }) {
           <TextItem color="#8b97c6" bgColor="#303651" data-aos="fade-up">
             <h3>Social media dashboard</h3>
             <p>
-              The application is built with the Mobile First approach and RWD
-              (Responisve Web Design) method that enables web to fit the screens
-              of different devices automatically.
+              It is a perfect responsive dashboard challenge good to practice
+              Grid or Flexbox skills. The color theme switcher also adds a nice
+              additional test.
+              <br />
+              Users are able to: view the optimal layout for the site depending
+              on their device's screen size, see hover states for all
+              interactive elements on the page, toggle color theme to their
+              preference.
             </p>
             <p>Build with:</p>
             <ul>
@@ -401,12 +411,14 @@ function FrontendMentor({ offset }) {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/social-media-dashboard/"
-                color="#8b97c6">
+                color="#8b97c6"
+              >
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/social-media-dashboard"
-                color="#8b97c6">
+                color="#8b97c6"
+              >
                 Github repository
               </LinkItem>
             </LinkContainer>

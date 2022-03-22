@@ -4,7 +4,7 @@ import breakpoint from "../utils/breakpoints";
 
 const MenuContainer = styled.nav`
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
