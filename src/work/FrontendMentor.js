@@ -301,7 +301,7 @@ function FrontendMentor({ offset }) {
               A great project to practice responsive layout building and simple
               form validation.
               <br />
-              Users are able to: view the optimal layout depending on their
+              Users are able to view the optimal layout depending on their
               device's screen size, see hover states for all interactive
               elements, receive an error message when the form is submitted (if
               the input field is empty or email address is not formatted
@@ -346,7 +346,7 @@ function FrontendMentor({ offset }) {
             <h3>Easybank landing page</h3>
             <p>
               A responisve landing page with mobile navigation menu toggle.
-              <br /> Users are able to: view the optimal layout for the site
+              <br /> Users are able to view the optimal layout for the site
               depending on their device's screen size, see hover states for all
               interactive elements on the page.
             </p>
@@ -403,10 +403,9 @@ function FrontendMentor({ offset }) {
               It is a responsive dashboard layout with color theme switcher. A
               perfect challenge to practice Grid or Flexbox skills.
               <br />
-              Users are able to: see hover states for all interactive elements
-              on the page, view the optimal layout for the site depending on
-              their device's screen size, toggle color theme to their
-              preference.
+              Users are able to see hover states for all interactive elements on
+              the page, view the optimal layout for the site depending on their
+              device's screen size, toggle color theme to their preference.
             </p>
             <p>Build with:</p>
             <ul>
@@ -489,10 +488,9 @@ function FrontendMentor({ offset }) {
           >
             <h3>Huddle landing page</h3>
             <p>
-              A responisve landing page where users are able to: view the
-              optimal layout for the site depending on their device's screen
-              size and see hover states for all interactive elements on the
-              page.
+              A responisve landing page where users are able to view the optimal
+              layout for the site depending on their device's screen size and
+              see hover states for all interactive elements on the page.
             </p>
             <p>Build with:</p>
             <ul>
@@ -589,7 +587,7 @@ function FrontendMentor({ offset }) {
               Dashboard layout build with CSS Grid. The data is pull from local
               <i> data.json</i> file.
               <br />
-              Users are able to: switch between viewing Daily, Weekly, and
+              Users are able to switch between viewing Daily, Weekly, and
               Monthly stats, see hover states for all interactive elements on
               the page and view the optimal layout for the site depending on
               their device's screen size.
@@ -633,7 +631,7 @@ function FrontendMentor({ offset }) {
           >
             <h3>3 column component</h3>
             <p>
-              Simple, responsive column component. Users are able to: view the
+              Simple, responsive 3 column component. Users are able to view the
               optimal layout for the site depending on their device's screen
               size and see hover states for all interactive elements on the
               page.
