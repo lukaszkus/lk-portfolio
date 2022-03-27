@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
-import Logo from "./Logo";
-import MenuBtn from "./MenuBtn";
+import { Logo, MenuBtn } from "./";
 
 const TopbarContainer = styled.div`
   width: 100%;

@@ -1,0 +1,9 @@
+export { default as Contact } from "./Contact";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
+export { default as Logo } from "./Logo";
+export { default as Menu } from "./Menu";
+export { default as MenuBtn } from "./MenuBtn";
+export { default as Portfolio } from "./Portfolio";
+export { default as ScrollBtn } from "./ScrollBtn";
+export { default as Topbar } from "./Topbar";

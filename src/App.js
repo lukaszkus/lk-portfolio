@@ -5,18 +5,11 @@ import AOS from "aos";
 import "./style.css";
 
 //Pages
-import Home from "./pages/Home";
-import About from "./pages/About";
+import { Home, About } from "./pages";
 //Components
-import Topbar from "./components/Topbar";
-import Menu from "./components/Menu";
-// import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import ScrollBtn from "./components/ScrollBtn";
+import { Topbar, Menu, Footer, ScrollBtn } from "./components";
 //Work
-import TodoApp from "./work/TodoApp";
-import WildnSlow from "./work/WildnSlow";
-import FrontendMentor from "./work/FrontendMentor";
+import { TodoApp, WildnSlow, FrontendMentor } from "./work";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

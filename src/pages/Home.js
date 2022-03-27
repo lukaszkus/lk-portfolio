@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import Header from "../components/Header";
-import Portfolio from "../components/Portfolio";
-import Contact from "../components/Contact";
+import { Header, Portfolio, Contact } from "../components";
 
 const Main = styled.main``;
 
