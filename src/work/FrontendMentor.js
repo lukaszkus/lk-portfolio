@@ -309,13 +309,17 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>Vanilla JS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "Vanilla JS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -352,13 +356,17 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>Vanilla JS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "Vanilla JS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -409,13 +417,17 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>Vanilla JS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "Vanilla JS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -447,12 +459,16 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -494,12 +510,16 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -536,13 +556,17 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>Vanilla JS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "Vanilla JS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -594,14 +618,17 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>Vanilla JS</li>
-              <li>BEM methodology</li>
-              <li>CSS Grid</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "Vanilla JS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
@@ -638,12 +665,16 @@ function FrontendMentor({ offset }) {
             </p>
             <p>Build with:</p>
             <ul>
-              <li>Semantic HTML5 markup</li>
-              <li>SCSS</li>
-              <li>BEM methodology</li>
-              <li>Flexbox</li>
-              <li>RWD</li>
-              <li>Mobile first approach</li>
+              {[
+                "Semantic HTML markup",
+                "SCSS",
+                "BEM methodology",
+                "Flexbox",
+                "RWD",
+                "Mobile first approach",
+              ].map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
             <p>Go to:</p>
             <LinkContainer>
