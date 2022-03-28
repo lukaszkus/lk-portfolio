@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
+import { breakpoint } from "../utils";
 
 import { Logo, MenuBtn } from ".";
 

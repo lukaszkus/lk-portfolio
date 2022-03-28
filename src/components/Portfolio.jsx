@@ -1,7 +1,7 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
-import portfolioItems from "../utils/portfolioItems";
+
+import { portfolioItems, breakpoint } from "../utils";
 
 const PContainer = styled.section.attrs((props) => ({
   id: props.id,
@@ -35,7 +35,6 @@ const PBoxContainer = styled.div`
 `;
 
 const PBox = styled.article`
-  // max-height: ${(props) => props.height};
   object-fit: cover;
   max-height: 50vh;
   display: grid;
@@ -101,7 +100,8 @@ function Portfolio() {
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}>
+              height={item.height}
+            >
               <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>

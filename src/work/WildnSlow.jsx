@@ -1,10 +1,7 @@
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
-import portfolioItems from "../utils/portfolioItems";
 
-import chevron from "../assets/chevron.svg";
-// import icon from "../assets/mobile-first.svg";
+import { images, portfolioItems, breakpoint } from "../utils";
 
 const Hero = styled.header`
   width: 100%;
@@ -15,7 +12,6 @@ const Hero = styled.header`
   position: relative;
   overflow: hidden;
   background-image: ${(props) => props.bgColor};
-  // z-index: -1;
 `;
 
 const HeroImg = styled.img.attrs((props) => ({
@@ -26,17 +22,15 @@ const HeroImg = styled.img.attrs((props) => ({
   height: 100%;
   display: block;
   object-fit: cover;
-  // z-index: 1;
   transform: translateY(${(props) => props.offset / 4}px);
 `;
 
 const Arrow = styled.img.attrs({
-  src: `${chevron}`,
+  src: `${images.arrow}`,
 })`
   position: absolute;
   bottom: 30px;
   left: calc(50% - (30px / 2));
-  // transform: translate(-50%);
   width: 30px;
   transition: 0.3s ease-in-out;
   z-indx: 9999;
@@ -131,7 +125,6 @@ const Grid = styled.div`
 
   @media ${breakpoint.desktop} {
     gap: 4rem;
-    // padding: 2rem 0;
   }
 `;
 
@@ -141,7 +134,6 @@ const ImageItem = styled.figure`
   img {
     width: 100%;
     height: auto;
-    // filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
   }
   figcaption {
     font-family: "Poppins", sans-serif;
@@ -174,19 +166,6 @@ const TextItem = styled.article`
     text-align: left;
   }
 `;
-
-// const Icon = styled.img.attrs((props) => ({
-//   src: props.icon,
-//   alt: props.alt,
-// }))`
-//   width: 100%;
-//   height: auto;
-//   padding-top: 1rem;
-
-//   @media ${breakpoint.tablet} {
-//     width: 80%;
-//   }
-// `;
 
 function WildnSlow({ offset }) {
   const item = portfolioItems[1];
@@ -235,11 +214,11 @@ function WildnSlow({ offset }) {
       <Section>
         <Grid>
           <ImageItem data-aos="fade-up">
-            <img src="../images/wns/wns-tag.jpg" alt="Label" />
+            <img src={images.wns_tag} alt="Label" />
             <figcaption>Label</figcaption>
           </ImageItem>
           <ImageItem data-aos="fade-up">
-            <img src="../images/wns/wns-box.jpg" alt="Bos sticker" />
+            <img src={images.wns_box} alt="Bos sticker" />
             <figcaption>Box sticker</figcaption>
           </ImageItem>
         </Grid>
@@ -258,7 +237,7 @@ function WildnSlow({ offset }) {
             </TextItem>
           </Grid>
           <ImageItem data-aos="fade-up">
-            <img src="../images/wns/wns-badges.png" alt="Badges" />
+            <img src={images.wns_badges} alt="Badges" />
           </ImageItem>
         </Container>
       </Section>

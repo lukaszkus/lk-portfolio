@@ -1,9 +1,7 @@
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
-import portfolioItems from "../utils/portfolioItems";
 
-import { images } from "../utils";
+import { images, portfolioItems, breakpoint } from "../utils";
 
 const Hero = styled.header`
   width: 100%;
@@ -14,7 +12,6 @@ const Hero = styled.header`
   position: relative;
   overflow: hidden;
   background-image: ${(props) => props.bgColor};
-  // z-index: -1;
 `;
 
 const HeroImg = styled.img.attrs((props) => ({
@@ -25,7 +22,6 @@ const HeroImg = styled.img.attrs((props) => ({
   height: 100%;
   display: block;
   object-fit: contain;
-  // z-index: 1;
   transform: translateY(${(props) => props.offset / 4}px);
 `;
 
@@ -35,7 +31,6 @@ const Arrow = styled.img.attrs({
   position: absolute;
   bottom: 30px;
   left: calc(50% - (30px / 2));
-  // transform: translate(-50%);
   width: 30px;
   transition: 0.3s ease-in-out;
   z-indx: 9999;
@@ -130,7 +125,6 @@ const Grid = styled.div`
 
   @media ${breakpoint.desktop} {
     gap: 4rem;
-    // padding: 2rem 0;
   }
 `;
 
@@ -140,7 +134,6 @@ const ImageItem = styled.figure`
   img {
     width: 100%;
     height: auto;
-    // filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
   }
   figcaption {
     font-family: "Poppins", sans-serif;
@@ -200,7 +193,8 @@ function TodoApp({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}>
+          duration={500}
+        >
           <Arrow />
         </Link>
       </Hero>

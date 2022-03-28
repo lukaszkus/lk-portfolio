@@ -1,9 +1,7 @@
 import { Link } from "react-scroll";
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
-import portfolioItems from "../utils/portfolioItems";
 
-import chevron from "../assets/chevron.svg";
+import { images, portfolioItems, breakpoint } from "../utils";
 
 const Hero = styled.header`
   width: 100%;
@@ -14,7 +12,6 @@ const Hero = styled.header`
   position: relative;
   overflow: hidden;
   background-image: ${(props) => props.bgColor};
-  // z-index: -1;
 `;
 
 const HeroImg = styled.img.attrs((props) => ({
@@ -25,12 +22,11 @@ const HeroImg = styled.img.attrs((props) => ({
   height: 100%;
   display: block;
   object-fit: contain;
-  // z-index: 1;
   transform: translateY(${(props) => props.offset / 4}px);
 `;
 
 const Arrow = styled.img.attrs({
-  src: `${chevron}`,
+  src: `${images.arrow}`,
 })`
   position: absolute;
   bottom: 30px;
@@ -50,10 +46,6 @@ const Section = styled.section.attrs((props) => ({
   padding: 4rem 2rem;
   background-image: ${(props) => (props.bgColor ? props.bgColor : null)};
   background-color: ${(props) => (props.bgColor ? props.bgColor : null)};
-
-  // &:first-of-type {
-  //   padding-bottom: 0;
-  // }
 `;
 
 const Container = styled.div`
@@ -121,16 +113,9 @@ const List = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  // gap: 2rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    // gap: 2rem;
-  }
-
-  @media ${breakpoint.desktop} {
-    // gap: 4rem;
-    // padding: 2rem 0;
   }
 `;
 
@@ -287,7 +272,7 @@ function FrontendMentor({ offset }) {
         <Grid>
           <ImageItem data-aos="fade-up">
             <img
-              src="../images/fm/fm-base-apparel.png"
+              src={images.fm_baseapparel}
               alt="Base Apparel comming soon page"
             />
           </ImageItem>
@@ -385,10 +370,7 @@ function FrontendMentor({ offset }) {
             </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-easybank-landing.png"
-              alt="Easybank landing page"
-            />
+            <img src={images.fm_easybank} alt="Easybank landing page" />
           </ImageItem>
         </Grid>
       </Section>
@@ -396,10 +378,7 @@ function FrontendMentor({ offset }) {
       <Section bgColor="#252a41" data-aos="fade-up">
         <Grid>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-social-dashboard.png"
-              alt="Social media dashboard"
-            />
+            <img src={images.fm_social} alt="Social media dashboard" />
           </ImageItem>
           <TextItem
             color="#8b97c6"
@@ -481,10 +460,7 @@ function FrontendMentor({ offset }) {
             </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-order-component.png"
-              alt="Order summary component"
-            />
+            <img src={images.fm_order} alt="Order summary component" />
           </ImageItem>
         </Grid>
       </Section>
@@ -492,10 +468,7 @@ function FrontendMentor({ offset }) {
       <Section data-aos="fade-up">
         <Grid>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-huddle-landing.png"
-              alt="Huddle landing page"
-            />
+            <img src={images.fm_huddle} alt="Huddle landing page" />
           </ImageItem>
           <TextItem
             color="#674baf"
@@ -585,10 +558,7 @@ function FrontendMentor({ offset }) {
             </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-pricing-component.png"
-              alt="Pricing component"
-            />
+            <img src={images.fm_pricing} alt="Pricing component" />
           </ImageItem>
         </Grid>
       </Section>
@@ -596,10 +566,7 @@ function FrontendMentor({ offset }) {
       <Section data-aos="fade-up">
         <Grid>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-time-tracking-dashboard.png"
-              alt="Time tracking dashboard"
-            />
+            <img src={images.fm_timetracking} alt="Time tracking dashboard" />
           </ImageItem>
           <TextItem
             color="#1c1f4a"
@@ -693,10 +660,7 @@ function FrontendMentor({ offset }) {
             </LinkContainer>
           </TextItem>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/fm/fm-3-column-component.png"
-              alt="3 column component"
-            />
+            <img src={images.fm_3column} alt="3 column component" />
           </ImageItem>
         </Grid>
       </Section>
