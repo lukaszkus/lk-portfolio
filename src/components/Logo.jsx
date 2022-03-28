@@ -2,13 +2,10 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 
-import darkLogo from "../assets/ksu.svg";
-import lightLogo from "../assets/ksu-light.svg";
+import { images } from "../utils";
 
-// const LogoContainer = styled.div``;
-
-const LogoDark = styled.img.attrs({
-  src: `${darkLogo}`,
+const LogoLight = styled.img.attrs({
+  src: `${images.logo}`,
 })`
   height: 22px;
 
@@ -17,14 +14,9 @@ const LogoDark = styled.img.attrs({
   }
 `;
 
-const LogoLight = styled(LogoDark).attrs({
-  src: `${lightLogo}`,
-})``;
-
-function Logo({ isOpen }) {
+function Logo() {
   return (
     <Link to="/">
-      {/* <LogoContainer>{isOpen ? <LogoLight /> : <LogoDark />}</LogoContainer> */}
       <LogoLight />
     </Link>
   );

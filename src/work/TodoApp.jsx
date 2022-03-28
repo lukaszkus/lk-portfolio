@@ -3,8 +3,7 @@ import styled from "styled-components";
 import breakpoint from "../utils/breakpoints";
 import portfolioItems from "../utils/portfolioItems";
 
-import chevron from "../assets/chevron.svg";
-import icon from "../assets/mobile-first.svg";
+import { images } from "../utils";
 
 const Hero = styled.header`
   width: 100%;
@@ -31,7 +30,7 @@ const HeroImg = styled.img.attrs((props) => ({
 `;
 
 const Arrow = styled.img.attrs({
-  src: `${chevron}`,
+  src: `${images.arrow}`,
 })`
   position: absolute;
   bottom: 30px;
@@ -201,8 +200,7 @@ function TodoApp({ offset }) {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>
@@ -250,14 +248,11 @@ function TodoApp({ offset }) {
       <Section>
         <Grid>
           <ImageItem data-aos="fade-up">
-            <img
-              src="../images/todo/light-mode.png"
-              alt="Todo App light mode"
-            />
+            <img src={images.todo_light} alt="Todo App light mode" />
             <figcaption>Todo App light mode</figcaption>
           </ImageItem>
           <ImageItem data-aos="fade-up">
-            <img src="../images/todo/dark-mode.png" alt="Todo App dark mode" />
+            <img src={images.todo_dark} alt="Todo App dark mode" />
             <figcaption>Todo App dark mode</figcaption>
           </ImageItem>
         </Grid>
@@ -273,13 +268,10 @@ function TodoApp({ offset }) {
                 (Responisve Web Design) method that enables web to fit the
                 screens of different devices automatically.
               </p>
-              <Icon icon={icon} alt="Mobile first" />
+              <Icon icon={images.mobile_first} alt="Mobile first" />
             </TextItem>
             <ImageItem data-aos="fade-up">
-              <img
-                src="../images/todo/todo-mobile.png"
-                alt="Todo App mobile screen"
-              />
+              <img src={images.todo_mobile} alt="Todo App mobile screen" />
             </ImageItem>
           </Grid>
         </Container>
