@@ -1,8 +1,7 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
 
-import { images } from "../utils";
+import { images, breakpoint } from "../utils";
 
 const LogoLight = styled.img.attrs({
   src: `${images.logo}`,

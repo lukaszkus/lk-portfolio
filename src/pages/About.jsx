@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
-// import me from "../assets/me.jpg";
+
+import { breakpoint } from "../utils";
 
 const AboutContainer = styled.section`
   min-height: 100vh;
@@ -26,11 +26,6 @@ const AboutBox = styled.article`
   }
 `;
 
-// const AboutImg = styled.img.attrs({
-//   src: `${me}`,
-// })`
-// `;
-
 const AboutTitle = styled.h1`
   font-size: 2.5rem;
   color: #6a11cb;
@@ -55,7 +50,6 @@ function About() {
   return (
     <AboutContainer>
       <AboutBox>
-        {/* <AboutImg /> */}
         <AboutTitle>About</AboutTitle>
       </AboutBox>
       <AboutBox>

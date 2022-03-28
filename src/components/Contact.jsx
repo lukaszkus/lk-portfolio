@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
+
+import { breakpoint } from "../utils";
 
 const CContainer = styled.section`
   position: relative;

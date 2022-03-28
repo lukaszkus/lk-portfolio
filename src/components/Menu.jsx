@@ -1,6 +1,7 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
+
+import { breakpoint } from "../utils";
 
 const MenuContainer = styled.nav`
   position: fixed;

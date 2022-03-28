@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { animateScroll as scroll } from "react-scroll";
-import breakpoint from "../utils/breakpoints";
-import chevron from "../assets/chevron.svg";
+
+import { images, breakpoint } from "../utils";
 
 const fadeIn = keyframes`
 from {
@@ -35,7 +35,7 @@ const ScrollButton = styled.button`
 `;
 
 const Arrow = styled.img.attrs({
-  src: `${chevron}`,
+  src: `${images.arrow}`,
 })`
   width: 30px;
 `;

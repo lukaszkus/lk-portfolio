@@ -1,8 +1,7 @@
-import styled, { keyframes } from "styled-components";
 import { Link } from "react-scroll";
-import breakpoint from "../utils/breakpoints";
+import styled, { keyframes } from "styled-components";
 
-import chevron from "../assets/chevron.svg";
+import { images, breakpoint } from "../utils";
 
 const HeaderContainer = styled.header`
   height: 100vh;
@@ -142,7 +141,7 @@ const SubtitleItem = styled.div`
 const HeaderLinkContainer = styled.div``;
 
 const Arrow = styled.img.attrs({
-  src: `${chevron}`,
+  src: `${images.arrow}`,
 })`
   width: 30px;
   transition: 0.3s ease-in-out;

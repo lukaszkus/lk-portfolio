@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import breakpoint from "../utils/breakpoints";
 
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
+import { images, breakpoint } from "../utils";
 
 const FContainer = styled.footer`
   min-height: 40vh;
@@ -27,7 +25,6 @@ const FBoxContainer = styled.div`
 
   @media ${breakpoint.tablet} {
     display: flex;
-    // justify-content: space-between;
     gap: 4rem;
   }
 
@@ -85,10 +82,10 @@ function Footer() {
         </FBox>
         <FBox data-aos="fade-down" data-aos-duration="500">
           <FLink path="https://github.com/lukaszkus">
-            <FIcon icon={github} />
+            <FIcon icon={images.github} />
           </FLink>
           <FLink path="https://www.linkedin.com/in/lukasz-kus/">
-            <FIcon icon={linkedin} />
+            <FIcon icon={images.linkedin} />
           </FLink>
         </FBox>
       </FBoxContainer>
