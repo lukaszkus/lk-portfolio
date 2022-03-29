@@ -102,15 +102,15 @@ const portfolioItems = [
         "RWD - Responsive Web Design",
         "Mobile first approach",
       ],
-      role: ["Web development"],
+      role: ["Web development", "Design"],
       links: {
         github: "https://github.com/lukaszkus/frontend-mentor-aio",
         frontendMentor: "https://www.frontendmentor.io/profile/lukaszkus",
       },
     },
     cover: images.inf_cover,
-    bgColor: "linear-gradient(120deg, #f02a4e 0%, #f02a4e 100%)",
-    overlayColor: "#f02a4e",
+    bgColor: "linear-gradient(120deg, #f73c4f 0%, #2e1e5c 100%)",
+    overlayColor: "#fc4f61",
     path: "work/informatyk-na-godziny",
   },
 ];

@@ -11,19 +11,23 @@ const PContainer = styled.section.attrs((props) => ({
   padding: 2rem 2rem;
   overflow: hidden;
   margin-bottom: 2rem;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  position: relative;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
+    gap: 2rem;
+
+    padding: 3rem;
   }
 
   @media ${breakpoint.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    padding: 4rem 6rem;
+    padding: 6rem;
   }
 
   @media ${breakpoint.desktopXL} {
-    gap: 2rem;
+    gap: 4rem;
   }
 `;
 

@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+// import styled, { keyframes } from "styled-components";
 
 import { images, breakpoint } from "../utils";
 
@@ -12,6 +13,7 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 `;
 
 const TitleContainer = styled.div`
@@ -22,60 +24,60 @@ const TitleContainer = styled.div`
   }
 `;
 
-const rotateA = keyframes`
-  100% {
-    transform: skew(40deg) rotate(360deg) scale(3) translateX(30px) translateY(-50px);
-    filter: blur(15px);
-  }
-`;
+// const rotateA = keyframes`
+//   100% {
+//     transform: skew(40deg) rotate(360deg) scale(3) translateX(30px) translateY(-50px);
+//     filter: blur(15px);
+//   }
+// `;
 
-const rotateB = keyframes`
-  100% {
-    transform: skew(10deg) rotate(-135deg) scale(3) translateX(50px) translateY(100px);
-    filter: blur(35px);
-  }
-`;
+// const rotateB = keyframes`
+//   100% {
+//     transform: skew(10deg) rotate(-135deg) scale(3) translateX(50px) translateY(100px);
+//     filter: blur(35px);
+//   }
+// `;
 
-const A = styled.div`
-  content: "";
-  position: fixed;
-  width: 80px;
-  height: 50px;
-  top: 23%;
-  left: -5%;
-  background-image: linear-gradient(
-    to right,
-    #f78ca0 0%,
-    #f9748f 19%,
-    #fd868c 60%,
-    #fe9a8b 100%
-  );
-  transform: skew(20deg) rotate(-10deg);
-  filter: blur(5px);
-  animation: ${rotateA} 20s infinite alternate;
+// const A = styled.div`
+//   content: "";
+//   position: fixed;
+//   width: 80px;
+//   height: 50px;
+//   top: 23%;
+//   left: -5%;
+//   background-image: linear-gradient(
+//     to right,
+//     #f78ca0 0%,
+//     #f9748f 19%,
+//     #fd868c 60%,
+//     #fe9a8b 100%
+//   );
+//   transform: skew(20deg) rotate(-10deg);
+//   filter: blur(5px);
+//   animation: ${rotateA} 20s infinite alternate;
 
-  @media ${breakpoint.tablet} {
-    left: 20%;
-  }
-`;
+//   @media ${breakpoint.tablet} {
+//     left: 20%;
+//   }
+// `;
 
-const B = styled.div`
-  content: "";
-  position: fixed;
-  width: 260px;
-  height: 200px;
-  top: 45%;
-  left: 60%;
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-  transform: skew(-38deg) rotate(25deg);
-  filter: blur(15px);
-  animation: ${rotateB} 30s infinite alternate;
+// const B = styled.div`
+//   content: "";
+//   position: fixed;
+//   width: 260px;
+//   height: 200px;
+//   top: 45%;
+//   left: 60%;
+//   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+//   transform: skew(-38deg) rotate(25deg);
+//   filter: blur(15px);
+//   animation: ${rotateB} 30s infinite alternate;
 
-  @media ${breakpoint.desktop} {
-    width: 320px;
-    height: 246px;
-  }
-`;
+//   @media ${breakpoint.desktop} {
+//     width: 320px;
+//     height: 246px;
+//   }
+// `;
 
 const HeaderTitle = styled.h1`
   font-size: 3.5rem;
@@ -157,8 +159,8 @@ function Header() {
   return (
     <HeaderContainer>
       <TitleContainer>
-        <A />
-        <B />
+        {/* <A /> */}
+        {/* <B /> */}
         <HeaderTitle data-aos="fade-up" data-aos-duration="300">
           Hi, I'm Kusiu.
         </HeaderTitle>

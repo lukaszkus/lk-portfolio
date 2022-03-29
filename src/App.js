@@ -9,7 +9,7 @@ import { Home, About } from "./pages";
 //Components
 import { Topbar, Menu, Footer, ScrollBtn } from "./components";
 //Work
-import { TodoApp, WildnSlow, FrontendMentor } from "./work";
+import { TodoApp, WildnSlow, FrontendMentor, Informatyk } from "./work";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +54,10 @@ function App() {
         <Route
           path="work/fm-solutions"
           element={<FrontendMentor offset={offset} />}
+        />
+        <Route
+          path="work/informatyk-na-godziny"
+          element={<Informatyk offset={offset} />}
         />
       </Routes>
       <Footer />
