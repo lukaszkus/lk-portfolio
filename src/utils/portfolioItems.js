@@ -82,6 +82,37 @@ const portfolioItems = [
     overlayColor: "#8ec5fc",
     path: "work/fm-solutions",
   },
+  {
+    id: 4,
+    title: "Informatyk Na Godziny",
+    category: "Front-end / Landing page",
+    project: {
+      description:
+        "Frontend Mentor is a platfrom where you can  improve your front-end coding skills by building real projects.",
+      details:
+        "They are my solutions to several challenges on this platform. Here you will find responsive landing pages and dashboards, simple card components and applications. The solutions are based only on graphic design and jpg files and have been built using various technologies. See the challenge for more details.",
+      technology: [
+        "React.js",
+        "JavaScript",
+        "Css",
+        "Sass",
+        "Styled Components",
+        "HTML",
+        "BEM methodology",
+        "RWD - Responsive Web Design",
+        "Mobile first approach",
+      ],
+      role: ["Web development"],
+      links: {
+        github: "https://github.com/lukaszkus/frontend-mentor-aio",
+        frontendMentor: "https://www.frontendmentor.io/profile/lukaszkus",
+      },
+    },
+    cover: images.inf_cover,
+    bgColor: "linear-gradient(120deg, #f02a4e 0%, #f02a4e 100%)",
+    overlayColor: "#f02a4e",
+    path: "work/informatyk-na-godziny",
+  },
 ];
 
 export default portfolioItems;

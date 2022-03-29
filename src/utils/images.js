@@ -31,6 +31,9 @@ import fm_pricing from "../assets/work/fm/fm_pricing.png";
 import fm_social from "../assets/work/fm/fm_social.png";
 import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
 
+//Informatyk
+import inf_cover from "../assets/work/inf/inf_cover.png";
+
 const images = {
   logo,
   arrow,
@@ -58,6 +61,8 @@ const images = {
   fm_pricing,
   fm_social,
   fm_timetracking,
+
+  inf_cover,
 };
 
 export default images;
