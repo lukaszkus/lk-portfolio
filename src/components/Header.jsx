@@ -17,7 +17,7 @@ const HeaderContainer = styled.header`
 `;
 
 const TitleContainer = styled.div`
-  padding-top: 2rem;
+  padding-top: 2rem 0 0 0;
 
   @media ${breakpoint.tablet} {
     padding-top: 4rem;
