@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
 import styled from "styled-components";
 // import styled, { keyframes } from "styled-components";
 
@@ -13,79 +13,50 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-color: #e4e4e1;
+  background-image: radial-gradient(
+      at top center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(143, 152, 157, 0.6) 100%
+    );
+  background-blend-mode: normal, multiply;
 `;
 
 const TitleContainer = styled.div`
-  padding-top: 2rem 0 0 0;
+  position: relative;
+  padding-top: 6rem;
 
   @media ${breakpoint.tablet} {
     padding-top: 4rem;
   }
+
+  img {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: -20px;
+    right: 0;
+
+    @media ${breakpoint.tablet} {
+      width: 50%;
+      top: -70px;
+      right: -30px;
+    }
+  }
 `;
 
-// const rotateA = keyframes`
-//   100% {
-//     transform: skew(40deg) rotate(360deg) scale(3) translateX(30px) translateY(-50px);
-//     filter: blur(15px);
-//   }
-// `;
-
-// const rotateB = keyframes`
-//   100% {
-//     transform: skew(10deg) rotate(-135deg) scale(3) translateX(50px) translateY(100px);
-//     filter: blur(35px);
-//   }
-// `;
-
-// const A = styled.div`
-//   content: "";
-//   position: fixed;
-//   width: 80px;
-//   height: 50px;
-//   top: 23%;
-//   left: -5%;
-//   background-image: linear-gradient(
-//     to right,
-//     #f78ca0 0%,
-//     #f9748f 19%,
-//     #fd868c 60%,
-//     #fe9a8b 100%
-//   );
-//   transform: skew(20deg) rotate(-10deg);
-//   filter: blur(5px);
-//   animation: ${rotateA} 20s infinite alternate;
-
-//   @media ${breakpoint.tablet} {
-//     left: 20%;
-//   }
-// `;
-
-// const B = styled.div`
-//   content: "";
-//   position: fixed;
-//   width: 260px;
-//   height: 200px;
-//   top: 45%;
-//   left: 60%;
-//   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-//   transform: skew(-38deg) rotate(25deg);
-//   filter: blur(15px);
-//   animation: ${rotateB} 30s infinite alternate;
-
-//   @media ${breakpoint.desktop} {
-//     width: 320px;
-//     height: 246px;
-//   }
-// `;
-
 const HeaderTitle = styled.h1`
+  position: relative;
   font-size: 3.5rem;
   line-height: 1;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
   margin-bottom: 5px;
 
   @media ${breakpoint.tablet} {
@@ -100,7 +71,6 @@ const HeaderTitle = styled.h1`
 
 const HeaderSubtitle = styled.div`
   position: relative;
-  margin-bottom: 30px;
 `;
 
 const SubtitleWrapper = styled.div``;
@@ -110,9 +80,9 @@ const SubtitleItem = styled.div`
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: 5px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
 
   &:first-child {
     background-image: linear-gradient(
@@ -128,11 +98,11 @@ const SubtitleItem = styled.div`
 
   &:last-child {
     background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
+    margin-bottom: 0;
   }
 
   @media ${breakpoint.tablet} {
     font-size: 3rem;
-    margin-bottom: 10px;
   }
 
   @media ${breakpoint.desktopXL} {
@@ -140,29 +110,14 @@ const SubtitleItem = styled.div`
   }
 `;
 
-const HeaderLinkContainer = styled.div``;
-
-const Arrow = styled.img.attrs({
-  src: `${images.arrow}`,
-})`
-  width: 30px;
-  transition: 0.3s ease-in-out;
-  position: relative;
-  z-indx: 1000;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-`;
-
 function Header() {
   return (
     <HeaderContainer>
       <TitleContainer>
-        {/* <A /> */}
-        {/* <B /> */}
+        <img src={images.me} alt="Me" data-aos="fade-down" />
         <HeaderTitle data-aos="fade-up" data-aos-duration="300">
-          Hi, I'm Kusiu.
+          Hi,
+          <br /> I'm Kusiu.
         </HeaderTitle>
         <HeaderSubtitle>
           <SubtitleWrapper>
@@ -174,21 +129,6 @@ function Header() {
             </SubtitleItem>
           </SubtitleWrapper>
         </HeaderSubtitle>
-        <HeaderLinkContainer
-          data-aos="fade-up"
-          data-aos-duration="500"
-          data-aos-delay="1500"
-        >
-          <Link
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
-          >
-            <Arrow />
-          </Link>
-        </HeaderLinkContainer>
       </TitleContainer>
     </HeaderContainer>
   );
