@@ -7,27 +7,27 @@ const PContainer = styled.section.attrs((props) => ({
   id: props.id,
 }))`
   display: grid;
-  gap: 2rem;
-  padding: 2rem 2rem;
+  // gap: 2rem;
+  // padding: 2rem 2rem;
   overflow: hidden;
   margin-bottom: 2rem;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  // background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
   position: relative;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    // gap: 2rem;
 
-    padding: 3rem;
+    // padding: 3rem;
   }
 
   @media ${breakpoint.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    padding: 6rem;
+    // padding: 6rem;
   }
 
   @media ${breakpoint.desktopXL} {
-    gap: 4rem;
+    // gap: 4rem;
   }
 `;
 
@@ -104,8 +104,7 @@ function Portfolio() {
             <PBox
               bgColor={item.bgColor}
               transform={item.transform}
-              height={item.height}
-            >
+              height={item.height}>
               <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
               <PBoxOverlay overlayColor={item.overlayColor}>
                 <PBoxText>
