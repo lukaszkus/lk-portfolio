@@ -1,10 +1,8 @@
-// import { Link } from "react-scroll";
 import styled from "styled-components";
-// import styled, { keyframes } from "styled-components";
 
-import { images, breakpoint } from "../utils";
+import { breakpoint } from "../../utils";
 
-const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header`
   height: 100vh;
   position: relative;
   width: 100%;
@@ -27,7 +25,7 @@ const HeaderContainer = styled.header`
   // background-blend-mode: normal, multiply;
 `;
 
-const TitleContainer = styled.div`
+export const TitleContainer = styled.div`
   position: relative;
   padding-top: 6rem;
 
@@ -55,7 +53,7 @@ const TitleContainer = styled.div`
   }
 `;
 
-const HeaderTitle = styled.h1`
+export const HeaderTitle = styled.h1`
   position: relative;
   font-size: 3.5rem;
   line-height: 1;
@@ -74,13 +72,13 @@ const HeaderTitle = styled.h1`
   }
 `;
 
-const HeaderSubtitle = styled.div`
+export const HeaderSubtitle = styled.div`
   position: relative;
 `;
 
-const SubtitleWrapper = styled.div``;
+export const SubtitleWrapper = styled.div``;
 
-const SubtitleItem = styled.div`
+export const SubtitleItem = styled.div`
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -114,30 +112,3 @@ const SubtitleItem = styled.div`
     font-size: 4rem;
   }
 `;
-
-function Header() {
-  return (
-    <HeaderContainer>
-      <TitleContainer>
-        <img src={images.me} alt="Me" data-aos="fade-down" />
-        <HeaderTitle data-aos="fade-up" data-aos-duration="300">
-          Hi,
-          <br />
-          I'm Kusiu.
-        </HeaderTitle>
-        <HeaderSubtitle>
-          <SubtitleWrapper>
-            <SubtitleItem data-aos="fade-up" data-aos-duration="600">
-              FRONT-END DEVELOPER
-            </SubtitleItem>
-            <SubtitleItem data-aos="fade-up" data-aos-duration="800">
-              & GRAPHIC DESIGNER
-            </SubtitleItem>
-          </SubtitleWrapper>
-        </HeaderSubtitle>
-      </TitleContainer>
-    </HeaderContainer>
-  );
-}
-
-export default Header;
