@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-import { breakpoint } from "../utils";
+import { breakpoint } from "../../utils";
 
-const CContainer = styled.section`
+export const CContainer = styled.section`
   position: relative;
   overflow: hidden;
   padding: 0 2rem;
 `;
 
-const CBox = styled.div`
+export const CBox = styled.div`
   width: 100%;
   height: 80vh;
   display: flex;
@@ -35,7 +35,7 @@ const CBox = styled.div`
   }
 `;
 
-const CTitle = styled.h2`
+export const CTitle = styled.h2`
   position: relative;
   font-size: 2.5rem;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
@@ -47,14 +47,14 @@ const CTitle = styled.h2`
   }
 `;
 
-const CText = styled.p`
+export const CText = styled.p`
   text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   padding-bottom: 10px;
 `;
 
-const CLink = styled.a.attrs((props) => ({
+export const CLink = styled.a.attrs((props) => ({
   href: props.mail,
 }))`
   color: #000;
@@ -69,27 +69,3 @@ const CLink = styled.a.attrs((props) => ({
     color: #6a11cb;
   }
 `;
-
-function Contact() {
-  return (
-    <CContainer>
-      <CBox data-aos="fade-up" data-aos-duration="300">
-        <CTitle data-aos="fade-up" data-aos-duration="600">
-          Get in Touch
-        </CTitle>
-        <CText data-aos="fade-up" data-aos-duration="800">
-          I’m open to job and project opportunities.
-        </CText>
-        <CLink
-          mail="mailto:lukasz.kus84@outlook.com"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
-          Drop me a line.
-        </CLink>
-      </CBox>
-    </CContainer>
-  );
-}
-
-export default Contact;
