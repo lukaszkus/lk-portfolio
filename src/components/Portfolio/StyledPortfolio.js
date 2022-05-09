@@ -25,7 +25,7 @@ export const PContainer = styled.section.attrs((props) => ({
   }
 
   @media ${breakpoint.desktopXL} {
-    gap: 4rem;
+    gap: 2rem;
   }
 `;
 
