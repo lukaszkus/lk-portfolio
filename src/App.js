@@ -1,21 +1,21 @@
 import { useContext } from "react";
 import Context from "./context/context";
 import { Routes, Route } from "react-router-dom";
+
 import "./style.css";
 
 //Pages
-import { Home, About } from "./pages";
+import { About, Home } from "./pages";
 //Components
-import { Topbar, Menu, Footer, ScrollBtn } from "./components";
+import { Footer, Menu, ScrollBtn, Topbar } from "./components";
 //Work
-import { TodoApp, WildnSlow, FrontendMentor, Informatyk } from "./work";
+import { FrontendMentor, Informatyk, TodoApp, WildnSlow } from "./work";
 
 function App() {
   const { isOpen } = useContext(Context);
 
   return (
     <>
-      <ScrollBtn />
       {isOpen && <Menu />}
       <Topbar />
       <Routes>
@@ -26,6 +26,7 @@ function App() {
         <Route path="work/fm-solutions" element={<FrontendMentor />} />
         <Route path="work/informatyk-na-godziny" element={<Informatyk />} />
       </Routes>
+      <ScrollBtn />
       <Footer />
     </>
   );
