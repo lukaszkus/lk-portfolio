@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 
 import { MenuContainer, MenuList, MenuItem } from "./StyledMenu";
 
-function Menu({ isOpen, toggle }) {
+function Menu() {
+  const { isOpen, toggle } = useContext(Context);
+
   return (
     <MenuContainer isOpen={isOpen} onClick={toggle}>
       <MenuList>

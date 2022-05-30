@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import Context from "../context/context";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -180,7 +182,8 @@ const Icon = styled.img.attrs((props) => ({
   }
 `;
 
-function TodoApp({ offset }) {
+function TodoApp() {
+  const { offset } = useContext(Context);
   const item = portfolioItems[0];
   const { title, category, project, cover, bgColor } = item;
 

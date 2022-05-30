@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import Context from "../context/context";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -209,7 +211,8 @@ const LinkItem = styled.a.attrs((props) => ({
   }
 `;
 
-function FrontendMentor({ offset }) {
+function FrontendMentor() {
+  const { offset } = useContext(Context);
   const item = portfolioItems[2];
   const { title, category, project, cover, bgColor } = item;
 

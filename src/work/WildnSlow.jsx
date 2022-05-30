@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import Context from "../context/context";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -167,7 +169,8 @@ const TextItem = styled.article`
   }
 `;
 
-function WildnSlow({ offset }) {
+function WildnSlow() {
+  const { offset } = useContext(Context);
   const item = portfolioItems[1];
   const { title, category, project, cover, bgColor } = item;
 
