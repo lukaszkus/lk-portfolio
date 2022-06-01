@@ -2,7 +2,29 @@ import { images } from "./";
 
 const portfolioItems = [
   {
-    id: 1,
+    id: 5,
+    title: "Top Albums",
+    category: "Front-end / Mobile app",
+    project: {
+      description:
+        "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
+      details:
+        "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
+      technology: ["React Native", "Expo"],
+      role: ["Mobile development"],
+      links: {
+        liveSite: "https://todo-fm.netlify.app/",
+        github: "https://github.com/lukaszkus/todo-app",
+      },
+    },
+    cover: images.ta_cover,
+    // bgColor: "linear-gradient(45deg, #0066ff 0%, #3500d3 100%)",
+    bgColor: "linear-gradient(to top, #6a85b6 0%, #bac8e0 100%)",
+    overlayColor: "#3500d3",
+    path: "work/top-albums",
+  },
+  {
+    id: 4,
     title: "Todo App",
     category: "Front-end / Web app",
     project: {
@@ -29,7 +51,7 @@ const portfolioItems = [
     path: "work/todo-app",
   },
   {
-    id: 2,
+    id: 3,
     title: "Wild'n'Slow",
     category: "Graphic design / Identity",
     project: {
@@ -52,7 +74,7 @@ const portfolioItems = [
     path: "work/wild-n-slow",
   },
   {
-    id: 3,
+    id: 2,
     title: "Frontend Mentor - Solutions",
     category: "Front-end / Misc",
     project: {
@@ -83,7 +105,7 @@ const portfolioItems = [
     path: "work/fm-solutions",
   },
   {
-    id: 4,
+    id: 1,
     title: "Informatyk Na Godziny",
     category: "Front-end / Landing page",
     project: {

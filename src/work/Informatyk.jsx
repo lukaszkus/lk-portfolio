@@ -184,7 +184,7 @@ const Icon = styled.img.attrs((props) => ({
 
 function Informatyk() {
   const { offset } = useContext(Context);
-  const item = portfolioItems[3];
+  const item = portfolioItems[4];
   const { title, category, project, cover, bgColor } = item;
 
   return (
@@ -196,8 +196,7 @@ function Informatyk() {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>

@@ -184,7 +184,7 @@ const Icon = styled.img.attrs((props) => ({
 
 function TodoApp() {
   const { offset } = useContext(Context);
-  const item = portfolioItems[1];
+  const item = portfolioItems[0];
   const { title, category, project, cover, bgColor } = item;
 
   return (

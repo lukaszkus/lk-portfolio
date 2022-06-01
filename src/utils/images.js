@@ -8,6 +8,9 @@ import me from "../assets/me.png";
 
 //WORK IMAGES
 
+//Top Albums
+import ta_cover from "../assets/work/topAlbums/ta_cover.png";
+
 //Todo
 import todo_cover from "../assets/work/todo/todo_cover.png";
 import todo_light from "../assets/work/todo/todo_light.png";
@@ -42,6 +45,8 @@ const images = {
   linkedin,
   mobile_first,
   me,
+
+  ta_cover,
 
   todo_cover,
   todo_light,

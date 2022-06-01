@@ -213,7 +213,7 @@ const LinkItem = styled.a.attrs((props) => ({
 
 function FrontendMentor() {
   const { offset } = useContext(Context);
-  const item = portfolioItems[2];
+  const item = portfolioItems[3];
   const { title, category, project, cover, bgColor } = item;
 
   return (
@@ -225,8 +225,7 @@ function FrontendMentor() {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>
@@ -282,8 +281,7 @@ function FrontendMentor() {
           <TextItem
             color="#935653"
             bgColor="rgba(255, 255, 255, 0.2)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>Base Apparel comming soon page</h3>
             <p>
               A great project to practice responsive layout building and simple
@@ -313,14 +311,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/base-apparel-coming-soon"
-                color="#935653"
-              >
+                color="#935653">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/base-apparel-coming-soon"
-                color="#935653"
-              >
+                color="#935653">
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -333,8 +329,7 @@ function FrontendMentor() {
           <TextItem
             color="#2d314d"
             bgColor="rgba(255, 255, 255, 0.3)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>Easybank landing page</h3>
             <p>
               A responisve landing page with mobile navigation menu toggle.
@@ -360,14 +355,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/easybank-landing-page"
-                color="#2d314d"
-              >
+                color="#2d314d">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/easybank-landing-page"
-                color="#2d314d"
-              >
+                color="#2d314d">
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -386,8 +379,7 @@ function FrontendMentor() {
           <TextItem
             color="#8b97c6"
             bgColor="rgba(0, 0, 0, 0.2)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>Social media dashboard</h3>
             <p>
               It is a responsive dashboard layout with color theme switcher. A
@@ -415,14 +407,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/social-media-dashboard"
-                color="#8b97c6"
-              >
+                color="#8b97c6">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/social-media-dashboard"
-                color="#8b97c6"
-              >
+                color="#8b97c6">
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -476,8 +466,7 @@ function FrontendMentor() {
           <TextItem
             color="#674baf"
             bgColor="rgba(255, 255, 255, 0.2)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>Huddle landing page</h3>
             <p>
               A responisve landing page where users are able to view the optimal
@@ -501,14 +490,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/huddle-landing-page"
-                color="#674baf"
-              >
+                color="#674baf">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/huddle-landing-page"
-                color="#674baf"
-              >
+                color="#674baf">
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -521,8 +508,7 @@ function FrontendMentor() {
           <TextItem
             color="#f6f6fe"
             bgColor="rgba(255, 255, 255, 0.1)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>Pricing component</h3>
             <p>
               Responsive pricing component where users are able to toggle
@@ -548,14 +534,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/pricing-component"
-                color="#f6f6fe"
-              >
+                color="#f6f6fe">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/pricing-component"
-                color="#f6f6fe"
-              >
+                color="#f6f6fe">
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -574,8 +558,7 @@ function FrontendMentor() {
           <TextItem
             color="#1c1f4a"
             bgColor="rgba(255, 255, 255, 0.2)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>Time tracking dashboard</h3>
             <p>
               Dashboard layout build with CSS Grid. The data is pull from local
@@ -604,14 +587,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/time-tracking-dashboard"
-                color="#1c1f4a"
-              >
+                color="#1c1f4a">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/time-tracking-dashboard"
-                color="#1c1f4a"
-              >
+                color="#1c1f4a">
                 Github repository
               </LinkItem>
             </LinkContainer>
@@ -624,8 +605,7 @@ function FrontendMentor() {
           <TextItem
             color="#f2f2f2"
             bgColor="rgba(255, 255, 255, 0.1)"
-            data-aos="fade-up"
-          >
+            data-aos="fade-up">
             <h3>3 column component</h3>
             <p>
               Simple, responsive 3 column component. Users are able to view the
@@ -650,14 +630,12 @@ function FrontendMentor() {
             <LinkContainer>
               <LinkItem
                 href="https://lukaszkus.github.io/3-column-component"
-                color="#f2f2f2"
-              >
+                color="#f2f2f2">
                 Live site
               </LinkItem>
               <LinkItem
                 href="https://github.com/lukaszkus/3-column-component"
-                color="#f2f2f2"
-              >
+                color="#f2f2f2">
                 Github repository
               </LinkItem>
             </LinkContainer>

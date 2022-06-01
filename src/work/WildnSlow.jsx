@@ -171,7 +171,7 @@ const TextItem = styled.article`
 
 function WildnSlow() {
   const { offset } = useContext(Context);
-  const item = portfolioItems[1];
+  const item = portfolioItems[2];
   const { title, category, project, cover, bgColor } = item;
 
   return (
@@ -183,8 +183,7 @@ function WildnSlow() {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
-        >
+          duration={500}>
           <Arrow />
         </Link>
       </Hero>
