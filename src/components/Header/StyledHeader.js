@@ -41,7 +41,7 @@ export const Image = styled(motion.img)`
     right: -50px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   position: relative;
   font-size: 3.5rem;
   line-height: 1;
@@ -64,7 +64,7 @@ export const SubtitleWrapper = styled.div`
   position: relative;
 `;
 
-export const Subtitle = styled.div`
+export const Subtitle = styled(motion.div)`
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
