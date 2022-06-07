@@ -1,5 +1,3 @@
-import { images } from "../../utils";
-
 import {
   Container,
   TitleWrapper,
@@ -9,12 +7,11 @@ import {
   Subtitle,
 } from "./StyledHeader";
 
-function Header() {
+const Header = () => {
   return (
     <Container>
       <TitleWrapper>
         <Image
-          src={images.me}
           alt="Me"
           animate={{ y: [-200, 0], opacity: [0, 1] }}
           transition={{ duration: 0.4 }}
@@ -48,6 +45,6 @@ function Header() {
       </TitleWrapper>
     </Container>
   );
-}
+};
 
 export default Header;

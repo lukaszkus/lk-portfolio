@@ -2,13 +2,13 @@ import { Logo, MenuBtn } from "../";
 
 import { TopbarContainer } from "./StyledTopbar";
 
-function Topbar() {
+const Topbar = () => {
   return (
-    <TopbarContainer data-aos="fade-down">
+    <TopbarContainer>
       <Logo />
       <MenuBtn />
     </TopbarContainer>
   );
-}
+};
 
 export default Topbar;

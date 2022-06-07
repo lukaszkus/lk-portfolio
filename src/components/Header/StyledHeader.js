@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { breakpoint } from "../../utils";
+import { breakpoint, images } from "../../utils";
 
 export const Container = styled.header`
   position: relative;
@@ -23,7 +23,9 @@ export const TitleWrapper = styled.div`
   }
 `;
 
-export const Image = styled(motion.img)`
+export const Image = styled(motion.img).attrs({
+  src: `${images.me}`,
+})`
   width: 65%;
   height: auto;
   position: absolute;
