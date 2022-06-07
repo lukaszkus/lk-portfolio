@@ -48,11 +48,17 @@ export const Title = styled(motion.h1)`
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 5px;
+
+  &:last-of-type {
+    margin-bottom: 5px;
+  }
 
   @media ${breakpoint.tablet} {
     font-size: 4.5rem;
-    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
   }
 
   @media ${breakpoint.desktopXL} {

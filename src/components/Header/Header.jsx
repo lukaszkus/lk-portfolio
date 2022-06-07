@@ -24,19 +24,23 @@ function Header() {
           transition={{ delay: 0.7, duration: 0.4 }}
         >
           Hi,
-          <br />
+        </Title>
+        <Title
+          animate={{ x: [-200, 0], opacity: [0, 1] }}
+          transition={{ delay: 0.9, duration: 0.4 }}
+        >
           I'm Kusiu.
         </Title>
         <SubtitleWrapper>
           <Subtitle
             animate={{ x: [-200, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.4, duration: 0.5 }}
+            transition={{ delay: 1.6, duration: 0.4 }}
           >
             FRONT-END DEVELOPER
           </Subtitle>
           <Subtitle
             animate={{ x: [-200, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.5, duration: 0.5 }}
+            transition={{ delay: 1.8, duration: 0.4 }}
           >
             & GRAPHIC DESIGNER
           </Subtitle>
