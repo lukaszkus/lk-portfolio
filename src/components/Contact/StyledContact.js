@@ -22,7 +22,7 @@ export const CBox = styled.div`
     width: 120%;
     height: 80%;
     background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
-    transform: skew(21deg) rotate(2deg);
+    // transform: skew(21deg) rotate(2deg);
 
     @media ${breakpoint.tablet} {
       width: 90%;
