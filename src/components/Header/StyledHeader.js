@@ -29,17 +29,17 @@ export const Image = styled(motion.img).attrs({
   width: 65%;
   height: auto;
   position: absolute;
-  top: -30px;
+  top: -50px;
   right: 0;
 
   @media ${breakpoint.tablet} {
     width: 50%;
-    top: -70px;
+    top: -90px;
     right: -30px;
   }
 
   @media ${breakpoint.desktopXL} {
-    top: -100px;
+    top: -120px;
     right: -50px;
 `;
 

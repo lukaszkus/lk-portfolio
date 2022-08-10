@@ -21,7 +21,7 @@ export const PContainer = styled.section.attrs((props) => ({
 
   @media ${breakpoint.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    // padding: 6rem;
+    padding: 2rem 4rem;
   }
 
   @media ${breakpoint.desktopXL} {
@@ -37,6 +37,8 @@ export const PBoxContainer = styled.div`
 `;
 
 export const PBox = styled.article`
+  display: flex;
+  justify-content: center;
   object-fit: cover;
   max-height: 50vh;
   display: grid;
@@ -44,8 +46,7 @@ export const PBox = styled.article`
   overflow: hidden;
   position: relative;
   background: ${(props) => props.bgColor};
-  display: flex;
-  justify-content: center;
+  border-radius: 0.5rem;
 `;
 
 export const PBoxImg = styled.img`
