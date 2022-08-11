@@ -35,6 +35,7 @@ function App() {
       </Routes>
       <ScrollBtn />
       <Footer />
+      <div class="background-gradient"></div>
     </>
   );
 }

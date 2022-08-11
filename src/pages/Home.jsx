@@ -12,7 +12,6 @@ function Home() {
         <Portfolio />
         <Contact />
       </Main>
-      <div class="background-gradient"></div>
     </>
   );
 }
