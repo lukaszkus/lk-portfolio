@@ -13,8 +13,8 @@ const MenuBtn = () => {
 
   return (
     <HamburgerWrapper
-      animate={{ x: [200, 0], opacity: [0, 1] }}
-      transition={{ delay: 2.3, duration: 0.4 }}
+      animate={{ x: [100, 0], opacity: [0, 1] }}
+      transition={{ delay: 1.5, duration: 0.4 }}
     >
       <Hamburger toggled={isOpen} toggle={toggle} size={28} color={clr} />
     </HamburgerWrapper>

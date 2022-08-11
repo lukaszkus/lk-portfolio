@@ -6,8 +6,8 @@ const Logo = () => {
   return (
     <Link to="/">
       <LogoLight
-        animate={{ x: [-200, 0], opacity: [0, 1] }}
-        transition={{ delay: 2.3, duration: 0.4 }}
+        animate={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ delay: 1.5, duration: 0.4 }}
       />
     </Link>
   );

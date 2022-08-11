@@ -13,31 +13,36 @@ const Header = () => {
       <TitleWrapper>
         <Image
           alt="Me"
-          animate={{ y: [-200, 0], opacity: [0, 1] }}
-          transition={{ duration: 0.4 }}
+          animate={{
+            // y: [-100, 0],
+            opacity: [0, 1],
+            scale: [4, 0.9, 1.1, 1],
+            // rotate: [15, 0],
+          }}
+          transition={{ duration: 0.6 }}
         />
         <Title
-          animate={{ x: [-200, 0], opacity: [0, 1] }}
-          transition={{ delay: 0.7, duration: 0.4 }}
+          animate={{ x: [-100, 0], opacity: [0, 1] }}
+          transition={{ delay: 0.2, duration: 0.4 }}
         >
           Hi,
         </Title>
         <Title
-          animate={{ x: [-200, 0], opacity: [0, 1] }}
-          transition={{ delay: 0.9, duration: 0.4 }}
+          animate={{ x: [-150, 0], opacity: [0, 1] }}
+          transition={{ delay: 0.3, duration: 0.4 }}
         >
           I'm Kusiu.
         </Title>
         <SubtitleWrapper>
           <Subtitle
-            animate={{ x: [-200, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.6, duration: 0.4 }}
+            animate={{ x: [-100, 0], opacity: [0, 1] }}
+            transition={{ delay: 1, duration: 0.4 }}
           >
             FRONT-END DEVELOPER
           </Subtitle>
           <Subtitle
-            animate={{ x: [-200, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.8, duration: 0.4 }}
+            animate={{ x: [-150, 0], opacity: [0, 1] }}
+            transition={{ delay: 1.1, duration: 0.4 }}
           >
             & GRAPHIC DESIGNER
           </Subtitle>
