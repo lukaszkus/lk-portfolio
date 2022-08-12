@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Context from "../context/context";
 import { Link } from "react-scroll";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { images, portfolioItems, breakpoint } from "../utils";
 
@@ -188,7 +189,10 @@ function TodoApp() {
   const { title, category, project, cover, bgColor } = item;
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
       <Hero bgColor={bgColor}>
         <HeroImg offset={offset} cover={cover} alt={`${title} - ${category}`} />
         <Link
@@ -200,7 +204,6 @@ function TodoApp() {
           <Arrow />
         </Link>
       </Hero>
-
       <Section id="section">
         <Container>
           <Heading data-aos="fade-up">
@@ -240,7 +243,6 @@ function TodoApp() {
           </Description>
         </Container>
       </Section>
-
       <Section>
         <Grid>
           <ImageItem data-aos="fade-up">
@@ -253,7 +255,6 @@ function TodoApp() {
           </ImageItem>
         </Grid>
       </Section>
-
       <Section bgColor={bgColor} data-aos="fade-up">
         <Container>
           <Grid>
@@ -272,7 +273,7 @@ function TodoApp() {
           </Grid>
         </Container>
       </Section>
-    </>
+    </motion.div>
   );
 }
 

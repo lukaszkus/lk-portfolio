@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Context from "../context/context";
 import { Link } from "react-scroll";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { images, portfolioItems, breakpoint } from "../utils";
 
@@ -217,7 +218,10 @@ function FrontendMentor() {
   const { title, category, project, cover, bgColor } = item;
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}>
       <Hero bgColor={bgColor}>
         <HeroImg offset={offset} cover={cover} alt={`${title} - ${category}`} />
         <Link
@@ -645,7 +649,7 @@ function FrontendMentor() {
           </ImageItem>
         </Grid>
       </Section>
-    </>
+    </motion.div>
   );
 }
 
