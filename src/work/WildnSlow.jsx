@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 import { images, portfolioItems, breakpoint } from "../utils";
+import ScrollToTop from "../utils/scrollToTop";
 
 const Hero = styled.header`
   width: 100%;
@@ -176,78 +177,87 @@ function WildnSlow() {
   const { title, category, project, cover, bgColor } = item;
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
-      <Hero bgColor={bgColor}>
-        <HeroImg offset={offset} cover={cover} alt={`${title} - ${category}`} />
-        <Link
-          to="section"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}>
-          <Arrow />
-        </Link>
-      </Hero>
+    <>
+      <ScrollToTop />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <Hero bgColor={bgColor}>
+          <HeroImg
+            offset={offset}
+            cover={cover}
+            alt={`${title} - ${category}`}
+          />
+          <Link
+            to="section"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            <Arrow />
+          </Link>
+        </Hero>
 
-      <Section id="section">
-        <Container>
-          <Heading data-aos="fade-up">
-            <h2>{title}</h2>
-            <h3>{category}</h3>
-          </Heading>
+        <Section id="section">
+          <Container>
+            <Heading data-aos="fade-up">
+              <h2>{title}</h2>
+              <h3>{category}</h3>
+            </Heading>
 
-          <Description>
-            <div data-aos="fade-up">
-              <p>{project.description}</p>
-              <p>{project.details}</p>
-            </div>
+            <Description>
+              <div data-aos="fade-up">
+                <p>{project.description}</p>
+                <p>{project.details}</p>
+              </div>
 
-            <List>
-              <ul data-aos="fade-up">
-                <p>My role:</p>
-                {project.role.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </List>
-          </Description>
-        </Container>
-      </Section>
+              <List>
+                <ul data-aos="fade-up">
+                  <p>My role:</p>
+                  {project.role.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </List>
+            </Description>
+          </Container>
+        </Section>
 
-      <Section>
-        <Grid>
-          <ImageItem data-aos="fade-up">
-            <img src={images.wns_tag} alt="Label" />
-            <figcaption>Label</figcaption>
-          </ImageItem>
-          <ImageItem data-aos="fade-up">
-            <img src={images.wns_box} alt="Bos sticker" />
-            <figcaption>Box sticker</figcaption>
-          </ImageItem>
-        </Grid>
-      </Section>
-
-      <Section bgColor={bgColor} data-aos="fade-up">
-        <Container>
+        <Section>
           <Grid>
-            <TextItem data-aos="fade-up">
-              <h3>Badges</h3>
-              <p>
-                The application is built with the Mobile First approach and RWD
-                (Responisve Web Design) method that enables web to fit the
-                screens of different devices automatically.
-              </p>
-            </TextItem>
+            <ImageItem data-aos="fade-up">
+              <img src={images.wns_tag} alt="Label" />
+              <figcaption>Label</figcaption>
+            </ImageItem>
+            <ImageItem data-aos="fade-up">
+              <img src={images.wns_box} alt="Bos sticker" />
+              <figcaption>Box sticker</figcaption>
+            </ImageItem>
           </Grid>
-          <ImageItem data-aos="fade-up">
-            <img src={images.wns_badges} alt="Badges" />
-          </ImageItem>
-        </Container>
-      </Section>
-    </motion.div>
+        </Section>
+
+        <Section bgColor={bgColor} data-aos="fade-up">
+          <Container>
+            <Grid>
+              <TextItem data-aos="fade-up">
+                <h3>Badges</h3>
+                <p>
+                  The application is built with the Mobile First approach and
+                  RWD (Responisve Web Design) method that enables web to fit the
+                  screens of different devices automatically.
+                </p>
+              </TextItem>
+            </Grid>
+            <ImageItem data-aos="fade-up">
+              <img src={images.wns_badges} alt="Badges" />
+            </ImageItem>
+          </Container>
+        </Section>
+      </motion.div>
+    </>
   );
 }
 
