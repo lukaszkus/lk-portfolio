@@ -106,3 +106,18 @@ export const Subtitle = styled(motion.div)`
     font-size: 4rem;
   }
 `;
+
+export const Arrow = styled.img.attrs({
+  src: `${images.arrow}`,
+})`
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - (30px / 2));
+  width: 30px;
+  transition: 0.3s ease-in-out;
+  z-indx: 9999;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+`;

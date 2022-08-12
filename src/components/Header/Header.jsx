@@ -1,4 +1,7 @@
+import { Link } from "react-scroll";
+
 import {
+  Arrow,
   Container,
   TitleWrapper,
   Image,
@@ -48,6 +51,15 @@ const Header = () => {
           </Subtitle>
         </SubtitleWrapper>
       </TitleWrapper>
+      <Link
+        to="portfolio"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+      >
+        <Arrow />
+      </Link>
     </Container>
   );
 };
