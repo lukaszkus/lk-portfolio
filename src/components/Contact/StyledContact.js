@@ -1,41 +1,30 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const CContainer = styled.section`
+export const Container = styled.section`
   position: relative;
   overflow: hidden;
   padding: 0 2rem;
+
+  @media ${breakpoint.desktop} {
+    padding: 4rem;
+  }
 `;
 
-export const CBox = styled.div`
+export const Box = styled(motion.div)`
   width: 100%;
   height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 80%;
-    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
-    // transform: skew(21deg) rotate(2deg);
-
-    @media ${breakpoint.tablet} {
-      width: 90%;
-      height: 90%;
-    }
-  }
-
-  @media ${breakpoint.tablet} {
-    height: 100vh;
-  }
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  border-radius: 0.5rem;
 `;
 
-export const CTitle = styled.h2`
+export const Title = styled.h2`
   position: relative;
   font-size: 2.5rem;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
@@ -47,14 +36,14 @@ export const CTitle = styled.h2`
   }
 `;
 
-export const CText = styled.p`
+export const Text = styled.p`
   text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   padding-bottom: 10px;
 `;
 
-export const CLink = styled.a.attrs((props) => ({
+export const Link = styled.a.attrs((props) => ({
   href: props.mail,
 }))`
   color: #000;

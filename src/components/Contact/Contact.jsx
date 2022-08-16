@@ -1,24 +1,22 @@
-import { CContainer, CBox, CTitle, CText, CLink } from "./StyledContact";
+import { Container, Box, Title, Text, Link } from "./StyledContact";
+
+const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 function Contact() {
   return (
-    <CContainer>
-      <CBox data-aos="fade-up" data-aos-duration="300">
-        <CTitle data-aos="fade-up" data-aos-duration="600">
-          Get in Touch
-        </CTitle>
-        <CText data-aos="fade-up" data-aos-duration="800">
-          I’m open to job and project opportunities.
-        </CText>
-        <CLink
-          mail="mailto:lukasz.kus84@outlook.com"
-          data-aos="fade-up"
-          data-aos-duration="800"
-        >
-          Drop me a line.
-        </CLink>
-      </CBox>
-    </CContainer>
+    <Container>
+      <Box
+        whileInView={{
+          y: [100, 0],
+          opacity: [0, 1],
+          transition: transition,
+        }}
+      >
+        <Title>Get in Touch</Title>
+        <Text>I’m open to job and project opportunities.</Text>
+        <Link mail="mailto:lukasz.kus84@outlook.com">Drop me a line.</Link>
+      </Box>
+    </Container>
   );
 }
 

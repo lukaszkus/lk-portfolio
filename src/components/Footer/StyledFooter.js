@@ -9,12 +9,8 @@ export const FContainer = styled.footer`
   padding: 2rem;
   display: flex;
 
-  @media ${breakpoint.tablet} {
-    padding: 4rem;
-  }
-
   @media ${breakpoint.desktop} {
-    padding: 6rem;
+    padding: 4rem;
   }
 `;
 
