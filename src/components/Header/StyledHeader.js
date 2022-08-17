@@ -107,7 +107,7 @@ export const Subtitle = styled(motion.div)`
   }
 `;
 
-export const Arrow = styled.img.attrs({
+export const Arrow = styled(motion.img).attrs({
   src: `${images.arrow}`,
 })`
   position: absolute;
