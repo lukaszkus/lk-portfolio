@@ -10,6 +10,8 @@ import {
   Subtitle,
 } from "./StyledHeader";
 
+const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+
 const Header = () => {
   return (
     <Container>
@@ -17,36 +19,30 @@ const Header = () => {
         <Image
           alt="Me"
           animate={{
-            // y: [-100, 0],
             opacity: [0, 1],
-            scale: [4, 0.9, 1.1, 1],
-            // rotate: [15, 0],
+            scale: [6, 0.9, 1.1, 1],
           }}
-          transition={{ duration: 0.6 }}
+          transition={transition}
         />
         <Title
           animate={{ x: [-100, 0], opacity: [0, 1] }}
-          transition={{ delay: 0.2, duration: 0.4 }}
-        >
+          transition={{ delay: 0.2, ...transition }}>
           Hi,
         </Title>
         <Title
           animate={{ x: [-150, 0], opacity: [0, 1] }}
-          transition={{ delay: 0.3, duration: 0.4 }}
-        >
+          transition={{ delay: 0.3, ...transition }}>
           I'm Kusiu.
         </Title>
         <SubtitleWrapper>
           <Subtitle
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 1, duration: 0.4 }}
-          >
+            transition={{ delay: 1, ...transition }}>
             FRONT-END DEVELOPER
           </Subtitle>
           <Subtitle
             animate={{ x: [-150, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.1, duration: 0.4 }}
-          >
+            transition={{ delay: 1.1, ...transition }}>
             & GRAPHIC DESIGNER
           </Subtitle>
         </SubtitleWrapper>
@@ -56,8 +52,7 @@ const Header = () => {
         spy={true}
         smooth={true}
         offset={-100}
-        duration={500}
-      >
+        duration={500}>
         <Arrow />
       </Link>
     </Container>
