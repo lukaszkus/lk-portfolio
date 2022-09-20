@@ -35,7 +35,7 @@ export const FBox = styled.div`
 
 export const FBoxTitle = styled.p`
   font-weight: 600;
-  color: #6a11cb;
+  color: #2575fc;
 `;
 
 export const FBoxContent = styled.p`

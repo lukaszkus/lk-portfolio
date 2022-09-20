@@ -25,6 +25,19 @@ body {
   color: #c3cfe2;
 }
 
+.background-animate {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url(./assets/vec.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 20% 20%;
+}
+
 .background-gradient {
   position: fixed;
   left: 0;

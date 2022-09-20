@@ -5,7 +5,7 @@ import { breakpoint, images } from "../../utils";
 
 export const Container = styled.header`
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -29,12 +29,12 @@ export const Image = styled(motion.img).attrs({
   width: 65%;
   height: auto;
   position: absolute;
-  top: -50px;
+  top: -30px;
   right: 0;
 
   @media ${breakpoint.tablet} {
     width: 50%;
-    top: -90px;
+    top: -80px;
     right: -30px;
   }
 
@@ -45,11 +45,12 @@ export const Image = styled(motion.img).attrs({
 
 export const Title = styled(motion.h1)`
   position: relative;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1;
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  color: #2575fc;
 
   &:last-of-type {
     margin-bottom: 5px;

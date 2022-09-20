@@ -34,7 +34,7 @@ const Header = () => {
           animate={{ x: [-150, 0], opacity: [0, 1] }}
           transition={{ delay: 0.3, ...transition }}
         >
-          I'm Kusiu.
+          I'm Łukasz.
         </Title>
         <SubtitleWrapper>
           <Subtitle

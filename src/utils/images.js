@@ -4,7 +4,8 @@ import arrow from "../assets/chevron.svg";
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import mobile_first from "../assets/mobile_first.svg";
-import me from "../assets/me.png";
+import me from "../assets/me22.png";
+import vec from "../assets/vec.svg";
 
 //WORK IMAGES
 
@@ -45,6 +46,7 @@ const images = {
   linkedin,
   mobile_first,
   me,
+  vec,
 
   ta_cover,
 
