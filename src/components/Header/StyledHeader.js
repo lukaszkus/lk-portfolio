@@ -14,8 +14,15 @@ export const Container = styled.header`
   overflow: hidden;
 `;
 
+export const Wrapper = styled.div`
+  @media ${breakpoint.tablet} {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+`;
+
 export const TitleWrapper = styled.div`
-  position: relative;
   padding-top: 6rem;
 
   @media ${breakpoint.tablet} {
@@ -26,24 +33,18 @@ export const TitleWrapper = styled.div`
 export const Image = styled(motion.img).attrs({
   src: `${images.me}`,
 })`
-  width: 65%;
-  height: auto;
-  position: absolute;
-  top: -30px;
-  right: 0;
+  width: 20%;
+  height: 100%;
+  position: relative;
   rotate: 9deg;
   z-index: -999;
 
   @media ${breakpoint.tablet} {
-    width: 60%;
-    top: -80px;
-    right: -30px;
+    width: 20%;
   }
 
-  @media ${breakpoint.desktopXL} {
-    top: -120px;
-    right: -30%;
-  }
+  // @media ${breakpoint.desktopXL} {
+  // }
 `;
 
 export const Title = styled(motion.h1)`

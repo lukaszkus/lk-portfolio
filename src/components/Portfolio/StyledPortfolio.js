@@ -46,7 +46,7 @@ export const PBox = styled.article`
   overflow: hidden;
   position: relative;
   background: ${(props) => props.bgColor};
-  border-radius: 0.5rem;
+  // border-radius: 0.5rem;
 `;
 
 export const PBoxImg = styled.img`

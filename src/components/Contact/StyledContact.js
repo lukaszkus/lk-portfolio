@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { breakpoint } from "../../utils";
+import { breakpoint, images } from "../../utils";
 
 export const Container = styled.section`
   position: relative;
@@ -15,14 +15,36 @@ export const Container = styled.section`
 
 export const Box = styled(motion.div)`
   width: 100%;
-  height: 80vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
-  border-radius: 0.5rem;
+
+  @media ${breakpoint.tablet} {
+    flex-direction: row;
+    gap: 4rem;
+  }
 `;
+
+export const Image = styled(motion.img).attrs({
+  src: `${images.me_call}`,
+})`
+  width: 50%;
+  height: 100%;
+  position: relative;
+  rotate: -7deg;
+  z-index: -999;
+
+  @media ${breakpoint.tablet} {
+    width: 20%;
+  }
+
+  // @media ${breakpoint.desktopXL} {
+  // }
+`;
+
+export const TextWrapper = styled.div``;
 
 export const Title = styled.h2`
   position: relative;
@@ -32,13 +54,11 @@ export const Title = styled.h2`
   -webkit-text-fill-color: transparent;
 
   @media ${breakpoint.tablet} {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 `;
 
 export const Text = styled.p`
-  text-align: center;
-  position: relative;
   font-family: "Poppins", sans-serif;
   padding-bottom: 10px;
 `;
@@ -47,7 +67,6 @@ export const Link = styled.a.attrs((props) => ({
   href: props.mail,
 }))`
   color: #000;
-  text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   text-decoration: underline;
