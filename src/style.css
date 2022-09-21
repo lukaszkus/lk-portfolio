@@ -16,11 +16,6 @@
 body {
   font-family: "ButlerStencil";
   position: relative;
-  /* background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(221, 221, 221, 1) 0.1%,
-    rgb(210, 210, 210) 90%
-  ); */
   background-color: #242930;
   color: #c3cfe2;
 }
@@ -35,7 +30,8 @@ body {
   background-image: url(./assets/vec.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 20% 20%;
+  background-position: center;
+  opacity: 0.8;
 }
 
 .background-gradient {

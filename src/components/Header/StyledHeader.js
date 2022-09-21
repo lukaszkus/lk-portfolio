@@ -31,16 +31,19 @@ export const Image = styled(motion.img).attrs({
   position: absolute;
   top: -30px;
   right: 0;
+  rotate: 9deg;
+  z-index: -999;
 
   @media ${breakpoint.tablet} {
-    width: 50%;
+    width: 60%;
     top: -80px;
     right: -30px;
   }
 
   @media ${breakpoint.desktopXL} {
     top: -120px;
-    right: -50px;
+    right: -30%;
+  }
 `;
 
 export const Title = styled(motion.h1)`
@@ -116,7 +119,7 @@ export const Arrow = styled(motion.img).attrs({
   left: calc(50% - (30px / 2));
   width: 30px;
   transition: 0.3s ease-in-out;
-  z-indx: 9999;
+  z-index: 9999;
   &:hover {
     cursor: pointer;
     transform: scale(1.1);

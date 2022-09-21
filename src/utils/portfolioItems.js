@@ -18,9 +18,10 @@ const portfolioItems = [
       },
     },
     cover: images.ta_cover,
-    // bgColor: "linear-gradient(45deg, #0066ff 0%, #3500d3 100%)",
-    bgColor: "linear-gradient(to top, #6a85b6 0%, #bac8e0 100%)",
-    overlayColor: "#3500d3",
+    bgColor:
+      "linear-gradient(to top, rgba(106, 133, 182, 0.8) 0%, rgba(186, 200, 224, 0.8) 100%)",
+    // overlayColor: "#3500d3",
+    overlayColor: "rgba(53, 0, 211, 0.9)",
     path: "work/top-albums",
   },
   {
@@ -46,8 +47,9 @@ const portfolioItems = [
       },
     },
     cover: images.todo_cover,
-    bgColor: "linear-gradient(45deg, #b721ff 0%, #21d4fd 100%)",
-    overlayColor: "#b721ff",
+    bgColor:
+      "linear-gradient(45deg, rgba(183, 33, 255, 0.8) 0%, rgba(33, 212, 253, 0.8) 100%)",
+    overlayColor: "rgba(183, 33, 255, 0.9)",
     path: "work/todo-app",
   },
   {
@@ -69,8 +71,9 @@ const portfolioItems = [
       role: ["Branding & identity", "Marketing design", "Photography"],
     },
     cover: images.wns_cover,
-    bgColor: "linear-gradient(45deg, #0235a8 0%, #26d5c9 100%)",
-    overlayColor: "#26d5c9",
+    bgColor:
+      "linear-gradient(45deg, rgba(2, 53, 168, 0.8) 0%, rgba(38, 213, 201, 0.8) 100%)",
+    overlayColor: "rgba(38, 213, 201, 0.9)",
     path: "work/wild-n-slow",
   },
   {
@@ -100,8 +103,9 @@ const portfolioItems = [
       },
     },
     cover: images.fm_cover,
-    bgColor: "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)",
-    overlayColor: "#8ec5fc",
+    bgColor:
+      "linear-gradient(120deg, rgba(224, 195, 252, 0.8) 0%, rgba(142, 197, 252, 0.8) 100%)",
+    overlayColor: "rgba(142, 197, 252, 0.9)",
     path: "work/fm-solutions",
   },
   {
@@ -131,8 +135,9 @@ const portfolioItems = [
       },
     },
     cover: images.inf_cover,
-    bgColor: "linear-gradient(120deg, #f73c4f 0%, #2e1e5c 100%)",
-    overlayColor: "#fc4f61",
+    bgColor:
+      "linear-gradient(120deg, rgba(247, 60, 79, 0.8) 0%, rgba(46, 30, 92, 0.8) 100%)",
+    overlayColor: "rgba(247, 60, 79, 0.9)",
     path: "work/informatyk-na-godziny",
   },
 ];

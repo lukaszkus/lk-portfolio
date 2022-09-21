@@ -18,7 +18,7 @@ const Hero = styled.header`
   background-image: ${(props) => props.bgColor};
 `;
 
-const HeroImg = styled.img.attrs((props) => ({
+const HeroImg = styled(motion.img).attrs((props) => ({
   src: props.cover,
   alt: props.alt,
 }))`
@@ -195,21 +195,22 @@ function Informatyk() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
             cover={cover}
             alt={`${title} - ${category}`}
+            animate={{ opacity: [0, 1], y: [500, 0] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, y: -500 }}
           />
           <Link
             to="section"
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>

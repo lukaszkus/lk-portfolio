@@ -14,18 +14,18 @@ export const PContainer = styled.section.attrs((props) => ({
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 4rem;
     gap: 2rem;
-
-    // padding: 3rem;
   }
 
   @media ${breakpoint.desktop} {
     grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 4rem;
+    padding: 2rem 6rem;
   }
 
   @media ${breakpoint.desktopXL} {
-    gap: 2rem;
+    padding: 2rem 8rem;
+    // gap: 2rem;
   }
 `;
 

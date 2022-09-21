@@ -16,12 +16,14 @@ export const FContainer = styled.footer`
 
 export const FBoxContainer = styled.div`
   width: 100%;
-  border-top: 1px solid #6a11cb;
+  border-top: 1px solid #2575fc;
   padding: 2rem 0;
 
   @media ${breakpoint.tablet} {
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    align-items: center;
+    // gap: 2rem;
   }
 
   @media ${breakpoint.desktop} {
@@ -31,6 +33,7 @@ export const FBoxContainer = styled.div`
 export const FBox = styled.div`
   font-family: "Poppins", sans-serif;
   padding-bottom: 2rem;
+  text-align: center;
 `;
 
 export const FBoxTitle = styled.p`
