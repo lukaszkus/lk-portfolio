@@ -5,8 +5,8 @@ import { breakpoint, images } from "../../utils";
 
 export const Container = styled.header`
   position: relative;
-  min-height: 100vh;
   width: 100%;
+  min-height: 100vh;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -15,25 +15,28 @@ export const Container = styled.header`
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   @media ${breakpoint.tablet} {
-    display: flex;
-    justify-content: center;
     flex-direction: row-reverse;
   }
 `;
 
 export const TitleWrapper = styled.div`
-  padding-top: 6rem;
+  // padding-top: 6rem;
 
   @media ${breakpoint.tablet} {
-    padding-top: 4rem;
+    // padding-top: 4rem;
   }
 `;
 
 export const Image = styled(motion.img).attrs({
   src: `${images.me}`,
 })`
-  width: 20%;
+  width: 50%;
   height: 100%;
   position: relative;
   rotate: 9deg;
@@ -51,9 +54,6 @@ export const Title = styled(motion.h1)`
   position: relative;
   font-size: 3rem;
   line-height: 1;
-  // background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
   color: #2575fc;
 
   &:last-of-type {

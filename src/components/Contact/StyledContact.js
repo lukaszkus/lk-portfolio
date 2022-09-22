@@ -49,12 +49,14 @@ export const TextWrapper = styled.div``;
 export const Title = styled.h2`
   position: relative;
   font-size: 2.5rem;
-  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #2575fc;
 
   @media ${breakpoint.tablet} {
     font-size: 4rem;
+  }
+
+  @media ${breakpoint.desktop} {
+    font-size: 5rem;
   }
 `;
 
