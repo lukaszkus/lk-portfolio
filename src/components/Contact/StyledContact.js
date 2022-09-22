@@ -13,7 +13,7 @@ export const Container = styled.section`
   }
 `;
 
-export const Box = styled(motion.div)`
+export const Box = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -44,7 +44,7 @@ export const Image = styled(motion.img).attrs({
   // }
 `;
 
-export const TextWrapper = styled.div``;
+export const TextWrapper = styled(motion.div)``;
 
 export const Title = styled.h2`
   position: relative;
