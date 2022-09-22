@@ -16,19 +16,31 @@ function Contact() {
       <Box>
         <Image
           alt="Contact Me"
+          initial={{
+            x: -300,
+            rotate: 45,
+            opacity: 0,
+          }}
           whileInView={{
-            x: [-300, 0],
-            rotate: [45, 0],
-            opacity: [0, 0.8],
+            x: 0,
+            rotate: 0,
+            opacity: 0.8,
             transition: transition,
           }}
+          viewport={{ once: true }}
         />
         <TextWrapper
+          initial={{
+            y: 100,
+            opacity: 0,
+          }}
           whileInView={{
-            y: [100, 0],
-            opacity: [0, 1],
+            y: 0,
+            opacity: 1,
             transition: transition,
-          }}>
+          }}
+          viewport={{ once: true }}
+        >
           <Title>Get in Touch</Title>
           <Text>I’m open to job and project opportunities.</Text>
           <Link mail="mailto:lukasz.kus84@outlook.com">Drop me a line.</Link>

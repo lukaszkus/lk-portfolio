@@ -52,7 +52,7 @@ export const Image = styled(motion.img).attrs({
 
 export const Title = styled(motion.h1)`
   position: relative;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1;
   color: #2575fc;
 
@@ -61,7 +61,7 @@ export const Title = styled(motion.h1)`
   }
 
   @media ${breakpoint.tablet} {
-    font-size: 4.5rem;
+    font-size: 5rem;
 
     &:last-of-type {
       margin-bottom: 20px;
