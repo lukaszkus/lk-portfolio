@@ -8,7 +8,7 @@ import "./style.css";
 //Pages
 import { About, Home } from "./pages";
 //Components
-import { Footer, Menu, ScrollBtn, Topbar } from "./components";
+import { BackgroundSvg, Footer, Menu, ScrollBtn, Topbar } from "./components";
 //Work
 import {
   FrontendMentor,
@@ -39,7 +39,8 @@ function App() {
       </AnimatePresence>
       <ScrollBtn />
       <Footer />
-      <div className="background-animate"></div>
+      <BackgroundSvg />
+      {/* <div className="background-animate"></div> */}
       <div className="background-gradient"></div>
     </>
   );
