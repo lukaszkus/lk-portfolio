@@ -8,7 +8,7 @@ const BackgroundSvg = () => {
       const delay = 1 + i * 0.5;
       return {
         pathLength: 1,
-        opacity: 1,
+        opacity: 0.8,
         transition: {
           pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
           opacity: { delay, duration: 0.01 },
@@ -22,12 +22,10 @@ const BackgroundSvg = () => {
       className="bgSvg"
       id="art"
       xmlns="http://www.w3.org/2000/svg"
-      x="0px"
-      y="0px"
+      preserveAspectRatio="xMidYMin slice"
       viewBox="0 0 1920 1080"
       initial="hidden"
-      animate="visible"
-    >
+      animate="visible">
       <motion.path
         id="circle-right_00000091697886710394994340000008159363649804286856_"
         fill="none"
