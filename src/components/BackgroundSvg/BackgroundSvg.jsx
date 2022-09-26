@@ -32,8 +32,15 @@ const BackgroundSvg = () => {
     show: {
       opacity: 0.8,
       scale: [0.1, 1.5, 1],
-      transition: { delay: 1, duration: 0.6 },
+      transition: { duration: 0.6 },
     },
+  };
+
+  const dotTransition = {
+    ease: "linear",
+    type: "tween  ",
+    repeat: Infinity,
+    repeatType: "reverse",
   };
 
   return (
@@ -45,7 +52,8 @@ const BackgroundSvg = () => {
         preserveAspectRatio="xMidYMin slice"
         viewBox="0 0 1920 1080"
         initial="hidden"
-        animate="visible">
+        animate="visible"
+      >
         <motion.path
           id="circle-right_00000091697886710394994340000008159363649804286856_"
           fill="none"
@@ -546,20 +554,42 @@ const BackgroundSvg = () => {
         viewBox="0 0 1920 1080"
         variants={showDots}
         initial="hidden"
-        animate="show">
-        <motion.circle fill="#FFFFFF" cx="23" cy="386.7" r="5" variants={dot} />
+        animate="show"
+      >
+        <motion.circle
+          fill="#FFFFFF"
+          cx="23"
+          cy="386.7"
+          r="5"
+          variants={dot}
+          animate={{
+            x: [-12, 7, 15, -27, 0, -17],
+            y: [13, 2, -10, 4, -17, -28],
+          }}
+          transition={{ duration: 15, ...dotTransition }}
+        />
         <motion.circle
           fill="#FFFFFF"
           cx="1556.6"
           cy="309.6"
           r="8.7"
           variants={dot}
+          animate={{
+            x: [-26, 3, 10, 12, 0, -7],
+            y: [1, 12, -5, 4, -8, 23],
+          }}
+          transition={{ duration: 25, ...dotTransition }}
         />
         <motion.path
           fill="#EA227A"
           d="M1735.1,173.8c0,2.4-1.9,4.3-4.3,4.3s-4.3-1.9-4.3-4.3s1.9-4.3,4.3-4.3
 		C1733.2,169.4,1735.1,171.3,1735.1,173.8C1735.1,173.7,1735.1,173.8,1735.1,173.8z"
           variants={dot}
+          animate={{
+            x: [19, 2, -10, 4, -17, -18],
+            y: [-16, 3, 10, 25, 0, -7],
+          }}
+          transition={{ duration: 25, ...dotTransition }}
         />
         <motion.circle
           fill="#FFFFFF"
@@ -567,6 +597,11 @@ const BackgroundSvg = () => {
           cy="892.6"
           r="4.3"
           variants={dot}
+          animate={{
+            x: [-26, 3, 10, 12, 0, -7],
+            y: [-12, 7, 25, -17, 0, -17],
+          }}
+          transition={{ duration: 20, ...dotTransition }}
         />
         <motion.circle
           fill="#EA227A"
@@ -574,18 +609,33 @@ const BackgroundSvg = () => {
           cy="584.9"
           r="4.3"
           variants={dot}
+          animate={{
+            x: [1, 22, -5, 4, -8, 3],
+            y: [13, 2, -10, 4, -27, -18],
+          }}
+          transition={{ duration: 30, ...dotTransition }}
         />
         <motion.path
           fill="#EA227A"
           d="M1839,712.3c0,2.4-1.9,4.3-4.3,4.3s-4.3-1.9-4.3-4.3c0-2.4,1.9-4.3,4.3-4.3S1839,709.9,1839,712.3
 		L1839,712.3z"
           variants={dot}
+          animate={{
+            x: [-30, 7, 15, -29, 0, -17],
+            y: [1, 19, -5, 4, -28, 3],
+          }}
+          transition={{ duration: 35, ...dotTransition }}
         />
         <motion.path
           fill="#FFFFFF"
           d="M421.5,839.4c0,3.3-2.6,5.9-5.9,5.9s-5.9-2.6-5.9-5.9c0-3.3,2.6-5.9,5.9-5.9l0,0
 		C418.9,833.5,421.5,836.1,421.5,839.4z"
           variants={dot}
+          animate={{
+            x: [1, 12, -25, 4, -8, 3],
+            y: [-26, 3, 10, 12, 0, -17],
+          }}
+          transition={{ duration: 40, ...dotTransition }}
         />
       </motion.svg>
     </div>
