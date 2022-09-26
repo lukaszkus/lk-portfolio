@@ -27,7 +27,7 @@ function Contact() {
             opacity: 0.8,
             transition: transition,
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         />
         <TextWrapper
           initial={{
@@ -39,7 +39,7 @@ function Contact() {
             opacity: 1,
             transition: transition,
           }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <Title>Get in Touch</Title>
           <Text>I’m open to job and project opportunities.</Text>
