@@ -31,8 +31,8 @@ const BackgroundSvg = () => {
     hidden: { opacity: 0 },
     show: {
       opacity: 0.8,
-      scale: [0.1, 1.5, 1],
-      transition: { duration: 0.6 },
+      scale: [0, 1.2, 0.6, 1, 0],
+      transition: { scale: { repeat: Infinity, duration: 8 }, duration: 0.4 },
     },
   };
 
@@ -171,7 +171,7 @@ const BackgroundSvg = () => {
             x: [-12, 7, 15, -27, 0, -17],
             y: [13, 2, -10, 4, -17, -28],
           }}
-          transition={{ duration: 15, ...dotTransition }}
+          transition={{ duration: 40, ...dotTransition }}
         />
         <motion.circle
           fill="#FFFFFF"
@@ -183,7 +183,7 @@ const BackgroundSvg = () => {
             x: [-26, 3, 10, 12, 0, -7],
             y: [1, 12, -5, 4, -8, 23],
           }}
-          transition={{ duration: 25, ...dotTransition }}
+          transition={{ duration: 20, ...dotTransition }}
         />
         <motion.path
           fill="#EA227A"
