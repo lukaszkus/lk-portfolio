@@ -10,7 +10,14 @@ const BackgroundSvg = () => {
         pathLength: 1,
         opacity: 0.8,
         transition: {
-          pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+          pathLength: {
+            delay,
+            type: "spring",
+            duration: 5,
+            bounce: 0,
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
           opacity: { delay, duration: 0.01 },
         },
       };
