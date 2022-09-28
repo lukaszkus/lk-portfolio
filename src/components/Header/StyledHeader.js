@@ -116,13 +116,13 @@ export const Arrow = styled(motion.img).attrs({
   src: `${images.arrow}`,
 })`
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: calc(50% - (30px / 2));
   width: 30px;
   transition: 0.3s ease-in-out;
   z-index: 9999;
+  cursor: pointer;
   &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+    scale: 1.2;
   }
 `;
