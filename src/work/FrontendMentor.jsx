@@ -95,7 +95,7 @@ function FrontendMentor() {
           </Container>
         </Section>
 
-        <Section bgColor="#edd3d3" data-aos="fade-up">
+        <Section bgColor="rgba(237, 211, 211, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
@@ -158,8 +158,8 @@ function FrontendMentor() {
           <Container>
             <Grid>
               <TextItem
-                color="#2d314d"
-                bgColor="rgba(255, 255, 255, 0.3)"
+                color="#c3cfe2"
+                bgColor="rgba(0, 0, 0, 0.1)"
                 data-aos="fade-up"
               >
                 <h3>Easybank landing page</h3>
@@ -187,13 +187,13 @@ function FrontendMentor() {
                 <LinkContainer>
                   <LinkItem
                     href="https://lukaszkus.github.io/easybank-landing-page"
-                    color="#2d314d"
+                    color="#c3cfe2"
                   >
                     Live site
                   </LinkItem>
                   <LinkItem
                     href="https://github.com/lukaszkus/easybank-landing-page"
-                    color="#2d314d"
+                    color="#c3cfe2"
                   >
                     Github repository
                   </LinkItem>
@@ -206,7 +206,7 @@ function FrontendMentor() {
           </Container>
         </Section>
 
-        <Section bgColor="#252a41" data-aos="fade-up">
+        <Section bgColor="rgba(37, 42, 65, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
@@ -261,7 +261,7 @@ function FrontendMentor() {
           </Container>
         </Section>
 
-        <Section bgColor="#b2c1eb" data-aos="fade-up">
+        <Section bgColor="rgba(178, 193, 235, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <TextItem bgColor="rgba(255, 255, 255, 0.2)" data-aos="fade-up">
@@ -308,8 +308,8 @@ function FrontendMentor() {
                 <img src={images.fm_huddle} alt="Huddle landing page" />
               </ImageItem>
               <TextItem
-                color="#674baf"
-                bgColor="rgba(255, 255, 255, 0.2)"
+                color="#c3cfe2"
+                bgColor="rgba(0, 0, 0, 0.1)"
                 data-aos="fade-up"
               >
                 <h3>Huddle landing page</h3>
@@ -336,13 +336,13 @@ function FrontendMentor() {
                 <LinkContainer>
                   <LinkItem
                     href="https://lukaszkus.github.io/huddle-landing-page"
-                    color="#674baf"
+                    color="#c3cfe2"
                   >
                     Live site
                   </LinkItem>
                   <LinkItem
                     href="https://github.com/lukaszkus/huddle-landing-page"
-                    color="#674baf"
+                    color="#c3cfe2"
                   >
                     Github repository
                   </LinkItem>
@@ -352,7 +352,7 @@ function FrontendMentor() {
           </Container>
         </Section>
 
-        <Section bgColor="#7d82e4" data-aos="fade-up">
+        <Section bgColor="rgba(125, 130, 228, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <TextItem
@@ -414,8 +414,8 @@ function FrontendMentor() {
                 />
               </ImageItem>
               <TextItem
-                color="#1c1f4a"
-                bgColor="rgba(255, 255, 255, 0.2)"
+                color="#c3cfe2"
+                bgColor="rgba(0, 0, 0, 0.1)"
                 data-aos="fade-up"
               >
                 <h3>Time tracking dashboard</h3>
@@ -447,13 +447,13 @@ function FrontendMentor() {
                 <LinkContainer>
                   <LinkItem
                     href="https://lukaszkus.github.io/time-tracking-dashboard"
-                    color="#1c1f4a"
+                    color="#c3cfe2"
                   >
                     Live site
                   </LinkItem>
                   <LinkItem
                     href="https://github.com/lukaszkus/time-tracking-dashboard"
-                    color="#1c1f4a"
+                    color="#c3cfe2"
                   >
                     Github repository
                   </LinkItem>
@@ -463,7 +463,7 @@ function FrontendMentor() {
           </Container>
         </Section>
 
-        <Section bgColor="#559ca1" data-aos="fade-up">
+        <Section bgColor="rgba(85, 156, 161, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <TextItem
