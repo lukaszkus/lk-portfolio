@@ -7,9 +7,9 @@ const portfolioItems = [
     category: "Front-end / Mobile app",
     project: {
       description:
-        "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
+        "The React Native mobile app that displays the top 100 albums based on the iTunes API.",
       details:
-        "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
+        "Users are able to: search albums on list in real time by keywords, changeing from list view to grid view, add albums to favourites, view favourites, remove from favourites, view album details, go to album or artist page on Apple Music.",
       technology: ["React Native", "Expo"],
       role: ["Mobile development"],
       links: {

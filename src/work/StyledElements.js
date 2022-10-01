@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { images, breakpoint } from "../utils";
+import { images, breakpoint, COLORS } from "../utils";
 
 export const Hero = styled.header`
   width: 100%;
@@ -101,10 +101,11 @@ export const List = styled.div`
     }
 
     a {
-      color: #000;
+      color: ${COLORS.white};
+      transition: 0.3s;
 
       &:hover {
-        color: #6a11cb;
+        color: ${COLORS.accentPrimary};
       }
     }
   }
@@ -157,7 +158,7 @@ export const TextItem = styled.article`
   padding: 1rem 0;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
-  color: ${(props) => (props.color ? props.color : "#fff")};
+  color: ${(props) => (props.color ? props.color : COLORS.white)};
   order: 2;
 
   h3 {
@@ -215,7 +216,7 @@ export const LinkContainer = styled.div`
 export const LinkItem = styled.a.attrs((props) => ({
   href: props.href,
 }))`
-  color: ${(props) => (props.color ? props.color : "#fff")};
+  color: ${(props) => (props.color ? props.color : COLORS.white)};
 
   &:hover {
     text-decoration: none;
