@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 
 import { images, breakpoint, COLORS } from "../utils";
 
+export const Container = styled.div`
+  max-width: 1024px;
+  margin: 0 auto;
+
+  @media ${breakpoint.desktopXL} {
+    max-width: 1280px;
+  }
+`;
+
 export const Hero = styled.header`
   width: 100%;
   height: 100vh;
@@ -50,11 +59,6 @@ export const Section = styled.section.attrs((props) => ({
   // &:first-of-type {
   //   padding-bottom: 0;
   // }
-`;
-
-export const Container = styled.div`
-  max-width: 1024px;
-  margin: 0 auto;
 `;
 
 export const Heading = styled.div`

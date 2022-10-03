@@ -30,32 +30,6 @@ body {
   z-index: -1;
 }
 
-/* .background-animate {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image: url(./assets/vec-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6;
-}
-
-@media (min-width: 640px) {
-  .background-animate {
-    background-image: url(./assets/vec-tablet.svg);
-  }
-}
-
-@media (min-width: 1280px) {
-  .background-animate {
-    background-image: url(./assets/vec-desktop.svg);
-  }
-} */
-
 .background-gradient {
   position: fixed;
   left: 0;
