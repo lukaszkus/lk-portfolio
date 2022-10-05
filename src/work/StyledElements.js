@@ -148,6 +148,7 @@ export const ImageItem = styled.figure`
     font-size: 1rem;
     font-weight: 300;
     padding: 1rem 0;
+    text-align: center;
   }
 
   @media ${breakpoint.tablet} {

@@ -32,8 +32,7 @@ function TopAlbums() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,8 +47,7 @@ function TopAlbums() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>
@@ -98,12 +96,28 @@ function TopAlbums() {
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
-                <img src={images.todo_light} alt="Todo App light mode" />
-                <figcaption>Todo App light mode</figcaption>
+                <img src={images.ta_brand_01} alt="Top Albums logo" />
+                <figcaption>App logo</figcaption>
               </ImageItem>
               <ImageItem data-aos="fade-up">
-                <img src={images.todo_dark} alt="Todo App dark mode" />
-                <figcaption>Todo App dark mode</figcaption>
+                <img
+                  src={images.ta_brand_02}
+                  alt="Splash screen & adaptive icons"
+                />
+                <figcaption>
+                  Splash screen & adaptive icons (favicons)
+                </figcaption>
+              </ImageItem>
+              <ImageItem data-aos="fade-up">
+                <img
+                  src={images.ta_brand_03}
+                  alt="Icons set | navigation icons & navbars"
+                />
+                <figcaption>Icons set | navigation icons & navbars</figcaption>
+              </ImageItem>
+              <ImageItem data-aos="fade-up">
+                <img src={images.ta_brand_04} alt="Typography & colors" />
+                <figcaption>Typography & colors</figcaption>
               </ImageItem>
             </Grid>
           </Container>

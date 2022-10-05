@@ -11,6 +11,10 @@ import me_call from "../assets/me-call.jpg";
 
 //Top Albums
 import ta_cover from "../assets/work/topAlbums/ta_cover.png";
+import ta_brand_01 from "../assets/work/topAlbums/ta_brand_01.png";
+import ta_brand_02 from "../assets/work/topAlbums/ta_brand_02.png";
+import ta_brand_03 from "../assets/work/topAlbums/ta_brand_03.png";
+import ta_brand_04 from "../assets/work/topAlbums/ta_brand_04.png";
 
 //Todo
 import todo_cover from "../assets/work/todo/todo_cover.png";
@@ -49,6 +53,10 @@ const images = {
   me_call,
 
   ta_cover,
+  ta_brand_01,
+  ta_brand_02,
+  ta_brand_03,
+  ta_brand_04,
 
   todo_cover,
   todo_light,
