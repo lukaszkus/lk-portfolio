@@ -7,6 +7,10 @@ import mobile_first from "../assets/mobile_first.svg";
 import me from "../assets/me.jpg";
 import me_call from "../assets/me-call.jpg";
 
+import icon_github from "../assets/icon-github.svg";
+import icon_web from "../assets/icon-web.svg";
+import icon_fm from "../assets/icon-fm.svg";
+
 //WORK IMAGES
 
 //Top Albums
@@ -51,6 +55,9 @@ const images = {
   mobile_first,
   me,
   me_call,
+  icon_github,
+  icon_web,
+  icon_fm,
 
   ta_cover,
   ta_brand_01,

@@ -55,10 +55,6 @@ export const Section = styled.section.attrs((props) => ({
   padding: 4rem 2rem;
   background-image: ${(props) => (props.bgColor ? props.bgColor : null)};
   background-color: ${(props) => (props.bgColor ? props.bgColor : null)};
-
-  // &:first-of-type {
-  //   padding-bottom: 0;
-  // }
 `;
 
 export const Heading = styled.div`
@@ -78,17 +74,20 @@ export const Heading = styled.div`
   h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+    padding-bottom: 2rem;
   }
 `;
 
 export const Description = styled.div`
   line-height: 1.8;
+  border-bottom: 1px solid #2575fc;
+  padding-bottom: 4rem;
   div {
     p {
       font-family: "Poppins", sans-serif;
       font-size: 1rem;
       font-weight: 300;
-      padding: 1rem 0;
+      padding-bottom: 1rem;
     }
   }
 `;
@@ -99,6 +98,12 @@ export const List = styled.div`
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     padding: 1rem 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
     p {
       font-weight: 400;
@@ -226,4 +231,13 @@ export const LinkItem = styled.a.attrs((props) => ({
   &:hover {
     text-decoration: none;
   }
+`;
+
+export const LinkIcon = styled.span.attrs((props) => ({
+  icon: props.icon,
+}))`
+  background-image: url(${(props) => props.icon});
+  width: 20px;
+  height: 20px;
+  display: block;
 `;

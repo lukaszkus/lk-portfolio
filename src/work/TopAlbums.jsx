@@ -17,6 +17,7 @@ import {
   Icon,
   ImageItem,
   List,
+  LinkIcon,
   Section,
   TextItem,
 } from "./StyledElements";
@@ -32,7 +33,8 @@ function TopAlbums() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -47,7 +49,8 @@ function TopAlbums() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <Arrow />
           </Link>
         </Hero>
@@ -81,9 +84,11 @@ function TopAlbums() {
                 <ul data-aos="fade-up">
                   <p>Links:</p>
                   <li>
+                    <LinkIcon icon={images.icon_web} />
                     <a href={project.links.liveSite}>Live site</a>
                   </li>
                   <li>
+                    <LinkIcon icon={images.icon_github} />
                     <a href={project.links.github}>Github</a>
                   </li>
                 </ul>
@@ -94,6 +99,9 @@ function TopAlbums() {
 
         <Section>
           <Container>
+            <Heading data-aos="fade-up">
+              <h3>Design</h3>
+            </Heading>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img src={images.ta_brand_01} alt="Top Albums logo" />
