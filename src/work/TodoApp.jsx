@@ -17,6 +17,7 @@ import {
   Icon,
   ImageItem,
   List,
+  LinkIcon,
   Section,
   TextItem,
 } from "./StyledElements";
@@ -32,8 +33,7 @@ function TodoApp() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,8 +48,7 @@ function TodoApp() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>
@@ -82,9 +81,12 @@ function TodoApp() {
                 <ul data-aos="fade-up">
                   <p>Links:</p>
                   <li>
+                    <LinkIcon icon={images.icon_web} />
                     <a href={project.links.liveSite}>Live site</a>
                   </li>
                   <li>
+                    <LinkIcon icon={images.icon_github} />
+
                     <a href={project.links.github}>Github</a>
                   </li>
                 </ul>

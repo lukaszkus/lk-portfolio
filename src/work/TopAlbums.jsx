@@ -33,8 +33,7 @@ function TopAlbums() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -49,8 +48,7 @@ function TopAlbums() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>
@@ -85,7 +83,7 @@ function TopAlbums() {
                   <p>Links:</p>
                   <li>
                     <LinkIcon icon={images.icon_web} />
-                    <a href={project.links.liveSite}>Live site</a>
+                    <a href={project.links.download}>Download APK</a>
                   </li>
                   <li>
                     <LinkIcon icon={images.icon_github} />

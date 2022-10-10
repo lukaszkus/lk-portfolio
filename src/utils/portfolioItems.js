@@ -13,8 +13,9 @@ const portfolioItems = [
       technology: ["React Native", "Expo"],
       role: ["Mobile development"],
       links: {
-        liveSite: "https://todo-fm.netlify.app/",
-        github: "https://github.com/lukaszkus/todo-app",
+        download:
+          "https://github.com/lukaszkus/react-native-music-app/blob/main/apk/TopAlbums.apk",
+        github: "https://github.com/lukaszkus/react-native-music-app",
       },
     },
     cover: images.ta_cover,
