@@ -3,9 +3,7 @@ import Context from "../context/context";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import ScrollToTop from "../utils/scrollToTop";
-import { images, portfolioItems } from "../utils";
-
+import { images, portfolioItems, ScrollToTop } from "../utils";
 import { OuterLink } from "../subcomponents";
 
 import {
