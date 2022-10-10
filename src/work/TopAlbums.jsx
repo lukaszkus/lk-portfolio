@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import ScrollToTop from "../utils/scrollToTop";
 import { images, portfolioItems } from "../utils";
 
+import { OuterLink } from "../subcomponents";
+
 import {
   Arrow,
   Container,
@@ -17,7 +19,6 @@ import {
   Icon,
   ImageItem,
   List,
-  LinkIcon,
   Section,
   TextItem,
 } from "./StyledElements";
@@ -33,7 +34,8 @@ function TopAlbums() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,7 +50,8 @@ function TopAlbums() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <Arrow />
           </Link>
         </Hero>
@@ -82,12 +85,22 @@ function TopAlbums() {
                 <ul data-aos="fade-up">
                   <p>Links:</p>
                   <li>
-                    <LinkIcon icon={images.icon_web} />
-                    <a href={project.links.download}>Download APK</a>
+                    <OuterLink
+                      href={project.links.download}
+                      icon="download"
+                      text="Download APK file"
+                      width="20px"
+                      height="20px"
+                    />
                   </li>
                   <li>
-                    <LinkIcon icon={images.icon_github} />
-                    <a href={project.links.github}>Github</a>
+                    <OuterLink
+                      href={project.links.github}
+                      icon="github"
+                      text="Github"
+                      width="20px"
+                      height="20px"
+                    />
                   </li>
                 </ul>
               </List>

@@ -9,6 +9,7 @@ import me_call from "../assets/me-call.jpg";
 
 import icon_github from "../assets/icon-github.svg";
 import icon_web from "../assets/icon-web.svg";
+import icon_download from "../assets/icon-download.svg";
 import icon_fm from "../assets/icon-fm.svg";
 
 //WORK IMAGES
@@ -57,6 +58,7 @@ const images = {
   me_call,
   icon_github,
   icon_web,
+  icon_download,
   icon_fm,
 
   ta_cover,
