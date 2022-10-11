@@ -3,8 +3,8 @@ import Context from "../context/context";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import ScrollToTop from "../utils/scrollToTop";
-import { images, portfolioItems } from "../utils";
+import { COLORS, images, portfolioItems, ScrollToTop } from "../utils";
+import { OuterLink } from "../subcomponents";
 
 import {
   Arrow,
@@ -17,7 +17,6 @@ import {
   Icon,
   ImageItem,
   List,
-  LinkIcon,
   Section,
   TextItem,
 } from "./StyledElements";
@@ -33,7 +32,8 @@ function TodoApp() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,7 +48,8 @@ function TodoApp() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <Arrow />
           </Link>
         </Hero>
@@ -81,13 +82,24 @@ function TodoApp() {
                 <ul data-aos="fade-up">
                   <p>Links:</p>
                   <li>
-                    <LinkIcon icon={images.icon_web} />
-                    <a href={project.links.liveSite}>Live site</a>
+                    <OuterLink
+                      href={project.links.liveSite}
+                      icon="liveSite"
+                      text="Live site"
+                      width="20px"
+                      height="20px"
+                      color={COLORS.accentPrimary}
+                    />
                   </li>
                   <li>
-                    <LinkIcon icon={images.icon_github} />
-
-                    <a href={project.links.github}>Github</a>
+                    <OuterLink
+                      href={project.links.github}
+                      icon="github"
+                      text="Github"
+                      width="20px"
+                      height="20px"
+                      color={COLORS.accentPrimary}
+                    />
                   </li>
                 </ul>
               </List>

@@ -3,8 +3,7 @@ import Context from "../context/context";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import { images, portfolioItems } from "../utils";
-import ScrollToTop from "../utils/scrollToTop";
+import { images, portfolioItems, ScrollToTop } from "../utils";
 
 import {
   Arrow,

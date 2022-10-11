@@ -109,14 +109,14 @@ export const List = styled.div`
       font-weight: 400;
     }
 
-    a {
-      color: ${COLORS.white};
-      transition: 0.3s;
+    // a {
+    //   color: ${COLORS.white};
+    //   transition: 0.3s;
 
-      &:hover {
-        color: ${COLORS.accentPrimary};
-      }
-    }
+    //   &:hover {
+    //     color: ${COLORS.accentPrimary};
+    //   }
+    // }
   }
 
   @media ${breakpoint.tablet} {
@@ -221,23 +221,4 @@ export const Icon = styled.img.attrs((props) => ({
 export const LinkContainer = styled.div`
   display: flex;
   gap: 2rem;
-`;
-
-export const LinkItem = styled.a.attrs((props) => ({
-  href: props.href,
-}))`
-  color: ${(props) => (props.color ? props.color : COLORS.white)};
-
-  &:hover {
-    text-decoration: none;
-  }
-`;
-
-export const LinkIcon = styled.span.attrs((props) => ({
-  icon: props.icon,
-}))`
-  background-image: url(${(props) => props.icon});
-  width: 20px;
-  height: 20px;
-  display: block;
 `;

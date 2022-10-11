@@ -32,7 +32,8 @@ function FrontendMentor() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -47,7 +48,8 @@ function FrontendMentor() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <Arrow />
           </Link>
         </Hero>
@@ -118,7 +120,8 @@ function FrontendMentor() {
               <TextItem
                 color="#935653"
                 bgColor="rgba(255, 255, 255, 0.2)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>Base Apparel comming soon page</h3>
                 <p>
                   A great project to practice responsive layout building and
@@ -174,7 +177,8 @@ function FrontendMentor() {
               <TextItem
                 color="#c3cfe2"
                 bgColor="rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>Easybank landing page</h3>
                 <p>
                   A responisve landing page with mobile navigation menu toggle.
@@ -232,7 +236,8 @@ function FrontendMentor() {
               <TextItem
                 color="#8b97c6"
                 bgColor="rgba(0, 0, 0, 0.2)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>Social media dashboard</h3>
                 <p>
                   It is a responsive dashboard layout with color theme switcher.
@@ -340,7 +345,8 @@ function FrontendMentor() {
               <TextItem
                 color="#c3cfe2"
                 bgColor="rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>Huddle landing page</h3>
                 <p>
                   A responisve landing page where users are able to view the
@@ -391,7 +397,8 @@ function FrontendMentor() {
               <TextItem
                 color="#f6f6fe"
                 bgColor="rgba(255, 255, 255, 0.1)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>Pricing component</h3>
                 <p>
                   Responsive pricing component where users are able to toggle
@@ -452,7 +459,8 @@ function FrontendMentor() {
               <TextItem
                 color="#c3cfe2"
                 bgColor="rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>Time tracking dashboard</h3>
                 <p>
                   Dashboard layout build with CSS Grid. The data is pull from
@@ -508,7 +516,8 @@ function FrontendMentor() {
               <TextItem
                 color="#f2f2f2"
                 bgColor="rgba(255, 255, 255, 0.1)"
-                data-aos="fade-up">
+                data-aos="fade-up"
+              >
                 <h3>3 column component</h3>
                 <p>
                   Simple, responsive 3 column component. Users are able to view
