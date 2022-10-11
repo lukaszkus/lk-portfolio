@@ -1,25 +1,29 @@
-import { images } from "../../utils";
-import { StyledLink, StyledIcon } from "./StyledOuterLink";
+import { ReactComponent as Web } from "../../assets/icon-web.svg";
+import { ReactComponent as Github } from "../../assets/icon-github.svg";
+import { ReactComponent as Download } from "../../assets/icon-download.svg";
+import { ReactComponent as FM } from "../../assets/icon-fm.svg";
 
-const OuterLink = ({ href, text, icon, width, height }) => {
+import { StyledLink } from "./StyledOuterLink";
+
+const OuterLink = ({ color, href, icon, text, height, width }) => {
   const getIcon = (icon) => {
     switch (icon) {
       case "liveSite":
-        return images.icon_web;
+        return <Web fill={color} width={width} height={height} />;
       case "github":
-        return images.icon_github;
+        return <Github fill={color} width={width} height={height} />;
       case "download":
-        return images.icon_download;
+        return <Download fill={color} width={width} height={height} />;
       case "frontendMentor":
-        return images.icon_fm;
+        return <FM fill={color} width={width} height={height} />;
       default:
         return null;
     }
   };
 
   return (
-    <StyledLink href={href}>
-      <StyledIcon src={getIcon(icon)} width={width} height={height} />
+    <StyledLink href={href} color={color}>
+      {getIcon(icon)}
       {text}
     </StyledLink>
   );

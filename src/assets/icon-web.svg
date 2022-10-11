@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 26.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#2575FC;}
-</style>
+<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 viewBox="0 0 512 512" fill="current">
 <path class="st0" d="M256,512C114.6,512.1,0,397.5,0,256.2c0-68,27-133.1,75-181.2C175-25,337-25,437,75s100,262,0,362
 	C389.1,485.2,323.9,512.2,256,512z M270.4,481.4l2.6-0.7c43.4-12.5,69-67.7,77.9-90.8l0.7-1.8l-1.7-0.8
 	c-24.4-11.1-50.6-17.7-77.3-19.6l-2.2-0.1L270.4,481.4z M239.4,367.7c-26.7,1.9-52.9,8.5-77.3,19.6l-1.7,0.8l0.7,1.8

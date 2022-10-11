@@ -218,26 +218,26 @@ export const Icon = styled.img.attrs((props) => ({
   }
 `;
 
-// export const LinkContainer = styled.div`
-//   display: flex;
-//   gap: 2rem;
-// `;
+export const LinkContainer = styled.div`
+  display: flex;
+  gap: 2rem;
+`;
 
-// export const LinkItem = styled.a.attrs((props) => ({
-//   href: props.href,
-// }))`
-//   color: ${(props) => (props.color ? props.color : COLORS.white)};
+export const LinkItem = styled.a.attrs((props) => ({
+  href: props.href,
+}))`
+  color: ${(props) => (props.color ? props.color : COLORS.white)};
 
-//   &:hover {
-//     text-decoration: none;
-//   }
-// `;
+  &:hover {
+    text-decoration: none;
+  }
+`;
 
-// export const LinkIcon = styled.span.attrs((props) => ({
-//   icon: props.icon,
-// }))`
-//   background-image: url(${(props) => props.icon});
-//   width: 20px;
-//   height: 20px;
-//   display: block;
-// `;
+export const LinkIcon = styled.span.attrs((props) => ({
+  icon: props.icon,
+}))`
+  background-image: url(${(props) => props.icon});
+  width: 20px;
+  height: 20px;
+  display: block;
+`;

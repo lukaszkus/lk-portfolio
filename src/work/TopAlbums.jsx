@@ -3,7 +3,7 @@ import Context from "../context/context";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import { images, portfolioItems, ScrollToTop } from "../utils";
+import { COLORS, images, portfolioItems, ScrollToTop } from "../utils";
 import { OuterLink } from "../subcomponents";
 
 import {
@@ -32,8 +32,7 @@ function TopAlbums() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,8 +47,7 @@ function TopAlbums() {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>
@@ -89,6 +87,7 @@ function TopAlbums() {
                       text="Download APK file"
                       width="20px"
                       height="20px"
+                      color={COLORS.accentPrimary}
                     />
                   </li>
                   <li>
@@ -98,6 +97,7 @@ function TopAlbums() {
                       text="Github"
                       width="20px"
                       height="20px"
+                      color={COLORS.accentPrimary}
                     />
                   </li>
                 </ul>
