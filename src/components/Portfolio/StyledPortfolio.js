@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import { breakpoint } from "../../utils";
 
 export const PContainer = styled.section.attrs((props) => ({
@@ -29,7 +31,7 @@ export const PContainer = styled.section.attrs((props) => ({
   }
 `;
 
-export const PBoxContainer = styled.div`
+export const PBoxContainer = styled(motion.div)`
   &:hover {
     opacity: 0.95;
     z-index: 999;

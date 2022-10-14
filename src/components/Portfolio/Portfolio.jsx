@@ -17,7 +17,19 @@ function Portfolio() {
   return (
     <PContainer id="portfolio">
       {portfolioItems.map((item) => (
-        <PBoxContainer key={item.id} data-aos="fade-up">
+        <PBoxContainer
+          key={item.id}
+          // data-aos="fade-up"
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.6,
+            },
+          }}
+          viewport={{ once: true }}
+        >
           <Link to={item.path}>
             <PBox
               bgColor={item.bgColor}
