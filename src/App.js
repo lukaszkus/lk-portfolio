@@ -30,11 +30,14 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="work/top-albums" element={<TopAlbums />} />
-          <Route path="work/todo-app" element={<TodoApp />} />
-          <Route path="work/wild-n-slow" element={<WildnSlow />} />
-          <Route path="work/fm-solutions" element={<FrontendMentor />} />
-          <Route path="work/informatyk-na-godziny" element={<Informatyk />} />
+          <Route path="work/top-albums" element={<TopAlbums id={5} />} />
+          <Route path="work/todo-app" element={<TodoApp id={4} />} />
+          <Route path="work/wild-n-slow" element={<WildnSlow id={3} />} />
+          <Route path="work/fm-solutions" element={<FrontendMentor id={2} />} />
+          <Route
+            path="work/informatyk-na-godziny"
+            element={<Informatyk id={1} />}
+          />
         </Routes>
       </AnimatePresence>
       <ScrollBtn />

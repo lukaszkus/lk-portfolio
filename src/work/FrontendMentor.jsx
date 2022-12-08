@@ -21,9 +21,9 @@ import {
   TextItem,
 } from "./StyledElements";
 
-function FrontendMentor() {
+function FrontendMentor({ id }) {
   const { offset } = useContext(Context);
-  const item = portfolioItems[3];
+  const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover, bgColor } = item;
 
   return (

@@ -21,9 +21,9 @@ import {
   TextItem,
 } from "./StyledElements";
 
-function TopAlbums() {
+function TopAlbums({ id }) {
   const { offset } = useContext(Context);
-  const item = portfolioItems[0];
+  const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover, bgColor } = item;
 
   return (

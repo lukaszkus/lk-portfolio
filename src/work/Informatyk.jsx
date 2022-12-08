@@ -21,9 +21,9 @@ import {
   TextItem,
 } from "./StyledElements";
 
-function Informatyk() {
+function Informatyk({ id }) {
   const { offset } = useContext(Context);
-  const item = portfolioItems[4];
+  const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover, bgColor } = item;
 
   return (

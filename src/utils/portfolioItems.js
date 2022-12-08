@@ -21,7 +21,6 @@ const portfolioItems = [
     cover: images.ta_cover,
     bgColor:
       "linear-gradient(to top, rgba(106, 133, 182, 0.8) 0%, rgba(186, 200, 224, 0.8) 100%)",
-    // overlayColor: "#3500d3",
     overlayColor: "rgba(53, 0, 211, 0.9)",
     path: "work/top-albums",
   },
