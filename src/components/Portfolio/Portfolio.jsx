@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 
 import { portfolioItems } from "../../utils";
@@ -14,12 +16,24 @@ import {
 } from "./StyledPortfolio";
 
 function Portfolio() {
+  const { portfolioList, setPortfolioList, types, filterPortfolioList } =
+    useContext(Context);
+
   return (
     <PContainer id="portfolio">
-      {portfolioItems.map((item) => (
+      <div>
+        {types.map((type, index) => {
+          return (
+            <button onClick={() => filterPortfolioList(type)} key={index}>
+              {type}
+            </button>
+          );
+        })}
+        <button onClick={setPortfolioList(portfolioItems)}>All</button>
+      </div>
+      {portfolioList.map((item) => (
         <PBoxContainer
           key={item.id}
-          // data-aos="fade-up"
           initial={{ opacity: 0, y: 200 }}
           whileInView={{
             opacity: 1,

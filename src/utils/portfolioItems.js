@@ -4,6 +4,7 @@ const portfolioItems = [
   {
     id: 5,
     title: "Top Albums",
+    type: "front-end",
     category: "Front-end / Mobile app",
     project: {
       description:
@@ -27,6 +28,7 @@ const portfolioItems = [
   {
     id: 4,
     title: "Todo App",
+    type: "front-end",
     category: "Front-end / Web app",
     project: {
       description:
@@ -55,6 +57,7 @@ const portfolioItems = [
   {
     id: 3,
     title: "Wild'n'Slow",
+    type: "graphic design",
     category: "Graphic design / Identity",
     project: {
       description:
@@ -79,6 +82,7 @@ const portfolioItems = [
   {
     id: 2,
     title: "Frontend Mentor - Solutions",
+    type: "front-end",
     category: "Front-end / Misc",
     project: {
       description:
@@ -111,6 +115,7 @@ const portfolioItems = [
   {
     id: 1,
     title: "Informatyk Na Godziny",
+    type: "front-end",
     category: "Front-end / Landing page",
     project: {
       description:
