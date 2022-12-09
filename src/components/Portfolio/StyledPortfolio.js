@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const PContainer = styled.section.attrs((props) => ({
+export const PContainer = styled(motion.section).attrs((props) => ({
   id: props.id,
 }))`
   display: grid;

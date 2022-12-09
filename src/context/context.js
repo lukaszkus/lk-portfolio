@@ -22,12 +22,12 @@ export function ContextProvider({ children }) {
   //Filter porfolio items
   const types = [...new Set(portfolioItems.map((item) => item.type))];
 
-  const filterPortfolioList = (curcat) => {
-    const newPortfolioItem = portfolioItems.filter((newVal) => {
-      return newVal.category === curcat;
+  const filterPortfolioList = (type) => {
+    const newPortfolioList = portfolioItems.filter((item) => {
+      return item.type === type;
       // comparing category for displaying data
     });
-    setPortfolioList(newPortfolioItem);
+    setPortfolioList(newPortfolioList);
   };
 
   //Parallax effect
@@ -54,8 +54,7 @@ export function ContextProvider({ children }) {
         setPortfolioList,
         types,
         filterPortfolioList,
-      }}
-    >
+      }}>
       {children}
     </Context.Provider>
   );
