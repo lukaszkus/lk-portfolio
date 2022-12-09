@@ -3,7 +3,7 @@ import Context from "../context/context";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import { images, portfolioItems, ScrollToTop } from "../utils";
+import { images, portfolioItems } from "../utils";
 
 import {
   Arrow,
@@ -26,12 +26,10 @@ function WildnSlow({ id }) {
 
   return (
     <>
-      <ScrollToTop />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -46,8 +44,7 @@ function WildnSlow({ id }) {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>

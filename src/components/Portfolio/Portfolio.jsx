@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import { portfolioItems } from "../../utils";
 
@@ -13,34 +14,54 @@ import {
   PBoxText,
   PBoxTitle,
   PBoxCat,
+  Filter,
+  // Heading,
 } from "./StyledPortfolio";
-import { AnimatePresence } from "framer-motion";
+
+import { Button } from "../";
 
 function Portfolio() {
   const { portfolioList, setPortfolioList, types, filterPortfolioList } =
     useContext(Context);
 
   return (
-    <div>
-      <div>
+    <>
+      <Filter
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.6,
+          },
+        }}
+        exit={{ opacity: 0, y: 200 }}
+        viewport={{ once: true }}>
         {types.map((type, index) => {
           return (
-            <button onClick={() => filterPortfolioList(type)} key={index}>
-              {type}
-            </button>
+            <Button
+              click={() => filterPortfolioList(type)}
+              key={index}
+              label={type}
+            />
           );
         })}
-        <button onClick={() => setPortfolioList(portfolioItems)}>All</button>
-      </div>
+        <Button click={() => setPortfolioList(portfolioItems)} label="all" />
+      </Filter>
       <PContainer
         id="portfolio"
         initial={{ opacity: 0, y: 200 }}
         whileInView={{
           opacity: 1,
           y: 0,
+          transition: {
+            duration: 0.6,
+          },
         }}
         exit={{ opacity: 0, y: 200 }}
         viewport={{ once: true }}>
+        {/* <Heading>Projects</Heading> */}
+
         {portfolioList.map((item) => (
           <AnimatePresence exitBeforeEnter>
             <PBoxContainer
@@ -49,7 +70,7 @@ function Portfolio() {
               animate={{
                 opacity: 1,
                 transition: {
-                  duration: 0.6,
+                  duration: 1,
                 },
               }}
               exit={{ opacity: 0 }}>
@@ -71,7 +92,7 @@ function Portfolio() {
           </AnimatePresence>
         ))}
       </PContainer>
-    </div>
+    </>
   );
 }
 

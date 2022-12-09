@@ -48,6 +48,9 @@ import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
 //Informatyk
 import inf_cover from "../assets/work/inf/inf_cover.png";
 
+//Inspiration Way
+import iw_cover from "../assets/work/iw/iw_cover.png";
+
 const images = {
   logo,
   arrow,
@@ -89,6 +92,8 @@ const images = {
   fm_timetracking,
 
   inf_cover,
+
+  iw_cover,
 };
 
 export default images;

@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"; //if there are bugs, import from "framer-motion/dist/framer-motion"
 
 import "./style.css";
+import { ScrollToTop } from "./utils";
 
 //Pages
 import { About, Home } from "./pages";
@@ -16,6 +17,7 @@ import {
   TopAlbums,
   TodoApp,
   WildnSlow,
+  InspirationWay,
 } from "./work";
 
 function App() {
@@ -24,12 +26,17 @@ function App() {
   const location = useLocation();
   return (
     <>
+      <ScrollToTop />
       {isOpen && <Menu />}
       <Topbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route
+            path="work/inspiration-way"
+            element={<InspirationWay id={6} />}
+          />
           <Route path="work/top-albums" element={<TopAlbums id={5} />} />
           <Route path="work/todo-app" element={<TodoApp id={4} />} />
           <Route path="work/wild-n-slow" element={<WildnSlow id={3} />} />

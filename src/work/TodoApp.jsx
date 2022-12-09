@@ -3,7 +3,7 @@ import Context from "../context/context";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-import { COLORS, images, portfolioItems, ScrollToTop } from "../utils";
+import { COLORS, images, portfolioItems } from "../utils";
 import { OuterLink } from "../subcomponents";
 
 import {
@@ -28,12 +28,10 @@ function TodoApp({ id }) {
 
   return (
     <>
-      <ScrollToTop />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,8 +46,7 @@ function TodoApp({ id }) {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <Arrow />
           </Link>
         </Hero>

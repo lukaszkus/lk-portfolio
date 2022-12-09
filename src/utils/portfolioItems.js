@@ -2,6 +2,29 @@ import { images } from "./";
 
 const portfolioItems = [
   {
+    id: 6,
+    title: "Inspiration Way",
+    type: "front-end",
+    category: "Front-end / Web page",
+    project: {
+      description: "Some description",
+      details:
+        "Users are able to: search albums on list in real time by keywords, changeing from list view to grid view, add albums to favourites, view favourites, remove from favourites, view album details, go to album or artist page on Apple Music.",
+      technology: ["React Native", "Expo"],
+      role: ["Mobile development"],
+      links: {
+        download:
+          "https://github.com/lukaszkus/react-native-music-app/blob/main/apk/TopAlbums.apk",
+        github: "https://github.com/lukaszkus/react-native-music-app",
+      },
+    },
+    cover: images.iw_cover,
+    bgColor:
+      "linear-gradient(45deg, rgba(31, 42, 102, 0.8) 0%, rgba(185, 103, 91, 0.8) 100%)",
+    overlayColor: "rgba(185, 103, 91, 0.9)",
+    path: "work/inspiration-way",
+  },
+  {
     id: 5,
     title: "Top Albums",
     type: "front-end",

@@ -21,7 +21,7 @@ import {
   TextItem,
 } from "./StyledElements";
 
-function Informatyk({ id }) {
+function InspirationWay({ id }) {
   const { offset } = useContext(Context);
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover, bgColor } = item;
@@ -81,9 +81,9 @@ function Informatyk({ id }) {
                   <p>Links:</p>
                   <li>
                     <OuterLink
-                      href={project.links.liveSite}
-                      icon="liveSite"
-                      text="Live site"
+                      href={project.links.github}
+                      icon="github"
+                      text="Github"
                       width="20px"
                       height="20px"
                       color={COLORS.accentPrimary}
@@ -91,9 +91,9 @@ function Informatyk({ id }) {
                   </li>
                   <li>
                     <OuterLink
-                      href={project.links.github}
-                      icon="github"
-                      text="Github"
+                      href={project.links.download}
+                      icon="download"
+                      text="Download APK file"
                       width="20px"
                       height="20px"
                       color={COLORS.accentPrimary}
@@ -107,14 +107,33 @@ function Informatyk({ id }) {
 
         <Section>
           <Container>
+            <Heading data-aos="fade-up">
+              <h3>Design</h3>
+            </Heading>
             <Grid>
               <ImageItem data-aos="fade-up">
-                <img src={images.todo_light} alt="Todo App light mode" />
-                <figcaption>Todo App light mode</figcaption>
+                <img src={images.ta_brand_01} alt="Top Albums logo" />
+                <figcaption>App logo</figcaption>
               </ImageItem>
               <ImageItem data-aos="fade-up">
-                <img src={images.todo_dark} alt="Todo App dark mode" />
-                <figcaption>Todo App dark mode</figcaption>
+                <img
+                  src={images.ta_brand_02}
+                  alt="Splash screen & adaptive icons"
+                />
+                <figcaption>
+                  Splash screen & adaptive icons (favicons)
+                </figcaption>
+              </ImageItem>
+              <ImageItem data-aos="fade-up">
+                <img
+                  src={images.ta_brand_03}
+                  alt="Icons set | navigation icons & navbars"
+                />
+                <figcaption>Icons set | navigation icons & navbars</figcaption>
+              </ImageItem>
+              <ImageItem data-aos="fade-up">
+                <img src={images.ta_brand_04} alt="Typography & colors" />
+                <figcaption>Typography & colors</figcaption>
               </ImageItem>
             </Grid>
           </Container>
@@ -143,4 +162,4 @@ function Informatyk({ id }) {
   );
 }
 
-export default Informatyk;
+export default InspirationWay;
