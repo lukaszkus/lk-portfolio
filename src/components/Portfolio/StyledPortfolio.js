@@ -9,7 +9,7 @@ export const PContainer = styled(motion.section).attrs((props) => ({
   display: grid;
   gap: 2rem;
   padding: 2rem 2rem;
-  // overflow: hidden;
+  overflow: hidden;
   margin-bottom: 2rem;
   // background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
   position: relative;

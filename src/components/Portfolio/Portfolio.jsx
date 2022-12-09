@@ -27,15 +27,16 @@ function Portfolio() {
   return (
     <>
       <Filter
-        initial={{ opacity: 0, y: 200 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{
           opacity: 1,
           y: 0,
           transition: {
+            delay: 0.8,
             duration: 0.6,
           },
         }}
-        exit={{ opacity: 0, y: 200 }}
+        exit={{ opacity: 0, y: 50 }}
         viewport={{ once: true }}>
         {types.map((type, index) => {
           return (
