@@ -4,7 +4,8 @@ import { breakpoint } from "../../utils";
 
 export const MenuContainer = styled.nav`
   position: fixed;
-  z-index: 1000;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
@@ -12,7 +13,6 @@ export const MenuContainer = styled.nav`
   align-items: center;
   padding: 2rem;
   font-size: 2.5rem;
-  opacity: ${(props) => (props.isOpen ? 1 : 0)};
 
   a {
     color: #c3cfe2;

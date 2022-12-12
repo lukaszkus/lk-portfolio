@@ -5,10 +5,10 @@ import { NavLink as Link } from "react-router-dom";
 import { MenuContainer, MenuList, MenuItem } from "./StyledMenu";
 
 function Menu() {
-  const { isOpen, toggle } = useContext(Context);
+  const { setIsMenuOpen } = useContext(Context);
 
   return (
-    <MenuContainer isOpen={isOpen} onClick={toggle}>
+    <MenuContainer onClick={setIsMenuOpen}>
       <MenuList>
         <MenuItem data-aos="fade-up" data-aos-duration="300">
           <Link to="/">Work</Link>

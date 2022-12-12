@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Context from "../../context/context";
+import useToggle from "../../hooks/useToggle";
 import { NavLink as Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -26,6 +27,8 @@ function Portfolio() {
   const { portfolioList, setPortfolioList, types, filterPortfolioList } =
     useContext(Context);
 
+  const [showFilters, setShowFilters] = useToggle();
+
   return (
     <>
       <Filter
@@ -39,18 +42,26 @@ function Portfolio() {
           },
         }}
         exit={{ opacity: 0, y: 50 }}
-        viewport={{ once: true }}>
-        {types.map((type, index) => {
-          return (
+        viewport={{ once: true }}
+      >
+        {showFilters && (
+          <div>
+            {types.map((type, index) => {
+              return (
+                <Button
+                  click={() => filterPortfolioList(type)}
+                  key={index}
+                  label={type}
+                />
+              );
+            })}
             <Button
-              click={() => filterPortfolioList(type)}
-              key={index}
-              label={type}
+              click={() => setPortfolioList(portfolioItems)}
+              label="all"
             />
-          );
-        })}
-        <Button click={() => setPortfolioList(portfolioItems)} label="all" />
-        <button>
+          </div>
+        )}
+        <button onClick={setShowFilters}>
           <Icon
             icon="filter"
             width="30px"
@@ -70,7 +81,8 @@ function Portfolio() {
           },
         }}
         exit={{ opacity: 0, y: 200 }}
-        viewport={{ once: true }}>
+        viewport={{ once: true }}
+      >
         {/* <Heading>Projects</Heading> */}
 
         {portfolioList.map((item) => (
@@ -84,12 +96,14 @@ function Portfolio() {
                   duration: 1,
                 },
               }}
-              exit={{ opacity: 0 }}>
+              exit={{ opacity: 0 }}
+            >
               <Link to={item.path}>
                 <PBox
                   bgColor={item.bgColor}
                   transform={item.transform}
-                  height={item.height}>
+                  height={item.height}
+                >
                   <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
                   <PBoxOverlay overlayColor={item.overlayColor}>
                     <PBoxText>

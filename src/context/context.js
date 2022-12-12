@@ -1,11 +1,12 @@
 import { createContext, useState, useEffect } from "react";
+import useToggle from "../hooks/useToggle";
 import AOS from "aos";
 
 import { portfolioItems } from "../utils";
 const Context = createContext();
 
 export function ContextProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useToggle();
   const [offset, setOffset] = useState(0);
   const [portfolioList, setPortfolioList] = useState(portfolioItems);
 
@@ -13,11 +14,6 @@ export function ContextProvider({ children }) {
   useEffect(() => {
     AOS.init();
   }, []);
-
-  //Menu toggle
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
 
   //Filter porfolio items
   const types = [...new Set(portfolioItems.map((item) => item.type))];
@@ -45,16 +41,16 @@ export function ContextProvider({ children }) {
   return (
     <Context.Provider
       value={{
-        isOpen,
-        setIsOpen,
+        isMenuOpen,
+        setIsMenuOpen,
         offset,
         setOffset,
-        toggle,
         portfolioList,
         setPortfolioList,
         types,
         filterPortfolioList,
-      }}>
+      }}
+    >
       {children}
     </Context.Provider>
   );
