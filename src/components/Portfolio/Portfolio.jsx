@@ -3,7 +3,9 @@ import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import { portfolioItems } from "../../utils";
+import { COLORS, portfolioItems } from "../../utils";
+
+import { Icon } from "../../subcomponents";
 
 import {
   PContainer,
@@ -48,6 +50,14 @@ function Portfolio() {
           );
         })}
         <Button click={() => setPortfolioList(portfolioItems)} label="all" />
+        <button>
+          <Icon
+            icon="filter"
+            width="30px"
+            height="30px"
+            color={COLORS.accentSecondary}
+          />
+        </button>
       </Filter>
       <PContainer
         id="portfolio"
