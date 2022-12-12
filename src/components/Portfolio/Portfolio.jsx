@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Context from "../../context/context";
 import useToggle from "../../hooks/useToggle";
 import { NavLink as Link } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { COLORS, portfolioItems } from "../../utils";
 
@@ -18,7 +18,6 @@ import {
   PBoxTitle,
   PBoxCat,
   Filter,
-  // Heading,
 } from "./StyledPortfolio";
 
 import { Button } from "../";
@@ -28,6 +27,21 @@ function Portfolio() {
     useContext(Context);
 
   const [showFilters, setShowFilters] = useToggle();
+
+  const slide = {
+    initial: { opacity: 0, x: 50 },
+    slideIn: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.2, ease: "easeInOut" },
+    },
+    // slideOut: { opacity: 0, x: 50 },
+  };
+
+  const rotate = {
+    initial: { rotate: 0 },
+    rotate: { rotate: 90 },
+  };
 
   return (
     <>
@@ -45,7 +59,11 @@ function Portfolio() {
         viewport={{ once: true }}
       >
         {showFilters && (
-          <div>
+          <motion.div
+            initial="initial"
+            variants={slide}
+            animate={showFilters ? "slideIn" : "initial"}
+          >
             {types.map((type, index) => {
               return (
                 <Button
@@ -59,16 +77,21 @@ function Portfolio() {
               click={() => setPortfolioList(portfolioItems)}
               label="all"
             />
-          </div>
+          </motion.div>
         )}
-        <button onClick={setShowFilters}>
+        <motion.button
+          onClick={setShowFilters}
+          variants={rotate}
+          initial="initial"
+          animate={showFilters ? "rotate" : "initial"}
+        >
           <Icon
             icon="filter"
             width="30px"
             height="30px"
             color={COLORS.accentSecondary}
           />
-        </button>
+        </motion.button>
       </Filter>
       <PContainer
         id="portfolio"
@@ -83,8 +106,6 @@ function Portfolio() {
         exit={{ opacity: 0, y: 200 }}
         viewport={{ once: true }}
       >
-        {/* <Heading>Projects</Heading> */}
-
         {portfolioList.map((item) => (
           <AnimatePresence exitBeforeEnter>
             <PBoxContainer

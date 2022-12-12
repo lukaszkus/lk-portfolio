@@ -115,23 +115,3 @@ export const Filter = styled(motion.div)`
     padding: 0 8rem;
   }
 `;
-
-// export const Heading = styled.h2`
-//   position: absolute;
-//   top: -10%;
-//   left: 5%;
-//   font-family: "Poppins", sans-serif;
-//   font-size: 10rem;
-//   font-weight: 600;
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   background-image: linear-gradient(
-//     to right,
-//     #b8cbb8 0%,
-//     #b8cbb8 0%,
-//     #b465da 0%,
-//     #cf6cc9 33%,
-//     #ee609c 66%,
-//     #ee609c 100%
-//   );
-// `;
