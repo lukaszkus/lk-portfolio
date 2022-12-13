@@ -95,23 +95,3 @@ export const PBoxCat = styled.p`
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
 `;
-
-export const Filter = styled(motion.div)`
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding: 0 2rem;
-  overflow: hidden;
-
-  @media ${breakpoint.tablet} {
-    padding: 0 4rem;
-  }
-
-  @media ${breakpoint.desktop} {
-    padding: 0 6rem;
-  }
-
-  @media ${breakpoint.desktopXL} {
-    padding: 0 8rem;
-  }
-`;
