@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const PContainer = styled(motion.section).attrs((props) => ({
+export const Container = styled(motion.section).attrs((props) => ({
   id: props.id,
 }))`
   display: grid;
@@ -11,7 +11,6 @@ export const PContainer = styled(motion.section).attrs((props) => ({
   padding: 2rem 2rem;
   overflow: hidden;
   margin-bottom: 2rem;
-  // background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
   position: relative;
 
   @media ${breakpoint.tablet} {
@@ -27,18 +26,17 @@ export const PContainer = styled(motion.section).attrs((props) => ({
 
   @media ${breakpoint.desktopXL} {
     padding: 2rem 8rem;
-    // gap: 2rem;
   }
 `;
 
-export const PBoxContainer = styled(motion.div)`
+export const BoxContainer = styled(motion.div)`
   &:hover {
     opacity: 0.95;
     z-index: 999;
   }
 `;
 
-export const PBox = styled.article`
+export const Box = styled.article`
   display: flex;
   justify-content: center;
   object-fit: cover;
@@ -48,15 +46,14 @@ export const PBox = styled.article`
   overflow: hidden;
   position: relative;
   background: ${(props) => props.bgColor};
-  // border-radius: 0.5rem;
 `;
 
-export const PBoxImg = styled.img`
+export const BoxImg = styled.img`
   width: 100%;
   height: auto;
 `;
 
-export const PBoxOverlay = styled.div`
+export const BoxOverlay = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -73,7 +70,7 @@ export const PBoxOverlay = styled.div`
   }
 `;
 
-export const PBoxText = styled.div`
+export const BoxText = styled.div`
   color: white;
   position: absolute;
   width: 100%;
@@ -87,11 +84,11 @@ export const PBoxText = styled.div`
   font-size: 1.2rem;
 `;
 
-export const PBoxTitle = styled.h2`
+export const BoxTitle = styled.h2`
   padding: 5px;
 `;
 
-export const PBoxCat = styled.p`
+export const BoxCat = styled.p`
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
 `;

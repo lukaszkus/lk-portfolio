@@ -6,14 +6,14 @@ import { AnimatePresence } from "framer-motion";
 import { Filter } from "../";
 
 import {
-  PContainer,
-  PBoxContainer,
-  PBox,
-  PBoxImg,
-  PBoxOverlay,
-  PBoxText,
-  PBoxTitle,
-  PBoxCat,
+  Container,
+  BoxContainer,
+  Box,
+  BoxImg,
+  BoxOverlay,
+  BoxText,
+  BoxTitle,
+  BoxCat,
 } from "./StyledPortfolio";
 
 function Portfolio() {
@@ -22,7 +22,7 @@ function Portfolio() {
   return (
     <>
       <Filter />
-      <PContainer
+      <Container
         id="portfolio"
         initial={{ opacity: 0, y: 200 }}
         whileInView={{
@@ -33,37 +33,47 @@ function Portfolio() {
           },
         }}
         exit={{ opacity: 0, y: 200 }}
-        viewport={{ once: true }}>
+        viewport={{ once: true }}
+      >
         {portfolioList.map((item) => (
           <AnimatePresence exitBeforeEnter>
-            <PBoxContainer
+            <BoxContainer
               key={item.id}
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
                 transition: {
-                  duration: 1,
+                  duration: 0.8,
+                  ease: "easeInOut",
                 },
               }}
-              exit={{ opacity: 0 }}>
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeInOut",
+                },
+              }}
+            >
               <Link to={item.path}>
-                <PBox
+                <Box
                   bgColor={item.bgColor}
                   transform={item.transform}
-                  height={item.height}>
-                  <PBoxImg src={item.cover} alt={item.title}></PBoxImg>
-                  <PBoxOverlay overlayColor={item.overlayColor}>
-                    <PBoxText>
-                      <PBoxTitle>{item.title}</PBoxTitle>
-                      <PBoxCat>{item.category}</PBoxCat>
-                    </PBoxText>
-                  </PBoxOverlay>
-                </PBox>
+                  height={item.height}
+                >
+                  <BoxImg src={item.cover} alt={item.title}></BoxImg>
+                  <BoxOverlay overlayColor={item.overlayColor}>
+                    <BoxText>
+                      <BoxTitle>{item.title}</BoxTitle>
+                      <BoxCat>{item.category}</BoxCat>
+                    </BoxText>
+                  </BoxOverlay>
+                </Box>
               </Link>
-            </PBoxContainer>
+            </BoxContainer>
           </AnimatePresence>
         ))}
-      </PContainer>
+      </Container>
     </>
   );
 }
