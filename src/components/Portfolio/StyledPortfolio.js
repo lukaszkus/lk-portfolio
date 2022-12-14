@@ -12,6 +12,7 @@ export const Container = styled(motion.section).attrs((props) => ({
   overflow: hidden;
   margin-bottom: 2rem;
   position: relative;
+  min-height: 50vh;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);

@@ -7,28 +7,22 @@ import { COLORS, portfolioItems } from "../../utils";
 import { Button } from "../";
 import { Icon } from "../../subcomponents";
 
-import { FilterWrapper, ButtonsWrapper, ShowFiltersBtn } from "./StyledFilter";
+import { Wrapper, FilterWrapper, ButtonsWrapper } from "./StyledFilter";
 
 const Filter = () => {
   const { setPortfolioList, types, filterPortfolioList } = useContext(Context);
   const [showFilters, setShowFilters] = useToggle();
 
   const slide = {
-    initial: { x: 50, opacity: 0 },
+    initial: { y: -50, opacity: 0 },
     slideIn: {
-      x: 0,
+      y: 0,
       opacity: 1,
     },
   };
 
-  const rotate = {
-    initial: { rotate: 0 },
-    rotate: { rotate: 90, transition: { ease: "easeInOut" } },
-    hover: { scale: 1.2 },
-  };
-
   return (
-    <FilterWrapper
+    <Wrapper
       initial={{ opacity: 0, y: 50 }}
       whileInView={{
         opacity: 1,
@@ -40,33 +34,34 @@ const Filter = () => {
       }}
       exit={{ opacity: 0, y: 50 }}
       viewport={{ once: true }}>
-      {showFilters && (
-        <ButtonsWrapper
-          variants={slide}
-          initial="initial"
-          animate={showFilters ? "slideIn" : "initial"}>
-          {types.map((type, index) => {
-            return (
-              <Button
-                click={() => filterPortfolioList(type)}
-                key={index}
-                label={type}
-              />
-            );
-          })}
-          <Button click={() => setPortfolioList(portfolioItems)} label="all" />
-        </ButtonsWrapper>
-      )}
+      <FilterWrapper>
+        <Button click={setShowFilters} label="Filters">
+          <Icon icon="filter" width="20px" height="20px" color={COLORS.light} />
+        </Button>
 
-      <ShowFiltersBtn
-        onClick={setShowFilters}
-        variants={rotate}
-        initial="initial"
-        animate={showFilters ? "rotate" : "initial"}
-        whileHover="hover">
-        <Icon icon="filter" width="30px" height="30px" color={COLORS.light} />
-      </ShowFiltersBtn>
-    </FilterWrapper>
+        {showFilters && (
+          <ButtonsWrapper
+            onClick={setShowFilters}
+            variants={slide}
+            initial="initial"
+            animate={showFilters ? "slideIn" : "initial"}>
+            {types.map((type, index) => {
+              return (
+                <Button
+                  click={() => filterPortfolioList(type)}
+                  key={index}
+                  label={type}
+                />
+              );
+            })}
+            <Button
+              click={() => setPortfolioList(portfolioItems)}
+              label="all"
+            />
+          </ButtonsWrapper>
+        )}
+      </FilterWrapper>
+    </Wrapper>
   );
 };
 

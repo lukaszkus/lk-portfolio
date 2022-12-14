@@ -33,8 +33,7 @@ function Portfolio() {
           },
         }}
         exit={{ opacity: 0, y: 200 }}
-        viewport={{ once: true }}
-      >
+        viewport={{ once: true }}>
         {portfolioList.map((item) => (
           <AnimatePresence exitBeforeEnter>
             <BoxContainer
@@ -43,24 +42,22 @@ function Portfolio() {
               animate={{
                 opacity: 1,
                 transition: {
-                  duration: 0.8,
+                  duration: 0.6,
                   ease: "easeInOut",
                 },
               }}
               exit={{
                 opacity: 0,
                 transition: {
-                  duration: 0.8,
+                  duration: 0.6,
                   ease: "easeInOut",
                 },
-              }}
-            >
+              }}>
               <Link to={item.path}>
                 <Box
                   bgColor={item.bgColor}
                   transform={item.transform}
-                  height={item.height}
-                >
+                  height={item.height}>
                   <BoxImg src={item.cover} alt={item.title}></BoxImg>
                   <BoxOverlay overlayColor={item.overlayColor}>
                     <BoxText>

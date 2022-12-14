@@ -3,12 +3,10 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const FilterWrapper = styled(motion.div)`
+export const Wrapper = styled(motion.div)`
   display: flex;
-  justify-content: flex-end;
   gap: 1rem;
   padding: 0 2rem;
-  overflow: hidden;
 
   @media ${breakpoint.tablet} {
     padding: 0 4rem;
@@ -23,14 +21,24 @@ export const FilterWrapper = styled(motion.div)`
   }
 `;
 
-export const ButtonsWrapper = styled(motion.div)`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+export const FilterWrapper = styled.div`
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  position: relative;
 `;
 
-export const ShowFiltersBtn = styled(motion.button)`
-  background: transparent;
-  border: none;
-  cursor: pointer;
+export const ButtonsWrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 165px;
+  box-shadow: 10px 10px 20px 0px rgba(36, 41, 48, 0.6);
+  z-index: 9999;
 `;

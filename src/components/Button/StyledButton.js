@@ -13,6 +13,9 @@ export const Btn = styled.button`
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
   &:hover {
     color: ${COLORS.white};
