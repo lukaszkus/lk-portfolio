@@ -33,7 +33,8 @@ const Filter = () => {
         },
       }}
       exit={{ opacity: 0, y: 50 }}
-      viewport={{ once: true }}>
+      viewport={{ once: true }}
+    >
       <FilterWrapper>
         <Button click={setShowFilters} label="Filters">
           <Icon icon="filter" width="20px" height="20px" color={COLORS.light} />
@@ -44,7 +45,8 @@ const Filter = () => {
             onClick={setShowFilters}
             variants={slide}
             initial="initial"
-            animate={showFilters ? "slideIn" : "initial"}>
+            animate={showFilters ? "slideIn" : "initial"}
+          >
             {types.map((type, index) => {
               return (
                 <Button

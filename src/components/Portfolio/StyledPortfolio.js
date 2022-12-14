@@ -33,7 +33,7 @@ export const Container = styled(motion.section).attrs((props) => ({
 export const BoxContainer = styled(motion.div)`
   &:hover {
     opacity: 0.95;
-    z-index: 999;
+    z-index: 9;
   }
 `;
 
