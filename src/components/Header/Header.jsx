@@ -59,7 +59,7 @@ const Header = () => {
           <BtnWrapper
             animate={{ x: [-100, 0], opacity: [0, 1] }}
             transition={{ delay: 1.2, ...transition }}>
-            <Button size="1.25rem">
+            <Button size={16}>
               <Link to="work">View my work</Link>
             </Button>
           </BtnWrapper>
