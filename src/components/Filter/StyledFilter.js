@@ -36,6 +36,6 @@ export const ButtonsWrapper = styled(motion.div)`
   position: absolute;
   top: 3rem;
   left: 0;
-  box-shadow: 10px 10px 20px 0px rgba(36, 41, 48, 0.6);
+  box-shadow: 18px 33px 47px 2px rgba(36, 41, 48, 0.5);
   z-index: 99;
 `;
