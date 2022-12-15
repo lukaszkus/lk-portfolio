@@ -25,13 +25,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const TitleWrapper = styled.div`
-  // padding-top: 6rem;
-
-  @media ${breakpoint.tablet} {
-    // padding-top: 4rem;
-  }
-`;
+export const TitleWrapper = styled.div``;
 
 export const Image = styled(motion.img).attrs({
   src: `${images.me}`,
@@ -45,9 +39,6 @@ export const Image = styled(motion.img).attrs({
   @media ${breakpoint.tablet} {
     width: 20%;
   }
-
-  // @media ${breakpoint.desktopXL} {
-  // }
 `;
 
 export const Title = styled(motion.h1)`
@@ -109,21 +100,6 @@ export const Subtitle = styled(motion.div)`
 
   @media ${breakpoint.desktopXL} {
     font-size: 4rem;
-  }
-`;
-
-export const Arrow = styled(motion.img).attrs({
-  src: `${images.arrow}`,
-})`
-  position: absolute;
-  bottom: 50px;
-  left: calc(50% - (30px / 2));
-  width: 30px;
-  transition: 0.3s ease-in-out;
-  z-index: 9999;
-  cursor: pointer;
-  &:hover {
-    scale: 1.2;
   }
 `;
 

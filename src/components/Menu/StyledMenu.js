@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
@@ -9,44 +10,42 @@ export const MenuContainer = styled.nav`
   bottom: 0;
   right: 0;
   display: flex;
-  // align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  font-size: 3rem;
-
-  a {
-    color: #c3cfe2;
-    text-decoration: none;
-  }
-
-  @media ${breakpoint.tablet} {
-    // justify-content: center;
-    font-size: 3.5rem;
+  justify-content: flex-end;
+  @media ${breakpoint.desktop} {
+    width: 35%;
   }
 
   @media ${breakpoint.desktop} {
     padding: 1.5rem;
-    font-size: 4.5rem;
   }
+`;
+
+export const Wrapper = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
+  box-shadow: 18px 33px 47px 2px rgba(36, 41, 48, 0.49);
 `;
 
 export const MenuList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
-  box-shadow: 10px 10px 20px 0px rgba(36, 41, 48, 0.6);
-  border-radius: 1rem;
-  // font-family: "Poppins", sans-serif;
-  // font-weight: 600;
+  gap: 1rem;
+  font-size: 2.75rem;
+
+  @media ${breakpoint.tablet} {
+    font-size: 3rem;
+  }
+
+  a {
+    color: #c3cfe2;
+    text-decoration: none;
+  }
 `;
 
-export const MenuItem = styled.li`
-  // &:first-child {
-  //   padding-bottom: 10px;
-  // }
-`;
+export const MenuItem = styled.li``;

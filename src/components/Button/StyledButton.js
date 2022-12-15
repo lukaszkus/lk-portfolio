@@ -26,7 +26,8 @@ export const Btn = styled.button.attrs((props) => ({
   }
 
   @media ${breakpoint.tablet} {
-    font-size: ${(props) => (props.size ? `${props.size * 1.5}px` : "0.75rem")};
+    font-size: ${(props) =>
+      props.size ? `${props.size * 1.25}px` : "0.75rem"};
   }
 
   a {
