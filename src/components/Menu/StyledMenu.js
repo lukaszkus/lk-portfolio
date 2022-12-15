@@ -41,10 +41,12 @@ export const MenuList = styled.ul`
   background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
   box-shadow: 10px 10px 20px 0px rgba(36, 41, 48, 0.6);
   border-radius: 1rem;
+  // font-family: "Poppins", sans-serif;
+  // font-weight: 600;
 `;
 
 export const MenuItem = styled.li`
-  &:first-child {
-    padding-bottom: 10px;
-  }
+  // &:first-child {
+  //   padding-bottom: 10px;
+  // }
 `;

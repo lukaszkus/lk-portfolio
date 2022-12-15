@@ -6,11 +6,11 @@ import {
   Text,
   TextWrapper,
   Link,
-} from "./StyledContact";
+} from "./StyledGetInTouch";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
-function Contact() {
+function GetInTouch() {
   return (
     <Container>
       <Box>
@@ -49,4 +49,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default GetInTouch;

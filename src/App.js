@@ -7,7 +7,7 @@ import "./style.css";
 import { ScrollToTop } from "./utils";
 
 //Pages
-import { About, Home, Work } from "./pages";
+import { About, Home, Work, Contact } from "./pages";
 //Components
 import {
   BackgroundSvg,
@@ -41,6 +41,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="work" element={<Work />} />
           <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
           <Route
             path="work/inspiration-way"
             element={<InspirationWay id={6} />}
