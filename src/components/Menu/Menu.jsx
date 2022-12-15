@@ -11,10 +11,16 @@ function Menu() {
     <MenuContainer onClick={setIsMenuOpen}>
       <MenuList>
         <MenuItem data-aos="fade-up" data-aos-duration="300">
-          <Link to="/">Work</Link>
+          <Link to="/">Home</Link>
+        </MenuItem>
+        <MenuItem data-aos="fade-up" data-aos-duration="300">
+          <Link to="work">Work</Link>
         </MenuItem>
         <MenuItem data-aos="fade-up" data-aos-duration="600">
-          <Link to="about">About</Link>
+          <Link to="about">About me</Link>
+        </MenuItem>
+        <MenuItem data-aos="fade-up" data-aos-duration="300">
+          <Link to="portfolio">Get in Touch</Link>
         </MenuItem>
       </MenuList>
     </MenuContainer>

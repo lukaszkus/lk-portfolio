@@ -1,28 +1,28 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { breakpoint } from "../../utils";
+import { COLORS } from "../../utils";
 
 export const Wrapper = styled(motion.div)`
-  // display: flex;
-  // gap: 1rem;
-  padding: 0 2rem;
-
-  @media ${breakpoint.tablet} {
-    padding: 0 4rem;
-  }
-
-  @media ${breakpoint.desktop} {
-    padding: 0 6rem;
-  }
-
-  @media ${breakpoint.desktopXL} {
-    padding: 0 8rem;
-  }
+  padding-bottom: 1rem;
 `;
 
 export const FilterWrapper = styled.div`
   position: relative;
+`;
+
+export const FilterBtn = styled.button`
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: ${COLORS.light};
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+  left: -14px;
+  padding-right: 14px;
 `;
 
 export const ButtonsWrapper = styled(motion.div)`
@@ -34,7 +34,7 @@ export const ButtonsWrapper = styled(motion.div)`
   border-radius: 1rem;
   padding: 1.5rem;
   position: absolute;
-  top: 2.5rem;
+  top: 3rem;
   left: 0;
   box-shadow: 10px 10px 20px 0px rgba(36, 41, 48, 0.6);
   z-index: 99;

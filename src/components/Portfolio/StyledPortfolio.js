@@ -3,30 +3,38 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const Container = styled(motion.section).attrs((props) => ({
-  id: props.id,
-}))`
-  display: grid;
-  gap: 2rem;
+export const Wrapper = styled(motion.section)`
   padding: 2rem 2rem;
   overflow: hidden;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
   position: relative;
-  min-height: 50vh;
+  margin-top: 3rem;
 
   @media ${breakpoint.tablet} {
-    grid-template-columns: repeat(2, 1fr);
     padding: 2rem 4rem;
-    gap: 2rem;
   }
 
   @media ${breakpoint.desktop} {
-    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
     padding: 2rem 6rem;
   }
 
   @media ${breakpoint.desktopXL} {
     padding: 2rem 8rem;
+  }
+`;
+
+export const Container = styled(motion.div)`
+  display: grid;
+  gap: 2rem;
+
+  @media ${breakpoint.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media ${breakpoint.desktop} {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 

@@ -1,7 +1,7 @@
-import { Link } from "react-scroll";
+import { NavLink as Link } from "react-router-dom";
 
 import {
-  // Arrow,
+  BtnWrapper,
   Container,
   Wrapper,
   TitleWrapper,
@@ -10,6 +10,8 @@ import {
   SubtitleWrapper,
   Subtitle,
 } from "./StyledHeader";
+
+import { Button } from "../";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -34,49 +36,35 @@ const Header = () => {
         <TitleWrapper>
           <Title
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.2, ...transition }}
-          >
+            transition={{ delay: 0.2, ...transition }}>
             Hi,
           </Title>
           <Title
             animate={{ x: [-150, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.3, ...transition }}
-          >
+            transition={{ delay: 0.3, ...transition }}>
             I'm Łukasz
           </Title>
           <SubtitleWrapper>
             <Subtitle
               animate={{ x: [-100, 0], opacity: [0, 1] }}
-              transition={{ delay: 1, ...transition }}
-            >
+              transition={{ delay: 1, ...transition }}>
               FRONT-END DEVELOPER
             </Subtitle>
             <Subtitle
               animate={{ x: [-150, 0], opacity: [0, 1] }}
-              transition={{ delay: 1.1, ...transition }}
-            >
+              transition={{ delay: 1.1, ...transition }}>
               & GRAPHIC DESIGNER
             </Subtitle>
           </SubtitleWrapper>
+          <BtnWrapper
+            animate={{ x: [-100, 0], opacity: [0, 1] }}
+            transition={{ delay: 1.2, ...transition }}>
+            <Button size="1.25rem">
+              <Link to="work">View my work</Link>
+            </Button>
+          </BtnWrapper>
         </TitleWrapper>
       </Wrapper>
-
-      <Link
-        to="portfolio"
-        spy={true}
-        smooth={true}
-        offset={-100}
-        duration={800}
-      >
-        {/* <Arrow
-          initial={{ y: -75, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            delay: 3,
-            ...transition,
-          }}
-        /> */}
-      </Link>
     </Container>
   );
 };

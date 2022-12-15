@@ -22,7 +22,7 @@ const portfolioItems = [
     bgColor:
       "linear-gradient(45deg, rgba(31, 42, 102, 0.8) 0%, rgba(185, 103, 91, 0.8) 100%)",
     overlayColor: "rgba(185, 103, 91, 0.9)",
-    path: "work/inspiration-way",
+    path: "inspiration-way",
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const portfolioItems = [
     bgColor:
       "linear-gradient(to top, rgba(106, 133, 182, 0.8) 0%, rgba(186, 200, 224, 0.8) 100%)",
     overlayColor: "rgba(53, 0, 211, 0.9)",
-    path: "work/top-albums",
+    path: "top-albums",
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ const portfolioItems = [
     bgColor:
       "linear-gradient(45deg, rgba(183, 33, 255, 0.8) 0%, rgba(33, 212, 253, 0.8) 100%)",
     overlayColor: "rgba(183, 33, 255, 0.9)",
-    path: "work/todo-app",
+    path: "todo-app",
   },
   {
     id: 3,
@@ -100,7 +100,7 @@ const portfolioItems = [
     bgColor:
       "linear-gradient(45deg, rgba(2, 53, 168, 0.8) 0%, rgba(38, 213, 201, 0.8) 100%)",
     overlayColor: "rgba(38, 213, 201, 0.9)",
-    path: "work/wild-n-slow",
+    path: "wild-n-slow",
   },
   {
     id: 2,
@@ -133,7 +133,7 @@ const portfolioItems = [
     bgColor:
       "linear-gradient(120deg, rgba(224, 195, 252, 0.8) 0%, rgba(142, 197, 252, 0.8) 100%)",
     overlayColor: "rgba(142, 197, 252, 0.9)",
-    path: "work/fm-solutions",
+    path: "fm-solutions",
   },
   {
     id: 1,
@@ -163,7 +163,7 @@ const portfolioItems = [
     bgColor:
       "linear-gradient(120deg, rgba(247, 60, 79, 0.8) 0%, rgba(46, 30, 92, 0.8) 100%)",
     overlayColor: "rgba(247, 60, 79, 0.9)",
-    path: "work/informatyk-na-godziny",
+    path: "informatyk-na-godziny",
   },
 ];
 

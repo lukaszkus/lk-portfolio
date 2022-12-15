@@ -14,16 +14,16 @@ import {
   BoxText,
   BoxTitle,
   BoxCat,
+  Wrapper,
 } from "./StyledPortfolio";
 
 function Portfolio() {
   const { portfolioList } = useContext(Context);
 
   return (
-    <>
+    <Wrapper>
       <Filter />
       <Container
-        id="portfolio"
         initial={{ opacity: 0, y: 200 }}
         whileInView={{
           opacity: 1,
@@ -71,7 +71,7 @@ function Portfolio() {
           </AnimatePresence>
         ))}
       </Container>
-    </>
+    </Wrapper>
   );
 }
 

@@ -126,3 +126,9 @@ export const Arrow = styled(motion.img).attrs({
     scale: 1.2;
   }
 `;
+
+export const BtnWrapper = styled(motion.div)`
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 0;
+`;

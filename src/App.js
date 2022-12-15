@@ -7,9 +7,16 @@ import "./style.css";
 import { ScrollToTop } from "./utils";
 
 //Pages
-import { About, Home } from "./pages";
+import { About, Home, Work } from "./pages";
 //Components
-import { BackgroundSvg, Footer, Menu, ScrollBtn, Topbar } from "./components";
+import {
+  BackgroundSvg,
+  // Footer,
+  Menu,
+  ScrollBtn,
+  Topbar,
+} from "./components";
+
 //Work
 import {
   FrontendMentor,
@@ -32,6 +39,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
+          <Route path="work" element={<Work />} />
           <Route path="about" element={<About />} />
           <Route
             path="work/inspiration-way"
@@ -48,9 +56,8 @@ function App() {
         </Routes>
       </AnimatePresence>
       <ScrollBtn />
-      <Footer />
+      {/* <Footer /> */}
       <BackgroundSvg />
-      {/* <div className="background-animate"></div> */}
       <div className="background-gradient"></div>
     </>
   );

@@ -1,13 +1,19 @@
 import { useContext } from "react";
 import Context from "../../context/context";
 import useToggle from "../../hooks/useToggle";
+import { Fade as Hamburger } from "hamburger-react";
 
 import { COLORS, portfolioItems } from "../../utils";
 
 import { Button } from "../";
-import { Icon } from "../../subcomponents";
+// import { Icon } from "../../subcomponents";
 
-import { Wrapper, FilterWrapper, ButtonsWrapper } from "./StyledFilter";
+import {
+  Wrapper,
+  FilterWrapper,
+  FilterBtn,
+  ButtonsWrapper,
+} from "./StyledFilter";
 
 const Filter = () => {
   const { setPortfolioList, types, filterPortfolioList } = useContext(Context);
@@ -33,20 +39,24 @@ const Filter = () => {
         },
       }}
       exit={{ opacity: 0, y: 50 }}
-      viewport={{ once: true }}
-    >
+      viewport={{ once: true }}>
       <FilterWrapper>
-        <Button click={setShowFilters} label="Filters">
-          <Icon icon="filter" width="20px" height="20px" color={COLORS.light} />
-        </Button>
+        <FilterBtn onClick={setShowFilters}>
+          <Hamburger
+            toggled={showFilters}
+            color={COLORS.light}
+            size={20}
+            direction="right"
+          />
+          <p>Filters</p>
+        </FilterBtn>
 
         {showFilters && (
           <ButtonsWrapper
             onClick={setShowFilters}
             variants={slide}
             initial="initial"
-            animate={showFilters ? "slideIn" : "initial"}
-          >
+            animate={showFilters ? "slideIn" : "initial"}>
             {types.map((type, index) => {
               return (
                 <Button
