@@ -6,9 +6,9 @@ import { breakpoint } from "../../utils";
 export const Wrapper = styled(motion.section)`
   padding: 2rem 2rem;
   overflow: hidden;
-  // margin-bottom: 2rem;
+  margin-bottom: 2rem;
   position: relative;
-  margin-top: 3rem;
+  margin: 3rem 0;
 
   @media ${breakpoint.tablet} {
     padding: 2rem 4rem;

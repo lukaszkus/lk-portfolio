@@ -17,7 +17,7 @@ export const FilterBtn = styled.button`
   background: transparent;
   border: none;
   color: ${COLORS.light};
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
   position: relative;
   top: 7px;
@@ -31,7 +31,7 @@ export const ButtonsWrapper = styled(motion.div)`
   align-items: flex-start;
   gap: 0.75rem;
   background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
-  border-radius: 1rem;
+  // border-radius: 1rem;
   padding: 1.5rem;
   position: absolute;
   top: 3rem;

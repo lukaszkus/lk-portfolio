@@ -38,8 +38,7 @@ const Filter = () => {
         },
       }}
       exit={{ opacity: 0, y: 50 }}
-      viewport={{ once: true }}
-    >
+      viewport={{ once: true }}>
       <FilterWrapper>
         <FilterBtn onClick={setShowFilters}>
           <Hamburger
@@ -56,8 +55,7 @@ const Filter = () => {
             onClick={setShowFilters}
             variants={slide}
             initial="initial"
-            animate={showFilters ? "slideIn" : "initial"}
-          >
+            animate={showFilters ? "slideIn" : "initial"}>
             {types.map((type, index) => {
               return (
                 <Button

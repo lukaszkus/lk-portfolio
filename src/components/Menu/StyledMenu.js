@@ -11,9 +11,6 @@ export const MenuContainer = styled.nav`
   right: 0;
   display: flex;
   justify-content: flex-end;
-  @media ${breakpoint.desktop} {
-    width: 35%;
-  }
 
   @media ${breakpoint.desktop} {
     padding: 1.5rem;
@@ -28,7 +25,11 @@ export const Wrapper = styled(motion.div)`
   width: 100%;
   height: 100%;
   background-image: linear-gradient(-135deg, #6a11cb 0%, #2575fc 100%);
-  box-shadow: 18px 33px 47px 2px rgba(36, 41, 48, 0.49);
+  box-shadow: -15px 33px 60px 15px rgba(36, 41, 48, 0.49);
+
+  @media ${breakpoint.desktop} {
+    width: 33.3%;
+  }
 `;
 
 export const MenuList = styled.ul`

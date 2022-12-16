@@ -7,17 +7,25 @@ import { MenuContainer, MenuList, MenuItem, Wrapper } from "./StyledMenu";
 function Menu() {
   const { setIsMenuOpen } = useContext(Context);
 
+  const slide = {
+    initial: { y: "-100%", opacity: 0 },
+    slideIn: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   return (
     <MenuContainer onClick={setIsMenuOpen}>
       <Wrapper
-        initial={{ opacity: 0, width: 0, height: 0 }}
-        animate={{
-          opacity: 1,
-          width: "100%",
-          height: "100%",
-          transition: { ease: "easeInOut" },
-        }}
-      >
+        // initial={{ opacity: 0 }}
+        // animate={{
+        //   opacity: 1,
+        //   transition: { ease: "easeInOut" },
+        // }}
+        variants={slide}
+        initial="initial"
+        animate="slideIn">
         <MenuList>
           <MenuItem>
             <Link to="/">Home</Link>
