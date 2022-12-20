@@ -8,10 +8,11 @@ function Menu() {
   const { setIsMenuOpen } = useContext(Context);
 
   const slide = {
-    initial: { y: "-100%", opacity: 0 },
+    initial: { x: "100%", opacity: 0 },
     slideIn: {
-      y: 0,
+      x: 0,
       opacity: 1,
+      transition: { ease: "easeInOut" },
     },
   };
 
@@ -25,7 +26,8 @@ function Menu() {
         // }}
         variants={slide}
         initial="initial"
-        animate="slideIn">
+        animate="slideIn"
+      >
         <MenuList>
           <MenuItem>
             <Link to="/">Home</Link>

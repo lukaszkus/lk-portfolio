@@ -24,10 +24,9 @@ function Portfolio() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-
       transition: {
-        duration: 0.4,
-        staggerChildren: 0.06,
+        duration: 0.6,
+        staggerChildren: 0.1,
         ease: "easeInOut",
       },
     },
@@ -54,14 +53,16 @@ function Portfolio() {
           variants={showContainer}
           initial="hidden"
           animate="show"
-          exit="exit">
+          exit="exit"
+        >
           {portfolioList.map((item) => (
             <BoxContainer key={item.id} variants={showBox}>
               <Link to={item.path}>
                 <Box
                   bgColor={item.bgColor}
                   transform={item.transform}
-                  height={item.height}>
+                  height={item.height}
+                >
                   <BoxImg src={item.cover} alt={item.title}></BoxImg>
                   <BoxOverlay overlayColor={item.overlayColor}>
                     <BoxText>
