@@ -5,17 +5,17 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-@font-face {
+/* @font-face {
   font-family: "ButlerStencil";
   src: local("ButlerStencil"),
     url("./assets/fonts/ButlerStencil-ExtraBold.woff2") format("woff2"),
     url("./assets/fonts/ButlerStencil-ExtraBold.woff") format("woff");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"); */
 
 body {
-  font-family: "ButlerStencil";
+  font-family: "Butler Stencil", sans-serif;
   position: relative;
   background-color: #242930;
   color: #c3cfe2;

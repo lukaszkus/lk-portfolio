@@ -43,7 +43,8 @@ export const Image = styled(motion.img).attrs({
 
 export const Title = styled(motion.h1)`
   position: relative;
-  font-size: 3.5rem;
+  font-weight: 700;
+  font-size: 3rem;
   line-height: 1;
   color: #2575fc;
 
@@ -60,7 +61,7 @@ export const Title = styled(motion.h1)`
   }
 
   @media ${breakpoint.desktopXL} {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
 `;
 
@@ -70,7 +71,7 @@ export const SubtitleWrapper = styled.div`
 
 export const Subtitle = styled(motion.div)`
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   font-weight: 600;
   line-height: 1;
   -webkit-background-clip: text;
@@ -95,11 +96,11 @@ export const Subtitle = styled(motion.div)`
   }
 
   @media ${breakpoint.tablet} {
-    font-size: 3rem;
+    font-size: 5rem;
   }
 
   @media ${breakpoint.desktopXL} {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 `;
 
