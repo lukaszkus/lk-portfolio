@@ -59,13 +59,14 @@ const BackgroundSvg = () => {
         preserveAspectRatio="xMidYMin slice"
         viewBox="0 0 1920 1080"
         initial="hidden"
-        animate="visible">
+        animate="visible"
+      >
         <motion.path
           id="circle-right_00000091697886710394994340000008159363649804286856_"
           fill="none"
           stroke="#EA227A"
-          stroke-width="1.8822"
-          stroke-miterlimit="9.9999"
+          strokeWidth="1.8822"
+          strokeMiterlimit="9.9999"
           d="
 	M1484.5,0c8.7,108.1,55.8,209.5,132.6,285.9c80.6,81.1,188.7,128.8,302.9,133.8"
           variants={draw}
@@ -75,8 +76,8 @@ const BackgroundSvg = () => {
           id="circle-bottom_00000031167115943174356390000012980304449456949426_"
           fill="none"
           stroke="#EA227A"
-          stroke-width="1.8822"
-          stroke-miterlimit="9.9999"
+          strokeWidth="1.8822"
+          strokeMiterlimit="9.9999"
           d="
 	M788.8,1080c-25.1-114.1-127-199.8-248.6-199.8S316.7,965.9,291.6,1080"
           variants={draw}
@@ -87,8 +88,8 @@ const BackgroundSvg = () => {
             transform="matrix(0.7071 -0.7071 0.7071 0.7071 136.1032 1316.2112)"
             fill="none"
             stroke="#EA227A"
-            stroke-width="1.8822"
-            stroke-miterlimit="9.9999"
+            strokeWidth="1.8822"
+            strokeMiterlimit="9.9999"
             cx="1656.9"
             cy="493.8"
             rx="57.7"
@@ -99,8 +100,8 @@ const BackgroundSvg = () => {
           <motion.circle
             fill="none"
             stroke="#90D8D4"
-            stroke-width="1.5555"
-            stroke-miterlimit="10"
+            strokeWidth="1.5555"
+            strokeMiterlimit="10"
             cx="195.7"
             cy="701.7"
             r="30.7"
@@ -112,8 +113,8 @@ const BackgroundSvg = () => {
           <motion.line
             fill="none"
             stroke="#90D8D4"
-            stroke-width="1.5555"
-            stroke-miterlimit="10"
+            strokeWidth="1.5555"
+            strokeMiterlimit="10"
             x1="421.5"
             y1="63"
             x2="350.3"
@@ -124,8 +125,8 @@ const BackgroundSvg = () => {
           <motion.line
             fill="none"
             stroke="#90D8D4"
-            stroke-width="1.5555"
-            stroke-miterlimit="10"
+            strokeWidth="1.5555"
+            strokeMiterlimit="10"
             x1="1516.1"
             y1="675.9"
             x2="1443.2"
@@ -136,8 +137,8 @@ const BackgroundSvg = () => {
           <motion.line
             fill="none"
             stroke="#FFFFFF"
-            stroke-width="1.8822"
-            stroke-miterlimit="10"
+            strokeWidth="1.8822"
+            strokeMiterlimit="10"
             x1="335.1"
             y1="743.1"
             x2="264.3"
@@ -148,8 +149,8 @@ const BackgroundSvg = () => {
           <motion.line
             fill="none"
             stroke="#FFFFFF"
-            stroke-width="1.8822"
-            stroke-miterlimit="10"
+            strokeWidth="1.8822"
+            strokeMiterlimit="10"
             x1="1490.6"
             y1="164.5"
             x2="1419.8"
@@ -167,7 +168,8 @@ const BackgroundSvg = () => {
         viewBox="0 0 1920 1080"
         variants={showDots}
         initial="hidden"
-        animate="show">
+        animate="show"
+      >
         <motion.circle
           fill="#FFFFFF"
           cx="23"
@@ -258,7 +260,8 @@ const BackgroundSvg = () => {
         viewBox="0 0 1920 1080"
         variants={showDots}
         initial="hidden"
-        animate="show">
+        animate="show"
+      >
         <motion.circle
           fill="#EA227A"
           cx="47.7"
@@ -613,7 +616,8 @@ const BackgroundSvg = () => {
         viewBox="0 0 1920 1080"
         variants={showDots}
         initial="hidden"
-        animate="show">
+        animate="show"
+      >
         <motion.circle
           fill="#EA227A"
           cx="1572.2"
