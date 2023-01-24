@@ -9,7 +9,6 @@ const Topbar = () => {
   const { isMenuOpen } = useContext(Context);
 
   const location = useLocation();
-  console.log(location);
 
   return (
     <TopbarContainer>

@@ -29,8 +29,12 @@ import {
 
 function App() {
   const { isOpen } = useContext(Context);
-
   const location = useLocation();
+
+  let titlePrefix = `${location.pathname.replace("/", "")} | `;
+
+  const titleSuffix = `łukasz kuś - frontend developer & graphic designer`;
+
   return (
     <>
       <ScrollToTop />
@@ -38,10 +42,25 @@ function App() {
       <Topbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="work" element={<Work />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="/" element={<Home titleSuffix={titleSuffix} />} />
+          <Route
+            path="work"
+            element={
+              <Work titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+            }
+          />
+          <Route
+            path="about"
+            element={
+              <About titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+            }
+          />
+          <Route
+            path="contact"
+            element={
+              <Contact titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+            }
+          />
           <Route
             path="work/inspiration-way"
             element={<InspirationWay id={6} />}

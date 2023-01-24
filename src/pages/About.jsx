@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 import { breakpoint } from "../utils";
 
@@ -46,7 +47,8 @@ const AboutText = styled.p`
   }
 `;
 
-function About() {
+function About({ titlePrefix, titleSuffix }) {
+  useDocumentTitle(`${titlePrefix}${titleSuffix}`);
   return (
     <AboutContainer>
       <AboutBox>
