@@ -3,7 +3,7 @@ import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 // import { AnimatePresence } from "framer-motion";
 
-import { Filter } from "../";
+// import { Filter } from "../";
 
 import {
   Container,
@@ -48,21 +48,19 @@ function Portfolio() {
   return (
     <>
       <Wrapper>
-        <Filter />
+        {/* <Filter /> */}
         <Container
           variants={showContainer}
           initial="hidden"
           animate="show"
-          exit="exit"
-        >
+          exit="exit">
           {portfolioList.map((item) => (
             <BoxContainer key={item.id} variants={showBox}>
               <Link to={item.path}>
                 <Box
                   bgColor={item.bgColor}
                   transform={item.transform}
-                  height={item.height}
-                >
+                  height={item.height}>
                   <BoxImg src={item.cover} alt={item.title}></BoxImg>
                   <BoxOverlay overlayColor={item.overlayColor}>
                     <BoxText>
