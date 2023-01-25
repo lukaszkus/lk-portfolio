@@ -7,14 +7,11 @@ const useDocumentTitle = (title, prevailOnUnmount = false) => {
     document.title = title;
   }, [title]);
 
-  useEffect(
-    () => () => {
-      if (!prevailOnUnmount) {
-        document.title = defaultTitle.current;
-      }
-    },
-    []
-  );
+  useEffect(() => () => {
+    if (!prevailOnUnmount) {
+      document.title = defaultTitle.current;
+    }
+  });
 };
 
 export default useDocumentTitle;
