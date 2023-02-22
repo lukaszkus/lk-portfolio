@@ -3,26 +3,22 @@ import styled from "styled-components";
 
 import { COLORS, breakpoint } from "../../utils";
 
-export const Btn = styled.button.attrs((props) => ({
-  size: props.size,
-}))`
+export const Btn = styled.button`
   color: ${COLORS.light};
-  padding: 0.5em 1.5em;
-  border: 1px solid ${COLORS.light};
   background: transparent;
-  border-radius: 2rem;
   cursor: pointer;
   font-size: ${(props) => (props.size ? `${props.size}px` : "0.75rem")};
-  font-family: "Poppins", sans-serif;
+  font-family: "Unbounded", cursive;
   transition: 0.3s ease-in-out;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   text-transform: uppercase;
+  outline: none;
+  border: none;
 
   &:hover {
     color: ${COLORS.white};
-    border-color: ${COLORS.white};
   }
 
   @media ${breakpoint.tablet} {

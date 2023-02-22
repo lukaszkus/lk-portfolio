@@ -1,22 +1,12 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
-
-/* @font-face {
-  font-family: "ButlerStencil";
-  src: local("ButlerStencil"),
-    url("./assets/fonts/ButlerStencil-ExtraBold.woff2") format("woff2"),
-    url("./assets/fonts/ButlerStencil-ExtraBold.woff") format("woff");
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"); */
-
-/* html {
-  scroll-snap-type: y mandatory;
-} */
 
 body {
   /* font-family: "Butler Stencil", sans-serif; */
@@ -50,3 +40,5 @@ body {
     rgba(31, 35, 41, 0)
   );
 }
+
+`;

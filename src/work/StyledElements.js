@@ -72,7 +72,8 @@ export const Heading = styled.div`
   }
 
   h3 {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Unbounded", cursive;
     font-weight: 400;
     padding-bottom: 2rem;
   }
@@ -84,7 +85,8 @@ export const Description = styled.div`
   padding-bottom: 4rem;
   div {
     p {
-      font-family: "Poppins", sans-serif;
+      /* font-family: "Poppins", sans-serif; */
+      font-family: "Unbounded", cursive;
       font-size: 1rem;
       font-weight: 300;
       padding-bottom: 1rem;
@@ -95,7 +97,8 @@ export const Description = styled.div`
 export const List = styled.div`
   ul {
     list-style: none;
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Unbounded", cursive;
     font-weight: 300;
     padding: 1rem 0;
 
@@ -149,7 +152,8 @@ export const ImageItem = styled.figure`
     height: auto;
   }
   figcaption {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Unbounded", cursive;
     font-size: 1rem;
     font-weight: 300;
     padding: 1rem 0;
@@ -167,7 +171,8 @@ export const TextItem = styled.article`
   justify-content: center;
   padding: 1rem 0;
   line-height: 1.8;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Unbounded", cursive;
   color: ${(props) => (props.color ? props.color : COLORS.white)};
   order: 2;
 

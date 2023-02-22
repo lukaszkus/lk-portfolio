@@ -51,16 +51,14 @@ function Portfolio() {
         {/* <Filter /> */}
         <Container
           variants={showContainer}
+          whileInView="show"
           initial="hidden"
-          animate="show"
+          // animate="show"
           exit="exit">
           {portfolioList.map((item) => (
             <BoxContainer key={item.id} variants={showBox}>
               <Link to={item.path}>
-                <Box
-                  bgColor={item.bgColor}
-                  transform={item.transform}
-                  height={item.height}>
+                <Box bgColor={item.bgColor} height={item.height}>
                   <BoxImg src={item.cover} alt={item.title}></BoxImg>
                   <BoxOverlay overlayColor={item.overlayColor}>
                     <BoxText>

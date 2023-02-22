@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { breakpoint } from "../../utils";
+import { COLORS, breakpoint } from "../../utils";
 
 export const Wrapper = styled(motion.section)`
   padding: 2rem 2rem;
@@ -9,6 +9,7 @@ export const Wrapper = styled(motion.section)`
   margin-bottom: 2rem;
   position: relative;
   margin: 3rem 0;
+  /* scroll-snap-align: start; */
 
   @media ${breakpoint.tablet} {
     padding: 2rem 4rem;
@@ -54,7 +55,12 @@ export const Box = styled.article`
   place-items: center;
   overflow: hidden;
   position: relative;
-  background: ${(props) => props.bgColor};
+  background: #262c33;
+  /* background: ${(props) => props.bgColor};
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: center; */
+  border: 1px solid #3f4854;
 `;
 
 export const BoxImg = styled.img`
@@ -64,12 +70,12 @@ export const BoxImg = styled.img`
 
 export const BoxOverlay = styled.div`
   position: absolute;
-  top: 0;
+  /* top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  right: 0; */
+  height: 90%;
+  width: 90%;
   opacity: 0;
   transition: 0.3s ease;
   background: ${(props) => props.overlayColor};
@@ -94,10 +100,13 @@ export const BoxText = styled.div`
 `;
 
 export const BoxTitle = styled.h2`
-  padding: 5px;
+  /* font-weight: 600; */
+  padding-bottom: 10px;
 `;
 
 export const BoxCat = styled.p`
-  font-family: "Poppins", sans-serif;
+  font-family: "Unbounded", cursive;
+  font-weight: 300;
+
   font-size: 1rem;
 `;

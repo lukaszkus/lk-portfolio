@@ -12,6 +12,7 @@ export const Container = styled.header`
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  /* scroll-snap-align: center; */
 `;
 
 export const Wrapper = styled.div`
@@ -43,17 +44,17 @@ export const Image = styled(motion.img).attrs({
 
 export const Title = styled(motion.h1)`
   position: relative;
-  font-weight: 700;
-  font-size: 3rem;
+  font-weight: 300;
+  font-size: 1.5rem;
   line-height: 1;
-  color: #2575fc;
+  color: #c3cfe2;
 
   &:last-of-type {
     margin-bottom: 5px;
   }
 
   @media ${breakpoint.tablet} {
-    font-size: 5rem;
+    font-size: 2.5rem;
 
     &:last-of-type {
       margin-bottom: 20px;
@@ -61,7 +62,7 @@ export const Title = styled(motion.h1)`
   }
 
   @media ${breakpoint.desktopXL} {
-    font-size: 6rem;
+    font-size: 3rem;
   }
 `;
 
@@ -70,8 +71,9 @@ export const SubtitleWrapper = styled.div`
 `;
 
 export const Subtitle = styled(motion.div)`
-  font-family: "Poppins", sans-serif;
-  font-size: 3.5rem;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Unbounded", cursive;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 1;
   -webkit-background-clip: text;

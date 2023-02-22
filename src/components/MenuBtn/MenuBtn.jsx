@@ -17,8 +17,7 @@ const MenuBtn = () => {
   return (
     <HamburgerWrapper
       animate={{ x: [100, 0], opacity: [0, 1] }}
-      transition={{ delay: 1.5, duration: 0.4 }}
-    >
+      transition={{ delay: 1.5, duration: 0.4 }}>
       <Hamburger
         toggled={isMenuOpen}
         toggle={setIsMenuOpen}

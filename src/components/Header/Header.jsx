@@ -36,34 +36,30 @@ const Header = () => {
         <TitleWrapper>
           <Title
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.2, ...transition }}
-          >
-            Hi,
+            transition={{ delay: 0.2, ...transition }}>
+            Hi, I'm Łukasz
           </Title>
-          <Title
+          {/* <Title
             animate={{ x: [-150, 0], opacity: [0, 1] }}
             transition={{ delay: 0.3, ...transition }}
           >
             I'm Łukasz
-          </Title>
+          </Title> */}
           <SubtitleWrapper>
             <Subtitle
               animate={{ x: [-100, 0], opacity: [0, 1] }}
-              transition={{ delay: 1, ...transition }}
-            >
+              transition={{ delay: 1, ...transition }}>
               FRONT-END DEVELOPER
             </Subtitle>
             <Subtitle
               animate={{ x: [-150, 0], opacity: [0, 1] }}
-              transition={{ delay: 1.1, ...transition }}
-            >
+              transition={{ delay: 1.1, ...transition }}>
               & GRAPHIC DESIGNER
             </Subtitle>
           </SubtitleWrapper>
           <BtnWrapper
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.2, ...transition }}
-          >
+            transition={{ delay: 1.2, ...transition }}>
             <Button size={16}>
               <Link to="work">View My work</Link>
             </Button>

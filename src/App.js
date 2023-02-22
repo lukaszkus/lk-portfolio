@@ -3,14 +3,15 @@ import Context from "./context/context";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"; //if there are bugs, import from "framer-motion/dist/framer-motion"
 
-import "./style.css";
+// import "./style.css";
+import { GlobalStyle } from "./style/GlobalStyle";
 import { ScrollToTop } from "./utils";
 
 //Pages
 import { About, Home, Work, Contact } from "./pages";
 //Components
 import {
-  BackgroundSvg,
+  // BackgroundSvg,
   // Footer,
   Menu,
   ScrollBtn,
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <>
+      <GlobalStyle />
       <ScrollToTop />
       {isOpen && <Menu />}
       <Topbar />
@@ -77,8 +79,8 @@ function App() {
       </AnimatePresence>
       <ScrollBtn />
       {/* <Footer /> */}
-      <BackgroundSvg />
-      <div className="background-gradient"></div>
+      {/* <BackgroundSvg /> */}
+      {/* <div className="background-gradient"></div> */}
     </>
   );
 }
