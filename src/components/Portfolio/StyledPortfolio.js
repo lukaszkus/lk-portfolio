@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { COLORS, breakpoint } from "../../utils";
+import { breakpoint } from "../../utils";
 
 export const Wrapper = styled(motion.section)`
   padding: 2rem 2rem;
