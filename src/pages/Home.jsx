@@ -9,9 +9,10 @@ function Home({ titleSuffix }) {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
+      exit={{ opacity: 0 }}
+    >
       <Header />
-      <Portfolio />
+      <Portfolio id="#portfolio" />
     </motion.div>
   );
 }

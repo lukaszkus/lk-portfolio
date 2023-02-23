@@ -3,15 +3,13 @@ import Context from "./context/context";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"; //if there are bugs, import from "framer-motion/dist/framer-motion"
 
-// import "./style.css";
 import { GlobalStyle } from "./style/GlobalStyle";
 import { ScrollToTop } from "./utils";
 
 //Pages
-import { About, Home, Work, Contact } from "./pages";
+import { About, Home, Contact } from "./pages";
 //Components
 import {
-  // BackgroundSvg,
   // Footer,
   Menu,
   ScrollBtn,
@@ -45,12 +43,12 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home titleSuffix={titleSuffix} />} />
-          <Route
+          {/* <Route
             path="work"
             element={
               <Work titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
             }
-          />
+          /> */}
           <Route
             path="about"
             element={
@@ -79,8 +77,6 @@ function App() {
       </AnimatePresence>
       <ScrollBtn />
       {/* <Footer /> */}
-      {/* <BackgroundSvg /> */}
-      {/* <div className="background-gradient"></div> */}
     </>
   );
 }

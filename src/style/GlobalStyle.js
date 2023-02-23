@@ -1,44 +1,57 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
+  :root {
+    //Colors
+    --clr-dark: #242930;
+    --clr-light: #c3cfe2;
+    --clr-accentPrimary: #2575fc;
+    --clr-accentSecondary: #ee609c;
+    --clr-white: #ffffff;
 
-body {
-  /* font-family: "Butler Stencil", sans-serif; */
-  font-family: "Unbounded", cursive;
-  position: relative;
-  background-color: #242930;
-  color: #c3cfe2;
-  scroll-behavior: smooth;
-}
+    //Fonts
+    --ff-main: "Unbounded", cursive;
 
-.bgSvg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
+    //Breakpoints
+    --bp-tablet: 640px;
+    --bp-desktop: 1280px;
+    --bp-desktopXL: 1600px;
+  }
 
-.background-gradient {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  background-image: radial-gradient(
-    circle farthest-side at 100% 100%,
-    rgba(56, 132, 255, 0.61),
-    rgba(31, 35, 41, 0) 59%,
-    rgba(31, 35, 41, 0)
-  );
-}
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: #2e343d;
+  }
 
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-image: linear-gradient(
+        to bottom,
+        #b8cbb8 0%,
+        #b8cbb8 0%,
+        #b465da 0%,
+        #cf6cc9 33%,
+        #ee609c 66%,
+        #ee609c 100%
+      );
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--clr-light);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: var(--ff-main);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    scroll-behavior: smooth;
+  }
 `;

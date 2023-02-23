@@ -16,6 +16,7 @@ export const Btn = styled.button`
   text-transform: uppercase;
   outline: none;
   border: none;
+  font-weight: 200;
 
   &:hover {
     color: ${COLORS.white};
