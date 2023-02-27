@@ -18,7 +18,7 @@ export const Wrapper = styled.header`
   @media ${breakpoint.desktopXL} {
     min-height: calc(100vh - 112px);
     margin-top: 112px;
-    background: var(--clr-accentPrimary);
+    /* background: var(--clr-accentPrimary); */
   }
 `;
 

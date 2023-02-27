@@ -32,7 +32,7 @@ function App() {
 
   let titlePrefix = `${location.pathname.replace("/", "")} | `;
 
-  const titleSuffix = `łukasz kuś - frontend developer & graphic designer`;
+  const titleSuffix = `ŁK - I design and develop webpages & applications`;
 
   return (
     <>
