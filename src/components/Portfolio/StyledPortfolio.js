@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 import { breakpoint } from "../../utils";
 
 export const Wrapper = styled(motion.section)`
-  /* padding: 2rem 2rem; */
+  padding: 2rem 2rem;
   overflow: hidden;
   margin-bottom: 2rem;
   position: relative;
   margin: 3rem 0;
-  /* scroll-snap-align: start; */
 
   /* @media ${breakpoint.tablet} {
     padding: 2rem 4rem;
@@ -27,7 +26,7 @@ export const Wrapper = styled(motion.section)`
 
 export const Container = styled(motion.div)`
   display: grid;
-  /* gap: 2rem; */
+  gap: 1rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
@@ -100,7 +99,6 @@ export const BoxTitle = styled.h2`
 `;
 
 export const BoxCat = styled.p`
-  font-family: "Unbounded", cursive;
   font-weight: 300;
 
   font-size: 1rem;

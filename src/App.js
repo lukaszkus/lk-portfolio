@@ -77,6 +77,7 @@ function App() {
       </AnimatePresence>
       <ScrollBtn />
       {/* <Footer /> */}
+      {/* <div className="background-gradient"></div> */}
     </>
   );
 }

@@ -50,6 +50,10 @@ import inf_cover from "../assets/work/inf/inf_cover.png";
 
 //Inspiration Way
 import iw_cover from "../assets/work/iw/iw_cover.png";
+import iw_desktop_home from "../assets/work/iw/iw_desktop_home.jpg";
+import iw_desktop_about from "../assets/work/iw/iw_desktop_about.jpg";
+import iw_desktop_services from "../assets/work/iw/iw_desktop_services.jpg";
+import iw_desktop_contact from "../assets/work/iw/iw_desktop_contact.jpg";
 
 const images = {
   logo,
@@ -94,6 +98,10 @@ const images = {
   inf_cover,
 
   iw_cover,
+  iw_desktop_home,
+  iw_desktop_about,
+  iw_desktop_services,
+  iw_desktop_contact,
 };
 
 export default images;

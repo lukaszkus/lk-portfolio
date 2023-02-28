@@ -1,24 +1,22 @@
 import { useContext } from "react";
 import Context from "../context/context";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 import { COLORS, images, portfolioItems } from "../utils";
 import { OuterLink } from "../subcomponents";
 
 import {
-  Arrow,
   Container,
   Description,
   Grid,
   Heading,
   Hero,
   HeroImg,
-  Icon,
+  // Icon,
   ImageItem,
   List,
   Section,
-  TextItem,
+  // TextItem,
 } from "./StyledElements";
 
 function InspirationWay({ id }) {
@@ -41,14 +39,6 @@ function InspirationWay({ id }) {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             exit={{ opacity: 0, y: -500 }}
           />
-          <Link
-            to="section"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}>
-            <Arrow />
-          </Link>
         </Hero>
 
         <Section id="section">
@@ -78,22 +68,18 @@ function InspirationWay({ id }) {
                   ))}
                 </ul>
                 <ul data-aos="fade-up">
+                  <p>Tools:</p>
+                  {project.tools.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+                <ul data-aos="fade-up">
                   <p>Links:</p>
                   <li>
                     <OuterLink
-                      href={project.links.github}
-                      icon="github"
-                      text="Github"
-                      width="20px"
-                      height="20px"
-                      color={COLORS.accentPrimary}
-                    />
-                  </li>
-                  <li>
-                    <OuterLink
-                      href={project.links.download}
-                      icon="download"
-                      text="Download APK file"
+                      href={project.links.liveSite}
+                      icon="liveSite"
+                      text="Live site"
                       width="20px"
                       height="20px"
                       color={COLORS.accentPrimary}
@@ -112,34 +98,28 @@ function InspirationWay({ id }) {
             </Heading>
             <Grid>
               <ImageItem data-aos="fade-up">
-                <img src={images.ta_brand_01} alt="Top Albums logo" />
-                <figcaption>App logo</figcaption>
+                <img src={images.iw_desktop_home} alt="Desktop Home page" />
+              </ImageItem>
+              <ImageItem data-aos="fade-up">
+                <img src={images.iw_desktop_about} alt="Desktop About page" />
               </ImageItem>
               <ImageItem data-aos="fade-up">
                 <img
-                  src={images.ta_brand_02}
-                  alt="Splash screen & adaptive icons"
+                  src={images.iw_desktop_services}
+                  alt="Desktop Services page"
                 />
-                <figcaption>
-                  Splash screen & adaptive icons (favicons)
-                </figcaption>
               </ImageItem>
               <ImageItem data-aos="fade-up">
                 <img
-                  src={images.ta_brand_03}
-                  alt="Icons set | navigation icons & navbars"
+                  src={images.iw_desktop_contact}
+                  alt="Desktop Contact page"
                 />
-                <figcaption>Icons set | navigation icons & navbars</figcaption>
-              </ImageItem>
-              <ImageItem data-aos="fade-up">
-                <img src={images.ta_brand_04} alt="Typography & colors" />
-                <figcaption>Typography & colors</figcaption>
               </ImageItem>
             </Grid>
           </Container>
         </Section>
 
-        <Section bgColor={bgColor} data-aos="fade-up">
+        {/* <Section bgColor={bgColor} data-aos="fade-up">
           <Container>
             <Grid>
               <TextItem data-aos="fade-up">
@@ -156,7 +136,7 @@ function InspirationWay({ id }) {
               </ImageItem>
             </Grid>
           </Container>
-        </Section>
+        </Section> */}
       </motion.div>
     </>
   );

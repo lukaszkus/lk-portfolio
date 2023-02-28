@@ -8,19 +8,23 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media ${breakpoint.desktopXL} {
-    max-width: 1280px;
+    max-width: 1400px;
   }
 `;
 
 export const Hero = styled.header`
   width: 100%;
-  height: 700px;
+  height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
   /* background-image: ${(props) => props.bgColor}; */
+
+  @media ${breakpoint.desktopXL} {
+    height: 720px;
+  }
 `;
 
 export const HeroImg = styled(motion.img).attrs((props) => ({
@@ -59,23 +63,24 @@ export const Section = styled.section.attrs((props) => ({
 
 export const Heading = styled.div`
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-bottom: 2rem;
+    font-weight: 500;
 
     @media ${breakpoint.tablet} {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     @media ${breakpoint.desktopXL} {
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
   }
 
   h3 {
-    /* font-family: "Poppins", sans-serif; */
-    font-family: "Unbounded", cursive;
-    font-weight: 400;
-    padding-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-bottom: 4rem;
+    text-transform: uppercase;
   }
 `;
 
@@ -84,12 +89,20 @@ export const Description = styled.div`
   border-bottom: 1px solid #2575fc;
   padding-bottom: 4rem;
   div {
+    @media ${breakpoint.desktop} {
+      :first-child {
+        max-width: 75%;
+      }
+    }
+
     p {
-      /* font-family: "Poppins", sans-serif; */
-      font-family: "Unbounded", cursive;
-      font-size: 1rem;
-      font-weight: 300;
+      font-size: 0.875rem;
+      font-weight: 200;
       padding-bottom: 1rem;
+
+      @media ${breakpoint.tablet} {
+        font-size: 1rem;
+      }
     }
   }
 `;
@@ -97,33 +110,24 @@ export const Description = styled.div`
 export const List = styled.div`
   ul {
     list-style: none;
-    /* font-family: "Poppins", sans-serif; */
-    font-family: "Unbounded", cursive;
     font-weight: 300;
-    padding: 1rem 0;
+    padding: 2rem 0;
 
     li {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      font-weight: 200;
+      gap: 1rem;
     }
 
     p {
-      font-weight: 400;
+      font-weight: 200;
     }
-
-    // a {
-    //   color: ${COLORS.white};
-    //   transition: 0.3s;
-
-    //   &:hover {
-    //     color: ${COLORS.accentPrimary};
-    //   }
-    // }
   }
 
   @media ${breakpoint.tablet} {
     display: flex;
+    flex-wrap: wrap;
     gap: 15%;
   }
 `;
@@ -144,7 +148,7 @@ export const Grid = styled.div`
 
 export const ImageItem = styled.figure`
   display: grid;
-  place-items: center;
+  /* place-items: center; */
   order: 1;
 
   img {
@@ -152,8 +156,6 @@ export const ImageItem = styled.figure`
     height: auto;
   }
   figcaption {
-    /* font-family: "Poppins", sans-serif; */
-    font-family: "Unbounded", cursive;
     font-size: 1rem;
     font-weight: 300;
     padding: 1rem 0;
@@ -171,8 +173,6 @@ export const TextItem = styled.article`
   justify-content: center;
   padding: 1rem 0;
   line-height: 1.8;
-  /* font-family: "Poppins", sans-serif; */
-  font-family: "Unbounded", cursive;
   color: ${(props) => (props.color ? props.color : COLORS.white)};
   order: 2;
 
