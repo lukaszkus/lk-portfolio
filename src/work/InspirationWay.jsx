@@ -12,11 +12,9 @@ import {
   Heading,
   Hero,
   HeroImg,
-  // Icon,
   ImageItem,
   List,
   Section,
-  // TextItem,
 } from "./StyledElements";
 
 function InspirationWay({ id }) {
@@ -26,10 +24,17 @@ function InspirationWay({ id }) {
 
   return (
     <>
+      <Container>
+        <Heading data-aos="fade-up">
+          <h1>{title}</h1>
+          <h3>{category}</h3>
+        </Heading>
+      </Container>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -43,11 +48,6 @@ function InspirationWay({ id }) {
 
         <Section id="section">
           <Container>
-            <Heading data-aos="fade-up">
-              <h2>{title}</h2>
-              <h3>{category}</h3>
-            </Heading>
-
             <Description>
               <div data-aos="fade-up">
                 <p>{project.description}</p>
@@ -93,11 +93,8 @@ function InspirationWay({ id }) {
 
         <Section>
           <Container>
-            <Heading data-aos="fade-up">
-              <h3>Design</h3>
-            </Heading>
             <Grid>
-              <ImageItem data-aos="fade-up">
+              {/* <ImageItem data-aos="fade-up">
                 <img src={images.iw_desktop_home} alt="Desktop Home page" />
               </ImageItem>
               <ImageItem data-aos="fade-up">
@@ -114,29 +111,20 @@ function InspirationWay({ id }) {
                   src={images.iw_desktop_contact}
                   alt="Desktop Contact page"
                 />
-              </ImageItem>
+              </ImageItem> */}
+              {[
+                images.iw_desktop_home,
+                images.iw_desktop_about,
+                images.iw_desktop_services,
+                images.iw_desktop_contact,
+              ].map((image, index) => (
+                <ImageItem key={index}>
+                  <img src={image} alt={image} data-aos="fade-up" />
+                </ImageItem>
+              ))}
             </Grid>
           </Container>
         </Section>
-
-        {/* <Section bgColor={bgColor} data-aos="fade-up">
-          <Container>
-            <Grid>
-              <TextItem data-aos="fade-up">
-                <h3>Mobile screens</h3>
-                <p>
-                  The application is built with the Mobile First approach and
-                  RWD (Responisve Web Design) method that enables web to fit the
-                  screens of different devices automatically.
-                </p>
-                <Icon icon={images.mobile_first} alt="Mobile first" />
-              </TextItem>
-              <ImageItem data-aos="fade-up">
-                <img src={images.todo_mobile} alt="Todo App mobile screen" />
-              </ImageItem>
-            </Grid>
-          </Container>
-        </Section> */}
       </motion.div>
     </>
   );

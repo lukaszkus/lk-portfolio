@@ -28,10 +28,17 @@ function TodoApp({ id }) {
 
   return (
     <>
+      <Container>
+        <Heading data-aos="fade-up">
+          <h1>{title}</h1>
+          <h3>{category}</h3>
+        </Heading>
+      </Container>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -46,16 +53,17 @@ function TodoApp({ id }) {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <Arrow />
           </Link>
         </Hero>
         <Section id="section">
           <Container>
-            <Heading data-aos="fade-up">
+            {/* <Heading data-aos="fade-up">
               <h2>{title}</h2>
               <h3>{category}</h3>
-            </Heading>
+            </Heading> */}
 
             <Description>
               <div data-aos="fade-up">

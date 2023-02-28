@@ -21,6 +21,7 @@ export const Hero = styled.header`
   position: relative;
   overflow: hidden;
   /* background-image: ${(props) => props.bgColor}; */
+  background: #5e6b7d;
 
   @media ${breakpoint.desktopXL} {
     height: 720px;
@@ -62,24 +63,32 @@ export const Section = styled.section.attrs((props) => ({
 `;
 
 export const Heading = styled.div`
-  h2 {
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5rem;
+  text-align: center;
+
+  h1 {
     font-size: 2.5rem;
     padding-bottom: 2rem;
     font-weight: 500;
 
     @media ${breakpoint.tablet} {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
 
     @media ${breakpoint.desktopXL} {
-      font-size: 4.5rem;
+      font-size: 5rem;
     }
   }
 
   h3 {
     font-weight: 300;
     font-size: 1rem;
-    padding-bottom: 4rem;
+    /* padding-bottom: 4rem; */
     text-transform: uppercase;
   }
 `;
@@ -89,12 +98,6 @@ export const Description = styled.div`
   border-bottom: 1px solid #2575fc;
   padding-bottom: 4rem;
   div {
-    @media ${breakpoint.desktop} {
-      :first-child {
-        max-width: 75%;
-      }
-    }
-
     p {
       font-size: 0.875rem;
       font-weight: 200;
@@ -128,7 +131,7 @@ export const List = styled.div`
   @media ${breakpoint.tablet} {
     display: flex;
     flex-wrap: wrap;
-    gap: 15%;
+    gap: 10%;
   }
 `;
 
