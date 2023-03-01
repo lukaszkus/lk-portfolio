@@ -12,10 +12,13 @@ export const GlobalStyle = createGlobalStyle`
     //Fonts
     --ff-main: "Unbounded", cursive;
 
-    //Breakpoints
+    //Widths
     --bp-tablet: 640px;
     --bp-desktop: 1280px;
     --bp-desktopXL: 1600px;
+
+    --maxWidth: 1024px;
+    --maxWidthXL: 1400px;
   }
 
   ::-webkit-scrollbar {

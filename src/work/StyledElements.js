@@ -67,13 +67,6 @@ export const Section = styled.section.attrs((props) => ({
 `;
 
 export const Heading = styled.div`
-  /* height: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 5rem;
-  text-align: center; */
   max-width: 75%;
 
   h1 {
@@ -92,9 +85,13 @@ export const Heading = styled.div`
 
   h3 {
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 0.875rem;
     padding-bottom: 4rem;
     text-transform: uppercase;
+
+    @media ${breakpoint.desktop} {
+      font-size: 1rem;
+    }
   }
 `;
 

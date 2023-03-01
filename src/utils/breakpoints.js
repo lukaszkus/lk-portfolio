@@ -5,7 +5,7 @@
 // };
 
 const breakpoint = {
-  tablet: `(min-width: 640px)`,
+  tablet: `(min-width: 800px)`,
   desktop: `(min-width: 1280px)`,
   desktopXL: `(min-width: 1600px)`,
 };

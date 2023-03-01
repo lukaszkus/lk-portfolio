@@ -3,19 +3,7 @@ import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 // import { AnimatePresence } from "framer-motion";
 
-// import { Filter } from "../";
-
-import {
-  Container,
-  BoxContainer,
-  Box,
-  BoxImg,
-  BoxOverlay,
-  BoxText,
-  BoxTitle,
-  BoxCat,
-  Wrapper,
-} from "./StyledPortfolio";
+import { Wrapper, Content, Grid, Box } from "./StyledPortfolio";
 
 function Portfolio() {
   const { portfolioList } = useContext(Context);
@@ -48,29 +36,36 @@ function Portfolio() {
   return (
     <>
       <Wrapper>
-        {/* <Filter /> */}
-        <Container
-          variants={showContainer}
-          whileInView="show"
-          initial="hidden"
-          // animate="show"
-          exit="exit">
-          {portfolioList.map((item) => (
-            <BoxContainer key={item.id} variants={showBox}>
-              <Link to={item.path}>
-                <Box bgColor={item.bgColor} height={item.height}>
-                  <BoxImg src={item.cover} alt={item.title}></BoxImg>
-                  <BoxOverlay overlayColor={item.overlayColor}>
-                    <BoxText>
-                      <BoxTitle>{item.title}</BoxTitle>
-                      <BoxCat>{item.category}</BoxCat>
-                    </BoxText>
-                  </BoxOverlay>
-                </Box>
-              </Link>
-            </BoxContainer>
-          ))}
-        </Container>
+        <Content>
+          <Grid
+            variants={showContainer}
+            whileInView="show"
+            initial="hidden"
+            // animate="show"
+            exit="exit"
+          >
+            {portfolioList.map((item) => (
+              <Box
+                key={item.id}
+                variants={showBox}
+                bgColor={item.bgColor}
+                overlayColor={item.overlayColor}
+              >
+                <Link to={item.path}>
+                  <div>
+                    <img src={item.cover} alt={item.title} />
+                    <div className="overlay">
+                      <div className="text">
+                        <h2>{item.title}</h2>
+                        <p>{item.category}</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </Box>
+            ))}
+          </Grid>
+        </Content>
       </Wrapper>
     </>
   );
