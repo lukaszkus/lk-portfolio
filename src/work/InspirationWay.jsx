@@ -24,17 +24,10 @@ function InspirationWay({ id }) {
 
   return (
     <>
-      <Container>
-        <Heading data-aos="fade-up">
-          <h1>{title}</h1>
-          <h3>{category}</h3>
-        </Heading>
-      </Container>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,6 +41,11 @@ function InspirationWay({ id }) {
 
         <Section id="section">
           <Container>
+            <Heading data-aos="fade-up">
+              <h1>{title}</h1>
+              <h3>{category}</h3>
+            </Heading>
+
             <Description>
               <div data-aos="fade-up">
                 <p>{project.description}</p>
@@ -119,7 +117,7 @@ function InspirationWay({ id }) {
                 images.iw_desktop_contact,
               ].map((image, index) => (
                 <ImageItem key={index}>
-                  <img src={image} alt={image} data-aos="fade-up" />
+                  <img src={image} alt="Desktop" data-aos="fade-up" />
                 </ImageItem>
               ))}
             </Grid>

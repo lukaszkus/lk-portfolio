@@ -1,12 +1,10 @@
 import { useContext } from "react";
 import Context from "../context/context";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 import { images, portfolioItems } from "../utils";
 
 import {
-  Arrow,
   Container,
   Description,
   Grid,
@@ -39,20 +37,12 @@ function WildnSlow({ id }) {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             exit={{ opacity: 0, y: -500 }}
           />
-          <Link
-            to="section"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}>
-            <Arrow />
-          </Link>
         </Hero>
 
         <Section id="section">
           <Container>
             <Heading data-aos="fade-up">
-              <h2>{title}</h2>
+              <h1>{title}</h1>
               <h3>{category}</h3>
             </Heading>
 

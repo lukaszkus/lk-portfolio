@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Hero = styled.header`
   width: 100%;
-  height: 480px;
+  height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +22,10 @@ export const Hero = styled.header`
   overflow: hidden;
   /* background-image: ${(props) => props.bgColor}; */
   background: #5e6b7d;
+
+  @media ${breakpoint.tablet} {
+    height: 480px;
+  }
 
   @media ${breakpoint.desktopXL} {
     height: 720px;
@@ -63,13 +67,14 @@ export const Section = styled.section.attrs((props) => ({
 `;
 
 export const Heading = styled.div`
-  height: 360px;
+  /* height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding: 5rem;
-  text-align: center;
+  text-align: center; */
+  max-width: 75%;
 
   h1 {
     font-size: 2.5rem;
@@ -81,14 +86,14 @@ export const Heading = styled.div`
     }
 
     @media ${breakpoint.desktopXL} {
-      font-size: 5rem;
+      font-size: 4.5rem;
     }
   }
 
   h3 {
     font-weight: 300;
     font-size: 1rem;
-    /* padding-bottom: 4rem; */
+    padding-bottom: 4rem;
     text-transform: uppercase;
   }
 `;

@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import Context from "../context/context";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 import { COLORS, images, portfolioItems } from "../utils";
 import { OuterLink } from "../subcomponents";
 
 import {
-  Arrow,
   Container,
   Description,
   Grid,
@@ -28,17 +26,10 @@ function TodoApp({ id }) {
 
   return (
     <>
-      <Container>
-        <Heading data-aos="fade-up">
-          <h1>{title}</h1>
-          <h3>{category}</h3>
-        </Heading>
-      </Container>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Hero bgColor={bgColor}>
           <HeroImg
             offset={offset}
@@ -48,22 +39,13 @@ function TodoApp({ id }) {
             // transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             // exit={{ opacity: 0, y: -500 }}
           />
-          <Link
-            to="section"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-          >
-            <Arrow />
-          </Link>
         </Hero>
         <Section id="section">
           <Container>
-            {/* <Heading data-aos="fade-up">
-              <h2>{title}</h2>
+            <Heading data-aos="fade-up">
+              <h1>{title}</h1>
               <h3>{category}</h3>
-            </Heading> */}
+            </Heading>
 
             <Description>
               <div data-aos="fade-up">
