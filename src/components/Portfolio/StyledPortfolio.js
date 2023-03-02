@@ -19,7 +19,7 @@ export const Content = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  gap: 2rem;
+  gap: 2.5rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
@@ -29,17 +29,6 @@ export const Grid = styled(motion.div)`
 
 export const Box = styled(motion.div)`
   div {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* object-fit: contain; */
-    /* height: 100%; */
-    /* display: grid; */
-    /* place-items: center; */
-    /* overflow: hidden; */
-    /* position: relative; */
-    /* background: ${(props) => props.bgColor}; */
-    /* width: 100%; */
-    /* height: auto; */
     overflow: hidden;
     border-radius: 0.675rem;
 
@@ -63,28 +52,28 @@ export const Box = styled(motion.div)`
 
 export const Text = styled.div`
   h2 {
-    padding-top: 1rem;
+    padding-top: 0.75rem;
     font-size: 1rem;
     font-weight: 300;
     color: var(--clr-light);
     text-decoration: none;
 
     @media ${breakpoint.tablet} {
-      padding-top: 1.25rem;
-      font-size: 1.5rem;
+      padding-top: 1rem;
+      font-size: 1.25rem;
     }
   }
 
   p {
-    padding: 0.5rem 0;
+    padding: 0.375rem 0;
     font-size: 0.75rem;
     font-weight: 200;
-    color: var(--clr-light);
+    color: var(--clr-middle);
     text-decoration: none;
 
     @media ${breakpoint.tablet} {
-      padding: 0.75rem 0;
-      font-size: 1rem;
+      /* padding: 0.75rem 0; */
+      font-size: 0.875rem;
     }
   }
 `;

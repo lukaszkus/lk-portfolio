@@ -63,16 +63,15 @@ function App() {
           />
           <Route
             path="work/inspiration-way"
-            element={<InspirationWay id={6} />}
+            element={<InspirationWay id={5} />}
           />
-          <Route path="work/top-albums" element={<TopAlbums id={5} />} />
-          <Route path="work/todo-app" element={<TodoApp id={4} />} />
-          <Route path="work/wild-n-slow" element={<WildnSlow id={3} />} />
-          <Route path="work/fm-solutions" element={<FrontendMentor id={2} />} />
+          <Route path="work/top-albums" element={<TopAlbums id={4} />} />
           <Route
             path="work/informatyk-na-godziny"
-            element={<Informatyk id={1} />}
+            element={<Informatyk id={3} />}
           />
+          <Route path="work/todo-app" element={<TodoApp id={2} />} />
+          <Route path="work/fm-solutions" element={<FrontendMentor id={1} />} />
         </Routes>
       </AnimatePresence>
       <ScrollBtn />

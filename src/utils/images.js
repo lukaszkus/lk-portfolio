@@ -22,7 +22,7 @@ import ta_brand_03 from "../assets/work/topAlbums/ta_brand_03.png";
 import ta_brand_04 from "../assets/work/topAlbums/ta_brand_04.png";
 
 //Todo
-import todo_cover from "../assets/work/todo/todo_cover.png";
+import todo_cover from "../assets/work/todo/todo_cover.jpg";
 import todo_light from "../assets/work/todo/todo_light.png";
 import todo_dark from "../assets/work/todo/todo_dark.png";
 import todo_mobile from "../assets/work/todo/todo_mobile.png";
@@ -35,7 +35,7 @@ import wns_tag from "../assets/work/wns/wns_tag.jpg";
 import wns_logo from "../assets/work/wns/wns_logo.svg";
 
 //FM solutions
-import fm_cover from "../assets/work/fm/fm_cover.png";
+import fm_cover from "../assets/work/fm/fm_cover.jpg";
 import fm_3column from "../assets/work/fm/fm_3column.png";
 import fm_baseapparel from "../assets/work/fm/fm_baseapparel.png";
 import fm_easybank from "../assets/work/fm/fm_easybank.png";
@@ -46,7 +46,7 @@ import fm_social from "../assets/work/fm/fm_social.png";
 import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
 
 //Informatyk
-import inf_cover from "../assets/work/inf/inf_cover.png";
+import inf_cover from "../assets/work/inf/inf_cover.jpg";
 
 //Inspiration Way
 import iw_cover from "../assets/work/iw/iw_cover.jpg";

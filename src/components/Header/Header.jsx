@@ -1,9 +1,7 @@
-import { NavLink as Link } from "react-router-dom";
+// import { NavLink as Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import { Wrapper, Content, BtnWrapper, Title } from "./StyledHeader";
-
-import { Button } from "../";
+import { Wrapper, Content, Title } from "./StyledHeader";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -36,14 +34,6 @@ const Header = () => {
           >
             I design and develop web pages and applications.
           </motion.p>
-          <BtnWrapper
-            animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.2, ...transition }}
-          >
-            <Button size={16}>
-              <Link to="#portfolio">View My Projects</Link>
-            </Button>
-          </BtnWrapper>
         </Title>
       </Content>
     </Wrapper>

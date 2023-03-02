@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     //Colors
     --clr-dark: #242930;
     --clr-light: #c3cfe2;
+    --clr-middle: #6f7a87;
     --clr-accentPrimary: #2575fc;
     --clr-accentSecondary: #ee609c;
     --clr-white: #ffffff;

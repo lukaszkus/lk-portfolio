@@ -41,7 +41,7 @@ export const Title = styled.div`
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 600;
 
     span {
@@ -70,7 +70,7 @@ export const Title = styled.div`
     }
 
     @media ${breakpoint.desktopXL} {
-      font-size: 5.125rem;
+      font-size: 6rem;
     }
   }
 `;
