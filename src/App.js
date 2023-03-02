@@ -22,7 +22,6 @@ import {
   Informatyk,
   TopAlbums,
   TodoApp,
-  WildnSlow,
   InspirationWay,
 } from "./work";
 
