@@ -23,11 +23,14 @@ export const Grid = styled(motion.div)`
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: masonry; */
   }
 `;
 
 export const Box = styled(motion.div)`
+  @media ${breakpoint.tablet} {
+    margin-bottom: 1.5rem;
+  }
+
   div {
     overflow: hidden;
     border-radius: 0.675rem;

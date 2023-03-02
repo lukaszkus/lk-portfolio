@@ -8,6 +8,34 @@ export const Wrapper = styled.header`
   padding: 2rem;
   display: grid;
   place-items: center;
+  position: relative;
+
+  .spin {
+    position: fixed;
+    bottom: 2rem;
+    right: 0;
+    z-index: 9;
+
+    svg {
+      fill: currentColor;
+      height: auto;
+      max-width: 66vmin;
+      transform-origin: center;
+      width: 66%;
+      letter-spacing: 10px;
+      animation: spin 20s linear infinite;
+      font-weight: 200;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
 `;
 
 export const Content = styled.div`
