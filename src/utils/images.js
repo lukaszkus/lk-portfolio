@@ -15,7 +15,7 @@ import icon_fm from "../assets/icon-fm.svg";
 //WORK IMAGES
 
 //Top Albums
-import ta_cover from "../assets/work/topAlbums/ta_cover.png";
+import ta_cover from "../assets/work/topAlbums/ta_cover.jpg";
 import ta_brand_01 from "../assets/work/topAlbums/ta_brand_01.png";
 import ta_brand_02 from "../assets/work/topAlbums/ta_brand_02.png";
 import ta_brand_03 from "../assets/work/topAlbums/ta_brand_03.png";
@@ -49,7 +49,7 @@ import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
 import inf_cover from "../assets/work/inf/inf_cover.png";
 
 //Inspiration Way
-import iw_cover from "../assets/work/iw/iw_cover.png";
+import iw_cover from "../assets/work/iw/iw_cover.jpg";
 import iw_desktop_home from "../assets/work/iw/iw_desktop_home.jpg";
 import iw_desktop_about from "../assets/work/iw/iw_desktop_about.jpg";
 import iw_desktop_services from "../assets/work/iw/iw_desktop_services.jpg";

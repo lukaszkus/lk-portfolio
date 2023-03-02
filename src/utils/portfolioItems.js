@@ -5,7 +5,7 @@ const portfolioItems = [
     id: 6,
     title: "Inspiration Way",
     type: "front-end",
-    category: "Front-end / Web page",
+    category: "Website",
     project: {
       description: "Some description",
       details:
@@ -27,7 +27,7 @@ const portfolioItems = [
     id: 5,
     title: "Top Albums",
     type: "front-end",
-    category: "Front-end / Mobile app",
+    category: "Mobile app",
     project: {
       description:
         "The React Native mobile app that displays the top 100 albums based on the iTunes API.",
@@ -51,7 +51,7 @@ const portfolioItems = [
     id: 4,
     title: "Todo App",
     type: "front-end",
-    category: "Front-end / Web app",
+    category: "Web app",
     project: {
       description:
         "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
@@ -76,36 +76,36 @@ const portfolioItems = [
     overlayColor: "rgba(183, 33, 255, 0.9)",
     path: "work/todo-app",
   },
-  {
-    id: 3,
-    title: "Wild'n'Slow",
-    type: "graphic design",
-    category: "Graphic design / Identity",
-    project: {
-      description:
-        "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
-      details:
-        "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
-      technology: [
-        "React.js",
-        "Styled Components",
-        "Firebase",
-        "RWD - Responsive Web Design",
-        "Mobile first approach",
-      ],
-      role: ["Branding & identity", "Marketing design", "Photography"],
-    },
-    cover: images.wns_cover,
-    bgColor:
-      "linear-gradient(45deg, rgba(2, 53, 168, 1) 0%, rgba(38, 213, 201, 1) 100%)",
-    overlayColor: "rgba(38, 213, 201, 0.9)",
-    path: "work/wild-n-slow",
-  },
+  // {
+  //   id: 3,
+  //   title: "Wild'n'Slow",
+  //   type: "graphic design",
+  //   category: "Graphic design / Identity",
+  //   project: {
+  //     description:
+  //       "Todo App is a simple tool to help you organise everything. It’s a list of tasks you need to complete or things that you want to do. This projects is a solution to the Todo app challenge on Frontend Mentor.",
+  //     details:
+  //       "The app is connected with Firebase and perform CRUD operations in the database. Users are able to: view the optimal layout for the app depending on their device's screen size, see hover states for all interactive elements on the page, toggle light and dark mode, add new todos to the list, mark todos as complete, update todos, delete todos from the list, filter by all/active/complete todos.",
+  //     technology: [
+  //       "React.js",
+  //       "Styled Components",
+  //       "Firebase",
+  //       "RWD - Responsive Web Design",
+  //       "Mobile first approach",
+  //     ],
+  //     role: ["Branding & identity", "Marketing design", "Photography"],
+  //   },
+  //   cover: images.wns_cover,
+  //   bgColor:
+  //     "linear-gradient(45deg, rgba(2, 53, 168, 1) 0%, rgba(38, 213, 201, 1) 100%)",
+  //   overlayColor: "rgba(38, 213, 201, 0.9)",
+  //   path: "work/wild-n-slow",
+  // },
   {
     id: 2,
     title: "Frontend Mentor - Solutions",
     type: "front-end",
-    category: "Front-end / Misc",
+    category: "Misc",
     project: {
       description:
         "Frontend Mentor is a platfrom where you can  improve your front-end coding skills by building real projects.",
@@ -138,7 +138,7 @@ const portfolioItems = [
     id: 1,
     title: "Informatyk Na Godziny",
     type: "front-end",
-    category: "Front-end / Landing page",
+    category: "Landing page",
     project: {
       description:
         "Frontend Mentor is a platfrom where you can  improve your front-end coding skills by building real projects.",

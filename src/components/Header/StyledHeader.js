@@ -70,7 +70,7 @@ export const Title = styled.div`
     }
 
     @media ${breakpoint.desktopXL} {
-      font-size: 6rem;
+      font-size: 5.125rem;
     }
   }
 `;

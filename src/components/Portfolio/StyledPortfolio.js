@@ -23,70 +23,68 @@ export const Grid = styled(motion.div)`
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: masonry; */
   }
 `;
 
 export const Box = styled(motion.div)`
   div {
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
-    height: 100%;
-    display: grid;
-    place-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* object-fit: contain; */
+    /* height: 100%; */
+    /* display: grid; */
+    /* place-items: center; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* background: ${(props) => props.bgColor}; */
+    /* width: 100%; */
+    /* height: auto; */
     overflow: hidden;
-    position: relative;
-    background: ${(props) => props.bgColor};
+    border-radius: 0.675rem;
 
-    img {
-      width: 90%;
-      height: auto;
+    @media ${breakpoint.tablet} {
+      border-radius: 1rem;
     }
 
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
+    img {
       width: 100%;
-      opacity: 0;
-      transition: 0.3s ease;
-      background: ${(props) => props.overlayColor};
+      display: block;
+      height: 100%;
+      transition: all 0.6s ease-out;
 
-      .text {
-        color: white;
-        position: absolute;
-        width: 100%;
-        height: auto;
-        top: 0;
-        left: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-size: 1.2rem;
-        background: transparent;
-
-        h2 {
-          padding-bottom: 10px;
-        }
-
-        p {
-          font-weight: 300;
-          font-size: 1rem;
-        }
-      }
-
-      &:hover {
-        opacity: 1;
+      :hover {
+        scale: 1.05;
+        /* opacity: 0.8; */
       }
     }
   }
+`;
 
-  &:hover {
-    opacity: 0.95;
-    z-index: 9;
+export const Text = styled.div`
+  h2 {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--clr-light);
+    text-decoration: none;
+
+    @media ${breakpoint.tablet} {
+      padding-top: 1.25rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+    font-weight: 200;
+    color: var(--clr-light);
+    text-decoration: none;
+
+    @media ${breakpoint.tablet} {
+      padding: 0.75rem 0;
+      font-size: 1rem;
+    }
   }
 `;
