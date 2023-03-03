@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
@@ -43,9 +42,9 @@ export const Content = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  @media ${breakpoint.desktopXL} {
+  /* @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
-  }
+  } */
 `;
 
 export const Title = styled.div`
@@ -69,7 +68,7 @@ export const Title = styled.div`
   }
 
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 600;
 
     span {
@@ -94,17 +93,11 @@ export const Title = styled.div`
     }
 
     @media ${breakpoint.tablet} {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
     }
 
     @media ${breakpoint.desktopXL} {
       font-size: 6rem;
     }
   }
-`;
-
-export const BtnWrapper = styled(motion.div)`
-  display: flex;
-  gap: 1rem;
-  padding-top: 3rem;
 `;

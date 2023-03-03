@@ -1,94 +1,75 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { images, breakpoint, COLORS } from "../utils";
+import { breakpoint, COLORS } from "../utils";
+
+export const Wrapper = styled(motion.div)`
+  padding-inline: 2rem;
+`;
 
 export const Container = styled.div`
-  max-width: 1024px;
+  max-width: 1400px;
   margin: 0 auto;
 
-  @media ${breakpoint.desktopXL} {
+  /* @media ${breakpoint.desktopXL} {
     max-width: 1400px;
-  }
+  } */
 `;
 
-export const Hero = styled.header`
+export const Hero = styled.div`
   width: 100%;
-  height: 360px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  /* background-image: ${(props) => props.bgColor}; */
-  background: #5e6b7d;
+  /* max-height: 540px; */
+  max-height: 840px;
 
-  @media ${breakpoint.tablet} {
-    height: 480px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  border-radius: 0;
+  /* transition: 0.3s ease-in-out; */
+
+  @media (min-width: 1400px) {
+    /* border-radius: 1.75rem; */
+  }
+
+  @media ${breakpoint.desktop} {
+    margin-top: 112px;
   }
 
   @media ${breakpoint.desktopXL} {
-    height: 720px;
+    /* max-height: 768px; */
   }
-`;
 
-export const HeroImg = styled(motion.img).attrs((props) => ({
-  src: props.cover,
-  alt: props.alt,
-}))`
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: bottom;
-  transform: translateY(${(props) => props.offset / 4}px);
-`;
-
-export const Arrow = styled.img.attrs({
-  src: `${images.arrow}`,
-})`
-  position: absolute;
-  bottom: 30px;
-  left: calc(50% - (30px / 2));
-  width: 30px;
-  transition: 0.3s ease-in-out;
-  z-index: 9999;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
-`;
-
-export const Section = styled.section.attrs((props) => ({
-  id: props.id,
-}))`
-  padding: 4rem 2rem;
-  background-image: ${(props) => (props.bgColor ? props.bgColor : null)};
-  background-color: ${(props) => (props.bgColor ? props.bgColor : null)};
 `;
 
 export const Heading = styled.div`
-  max-width: 75%;
+  /* max-width: 75%; */
+  padding: 4rem 0;
 
   h1 {
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+    font-size: 1.75rem;
+    padding-bottom: 1rem;
     font-weight: 500;
 
     @media ${breakpoint.tablet} {
-      font-size: 3.5rem;
+      font-size: 2.75rem;
     }
 
     @media ${breakpoint.desktopXL} {
-      font-size: 4.5rem;
+      font-size: 3.5rem;
     }
   }
 
   h3 {
     font-weight: 300;
     font-size: 0.875rem;
-    padding-bottom: 4rem;
-    text-transform: uppercase;
+    /* padding-bottom: 4rem; */
 
     @media ${breakpoint.desktop} {
       font-size: 1rem;
@@ -99,7 +80,7 @@ export const Heading = styled.div`
 export const Description = styled.div`
   line-height: 1.8;
   border-bottom: 1px solid #2575fc;
-  padding-bottom: 4rem;
+
   div {
     p {
       font-size: 0.875rem;
@@ -141,6 +122,7 @@ export const List = styled.div`
 export const Grid = styled.div`
   display: grid;
   gap: 2rem;
+  padding: 4rem 0;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);

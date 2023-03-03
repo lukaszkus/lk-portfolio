@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const Wrapper = styled(motion.section)`
+export const Wrapper = styled(motion.div)`
   padding: 2rem;
   margin: 3rem 0;
 `;
@@ -12,9 +12,9 @@ export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
 
-  @media ${breakpoint.desktopXL} {
+  /* @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
-  }
+  } */
 `;
 
 export const Grid = styled(motion.div)`
@@ -33,15 +33,15 @@ export const Box = styled(motion.div)`
 
   div {
     overflow: hidden;
-    border-radius: 0.675rem;
+    /* border-radius: 1rem; */
 
     @media ${breakpoint.tablet} {
-      border-radius: 1rem;
+      /* border-radius: 1.5rem; */
     }
 
     img {
-      width: 100%;
       display: block;
+      width: 100%;
       height: 100%;
       transition: all 0.6s ease-out;
 
@@ -65,6 +65,11 @@ export const Text = styled.div`
       padding-top: 1rem;
       font-size: 1.25rem;
     }
+
+    @media ${breakpoint.desktopXL} {
+      padding-top: 1rem;
+      font-size: 1.5rem;
+    }
   }
 
   p {
@@ -77,6 +82,11 @@ export const Text = styled.div`
     @media ${breakpoint.tablet} {
       /* padding: 0.75rem 0; */
       font-size: 0.875rem;
+    }
+
+    @media ${breakpoint.desktopXL} {
+      /* padding: 0.75rem 0; */
+      font-size: 1rem;
     }
   }
 `;

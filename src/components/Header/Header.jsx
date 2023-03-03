@@ -12,26 +12,22 @@ const Header = () => {
         <Title>
           <motion.p
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.2, ...transition }}
-          >
+            transition={{ delay: 0.2, ...transition }}>
             Hi, I'm Łukasz
           </motion.p>
           <motion.h1
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 1, ...transition }}
-          >
+            transition={{ delay: 1, ...transition }}>
             I <span>design</span> & <span>develop</span>
           </motion.h1>
           <motion.h1
             animate={{ x: [-150, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.1, ...transition }}
-          >
-            websites and applications.
+            transition={{ delay: 1.1, ...transition }}>
+            websites and apps.
           </motion.h1>
           <motion.p
             animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.2, ...transition }}
-          >
+            transition={{ delay: 0.2, ...transition }}>
             I design and develop web pages and applications.
           </motion.p>
         </Title>

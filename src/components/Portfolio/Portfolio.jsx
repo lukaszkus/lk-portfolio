@@ -8,46 +8,14 @@ import { Wrapper, Content, Grid, Box, Text } from "./StyledPortfolio";
 function Portfolio() {
   const { portfolioList } = useContext(Context);
 
-  // const showContainer = {
-  //   hidden: { opacity: 0 },
-  //   show: {
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 0.6,
-  //       // staggerChildren: 0.1,
-  //       ease: "easeInOut",
-  //     },
-  //   },
-  //   exit: { opacity: 0 },
-  // };
-
-  // const showBox = {
-  //   hidden: { opacity: 0, y: 200 },
-  //   show: {
-  //     opacity: 1,
-  //     y: 0,
-  //   },
-  //   exit: {
-  //     opacity: 0,
-  //     y: 200,
-  //   },
-  // };
-
   return (
     <>
       <Wrapper>
         <Content>
-          <Grid
-          // variants={showContainer}
-          // whileInView="show"
-          // initial="hidden"
-          // // animate="show"
-          // exit="exit"
-          >
+          <Grid>
             {portfolioList.map((item) => (
               <Box
                 key={item.id}
-                // variants={showBox}
                 initial={{ opacity: 0 }}
                 whileInView={{
                   opacity: 1,
@@ -62,8 +30,11 @@ function Portfolio() {
                 overlayColor={item.overlayColor}>
                 <Link to={item.path}>
                   <div>
-                    <img src={item.cover} alt={item.title} />
-                    {/* <div className="overlay"></div> */}
+                    <img
+                      src={item.cover}
+                      alt=""
+                      // alt={item.title}
+                    />
                   </div>
                 </Link>
                 <Text>

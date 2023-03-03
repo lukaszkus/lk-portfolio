@@ -42,12 +42,6 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home titleSuffix={titleSuffix} />} />
-          {/* <Route
-            path="work"
-            element={
-              <Work titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
-            }
-          /> */}
           <Route
             path="about"
             element={
