@@ -42,9 +42,9 @@ export const Content = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  /* @media ${breakpoint.desktopXL} {
+  @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
-  } */
+  }
 `;
 
 export const Title = styled.div`

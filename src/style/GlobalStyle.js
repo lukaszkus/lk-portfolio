@@ -18,8 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     --bp-desktop: 1280px;
     --bp-desktopXL: 1600px;
 
-    --maxWidth: 1400px;
-    /* --maxWidthXL: 1400px; */
+    --maxWidth: 1024px;
+    --maxWidthXL: 1400px;
   }
 
   ::-webkit-scrollbar {

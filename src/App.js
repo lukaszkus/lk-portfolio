@@ -18,11 +18,11 @@ import {
 
 //Work
 import {
-  FrontendMentor,
-  Informatyk,
-  TopAlbums,
-  TodoApp,
   InspirationWay,
+  TopAlbums,
+  Informatyk,
+  TodoApp,
+  FrontendMentor,
 } from "./work";
 
 function App() {

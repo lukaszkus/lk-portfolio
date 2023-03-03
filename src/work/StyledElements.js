@@ -1,25 +1,26 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { breakpoint, COLORS } from "../utils";
+import { breakpoint } from "../utils";
 
 export const Wrapper = styled(motion.div)`
   padding-inline: 2rem;
 `;
 
 export const Container = styled.div`
-  max-width: 1400px;
+  max-width: var(--maxWidth);
+
   margin: 0 auto;
 
-  /* @media ${breakpoint.desktopXL} {
-    max-width: 1400px;
-  } */
+  @media ${breakpoint.desktopXL} {
+    max-width: var(--maxWidthXL);
+  }
 `;
 
 export const Hero = styled.div`
   width: 100%;
   /* max-height: 540px; */
-  max-height: 840px;
+  max-height: 768px;
 
   overflow: hidden;
   display: flex;
@@ -95,6 +96,8 @@ export const Description = styled.div`
 `;
 
 export const List = styled.div`
+  font-size: 0.875rem;
+
   ul {
     list-style: none;
     font-weight: 300;
@@ -105,6 +108,7 @@ export const List = styled.div`
       align-items: center;
       font-weight: 200;
       gap: 1rem;
+      padding: 0.25rem 0;
     }
 
     p {
@@ -144,7 +148,7 @@ export const ImageItem = styled.figure`
     height: auto;
   }
   figcaption {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 300;
     padding: 1rem 0;
     text-align: center;
@@ -161,22 +165,22 @@ export const TextItem = styled.article`
   justify-content: center;
   padding: 1rem 0;
   line-height: 1.8;
-  color: ${(props) => (props.color ? props.color : COLORS.white)};
+  color: var(--clr-light);
   order: 2;
 
   h3 {
-    font-weight: 400;
+    font-weight: 200;
   }
 
   p {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 0.875rem;
+    font-weight: 200;
     padding: 1rem 0;
   }
 
   ul {
     list-style: none;
-    font-weight: 400;
+    font-weight: 200;
     padding-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -185,10 +189,10 @@ export const TextItem = styled.article`
 
   li {
     font-size: 0.75rem;
-    font-weight: 300;
+    font-weight: 200;
     padding: 0.3rem 0.8rem;
     border-radius: 25px;
-    background-color: ${(props) => props.bgColor};
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   @media ${breakpoint.tablet} {

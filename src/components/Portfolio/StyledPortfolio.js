@@ -12,9 +12,9 @@ export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
 
-  /* @media ${breakpoint.desktopXL} {
+  @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
-  } */
+  }
 `;
 
 export const Grid = styled(motion.div)`

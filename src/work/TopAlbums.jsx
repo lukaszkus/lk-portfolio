@@ -23,13 +23,14 @@ function TopAlbums({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Container>
           <Hero>
             <img
               src={cover}
-              alt=""
-              // alt={`${title} - ${category}`}
+              // alt=""
+              alt={`${title} - ${category}`}
             />
           </Hero>
         </Container>

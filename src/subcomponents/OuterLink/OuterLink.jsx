@@ -4,8 +4,8 @@ import { StyledLink } from "./StyledOuterLink";
 
 const OuterLink = ({ color, href, icon, text, height, width }) => {
   return (
-    <StyledLink href={href} color={color}>
-      <Icon icon={icon} color={color} width={width} height={height} />
+    <StyledLink href={href} color="#c3cfe2">
+      <Icon icon={icon} color="#c3cfe2" width={width} height={height} />
       {text}
     </StyledLink>
   );

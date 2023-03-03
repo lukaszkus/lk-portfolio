@@ -108,7 +108,7 @@ const portfolioItems = [
   },
   {
     id: 1,
-    title: "Frontend Mentor - Solutions",
+    title: "FM - Solutions",
     type: "front-end",
     category: "Misc",
     project: {

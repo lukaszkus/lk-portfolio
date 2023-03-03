@@ -1,47 +1,43 @@
-import { useContext } from "react";
-import Context from "../context/context";
 import { motion } from "framer-motion";
 
 import { COLORS, images, portfolioItems } from "../utils";
 import { OuterLink } from "../subcomponents";
 
 import {
+  Wrapper,
   Container,
   Description,
   Grid,
   Heading,
   Hero,
-  HeroImg,
   ImageItem,
   List,
   LinkContainer,
-  Section,
   TextItem,
 } from "./StyledElements";
 
 function FrontendMentor({ id }) {
-  const { offset } = useContext(Context);
   const item = portfolioItems.find((item) => item.id === id);
-  const { title, category, project, cover, bgColor } = item;
+  const { title, category, project, cover } = item;
 
   return (
     <>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
-        <Hero bgColor={bgColor}>
-          <HeroImg
-            offset={offset}
-            cover={cover}
-            alt={`${title} - ${category}`}
-            animate={{ opacity: [0, 1], y: [500, 0] }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            exit={{ opacity: 0, y: -500 }}
-          />
-        </Hero>
+        exit={{ opacity: 0 }}
+      >
+        <Container>
+          <Hero>
+            <img
+              src={cover}
+              // alt=""
+              alt={`${title} - ${category}`}
+            />
+          </Hero>
+        </Container>
 
-        <Section id="section">
+        <Wrapper>
           <Container>
             <Heading data-aos="fade-up">
               <h1>{title}</h1>
@@ -93,9 +89,7 @@ function FrontendMentor({ id }) {
               </List>
             </Description>
           </Container>
-        </Section>
 
-        <Section bgColor="rgba(237, 211, 211, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
@@ -104,10 +98,7 @@ function FrontendMentor({ id }) {
                   alt="Base Apparel comming soon page"
                 />
               </ImageItem>
-              <TextItem
-                color="#935653"
-                bgColor="rgba(255, 255, 255, 0.2)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Base Apparel comming soon page</h3>
                 <p>
                   A great project to practice responsive layout building and
@@ -141,7 +132,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#935653"
                   />
                   <OuterLink
                     href="https://lukaszkus.github.io/base-apparel-coming-soon"
@@ -149,21 +139,15 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#935653"
                   />
                 </LinkContainer>
               </TextItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section data-aos="fade-up">
           <Container>
             <Grid>
-              <TextItem
-                color="#c3cfe2"
-                bgColor="rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Easybank landing page</h3>
                 <p>
                   A responisve landing page with mobile navigation menu toggle.
@@ -193,7 +177,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#c3cfe2"
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/easybank-landing-page"
@@ -201,7 +184,6 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#c3cfe2"
                   />
                 </LinkContainer>
               </TextItem>
@@ -210,18 +192,13 @@ function FrontendMentor({ id }) {
               </ImageItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section bgColor="rgba(37, 42, 65, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img src={images.fm_social} alt="Social media dashboard" />
               </ImageItem>
-              <TextItem
-                color="#8b97c6"
-                bgColor="rgba(0, 0, 0, 0.2)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Social media dashboard</h3>
                 <p>
                   It is a responsive dashboard layout with color theme switcher.
@@ -254,7 +231,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#8b97c6"
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/social-media-dashboard"
@@ -262,18 +238,15 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#8b97c6"
                   />
                 </LinkContainer>
               </TextItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section bgColor="rgba(178, 193, 235, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
-              <TextItem bgColor="rgba(255, 255, 255, 0.2)" data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Order summary component</h3>
                 <p>
                   It is a simple component build to practice layout skills.
@@ -301,7 +274,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color={COLORS.white}
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/order-component"
@@ -309,7 +281,6 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color={COLORS.white}
                   />
                 </LinkContainer>
               </TextItem>
@@ -318,18 +289,13 @@ function FrontendMentor({ id }) {
               </ImageItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section data-aos="fade-up">
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img src={images.fm_huddle} alt="Huddle landing page" />
               </ImageItem>
-              <TextItem
-                color="#c3cfe2"
-                bgColor="rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Huddle landing page</h3>
                 <p>
                   A responisve landing page where users are able to view the
@@ -358,7 +324,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#c3cfe2"
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/huddle-landing-page"
@@ -366,21 +331,15 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#c3cfe2"
                   />
                 </LinkContainer>
               </TextItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section bgColor="rgba(125, 130, 228, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
-              <TextItem
-                color="#f6f6fe"
-                bgColor="rgba(255, 255, 255, 0.1)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Pricing component</h3>
                 <p>
                   Responsive pricing component where users are able to toggle
@@ -410,7 +369,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#f6f6fe"
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/pricing-component"
@@ -418,7 +376,6 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#f6f6fe"
                   />
                 </LinkContainer>
               </TextItem>
@@ -427,9 +384,7 @@ function FrontendMentor({ id }) {
               </ImageItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section data-aos="fade-up">
           <Container>
             <Grid>
               <ImageItem data-aos="fade-up">
@@ -438,10 +393,7 @@ function FrontendMentor({ id }) {
                   alt="Time tracking dashboard"
                 />
               </ImageItem>
-              <TextItem
-                color="#c3cfe2"
-                bgColor="rgba(0, 0, 0, 0.1)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>Time tracking dashboard</h3>
                 <p>
                   Dashboard layout build with CSS Grid. The data is pull from
@@ -475,7 +427,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#c3cfe2"
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/time-tracking-dashboard"
@@ -483,21 +434,15 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#c3cfe2"
                   />
                 </LinkContainer>
               </TextItem>
             </Grid>
           </Container>
-        </Section>
 
-        <Section bgColor="rgba(85, 156, 161, 0.8)" data-aos="fade-up">
           <Container>
             <Grid>
-              <TextItem
-                color="#f2f2f2"
-                bgColor="rgba(255, 255, 255, 0.1)"
-                data-aos="fade-up">
+              <TextItem data-aos="fade-up">
                 <h3>3 column component</h3>
                 <p>
                   Simple, responsive 3 column component. Users are able to view
@@ -526,7 +471,6 @@ function FrontendMentor({ id }) {
                     text="Live site"
                     width="20px"
                     height="20px"
-                    color="#f2f2f2"
                   />
                   <OuterLink
                     href="https://github.com/lukaszkus/3-column-component"
@@ -534,7 +478,6 @@ function FrontendMentor({ id }) {
                     text="Github"
                     width="20px"
                     height="20px"
-                    color="#f2f2f2"
                   />
                 </LinkContainer>
               </TextItem>
@@ -543,7 +486,7 @@ function FrontendMentor({ id }) {
               </ImageItem>
             </Grid>
           </Container>
-        </Section>
+        </Wrapper>
       </motion.div>
     </>
   );

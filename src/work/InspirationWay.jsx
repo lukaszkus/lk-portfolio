@@ -1,5 +1,3 @@
-// import { useContext } from "react";
-// import Context from "../context/context";
 import { motion } from "framer-motion";
 
 import { COLORS, images, portfolioItems } from "../utils";
@@ -17,7 +15,6 @@ import {
 } from "./StyledElements";
 
 function InspirationWay({ id }) {
-  // const { offset } = useContext(Context);
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
 
@@ -26,13 +23,14 @@ function InspirationWay({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Container>
           <Hero>
             <img
               src={cover}
-              alt=""
-              // alt={`${title} - ${category}`}
+              // alt=""
+              alt={`${title} - ${category}`}
             />
           </Hero>
         </Container>
