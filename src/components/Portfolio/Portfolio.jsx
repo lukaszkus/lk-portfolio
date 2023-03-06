@@ -21,13 +21,14 @@ function Portfolio() {
                   opacity: 1,
                   transition: {
                     ease: "easeIn",
-                    duration: 0.6,
+                    duration: 1,
                     delay: 0.2,
                   },
                 }}
                 exit={{ opacity: 0 }}
                 bgColor={item.bgColor}
-                overlayColor={item.overlayColor}>
+                overlayColor={item.overlayColor}
+              >
                 <Link to={item.path}>
                   <div>
                     <img

@@ -14,6 +14,8 @@ import {
   List,
 } from "./StyledElements";
 
+import { PortfolioNav } from "../components";
+
 function InspirationWay({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
@@ -98,6 +100,7 @@ function InspirationWay({ id }) {
           </Container>
         </Wrapper>
       </motion.div>
+      <PortfolioNav id={id} />
     </>
   );
 }

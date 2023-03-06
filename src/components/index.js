@@ -8,5 +8,6 @@ export { default as Logo } from "./Logo/Logo";
 export { default as Menu } from "./Menu/Menu";
 export { default as MenuBtn } from "./MenuBtn/MenuBtn";
 export { default as Portfolio } from "./Portfolio/Portfolio";
+export { default as PortfolioNav } from "./PortfolioNav/PortfolioNav";
 export { default as ScrollBtn } from "./ScrollBtn/ScrollBtn";
 export { default as Topbar } from "./Topbar/Topbar";
