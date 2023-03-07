@@ -16,6 +16,8 @@ import {
   TextItem,
 } from "./StyledElements";
 
+import { PortfolioNav } from "../components";
+
 function FrontendMentor({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
@@ -25,8 +27,7 @@ function FrontendMentor({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Container>
           <Hero>
             <img
@@ -488,6 +489,7 @@ function FrontendMentor({ id }) {
           </Container>
         </Wrapper>
       </motion.div>
+      <PortfolioNav id={id} />
     </>
   );
 }

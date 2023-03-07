@@ -14,6 +14,8 @@ import {
   List,
 } from "./StyledElements";
 
+import { PortfolioNav } from "../components";
+
 function TopAlbums({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
@@ -23,8 +25,7 @@ function TopAlbums({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Container>
           <Hero>
             <img
@@ -118,6 +119,7 @@ function TopAlbums({ id }) {
           </Container>
         </Wrapper>
       </motion.div>
+      <PortfolioNav id={id} />
     </>
   );
 }
