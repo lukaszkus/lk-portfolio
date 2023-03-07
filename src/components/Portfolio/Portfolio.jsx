@@ -29,7 +29,7 @@ function Portfolio() {
                 bgColor={item.bgColor}
                 overlayColor={item.overlayColor}
               >
-                <Link to={item.path}>
+                <Link to={`work/${item.path}`}>
                   <div>
                     <img
                       src={item.cover}
