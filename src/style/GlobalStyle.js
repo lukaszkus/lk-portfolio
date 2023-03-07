@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { breakpoint } from "../utils";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -57,5 +58,38 @@ export const GlobalStyle = createGlobalStyle`
     background-color: var(--clr-dark);
     color: var(--clr-light);
     scroll-behavior: smooth;
+  }
+
+  .divider {
+    padding-inline: 2rem;
+
+    div {
+      max-width: var(--maxWidth);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      @media ${breakpoint.tablet}{
+        gap: 1rem;
+      }
+
+      p {
+        color: var(--clr-middle);
+        font-size: 0.675rem;
+        font-weight: 300;
+        /* text-transform: uppercase; */
+
+        @media ${breakpoint.tablet}{
+        font-size: 0.875rem;
+      }
+      }
+    
+      hr {
+        width: 100%;
+        border-color: var(--clr-middle);
+        height: 1px;
+      }
+    }
   }
 `;

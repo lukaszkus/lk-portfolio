@@ -12,6 +12,12 @@ function Home({ titleSuffix }) {
       exit={{ opacity: 0 }}
     >
       <Header />
+      <div className="divider">
+        <div>
+          <p>Projects</p>
+          <hr />
+        </div>
+      </div>
       <Portfolio id="#portfolio" />
     </motion.div>
   );
