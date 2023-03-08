@@ -18,12 +18,16 @@ export const Content = styled.div`
   .wrapper {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--clr-accentSecondary);
-    border-bottom: 1px solid var(--clr-accentSecondary);
+    /* border-top: 1px solid var(--clr-accentSecondary);
+    border-bottom: 1px solid var(--clr-accentSecondary); */
     padding: 4rem 0;
 
     @media ${breakpoint.tablet} {
       padding: 5rem 0;
+    }
+
+    @media ${breakpoint.desktopXL} {
+      padding: 7rem 0;
     }
 
     div {
@@ -50,6 +54,10 @@ export const Content = styled.div`
           @media ${breakpoint.desktop} {
             font-size: 2rem;
           }
+
+          @media ${breakpoint.desktopXL} {
+            font-size: 2.5rem;
+          }
         }
 
         p {
@@ -60,6 +68,10 @@ export const Content = styled.div`
             font-size: 0.875rem;
             font-weight: 200;
             margin-top: 8px;
+          }
+
+          @media ${breakpoint.desktopXL} {
+            font-size: 1rem;
           }
         }
       }

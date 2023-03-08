@@ -1,5 +1,6 @@
 export { default as BackgroundSvg } from "./BackgroundSvg/BackgroundSvg";
 export { default as Button } from "./Button/Button";
+export { default as Divider } from "./Divider/Divider";
 export { default as GetInTouch } from "./GetInTouch/GetInTouch";
 export { default as Filter } from "./Filter/Filter";
 export { default as Footer } from "./Footer/Footer";

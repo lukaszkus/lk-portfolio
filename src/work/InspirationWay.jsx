@@ -14,7 +14,7 @@ import {
   List,
 } from "./StyledElements";
 
-import { PortfolioNav } from "../components";
+import { Divider, PortfolioNav } from "../components";
 
 function InspirationWay({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
@@ -25,8 +25,7 @@ function InspirationWay({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Container>
           <Hero>
             <img
@@ -100,7 +99,9 @@ function InspirationWay({ id }) {
           </Container>
         </Wrapper>
       </motion.div>
+      <Divider label="Go to" />
       <PortfolioNav id={id} />
+      <Divider />
     </>
   );
 }
