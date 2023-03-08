@@ -26,10 +26,8 @@ function Portfolio() {
                   },
                 }}
                 exit={{ opacity: 0 }}
-                bgColor={item.bgColor}
-                overlayColor={item.overlayColor}
               >
-                <Link to={`work/${item.path}`}>
+                <Link to={item.path}>
                   <div>
                     <img
                       src={item.cover}

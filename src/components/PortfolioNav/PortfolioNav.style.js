@@ -31,16 +31,13 @@ export const Content = styled.div`
     }
 
     div {
-      :last-of-type {
-        text-align: right;
-      }
-
-      a {
+      .item {
         color: var(--clr-light);
         text-decoration: none;
 
         :hover {
           opacity: 0.75;
+          cursor: pointer;
         }
 
         h2 {

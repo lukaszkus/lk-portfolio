@@ -18,10 +18,7 @@ const portfolioItems = [
       },
     },
     cover: images.iw_cover,
-    bgColor:
-      "linear-gradient(45deg, rgba(31, 42, 102, 1) 0%, rgba(185, 103, 91, 1) 100%)",
-    overlayColor: "rgba(185, 103, 91, 0.9)",
-    path: "inspiration-way",
+    path: "/work/inspiration-way",
   },
   {
     id: 4,
@@ -42,10 +39,7 @@ const portfolioItems = [
       },
     },
     cover: images.ta_cover,
-    bgColor:
-      "linear-gradient(to top, rgba(106, 133, 182, 1) 0%, rgba(186, 200, 224, 1) 100%)",
-    overlayColor: "rgba(53, 0, 211, 0.9)",
-    path: "top-albums",
+    path: "/work/top-albums",
   },
   {
     id: 3,
@@ -72,10 +66,7 @@ const portfolioItems = [
       },
     },
     cover: images.inf_cover,
-    bgColor:
-      "linear-gradient(120deg, rgba(247, 60, 79, 1) 0%, rgba(46, 30, 92, 1) 100%)",
-    overlayColor: "rgba(247, 60, 79, 0.9)",
-    path: "informatyk-na-godziny",
+    path: "/work/informatyk-na-godziny",
   },
   {
     id: 2,
@@ -101,10 +92,7 @@ const portfolioItems = [
       },
     },
     cover: images.todo_cover,
-    bgColor:
-      "linear-gradient(45deg, rgba(183, 33, 255, 1) 0%, rgba(33, 212, 253, 1) 100%)",
-    overlayColor: "rgba(183, 33, 255, 0.9)",
-    path: "todo-app",
+    path: "/work/todo-app",
   },
   {
     id: 1,
@@ -134,10 +122,7 @@ const portfolioItems = [
       },
     },
     cover: images.fm_cover,
-    bgColor:
-      "linear-gradient(120deg, rgba(224, 195, 252, 1) 0%, rgba(142, 197, 252, 1) 100%)",
-    overlayColor: "rgba(142, 197, 252, 0.9)",
-    path: "fm-solutions",
+    path: "/work/fm-solutions",
   },
 ];
 
