@@ -14,7 +14,7 @@ import {
   List,
 } from "./StyledElements";
 
-import { Divider, PortfolioNav } from "../components";
+import { PortfolioNav } from "../components";
 
 function InspirationWay({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
@@ -99,9 +99,7 @@ function InspirationWay({ id }) {
           </Container>
         </Wrapper>
       </motion.div>
-      <Divider label="Go to" />
       <PortfolioNav id={id} />
-      <Divider />
     </>
   );
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { breakpoint } from "../../utils";
 
 export const Wrapper = styled.div`
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 `;
 
 export const Content = styled.div`
