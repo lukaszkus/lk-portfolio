@@ -18,8 +18,6 @@ export const Content = styled.div`
   .wrapper {
     display: flex;
     justify-content: space-between;
-    /* border-top: 1px solid var(--clr-accentSecondary);
-    border-bottom: 1px solid var(--clr-accentSecondary); */
     padding: 4rem 0;
 
     @media ${breakpoint.tablet} {
@@ -31,13 +29,16 @@ export const Content = styled.div`
     }
 
     div {
-      .item {
+      :last-of-type {
+        text-align: right;
+      }
+
+      a {
         color: var(--clr-light);
         text-decoration: none;
 
         :hover {
           opacity: 0.75;
-          cursor: pointer;
         }
 
         h2 {

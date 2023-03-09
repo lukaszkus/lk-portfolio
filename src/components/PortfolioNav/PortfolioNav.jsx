@@ -1,52 +1,65 @@
 import { useContext } from "react";
 import Context from "../../context/context";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { Wrapper, Content } from "./PortfolioNav.style";
+import Dividier from "../Divider/Divider";
 
 const PortfolioNav = ({ id }) => {
   const { portfolioList } = useContext(Context);
-  const navigate = useNavigate();
 
-  const currentIndex = portfolioList.findIndex((item) => {
+  let currentIndex = portfolioList.findIndex((item) => {
     return item.id === id;
   });
 
   let prevIndex = currentIndex - 1;
   let nextIndex = currentIndex + 1;
 
-  const handlePrev = () => {
-    navigate(`${portfolioList[prevIndex].path}`);
+  const getPrevPath = (portfolioList) => {
+    let prev;
+
+    if (prevIndex < 0) {
+      return null;
+    } else prev = portfolioList[prevIndex].path;
+    return prev;
   };
 
-  const handleNext = () => {
-    navigate(`${portfolioList[nextIndex].path}`);
+  const getNextPath = (portfolioList) => {
+    let next;
+
+    if (nextIndex > portfolioList.length - 1) {
+      return null;
+    } else next = portfolioList[nextIndex].path;
+    return next;
   };
 
-  const prevItem =
-    prevIndex < 0 ? null : (
-      <div onClick={handlePrev} className="item">
-        <h2>Previous</h2>
-        <p>{portfolioList[prevIndex].title}</p>
-      </div>
-    );
-
-  const nextItem =
-    nextIndex > portfolioList.length - 1 ? null : (
-      <div onClick={handleNext} className="item">
-        <h2>Next</h2>
-        <p>{portfolioList[nextIndex].title}</p>
-      </div>
-    );
+  let prevPath = getPrevPath(portfolioList);
+  let nextPath = getNextPath(portfolioList);
 
   return (
     <Wrapper>
+      <Dividier label="Go to" />
       <Content>
         <div className="wrapper">
-          <div>{prevItem}</div>
-          <div>{nextItem}</div>
+          <div>
+            {prevPath === null ? null : (
+              <Link to={prevPath}>
+                <h2>Previous</h2>
+                <p>{portfolioList[prevIndex].title}</p>
+              </Link>
+            )}
+          </div>
+          <div>
+            {nextPath === null ? null : (
+              <Link to={nextPath}>
+                <h2>Next</h2>
+                <p>{portfolioList[nextIndex].title}</p>
+              </Link>
+            )}
+          </div>
         </div>
       </Content>
+      <Dividier />
     </Wrapper>
   );
 };
