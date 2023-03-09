@@ -18,14 +18,14 @@ export const Content = styled.div`
   .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 4rem 0;
+    padding: 3rem 0 4rem 0;
 
     @media ${breakpoint.tablet} {
-      padding: 5rem 0;
+      padding: 4rem 0 5rem 0;
     }
 
     @media ${breakpoint.desktopXL} {
-      padding: 7rem 0;
+      padding: 6rem 0 7rem 0;
     }
 
     div {

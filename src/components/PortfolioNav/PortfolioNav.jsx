@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 
 import { Wrapper, Content } from "./PortfolioNav.style";
-import Dividier from "../Divider/Divider";
+import { Divider } from "../";
 
 const PortfolioNav = ({ id }) => {
   const { portfolioList } = useContext(Context);
@@ -39,7 +39,7 @@ const PortfolioNav = ({ id }) => {
 
   return (
     <Wrapper>
-      <Dividier label="Go to project" />
+      <Divider label="Go to project" />
       <Content>
         <div className="wrapper">
           <div>
@@ -62,7 +62,7 @@ const PortfolioNav = ({ id }) => {
           </div>
         </div>
       </Content>
-      <Dividier />
+      <Divider />
     </Wrapper>
   );
 };

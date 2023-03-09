@@ -11,6 +11,7 @@ export const Wrapper = styled(motion.div)`
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
+  padding: 4rem 0;
 
   @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
