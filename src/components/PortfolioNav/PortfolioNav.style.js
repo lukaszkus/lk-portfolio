@@ -34,11 +34,13 @@ export const Content = styled.div`
       }
 
       a {
-        color: var(--clr-light);
+        color: var(--clr-middle);
         text-decoration: none;
+        transition: 0.3s ease-in-out;
 
         :hover {
-          opacity: 0.75;
+          /* opacity: 0.75; */
+          color: var(--clr-light);
         }
 
         h2 {

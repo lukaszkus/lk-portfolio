@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Context from "../../context/context";
 import { Link } from "react-router-dom";
+import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 
 import { Wrapper, Content } from "./PortfolioNav.style";
 import Dividier from "../Divider/Divider";
@@ -38,12 +39,13 @@ const PortfolioNav = ({ id }) => {
 
   return (
     <Wrapper>
-      <Dividier label="Go to" />
+      <Dividier label="Go to project" />
       <Content>
         <div className="wrapper">
           <div>
             {prevPath === null ? null : (
               <Link to={prevPath}>
+                <VscArrowLeft size="1.5em" />
                 <h2>Previous</h2>
                 <p>{portfolioList[prevIndex].title}</p>
               </Link>
@@ -52,6 +54,7 @@ const PortfolioNav = ({ id }) => {
           <div>
             {nextPath === null ? null : (
               <Link to={nextPath}>
+                <VscArrowRight size="1.5em" />
                 <h2>Next</h2>
                 <p>{portfolioList[nextIndex].title}</p>
               </Link>
