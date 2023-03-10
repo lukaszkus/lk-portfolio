@@ -4,14 +4,25 @@ import { breakpoint } from "../../utils";
 
 export const Wrapper = styled.footer`
   padding: 0 2rem;
-  margin-bottom: 5rem;
+  margin: 2rem 0 6rem 0;
+
+  @media ${breakpoint.desktop} {
+    margin: 4rem 0 8rem 0;
+  }
 `;
 
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+
+  @media ${breakpoint.tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+  }
 
   @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
@@ -20,12 +31,16 @@ export const Content = styled.div`
 
 export const Box = styled.div`
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 
   p {
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 200;
     color: var(--clr-middle);
+
+    @media ${breakpoint.tablet} {
+      font-size: 1rem;
+    }
   }
 
   a {
@@ -39,17 +54,4 @@ export const Box = styled.div`
       color: var(--clr-light);
     }
   }
-
-  /* a {
-    font-size: 0.875rem;
-    font-weight: 300;
-
-    :first-of-type {
-      color: var(--clr-accentSecondary);
-    }
-
-    :last-of-type {
-      color: var(--clr-accentPrimary);
-    }
-  } */
 `;
