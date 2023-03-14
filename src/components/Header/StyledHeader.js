@@ -9,7 +9,7 @@ export const Wrapper = styled.header`
   place-items: center;
   position: relative;
 
-  .spin {
+  /* .spin {
     position: fixed;
     bottom: 2rem;
     right: 0;
@@ -34,7 +34,7 @@ export const Wrapper = styled.header`
         transform: rotate(360deg);
       }
     }
-  }
+  } */
 `;
 
 export const Content = styled.div`
@@ -64,6 +64,7 @@ export const Title = styled.div`
 
     :last-of-type {
       font-size: 1.25rem;
+      padding-bottom: 4rem;
     }
   }
 
@@ -98,6 +99,33 @@ export const Title = styled.div`
 
     @media ${breakpoint.desktopXL} {
       font-size: 6rem;
+    }
+  }
+
+  .link {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--clr-middle);
+    transition: 0.3s ease-in-out;
+
+    display: inline-flex;
+    gap: 0.5rem;
+
+    :hover {
+      color: var(--clr-light);
+    }
+
+    @media ${breakpoint.tablet} {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 1.25rem;
+
+      @media ${breakpoint.tablet} {
+        font-size: 1.875rem;
+      }
     }
   }
 `;

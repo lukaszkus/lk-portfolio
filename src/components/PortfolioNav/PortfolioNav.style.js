@@ -39,7 +39,6 @@ export const Content = styled.div`
         transition: 0.3s ease-in-out;
 
         :hover {
-          /* opacity: 0.75; */
           color: var(--clr-light);
         }
 
@@ -61,12 +60,12 @@ export const Content = styled.div`
         }
 
         p {
-          display: none;
+          font-size: 0.675rem;
+          font-weight: 200;
+          margin-top: 5px;
 
           @media ${breakpoint.tablet} {
-            display: block;
             font-size: 0.875rem;
-            font-weight: 200;
             margin-top: 8px;
           }
 
