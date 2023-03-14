@@ -10,7 +10,7 @@ function Portfolio() {
   const { portfolioList } = useContext(Context);
 
   return (
-    <Wrapper>
+    <Wrapper id="portfolio">
       <Divider label="Projects" />
       <Content>
         <Grid>
@@ -26,8 +26,7 @@ function Portfolio() {
                   delay: 0.2,
                 },
               }}
-              exit={{ opacity: 0 }}
-            >
+              exit={{ opacity: 0 }}>
               <Link to={item.path}>
                 <div>
                   <img

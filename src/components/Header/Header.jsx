@@ -1,6 +1,6 @@
 // import { NavLink as Link } from "react-router-dom";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 import { Wrapper, Content, Title } from "./StyledHeader";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -31,6 +31,14 @@ const Header = () => {
             I design and develop web pages and applications.
           </motion.p>
         </Title>
+        <Link
+          to="portfolio"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}>
+          Work
+        </Link>
       </Content>
       {/* <div className="spin">
         <svg viewBox="0 0 100 100" width="100" height="100">

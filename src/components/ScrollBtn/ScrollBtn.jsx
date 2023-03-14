@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { VscArrowDown } from "react-icons/vsc";
+import { VscArrowUp } from "react-icons/vsc";
 
-import { ScrollButton } from "./StyledScrollBtn";
+import { ScrollButton } from "./ScrollBtn.style";
 
 function ScrollBtn() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,8 +27,7 @@ function ScrollBtn() {
     <>
       {isVisible && (
         <ScrollButton onClick={scrollToTop}>
-          {/* <Arrow /> */}
-          <VscArrowDown size="2em" color="white" />
+          <VscArrowUp size="2em" color="white" />
         </ScrollButton>
       )}
     </>

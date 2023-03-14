@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { images, breakpoint } from "../../utils";
+import { breakpoint } from "../../utils";
 
 const fadeIn = keyframes`
 from {
@@ -16,23 +16,17 @@ export const ScrollButton = styled.button`
   padding: 5px;
   background: none;
   border: none;
-  animation: ${fadeIn} 700ms ease-in-out 0.2s both;
+  animation: ${fadeIn} 0.6s ease-in-out 0.2s both;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
-  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
   z-index: 1000;
-  &:hover {
-    transform: rotate(180deg) scale(1.1);
+
+  :hover {
+    scale: 1.1;
   }
 
   @media ${breakpoint.tablet} {
     bottom: 2rem;
     right: 2.2rem;
   }
-`;
-
-export const Arrow = styled.img.attrs({
-  src: `${images.arrow}`,
-})`
-  width: 30px;
 `;
