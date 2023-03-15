@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
@@ -47,7 +48,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled(motion.div)`
   p {
     font-weight: 200;
     font-size: 1.5rem;
@@ -102,7 +103,10 @@ export const Title = styled.div`
     }
   }
 
-  .link {
+  button {
+    font-family: var(--ff-main);
+    background: none;
+    border: none;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 300;

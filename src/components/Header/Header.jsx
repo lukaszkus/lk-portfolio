@@ -7,60 +7,70 @@ import { Wrapper, Content, Title } from "./StyledHeader";
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Header = () => {
-  const motionArrow = {
+  const title = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+        ...transition,
+      },
+    },
+  };
+
+  const child = {
+    hidden: { y: 20, opacity: 0 },
+    show: { y: 0, opacity: 1, ...transition },
+  };
+
+  const btn = {
+    hidden: { x: -50, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        ...transition,
+      },
+    },
+  };
+
+  const arrow = {
     initial: { x: 0, y: 0 },
-    hover: { x: 6, y: 6, transition: { duration: 0.6 } },
+    hover: { x: 6, y: 6 },
   };
 
   return (
     <Wrapper>
       <Content>
-        <Title>
-          <motion.p
-            animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.2, ...transition }}
-          >
-            Hi, I'm Łukasz
-          </motion.p>
-          <motion.h1
-            animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.8, ...transition }}
-          >
+        <Title variants={title} initial="hidden" animate="show">
+          <motion.p variants={child}>Hi, I'm Łukasz</motion.p>
+          <motion.h1 variants={child}>
             I <span>design</span> & <span>develop</span>
           </motion.h1>
-          <motion.h1
-            animate={{ x: [-150, 0], opacity: [0, 1] }}
-            transition={{ delay: 0.9, ...transition }}
-          >
-            websites and apps.
-          </motion.h1>
-          <motion.p
-            animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.3, ...transition }}
-          >
+          <motion.h1 variants={child}>websites and apps.</motion.h1>
+          <motion.p variants={child}>
             I design and develop web pages and applications.
           </motion.p>
-          <motion.div
-            animate={{ x: [-100, 0], opacity: [0, 1] }}
-            transition={{ delay: 1.5, ...transition }}
-            initial="initial"
-            whileHover="hover"
-            whileTap="hover"
-          >
-            <Link
-              className="link"
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
+          <Link
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}>
+            <motion.button
+              variants={btn}
+              animate="show"
+              initial="hidden"
+              whileHover="hover"
+              whileTap="hover">
               View my projects
-              <motion.span variants={motionArrow}>
+              <motion.span variants={arrow}>
                 <RxArrowBottomRight />
               </motion.span>
-            </Link>
-          </motion.div>
+            </motion.button>
+          </Link>
         </Title>
       </Content>
       {/* <div className="spin">
