@@ -3,7 +3,7 @@ import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 // import { AnimatePresence } from "framer-motion";
 
-import { Wrapper, Content, Grid, Box, Text } from "./StyledPortfolio";
+import { Wrapper, Content, Grid, Box, Text } from "./Portfolio.style";
 import { Divider } from "../";
 
 function Portfolio() {
@@ -22,11 +22,12 @@ function Portfolio() {
                 opacity: 1,
                 transition: {
                   ease: "easeIn",
-                  duration: 1,
-                  delay: 0.2,
+                  duration: 0.4,
+                  delay: 0.6,
                 },
               }}
-              exit={{ opacity: 0 }}>
+              exit={{ opacity: 0 }}
+              viewport={{ once: true }}>
               <Link to={item.path}>
                 <div>
                   <img
