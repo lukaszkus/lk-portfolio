@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   /* padding: 0 2rem; */
 `;
 
@@ -39,5 +40,6 @@ export const Content = styled.div`
     background-color: var(--clr-middle);
     height: 0.5px;
     flex: 1;
+    transform-origin: left;
   }
 `;

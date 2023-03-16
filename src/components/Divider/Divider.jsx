@@ -1,11 +1,51 @@
+import { motion } from "framer-motion";
 import { Wrapper, Content } from "./Divider.style";
 
 const Divider = ({ label }) => {
   return (
-    <Wrapper>
+    <Wrapper
+    // initial={{ opacity: 0 }}
+    // whileInView={{
+    //   opacity: 1,
+    //   transition: {
+    //     ease: "easeIn",
+    //     duration: 0.6,
+    //   },
+    // }}
+    // exit={{ opacity: 0 }}
+    >
       <Content>
-        {label && <p className="label">{label}</p>}
-        <div className="line"></div>
+        {label && (
+          <motion.p
+            className="label"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                ease: "easeInOut",
+                delay: 0.2,
+                duration: 0.3,
+              },
+            }}
+            exit={{ opacity: 0, y: -20 }}
+            viewport={{ once: true }}>
+            {label}
+          </motion.p>
+        )}
+        <motion.div
+          className="line"
+          initial={{ scaleX: 0 }}
+          whileInView={{
+            scaleX: 1,
+            transition: {
+              ease: "easeInOut",
+              delay: 0.4,
+              duration: 0.4,
+            },
+          }}
+          exit={{ scaleX: 0 }}
+          viewport={{ once: true }}></motion.div>
       </Content>
     </Wrapper>
   );
