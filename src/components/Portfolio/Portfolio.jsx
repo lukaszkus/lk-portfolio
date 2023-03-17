@@ -17,18 +17,18 @@ function Portfolio() {
           {portfolioList.map((item) => (
             <Box
               key={item.id}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0 }}
               whileInView={{
                 opacity: 1,
-                y: 0,
                 transition: {
-                  ease: "easeIn",
+                  ease: "easeInOut",
                   duration: 0.8,
                   delay: 0.2,
                 },
               }}
-              exit={{ opacity: 0, y: 10 }}
-              viewport={{ once: true }}>
+              exit={{ opacity: 0 }}
+              viewport={{ once: true }}
+            >
               <Link to={item.path}>
                 <div>
                   <img

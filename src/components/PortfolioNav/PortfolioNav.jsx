@@ -44,18 +44,17 @@ const PortfolioNav = ({ id }) => {
       <Content>
         <div className="wrapper">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
-              y: 0,
               transition: {
-                ease: "easeIn",
+                ease: "easeInOut",
                 duration: 0.8,
                 delay: 0.2,
               },
             }}
-            exit={{ opacity: 0, y: 10 }}
-            viewport={{ once: true }}>
+            viewport={{ once: true }}
+          >
             {prevPath === null ? null : (
               <Link to={prevPath}>
                 <VscArrowLeft size="1.5em" />
@@ -65,18 +64,17 @@ const PortfolioNav = ({ id }) => {
             )}
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0 }}
             whileInView={{
               opacity: 1,
-              y: 0,
               transition: {
-                ease: "easeIn",
+                ease: "easeInOut",
                 duration: 0.8,
                 delay: 0.2,
               },
             }}
-            exit={{ opacity: 0, y: 10 }}
-            viewport={{ once: true }}>
+            viewport={{ once: true }}
+          >
             {nextPath === null ? null : (
               <Link to={nextPath}>
                 <VscArrowRight size="1.5em" />
