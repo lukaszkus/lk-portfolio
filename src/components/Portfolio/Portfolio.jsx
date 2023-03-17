@@ -17,16 +17,17 @@ function Portfolio() {
           {portfolioList.map((item) => (
             <Box
               key={item.id}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{
                 opacity: 1,
+                y: 0,
                 transition: {
                   ease: "easeIn",
-                  duration: 0.4,
-                  delay: 0.6,
+                  duration: 0.8,
+                  delay: 0.2,
                 },
               }}
-              exit={{ opacity: 0 }}
+              exit={{ opacity: 0, y: 10 }}
               viewport={{ once: true }}>
               <Link to={item.path}>
                 <div>

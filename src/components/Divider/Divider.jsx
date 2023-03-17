@@ -18,17 +18,17 @@ const Divider = ({ label }) => {
         {label && (
           <motion.p
             className="label"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{
               opacity: 1,
-              y: 0,
+              x: 0,
               transition: {
                 ease: "easeInOut",
                 delay: 0.2,
-                duration: 0.3,
+                duration: 0.8,
               },
             }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, x: -20 }}
             viewport={{ once: true }}>
             {label}
           </motion.p>

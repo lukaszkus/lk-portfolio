@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import Context from "../../context/context";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 
@@ -42,7 +43,19 @@ const PortfolioNav = ({ id }) => {
       <Divider label="Go to project" />
       <Content>
         <div className="wrapper">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                ease: "easeIn",
+                duration: 0.8,
+                delay: 0.2,
+              },
+            }}
+            exit={{ opacity: 0, y: 10 }}
+            viewport={{ once: true }}>
             {prevPath === null ? null : (
               <Link to={prevPath}>
                 <VscArrowLeft size="1.5em" />
@@ -50,8 +63,20 @@ const PortfolioNav = ({ id }) => {
                 <p>{portfolioList[prevIndex].title}</p>
               </Link>
             )}
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                ease: "easeIn",
+                duration: 0.8,
+                delay: 0.2,
+              },
+            }}
+            exit={{ opacity: 0, y: 10 }}
+            viewport={{ once: true }}>
             {nextPath === null ? null : (
               <Link to={nextPath}>
                 <VscArrowRight size="1.5em" />
@@ -59,7 +84,7 @@ const PortfolioNav = ({ id }) => {
                 <p>{portfolioList[nextIndex].title}</p>
               </Link>
             )}
-          </div>
+          </motion.div>
         </div>
       </Content>
       <Divider />
