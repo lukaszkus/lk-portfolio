@@ -51,7 +51,8 @@ const Header = () => {
           </motion.h1>
           <motion.h1 variants={child}>websites and apps.</motion.h1>
           <motion.p variants={child}>
-            I design and develop web pages and applications.
+            I'm a frontend developer with a passion for great design and user
+            experience.
           </motion.p>
           <Link
             to="portfolio"
