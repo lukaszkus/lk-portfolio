@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { breakpoint } from "../../utils";
 
 export const Wrapper = styled.header`
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 2rem;
   display: grid;
   place-items: center;
@@ -64,8 +64,16 @@ export const Title = styled(motion.div)`
     }
 
     :last-of-type {
-      font-size: 1.25rem;
-      padding-bottom: 4rem;
+      font-size: 0.875rem;
+      padding-bottom: 3.5rem;
+      width: 80%;
+      line-height: 1.5;
+
+      @media ${breakpoint.tablet} {
+        font-size: 1.25rem;
+        padding-bottom: 4rem;
+        width: 100%;
+      }
     }
   }
 
