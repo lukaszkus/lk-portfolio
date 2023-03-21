@@ -21,7 +21,7 @@ const Header = () => {
 
   const title = {
     hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1, ...transition },
+    show: { y: 0, opacity: 1, transition: { ...transition } },
   };
 
   const btn = {
@@ -38,13 +38,18 @@ const Header = () => {
 
   const arrow = {
     initial: { x: 0, y: 0 },
-    hover: { x: 6, y: 6 },
+    hover: { x: 6, y: 6, transition: { ...transition } },
   };
 
   return (
     <Wrapper>
       <Content>
-        <Title variants={container} initial="hidden" animate="show">
+        <Title
+          variants={container}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+        >
           <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
           <motion.h1 variants={title}>
             I <span>design</span> & <span>develop</span>
