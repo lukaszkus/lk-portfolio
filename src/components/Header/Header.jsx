@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { RxArrowBottomRight } from "react-icons/rx";
-import { Wrapper, Content, Title } from "./StyledHeader";
+import { Wrapper, Content, Title } from "./Header.style";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const Header = () => {
-  const title = {
+  const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -19,7 +19,7 @@ const Header = () => {
     },
   };
 
-  const child = {
+  const title = {
     hidden: { y: 20, opacity: 0 },
     show: { y: 0, opacity: 1, ...transition },
   };
@@ -44,13 +44,13 @@ const Header = () => {
   return (
     <Wrapper>
       <Content>
-        <Title variants={title} initial="hidden" animate="show">
-          <motion.p variants={child}>Hi, I'm Łukasz</motion.p>
-          <motion.h1 variants={child}>
+        <Title variants={container} initial="hidden" animate="show">
+          <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
+          <motion.h1 variants={title}>
             I <span>design</span> & <span>develop</span>
           </motion.h1>
-          <motion.h1 variants={child}>websites and apps.</motion.h1>
-          <motion.p variants={child}>
+          <motion.h1 variants={title}>websites and apps.</motion.h1>
+          <motion.p variants={title}>
             I'm a frontend developer with a passion for great design and user
             experience.
           </motion.p>
@@ -59,13 +59,15 @@ const Header = () => {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <motion.button
               variants={btn}
               animate="show"
               initial="hidden"
               whileHover="hover"
-              whileTap="hover">
+              whileTap="hover"
+            >
               View my projects
               <motion.span variants={arrow}>
                 <RxArrowBottomRight />
