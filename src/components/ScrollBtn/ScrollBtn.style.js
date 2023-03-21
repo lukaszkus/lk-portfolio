@@ -22,7 +22,8 @@ export const ScrollButton = styled.button`
   z-index: 1000;
 
   :hover {
-    scale: 1.1;
+    /* scale: 1.1; */
+    transform: translateY(-6px);
   }
 
   @media ${breakpoint.tablet} {
