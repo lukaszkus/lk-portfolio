@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { breakpoint } from "../../utils";
 
-export const TopbarContainer = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
