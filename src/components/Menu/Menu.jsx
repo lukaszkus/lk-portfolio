@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 
-import { MenuContainer, MenuList, MenuItem, Wrapper } from "./StyledMenu";
+import { Wrapper, Content } from "./Menu.style";
 
 function Menu() {
   const { setIsMenuOpen } = useContext(Context);
@@ -17,33 +17,43 @@ function Menu() {
   };
 
   return (
-    <MenuContainer onClick={setIsMenuOpen}>
-      <Wrapper
-        // initial={{ opacity: 0 }}
-        // animate={{
-        //   opacity: 1,
-        //   transition: { ease: "easeInOut" },
-        // }}
-        variants={slide}
-        initial="initial"
-        animate="slideIn"
-      >
-        <MenuList>
-          <MenuItem>
+    <Wrapper onClick={setIsMenuOpen}>
+      <Content variants={slide} initial="initial" animate="slideIn">
+        <ul>
+          <li>
             <Link to="/">Home</Link>
-          </MenuItem>
-          <MenuItem>
+          </li>
+          <li>
             <Link to="work">Work</Link>
-          </MenuItem>
-          <MenuItem>
+          </li>
+          <li>
             <Link to="about">About me</Link>
-          </MenuItem>
-          <MenuItem>
+          </li>
+          <li>
             <Link to="contact">Contact</Link>
-          </MenuItem>
-        </MenuList>
-      </Wrapper>
-    </MenuContainer>
+          </li>
+        </ul>
+        <div
+          className="line"
+          initial={{ scaleX: 0 }}
+          whileInView={{
+            scaleX: 1,
+            transition: {
+              ease: "easeInOut",
+              delay: 0.4,
+              duration: 0.4,
+            },
+          }}
+          exit={{ scaleX: 0 }}
+          viewport={{ once: true }}
+        ></div>
+        <div>
+          <a href="mailto:hello.kusiu@gmail.com" className="email">
+            hello.kusiu@gmail.com
+          </a>
+        </div>
+      </Content>
+    </Wrapper>
   );
 }
 
