@@ -119,7 +119,7 @@ export const Title = styled(motion.div)`
     font-size: 1rem;
     font-weight: 300;
     color: var(--clr-middle);
-    transition: 0.3s ease-in-out;
+    /* transition: 0.3s ease-in-out; */
 
     display: inline-flex;
     gap: 0.5rem;

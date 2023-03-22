@@ -30,14 +30,14 @@ const Header = () => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: 0.5,
+        delay: 0.8,
         ...transition,
       },
     },
   };
 
   const arrow = {
-    initial: { x: 0, y: 0 },
+    hidden: { x: 0, y: 0 },
     hover: { x: 6, y: 6, transition: { ...transition } },
   };
 
