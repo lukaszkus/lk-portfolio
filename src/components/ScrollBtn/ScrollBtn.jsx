@@ -4,7 +4,7 @@ import { VscArrowUp } from "react-icons/vsc";
 
 import { ScrollButton } from "./ScrollBtn.style";
 
-const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition = { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 function ScrollBtn() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +26,7 @@ function ScrollBtn() {
   }, []);
 
   const slide = {
-    hidden: { opacity: 0, y: 40, transition: { ...transition } },
+    hidden: { opacity: 0, y: 72, transition: { ...transition } },
     show: { opacity: 1, y: 0, transition: { ...transition } },
     hover: { y: -6, transition: { ...transition } },
   };
