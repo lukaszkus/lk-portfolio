@@ -3,17 +3,7 @@ import { Wrapper, Content } from "./Divider.style";
 
 const Divider = ({ label }) => {
   return (
-    <Wrapper
-    // initial={{ opacity: 0 }}
-    // whileInView={{
-    //   opacity: 1,
-    //   transition: {
-    //     ease: "easeIn",
-    //     duration: 0.6,
-    //   },
-    // }}
-    // exit={{ opacity: 0 }}
-    >
+    <Wrapper>
       <Content>
         {label && (
           <motion.p
@@ -29,7 +19,8 @@ const Divider = ({ label }) => {
               },
             }}
             exit={{ opacity: 0, x: -20 }}
-            viewport={{ once: true }}>
+            viewport={{ once: true }}
+          >
             {label}
           </motion.p>
         )}
@@ -45,7 +36,8 @@ const Divider = ({ label }) => {
             },
           }}
           exit={{ scaleX: 0 }}
-          viewport={{ once: true }}></motion.div>
+          viewport={{ once: true }}
+        ></motion.div>
       </Content>
     </Wrapper>
   );
