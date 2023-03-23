@@ -14,7 +14,6 @@ function Menu() {
     hidden: {
       opacity: 0,
       x: "100%",
-      transition: { staggerChildren: 0.05, staggerDirection: -1 },
     },
     show: {
       opacity: 1,
@@ -29,7 +28,7 @@ function Menu() {
   };
 
   const list = {
-    hidden: { opacity: 0, transition: { ...transition } },
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {

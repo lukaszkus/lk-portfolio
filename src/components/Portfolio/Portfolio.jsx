@@ -19,12 +19,14 @@ function Portfolio() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.5,
+        ...transition,
+        delay: 0.6,
       },
     },
   };
 
   const box = {
-    hidden: { opacity: 0, y: 20, transition: { ...transition } },
+    hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { ...transition } },
   };
 
@@ -44,17 +46,9 @@ function Portfolio() {
           initial="hidden"
           whileInView="show"
           exit="hidden"
-          viewport={{ once: true }}
-        >
+          viewport={{ once: true }}>
           {portfolioList.map((item) => (
-            <Box
-              key={item.id}
-              variants={box}
-              initial="hidden"
-              whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+            <Box key={item.id} variants={box} whileInView="show">
               <Link to={item.path}>
                 <div>
                   <motion.img
