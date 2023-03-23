@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
@@ -11,7 +12,7 @@ export const Wrapper = styled.footer`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   max-width: var(--maxWidth);
   margin: 0 auto;
   display: flex;
@@ -29,7 +30,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Box = styled.div`
+export const Box = styled(motion.div)`
   display: flex;
   gap: 2rem;
 
