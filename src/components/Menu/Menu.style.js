@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const Wrapper = styled.nav`
+export const Wrapper = styled(motion.nav)`
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 9999;
   display: flex;
   justify-content: flex-end;
 
