@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import useToggle from "../hooks/useToggle";
+import { useCycle } from "framer-motion";
 import AOS from "aos";
 
 import { portfolioItems } from "../utils";
@@ -7,6 +8,7 @@ const Context = createContext();
 
 export function ContextProvider({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useToggle();
+  const [open, cycleOpen] = useCycle(false, true);
   const [offset, setOffset] = useState(0);
   const [portfolioList, setPortfolioList] = useState(portfolioItems);
 
@@ -41,6 +43,8 @@ export function ContextProvider({ children }) {
   return (
     <Context.Provider
       value={{
+        open,
+        cycleOpen,
         isMenuOpen,
         setIsMenuOpen,
         offset,
