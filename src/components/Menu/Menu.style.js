@@ -22,7 +22,7 @@ export const Content = styled(motion.div)`
   flex-direction: column;
   justify-content: space-between;
   gap: 3rem;
-  width: 90%;
+  width: 91%;
   height: 100%;
   background: var(--clr-light);
   padding: 6rem 2rem 4rem 2rem;
@@ -44,17 +44,24 @@ export const Content = styled(motion.div)`
     @media ${breakpoint.tablet} {
       font-size: 2.25rem;
     }
+
+    @media ${breakpoint.desktopXL} {
+      font-size: 3rem;
+    }
   }
 
   .line {
-    border-left: 1px solid var(--clr-middle);
+    /* border-left: 1px solid var(--clr-middle); */
+    background-color: var(--clr-middle);
+    width: 1px;
     flex: 1;
+    transform-origin: top;
   }
 
   a {
-    color: #3f4856;
+    color: var(--clr-dark);
     text-decoration: none;
-    transition: 0.6s all ease-in-out;
+    /* transition: 0.3s all ease-in-out; */
 
     :hover {
       color: var(--clr-middle);
@@ -63,5 +70,9 @@ export const Content = styled(motion.div)`
 
   .email {
     font-size: 0.875rem;
+
+    @media ${breakpoint.desktopXL} {
+      font-size: 1rem;
+    }
   }
 `;
