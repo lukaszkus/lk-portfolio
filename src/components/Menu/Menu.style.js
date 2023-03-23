@@ -51,9 +51,9 @@ export const Content = styled(motion.div)`
   }
 
   .line {
-    /* border-left: 1px solid var(--clr-middle); */
-    background-color: var(--clr-middle);
-    width: 1px;
+    border-left: 1px solid var(--clr-middle);
+    /* background-color: var(--clr-middle); */
+    /* width: 1px; */
     flex: 1;
     transform-origin: top;
   }
