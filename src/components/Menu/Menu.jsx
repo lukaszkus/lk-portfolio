@@ -5,27 +5,27 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { Wrapper, Content } from "./Menu.style";
 
-const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition = { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const container = {
   hidden: {
-    opacity: 0,
+    // opacity: 0,
     x: "100%",
     transition: {
       staggerChildren: 0.1,
       staggerDirection: -1,
-      delay: 0.6,
+      delay: 0.5,
       duration: 0.3,
     },
   },
   show: {
-    opacity: 1,
+    // opacity: 1,
     x: 0,
     transition: {
       staggerChildren: 0.1,
       staggerDirection: 1,
-      delayChildren: 0.3,
-      duration: 0.4,
+      delayChildren: 0.2,
+      duration: 0.3,
       ease: [0.43, 0.13, 0.23, 0.96],
     },
   },
@@ -76,8 +76,7 @@ function Menu() {
             variants={container}
             initial="hidden"
             animate="show"
-            exit="hidden"
-          >
+            exit="hidden">
             <motion.ul variants={list}>
               <motion.li variants={item}>
                 <Link to="/">Home</Link>
@@ -97,8 +96,7 @@ function Menu() {
             <motion.a
               href="mailto:hello.kusiu@gmail.com"
               className="email"
-              variants={email}
-            >
+              variants={email}>
               hello.kusiu@gmail.com
             </motion.a>
           </Content>
