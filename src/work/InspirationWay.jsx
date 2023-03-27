@@ -5,16 +5,16 @@ import { OuterLink } from "../subcomponents";
 
 import {
   Wrapper,
-  Container,
+  Content,
   Description,
   Grid,
   Heading,
-  Hero,
+  HeroImg,
   ImageItem,
   List,
 } from "./StyledElements";
 
-import { PortfolioNav } from "../components";
+import { Divider, PortfolioNav } from "../components";
 
 function InspirationWay({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
@@ -25,48 +25,45 @@ function InspirationWay({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
-        <Container>
-          <Hero>
-            <img
-              src={cover}
-              // alt=""
-              alt={`${title} - ${category}`}
-            />
-          </Hero>
-        </Container>
+        exit={{ opacity: 0 }}
+      >
+        <Content>
+          <HeroImg>
+            <img src={cover} alt={`${title} - ${category}`} />
+          </HeroImg>
+        </Content>
         <Wrapper>
-          <Container>
-            <Heading data-aos="fade-up">
+          <Content>
+            <Heading>
               <h1>{title}</h1>
-              <h3>{category}</h3>
+              <h2>{category}</h2>
             </Heading>
             <Description>
-              <div data-aos="fade-up">
+              <div>
                 <p>{project.description}</p>
                 <p>{project.details}</p>
               </div>
 
               <List>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>My role:</p>
                   {project.role.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>Technology used:</p>
                   {project.technology.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>Tools:</p>
                   {project.tools.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>Links:</p>
                   <li>
                     <OuterLink
@@ -81,9 +78,9 @@ function InspirationWay({ id }) {
                 </ul>
               </List>
             </Description>
-          </Container>
 
-          <Container>
+            <Divider />
+
             <Grid>
               {[
                 images.iw_desktop_home,
@@ -92,11 +89,11 @@ function InspirationWay({ id }) {
                 images.iw_desktop_contact,
               ].map((image, index) => (
                 <ImageItem key={index}>
-                  <img src={image} alt="Desktop" data-aos="fade-up" />
+                  <img src={image} alt="Desktop" />
                 </ImageItem>
               ))}
             </Grid>
-          </Container>
+          </Content>
         </Wrapper>
       </motion.div>
       <PortfolioNav id={id} />

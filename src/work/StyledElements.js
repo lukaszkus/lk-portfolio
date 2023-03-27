@@ -7,9 +7,8 @@ export const Wrapper = styled(motion.div)`
   padding-inline: 2rem;
 `;
 
-export const Container = styled.div`
+export const Content = styled.div`
   max-width: var(--maxWidth);
-
   margin: 0 auto;
 
   @media ${breakpoint.desktopXL} {
@@ -17,22 +16,14 @@ export const Container = styled.div`
   }
 `;
 
-export const Hero = styled.div`
+export const HeroImg = styled.div`
   width: 100%;
-  /* max-height: 540px; */
   max-height: 768px;
-
-  overflow: hidden;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
-  border-radius: 0;
-  /* transition: 0.3s ease-in-out; */
-
-  @media (min-width: 1400px) {
-    /* border-radius: 1.75rem; */
-  }
+  overflow: hidden;
 
   @media ${breakpoint.desktop} {
     margin-top: 112px;
@@ -50,7 +41,6 @@ export const Hero = styled.div`
 `;
 
 export const Heading = styled.div`
-  /* max-width: 75%; */
   padding: 4rem 0;
 
   h1 {
@@ -67,7 +57,7 @@ export const Heading = styled.div`
     }
   }
 
-  h3 {
+  h2 {
     font-weight: 300;
     font-size: 0.875rem;
     /* padding-bottom: 4rem; */
@@ -79,8 +69,8 @@ export const Heading = styled.div`
 `;
 
 export const Description = styled.div`
+  padding-bottom: 4rem;
   line-height: 1.8;
-  border-bottom: 1px solid #2575fc;
 
   div {
     p {
@@ -101,7 +91,7 @@ export const List = styled.div`
   ul {
     list-style: none;
     font-weight: 300;
-    padding: 2rem 0;
+    padding-top: 2rem;
 
     li {
       display: flex;
@@ -113,6 +103,7 @@ export const List = styled.div`
 
     p {
       font-weight: 200;
+      text-decoration: underline;
     }
   }
 
