@@ -28,6 +28,12 @@ export const Content = styled(motion.div)`
   background: var(--clr-light);
   padding: 6rem 2rem 4rem 2rem;
 
+  @media ${breakpoint.tablet} {
+    width: 50%;
+    padding: 6rem 4rem 4rem 4rem;
+    gap: 2rem;
+  }
+
   @media ${breakpoint.desktop} {
     width: 40%;
     padding: 6rem 4rem 4rem 4rem;
@@ -69,11 +75,9 @@ export const Content = styled(motion.div)`
     }
   }
 
-  .email {
-    font-size: 0.875rem;
-
-    @media ${breakpoint.desktopXL} {
-      font-size: 1rem;
-    }
+  div {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
   }
 `;

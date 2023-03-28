@@ -2,6 +2,8 @@ import { useContext } from "react";
 import Context from "../../context/context";
 import { NavLink as Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { VscGithubAlt } from "react-icons/vsc";
+import { SlSocialLinkedin } from "react-icons/sl";
 
 import { Wrapper, Content } from "./Menu.style";
 
@@ -60,9 +62,9 @@ const line = {
   },
 };
 
-const email = {
-  hidden: { opacity: 0, y: -10 },
-  show: { opacity: 1, y: 0, transition: { delay: 1.1, ...transition } },
+const link = {
+  hidden: { opacity: 0, x: -10 },
+  show: { opacity: 1, x: 0, transition: { ...transition, delay: 1.1 } },
 };
 
 function Menu() {
@@ -76,7 +78,8 @@ function Menu() {
             variants={container}
             initial="hidden"
             animate="show"
-            exit="hidden">
+            exit="hidden"
+          >
             <motion.ul variants={list}>
               <motion.li variants={item}>
                 <Link to="/">Home</Link>
@@ -93,12 +96,14 @@ function Menu() {
             </motion.ul>
 
             <motion.div className="line" variants={line}></motion.div>
-            <motion.a
-              href="mailto:hello.kusiu@gmail.com"
-              className="email"
-              variants={email}>
-              hello.kusiu@gmail.com
-            </motion.a>
+            <motion.div variants={list}>
+              <motion.a href="#github" variants={link}>
+                <VscGithubAlt size="2em" />
+              </motion.a>
+              <motion.a href="#linkedin" variants={link}>
+                <SlSocialLinkedin size="1.8em" />
+              </motion.a>
+            </motion.div>
           </Content>
         </Wrapper>
       )}
