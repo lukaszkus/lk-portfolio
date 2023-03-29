@@ -4,14 +4,13 @@ import { motion } from "framer-motion";
 import { breakpoint } from "../../utils";
 
 export const Wrapper = styled.div`
-  padding: 2rem;
-  margin: 3rem 0;
+  padding-inline: 2rem;
 `;
 
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 6rem 0;
 
   @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
@@ -34,17 +33,12 @@ export const Box = styled(motion.div)`
 
   div {
     overflow: hidden;
-    /* border-radius: 1rem; */
-
-    @media ${breakpoint.tablet} {
-      /* border-radius: 1.5rem; */
-    }
 
     img {
       display: block;
       width: 100%;
       height: 100%;
-      transition: 0.6s all;
+      transition: 0.6s all ease-out;
     }
   }
 `;
@@ -76,12 +70,10 @@ export const Text = styled.div`
     text-decoration: none;
 
     @media ${breakpoint.tablet} {
-      /* padding: 0.75rem 0; */
       font-size: 0.875rem;
     }
 
     @media ${breakpoint.desktopXL} {
-      /* padding: 0.75rem 0; */
       font-size: 1rem;
     }
   }

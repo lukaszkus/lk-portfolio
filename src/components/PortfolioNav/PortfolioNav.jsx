@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 
 import { Wrapper, Content } from "./PortfolioNav.style";
-import { Divider } from "../";
 
 const PortfolioNav = ({ id }) => {
   const { portfolioList } = useContext(Context);
@@ -40,7 +39,6 @@ const PortfolioNav = ({ id }) => {
 
   return (
     <Wrapper>
-      <Divider label="Go to project" />
       <Content>
         <div className="wrapper">
           <motion.div
@@ -55,7 +53,8 @@ const PortfolioNav = ({ id }) => {
               },
             }}
             exit={{ opacity: 0, x: 10 }}
-            viewport={{ once: true }}>
+            viewport={{ once: true }}
+          >
             {prevPath === null ? null : (
               <Link to={prevPath}>
                 <VscArrowLeft size="1.5em" />
@@ -76,7 +75,8 @@ const PortfolioNav = ({ id }) => {
               },
             }}
             exit={{ opacity: 0, x: -10 }}
-            viewport={{ once: true }}>
+            viewport={{ once: true }}
+          >
             {nextPath === null ? null : (
               <Link to={nextPath}>
                 <VscArrowRight size="1.5em" />
@@ -87,7 +87,6 @@ const PortfolioNav = ({ id }) => {
           </motion.div>
         </div>
       </Content>
-      <Divider />
     </Wrapper>
   );
 };

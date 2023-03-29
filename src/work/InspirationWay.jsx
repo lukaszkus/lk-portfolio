@@ -78,9 +78,12 @@ function InspirationWay({ id }) {
                 </ul>
               </List>
             </Description>
+          </Content>
+        </Wrapper>
 
-            <Divider />
-
+        <Divider />
+        <Wrapper>
+          <Content>
             <Grid>
               {[
                 images.iw_desktop_home,
@@ -96,6 +99,7 @@ function InspirationWay({ id }) {
           </Content>
         </Wrapper>
       </motion.div>
+      <Divider label="Go to project" />
       <PortfolioNav id={id} />
     </>
   );

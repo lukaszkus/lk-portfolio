@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { breakpoint } from "../../utils";
 
 export const Wrapper = styled(motion.div)`
-  /* padding: 0 2rem; */
+  padding-inline: 2rem;
 `;
 
 export const Content = styled.div`

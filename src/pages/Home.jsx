@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-import { Header, Portfolio } from "../components";
+import { Divider, Header, Portfolio } from "../components";
 
 function Home({ titleSuffix }) {
   useDocumentTitle(`${titleSuffix}`);
@@ -12,6 +12,7 @@ function Home({ titleSuffix }) {
       exit={{ opacity: 0 }}
     >
       <Header />
+      <Divider label="Projects" />
       <Portfolio />
     </motion.div>
   );

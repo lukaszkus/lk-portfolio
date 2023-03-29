@@ -7,7 +7,7 @@ import { ScrollToTop } from "./utils";
 //Pages
 import { About, Home, Contact } from "./pages";
 //Components
-import { Footer, ScrollBtn, Topbar } from "./components";
+import { Divider, Footer, ScrollBtn, Topbar } from "./components";
 
 //Work
 import {
@@ -58,9 +58,9 @@ function App() {
           <Route path="work/fm-solutions" element={<FrontendMentor id={1} />} />
         </Routes>
       </AnimatePresence>
+      <Divider />
       <Footer />
       <ScrollBtn />
-      {/* <div className="background-gradient"></div> */}
     </>
   );
 }
