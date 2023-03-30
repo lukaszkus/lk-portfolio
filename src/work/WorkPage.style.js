@@ -41,7 +41,7 @@ export const HeroImg = styled.div`
 `;
 
 export const Heading = styled.div`
-  padding: 4rem 0;
+  padding: 6rem 0;
 
   h1 {
     font-size: 1.75rem;
@@ -69,7 +69,7 @@ export const Heading = styled.div`
 `;
 
 export const Description = styled.div`
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
   line-height: 1.8;
 
   div {
@@ -117,7 +117,7 @@ export const List = styled.div`
 export const Grid = styled.div`
   display: grid;
   gap: 2rem;
-  padding: 4rem 0;
+  padding: 6rem 0;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);

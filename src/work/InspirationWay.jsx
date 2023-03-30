@@ -12,7 +12,7 @@ import {
   HeroImg,
   ImageItem,
   List,
-} from "./StyledElements";
+} from "./WorkPage.style";
 
 import { Divider, PortfolioNav } from "../components";
 
@@ -80,7 +80,6 @@ function InspirationWay({ id }) {
             </Description>
           </Content>
         </Wrapper>
-
         <Divider />
         <Wrapper>
           <Content>

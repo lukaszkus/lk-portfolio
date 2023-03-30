@@ -53,13 +53,11 @@ const portfolioItems = [
         "They are my solutions to several challenges on this platform. Here you will find responsive landing pages and dashboards, simple card components and applications. The solutions are based only on graphic design and jpg files and have been built using various technologies. See the challenge for more details.",
       technology: [
         "React.js",
-        "Sass",
+        "SCSS",
         "BEM methodology",
         "RWD - Responsive Web Design",
-        "Mobile first approach",
-        "SVG Animation",
       ],
-      role: ["Web development", "Design"],
+      role: ["Web development", "Web design"],
       links: {
         liveSite: "https://informatyk-na-godziny.netlify.app/",
         github: "https://github.com/lukaszkus/informatyk-app",
@@ -83,7 +81,6 @@ const portfolioItems = [
         "Styled Components",
         "Firebase",
         "RWD - Responsive Web Design",
-        "Mobile first approach",
       ],
       role: ["Web development"],
       links: {
@@ -107,13 +104,12 @@ const portfolioItems = [
       technology: [
         "React.js",
         "JavaScript",
-        "Css",
-        "Sass",
+        "CSS",
+        "SCSS",
         "Styled Components",
         "HTML",
         "BEM methodology",
         "RWD - Responsive Web Design",
-        "Mobile first approach",
       ],
       role: ["Web development"],
       links: {

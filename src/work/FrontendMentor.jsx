@@ -5,18 +5,18 @@ import { OuterLink } from "../subcomponents";
 
 import {
   Wrapper,
-  Container,
+  Content,
   Description,
   Grid,
   Heading,
-  Hero,
+  HeroImg,
   ImageItem,
   List,
-  LinkContainer,
   TextItem,
-} from "./StyledElements";
+  LinkContainer,
+} from "./WorkPage.style";
 
-import { PortfolioNav } from "../components";
+import { Divider, PortfolioNav } from "../components";
 
 function FrontendMentor({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
@@ -27,44 +27,40 @@ function FrontendMentor({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
-        <Container>
-          <Hero>
-            <img
-              src={cover}
-              // alt=""
-              alt={`${title} - ${category}`}
-            />
-          </Hero>
-        </Container>
-
+        exit={{ opacity: 0 }}
+      >
+        <Content>
+          <HeroImg>
+            <img src={cover} alt={`${title} - ${category}`} />
+          </HeroImg>
+        </Content>
         <Wrapper>
-          <Container>
-            <Heading data-aos="fade-up">
+          <Content>
+            <Heading>
               <h1>{title}</h1>
-              <h3>{category}</h3>
+              <h2>{category}</h2>
             </Heading>
-
             <Description>
-              <div data-aos="fade-up">
+              <div>
                 <p>{project.description}</p>
                 <p>{project.details}</p>
               </div>
 
               <List>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>My role:</p>
                   {project.role.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>Technology used:</p>
                   {project.technology.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+
+                <ul>
                   <p>Links:</p>
                   <li>
                     <OuterLink
@@ -89,9 +85,12 @@ function FrontendMentor({ id }) {
                 </ul>
               </List>
             </Description>
-          </Container>
+          </Content>
+        </Wrapper>
+        <Divider />
 
-          <Container>
+        <Wrapper>
+          <Content>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img
@@ -144,9 +143,10 @@ function FrontendMentor({ id }) {
                 </LinkContainer>
               </TextItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <TextItem data-aos="fade-up">
                 <h3>Easybank landing page</h3>
@@ -192,9 +192,10 @@ function FrontendMentor({ id }) {
                 <img src={images.fm_easybank} alt="Easybank landing page" />
               </ImageItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img src={images.fm_social} alt="Social media dashboard" />
@@ -243,9 +244,10 @@ function FrontendMentor({ id }) {
                 </LinkContainer>
               </TextItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <TextItem data-aos="fade-up">
                 <h3>Order summary component</h3>
@@ -289,9 +291,10 @@ function FrontendMentor({ id }) {
                 <img src={images.fm_order} alt="Order summary component" />
               </ImageItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img src={images.fm_huddle} alt="Huddle landing page" />
@@ -336,9 +339,10 @@ function FrontendMentor({ id }) {
                 </LinkContainer>
               </TextItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <TextItem data-aos="fade-up">
                 <h3>Pricing component</h3>
@@ -384,9 +388,10 @@ function FrontendMentor({ id }) {
                 <img src={images.fm_pricing} alt="Pricing component" />
               </ImageItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <ImageItem data-aos="fade-up">
                 <img
@@ -439,9 +444,10 @@ function FrontendMentor({ id }) {
                 </LinkContainer>
               </TextItem>
             </Grid>
-          </Container>
+          </Content>
+          <Divider />
 
-          <Container>
+          <Content>
             <Grid>
               <TextItem data-aos="fade-up">
                 <h3>3 column component</h3>
@@ -486,9 +492,10 @@ function FrontendMentor({ id }) {
                 <img src={images.fm_3column} alt="3 column component" />
               </ImageItem>
             </Grid>
-          </Container>
+          </Content>
         </Wrapper>
       </motion.div>
+      <Divider label="Go to project" />
       <PortfolioNav id={id} />
     </>
   );

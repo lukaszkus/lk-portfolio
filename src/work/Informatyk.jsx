@@ -5,16 +5,16 @@ import { OuterLink } from "../subcomponents";
 
 import {
   Wrapper,
-  Container,
+  Content,
   Description,
   Grid,
   Heading,
-  Hero,
+  HeroImg,
   ImageItem,
   List,
-} from "./StyledElements";
+} from "./WorkPage.style";
 
-import { PortfolioNav } from "../components";
+import { Divider, PortfolioNav } from "../components";
 
 function Informatyk({ id }) {
   const item = portfolioItems.find((item) => item.id === id);
@@ -25,44 +25,45 @@ function Informatyk({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
-        <Container>
-          <Hero>
-            <img
-              src={cover}
-              alt=""
-              // alt={`${title} - ${category}`}
-            />
-          </Hero>
-        </Container>
-
+        exit={{ opacity: 0 }}
+      >
+        <Content>
+          <HeroImg>
+            <img src={cover} alt={`${title} - ${category}`} />
+          </HeroImg>
+        </Content>
         <Wrapper>
-          <Container>
-            <Heading data-aos="fade-up">
+          <Content>
+            <Heading>
               <h1>{title}</h1>
-              <h3>{category}</h3>
+              <h2>{category}</h2>
             </Heading>
-
             <Description>
-              <div data-aos="fade-up">
+              <div>
                 <p>{project.description}</p>
                 <p>{project.details}</p>
               </div>
 
               <List>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>My role:</p>
                   {project.role.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+                <ul>
                   <p>Technology used:</p>
                   {project.technology.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
                 </ul>
-                <ul data-aos="fade-up">
+                {/* <ul>
+                  <p>Tools:</p>
+                  {project.tools.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul> */}
+                <ul>
                   <p>Links:</p>
                   <li>
                     <OuterLink
@@ -87,22 +88,21 @@ function Informatyk({ id }) {
                 </ul>
               </List>
             </Description>
-          </Container>
+          </Content>
+        </Wrapper>
+        <Divider />
 
-          <Container>
+        <Wrapper>
+          <Content>
             <Grid>
-              <ImageItem data-aos="fade-up">
-                <img src={images.todo_light} alt="Todo App light mode" />
-                <figcaption>Todo App light mode</figcaption>
-              </ImageItem>
-              <ImageItem data-aos="fade-up">
-                <img src={images.todo_dark} alt="Todo App dark mode" />
-                <figcaption>Todo App dark mode</figcaption>
+              <ImageItem>
+                <img src={images.ta_brand_01} alt="Top Albums logo" />
               </ImageItem>
             </Grid>
-          </Container>
+          </Content>
         </Wrapper>
       </motion.div>
+      <Divider label="Go to project" />
       <PortfolioNav id={id} />
     </>
   );
