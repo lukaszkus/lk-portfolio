@@ -18,7 +18,7 @@ export const Content = styled.div`
 
 export const HeroImg = styled.div`
   width: 100%;
-  max-height: 768px;
+  max-height: 680px;
   margin-top: 80px;
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@ export const HeroImg = styled.div`
   }
 
   @media ${breakpoint.desktopXL} {
-    /* max-height: 768px; */
+    max-height: 900px;
   }
 
   img {
