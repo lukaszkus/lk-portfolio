@@ -23,7 +23,7 @@ export const Content = styled(motion.div)`
   flex-direction: column;
   justify-content: space-between;
   gap: 3rem;
-  width: 91%;
+  width: 80%;
   height: 100%;
   background: var(--clr-light);
   padding: 6rem 2rem 4rem 2rem;
