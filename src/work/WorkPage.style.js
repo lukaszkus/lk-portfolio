@@ -7,6 +7,10 @@ export const Wrapper = styled(motion.div)`
   padding-inline: 2rem;
 `;
 
+export const FullWidth = styled(motion.div)`
+  margin-bottom: 2rem;
+`;
+
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
@@ -41,7 +45,11 @@ export const HeroImg = styled.div`
 `;
 
 export const Heading = styled.div`
-  padding: 6rem 0;
+  padding: 4rem 0;
+
+  @media ${breakpoint.desktop} {
+    padding: 6rem 0;
+  }
 
   h1 {
     font-size: 1.75rem;
@@ -131,7 +139,6 @@ export const Grid = styled.div`
 
 export const ImageItem = styled.figure`
   display: grid;
-  /* place-items: center; */
   order: 1;
 
   img {

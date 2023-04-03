@@ -12,6 +12,7 @@ import {
   HeroImg,
   ImageItem,
   List,
+  FullWidth,
 } from "./WorkPage.style";
 
 import { Divider, PortfolioNav } from "../components";
@@ -93,13 +94,26 @@ function TopAlbums({ id }) {
         <Divider />
         <Wrapper>
           <Content>
-            <Grid>
-              <ImageItem>
-                <img src={images.ta_brand_01} alt="Top Albums logo" />
-              </ImageItem>
-            </Grid>
+            <ImageItem>
+              <img src={images.ta_screens_lo} alt="Lo fidelity wireframes" />
+            </ImageItem>
+            <ImageItem>
+              <img src={images.ta_screens_hi} alt="Hi fidelity wireframes" />
+            </ImageItem>
           </Content>
         </Wrapper>
+        {/* <Wrapper>
+          <Content>
+            <ImageItem>
+              <img src={images.ta_screens_2} alt="Top Albums logo" />
+            </ImageItem>
+          </Content>
+        </Wrapper> */}
+        <FullWidth>
+          <ImageItem>
+            <img src={images.ta_screens} alt="Top Albums logo" />
+          </ImageItem>
+        </FullWidth>
       </motion.div>
       <Divider label="Go to project" />
       <PortfolioNav id={id} />
