@@ -8,7 +8,7 @@ export const Wrapper = styled(motion.div)`
 `;
 
 export const FullWidth = styled(motion.div)`
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 `;
 
 export const Content = styled.div`
@@ -145,11 +145,14 @@ export const ImageItem = styled.figure`
     width: 100%;
     height: auto;
   }
-  figcaption {
+  p {
     font-size: 0.875rem;
-    font-weight: 300;
-    padding: 1rem 0;
-    text-align: center;
+    font-weight: 200;
+    padding: 2rem 0;
+
+    @media ${breakpoint.tablet} {
+      font-size: 1rem;
+    }
   }
 
   @media ${breakpoint.tablet} {

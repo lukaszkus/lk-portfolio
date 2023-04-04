@@ -21,7 +21,6 @@ import ta_brand_02 from "../assets/work/topAlbums/ta_brand_02.png";
 import ta_brand_03 from "../assets/work/topAlbums/ta_brand_03.png";
 import ta_brand_04 from "../assets/work/topAlbums/ta_brand_04.png";
 import ta_screens from "../assets/work/topAlbums/ta_screens.jpg";
-import ta_screens_2 from "../assets/work/topAlbums/ta_screens_2.jpg";
 import ta_screens_lo from "../assets/work/topAlbums/ta_screens_lo.jpg";
 import ta_screens_hi from "../assets/work/topAlbums/ta_screens_hi.jpg";
 
@@ -78,7 +77,6 @@ const images = {
   ta_brand_03,
   ta_brand_04,
   ta_screens,
-  ta_screens_2,
   ta_screens_lo,
   ta_screens_hi,
 

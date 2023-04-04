@@ -7,7 +7,7 @@ import {
   Wrapper,
   Content,
   Description,
-  Grid,
+  // Grid,
   Heading,
   HeroImg,
   ImageItem,
@@ -26,11 +26,14 @@ function TopAlbums({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Content>
           <HeroImg>
-            <img src={cover} alt={`${title} - ${category}`} />
+            <img
+              src={cover}
+              alt={title}
+              // alt={`${title} - ${category}`}
+            />
           </HeroImg>
         </Content>
         <Wrapper>
@@ -95,20 +98,16 @@ function TopAlbums({ id }) {
         <Wrapper>
           <Content>
             <ImageItem>
+              <p>Low fidelity wireframes</p>
               <img src={images.ta_screens_lo} alt="Lo fidelity wireframes" />
             </ImageItem>
             <ImageItem>
+              <p>High fidelity wireframes</p>
               <img src={images.ta_screens_hi} alt="Hi fidelity wireframes" />
             </ImageItem>
           </Content>
         </Wrapper>
-        {/* <Wrapper>
-          <Content>
-            <ImageItem>
-              <img src={images.ta_screens_2} alt="Top Albums logo" />
-            </ImageItem>
-          </Content>
-        </Wrapper> */}
+
         <FullWidth>
           <ImageItem>
             <img src={images.ta_screens} alt="Top Albums logo" />
