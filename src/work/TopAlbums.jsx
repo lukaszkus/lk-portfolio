@@ -26,7 +26,8 @@ function TopAlbums({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Content>
           <HeroImg>
             <img
@@ -99,18 +100,18 @@ function TopAlbums({ id }) {
           <Content>
             <ImageItem>
               <p>Low fidelity wireframes</p>
-              <img src={images.ta_screens_lo} alt="Lo fidelity wireframes" />
+              <img src={images.ta_screens_lo} alt="Low fidelity wireframes" />
             </ImageItem>
             <ImageItem>
               <p>High fidelity wireframes</p>
-              <img src={images.ta_screens_hi} alt="Hi fidelity wireframes" />
+              <img src={images.ta_screens_hi} alt="High fidelity wireframes" />
             </ImageItem>
           </Content>
         </Wrapper>
 
         <FullWidth>
           <ImageItem>
-            <img src={images.ta_screens} alt="Top Albums logo" />
+            <img src={images.ta_screens} alt="Top Albums screens" />
           </ImageItem>
         </FullWidth>
       </motion.div>

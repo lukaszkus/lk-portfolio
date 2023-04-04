@@ -42,11 +42,11 @@ export const Content = styled.div`
         }
 
         h2 {
-          font-weight: 300;
+          font-weight: 400;
           font-size: 1.5rem;
 
           @media ${breakpoint.tablet} {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
           }
 
           @media ${breakpoint.desktop} {
@@ -62,10 +62,12 @@ export const Content = styled.div`
           font-size: 0.675rem;
           font-weight: 200;
           margin-top: 5px;
+          display: none;
 
           @media ${breakpoint.tablet} {
             font-size: 0.875rem;
             margin-top: 8px;
+            display: block;
           }
 
           @media ${breakpoint.desktopXL} {

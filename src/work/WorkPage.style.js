@@ -137,7 +137,7 @@ export const Grid = styled.div`
   }
 `;
 
-export const ImageItem = styled.figure`
+export const ImageItem = styled.div`
   display: grid;
   order: 1;
 
@@ -148,10 +148,11 @@ export const ImageItem = styled.figure`
   p {
     font-size: 0.875rem;
     font-weight: 200;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
 
     @media ${breakpoint.tablet} {
       font-size: 1rem;
+      padding: 4rem 0;
     }
   }
 
