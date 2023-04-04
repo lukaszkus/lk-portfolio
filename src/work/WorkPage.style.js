@@ -8,7 +8,7 @@ export const Wrapper = styled(motion.div)`
 `;
 
 export const FullWidth = styled(motion.div)`
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 `;
 
 export const Content = styled.div`

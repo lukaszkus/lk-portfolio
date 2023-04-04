@@ -10,7 +10,11 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 6rem 0;
+  padding: 2.5rem 0;
+
+  @media ${breakpoint.desktop} {
+    padding: 6rem 0;
+  }
 
   @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
