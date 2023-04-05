@@ -11,6 +11,7 @@ import icon_github from "../assets/icon-github.svg";
 import icon_web from "../assets/icon-web.svg";
 import icon_download from "../assets/icon-download.svg";
 import icon_fm from "../assets/icon-fm.svg";
+import browser from "../assets/browser.jpg";
 
 //WORK IMAGES
 
@@ -70,6 +71,7 @@ const images = {
   icon_web,
   icon_download,
   icon_fm,
+  browser,
 
   ta_cover,
   ta_brand_01,

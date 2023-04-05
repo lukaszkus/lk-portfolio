@@ -11,7 +11,7 @@ const portfolioItems = [
       details:
         "Users are able to: search albums on list in real time by keywords, changeing from list view to grid view, add albums to favourites, view favourites, remove from favourites, view album details, go to album or artist page on Apple Music.",
       technology: ["React.js", "SCSS", "Framer Motion"],
-      tools: ["Vite", "Adobe Illustrator", "Figma"],
+      tools: ["Vite", "Figma"],
       role: ["Web design", "Web development"],
       links: {
         liveSite: "https://iw-gabinetpsychoterapii.pl",

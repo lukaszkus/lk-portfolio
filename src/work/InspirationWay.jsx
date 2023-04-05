@@ -12,6 +12,7 @@ import {
   HeroImg,
   ImageItem,
   List,
+  ScrollY,
 } from "./WorkPage.style";
 
 import { Divider, PortfolioNav } from "../components";
@@ -83,6 +84,12 @@ function InspirationWay({ id }) {
         <Divider />
         <Wrapper>
           <Content>
+            <ScrollY>
+              <img src={images.browser} alt="" className="browser-tb" />
+              <div>
+                <img src={images.iw_desktop_home} alt="Home page" />
+              </div>
+            </ScrollY>
             <Grid>
               {[
                 images.iw_desktop_home,

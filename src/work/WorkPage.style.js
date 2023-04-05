@@ -2,9 +2,15 @@ import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { breakpoint } from "../utils";
 
-const scroll = keyframes`
+const scrollX = keyframes`
 	0% { transform: translateX(0) }
 	100% { transform: translateX(calc(-100%))}
+`;
+
+const scrollY = keyframes`
+	0% { transform: translateY(0) }
+	25% { transform: translateY(calc(-40%))}
+
 `;
 
 export const Wrapper = styled(motion.div)`
@@ -18,7 +24,43 @@ export const ScrollX = styled(motion.div)`
   div {
     width: 100%;
     display: flex;
-    animation: ${scroll} 45s linear infinite;
+    animation: ${scrollX} 45s linear infinite;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+`;
+
+export const ScrollY = styled(motion.div)`
+  overflow-y: hidden;
+  height: 360px;
+  width: 100%;
+  border-radius: 2px;
+  margin-top: 2.5rem;
+  position: relative;
+
+  .browser-tb {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  @media ${breakpoint.tablet} {
+    height: 480px;
+    margin-top: 4rem;
+  }
+
+  @media ${breakpoint.desktop} {
+    height: 720px;
+  }
+
+  div {
+    animation: ${scrollY} 30s ease-in-out infinite;
 
     img {
       width: 100%;
@@ -149,7 +191,8 @@ export const Grid = styled.div`
   }
 
   @media ${breakpoint.desktop} {
-    gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 4rem; */
   }
 `;
 
