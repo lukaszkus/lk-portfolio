@@ -31,7 +31,7 @@ const portfolioItems = [
       details:
         "Users are able to: search albums on list in real time by keywords, changeing from list view to grid view, add albums to favourites, view favourites, remove from favourites, view album details, go to album or artist page on Apple Music.",
       technology: ["React Native", "Expo"],
-      role: ["Mobile development"],
+      role: ["Mobile development", "Mobile design"],
       links: {
         download:
           "https://github.com/lukaszkus/react-native-music-app/blob/main/apk/TopAlbums.apk",

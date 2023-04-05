@@ -12,7 +12,7 @@ import {
   HeroImg,
   ImageItem,
   List,
-  FullWidth,
+  ScrollX,
 } from "./WorkPage.style";
 
 import { Divider, PortfolioNav } from "../components";
@@ -109,11 +109,12 @@ function TopAlbums({ id }) {
           </Content>
         </Wrapper>
 
-        <FullWidth>
-          <ImageItem>
+        <ScrollX>
+          <div>
             <img src={images.ta_screens} alt="Top Albums screens" />
-          </ImageItem>
-        </FullWidth>
+            <img src={images.ta_screens} alt="Top Albums screens" />
+          </div>
+        </ScrollX>
       </motion.div>
       <Divider label="Go to project" />
       <PortfolioNav id={id} />

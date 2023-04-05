@@ -1,14 +1,30 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { motion } from "framer-motion";
-
 import { breakpoint } from "../utils";
+
+const scroll = keyframes`
+	0% { transform: translateX(0) }
+	100% { transform: translateX(calc(-100%))}
+`;
 
 export const Wrapper = styled(motion.div)`
   padding-inline: 2rem;
 `;
 
-export const FullWidth = styled(motion.div)`
+export const ScrollX = styled(motion.div)`
   margin: 2.5rem 0;
+  overflow-x: hidden;
+
+  div {
+    width: 100%;
+    display: flex;
+    animation: ${scroll} 45s linear infinite;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 export const Content = styled.div`
