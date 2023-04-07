@@ -5,7 +5,7 @@ import { GlobalStyle } from "./style/GlobalStyle";
 import { ScrollToTop } from "./utils";
 
 //Pages
-import { About, Home, Contact } from "./pages";
+import { Bio, Home, ContactPage } from "./pages";
 //Components
 import { Divider, Footer, ScrollBtn, Topbar } from "./components";
 
@@ -18,7 +18,7 @@ import {
   FrontendMentor,
 } from "./work";
 
-function App() {
+const App = () => {
   const location = useLocation();
 
   let titlePrefix = `${location.pathname.replace("/", "")} | `;
@@ -34,15 +34,18 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home titleSuffix={titleSuffix} />} />
           <Route
-            path="about"
+            path="bio"
             element={
-              <About titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+              <Bio titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
             }
           />
           <Route
             path="contact"
             element={
-              <Contact titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+              <ContactPage
+                titlePrefix={titlePrefix}
+                titleSuffix={titleSuffix}
+              />
             }
           />
           <Route
@@ -63,6 +66,6 @@ function App() {
       <ScrollBtn />
     </>
   );
-}
+};
 
 export default App;

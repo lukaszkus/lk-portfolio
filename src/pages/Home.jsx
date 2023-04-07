@@ -3,7 +3,7 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 
 import { Divider, Header, Portfolio } from "../components";
 
-function Home({ titleSuffix }) {
+const Home = ({ titleSuffix }) => {
   useDocumentTitle(`${titleSuffix}`);
   return (
     <motion.div
@@ -16,6 +16,6 @@ function Home({ titleSuffix }) {
       <Portfolio />
     </motion.div>
   );
-}
+};
 
 export default Home;
