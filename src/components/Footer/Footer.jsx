@@ -27,11 +27,11 @@ function Footer() {
     <Wrapper>
       <Content variants={container} initial="hidden" whileInView="show">
         <Box variants={box}>
-          <p>&copy; Łukasz Kuś</p>
+          <p>&copy; Łukasz Kuś - lkus.pl</p>
         </Box>
         <Box variants={box}>
-          <a href="#github">Github</a>
-          <a href="#linkedin">Linkedin</a>
+          <a href="https://github.com/lukaszkus">Github</a>
+          <a href="https://www.linkedin.com/in/lukasz-kus/">Linkedin</a>
         </Box>
       </Content>
     </Wrapper>
