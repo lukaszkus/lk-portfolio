@@ -191,8 +191,8 @@ export const Grid = styled.div`
   }
 
   @media ${breakpoint.desktop} {
-    grid-template-columns: repeat(3, 1fr);
-    /* gap: 4rem; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 4rem;
   }
 `;
 
