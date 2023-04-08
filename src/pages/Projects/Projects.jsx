@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
-import { Divider, Portfolio } from "../../components";
+import { Divider, Portfolio, Heading } from "../../components";
 
 import { Wrapper } from "./Projects.style";
 
@@ -15,7 +15,8 @@ const Projects = ({ titlePrefix, titleSuffix }) => {
       exit={{ opacity: 0 }}
     >
       <Wrapper>
-        <Divider label="Projects" />
+        <Heading title="Projects" />
+        <Divider />
         <Portfolio />
       </Wrapper>
     </motion.div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
-import { Divider } from "../../components";
+import { Divider, Heading } from "../../components";
 
 import { Wrapper } from "./AboutMe.style";
 
@@ -14,7 +14,8 @@ const AboutMe = ({ titlePrefix, titleSuffix }) => {
       exit={{ opacity: 0 }}
     >
       <Wrapper>
-        <Divider label="About me" />
+        <Heading title="About me" />
+        <Divider />
       </Wrapper>
     </motion.div>
   );
