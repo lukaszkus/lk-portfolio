@@ -1,4 +1,4 @@
-export { default as Bio } from "./Bio";
-export { default as ContactPage } from "./ContactPage";
-export { default as Home } from "./Home";
-export { default as Work } from "./Work";
+export { default as AboutMe } from "./AboutMe/AboutMe";
+export { default as Contact } from "./Contact/Contact";
+export { default as Home } from "./Home/Home";
+export { default as Projects } from "./Projects/Projects";

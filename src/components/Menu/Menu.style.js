@@ -75,6 +75,10 @@ export const Content = styled(motion.div)`
     }
   }
 
+  .active {
+    color: var(--clr-middle);
+  }
+
   div {
     display: flex;
     align-items: flex-end;

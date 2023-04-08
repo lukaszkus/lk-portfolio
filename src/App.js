@@ -5,7 +5,7 @@ import { GlobalStyle } from "./style/GlobalStyle";
 import { ScrollToTop } from "./utils";
 
 //Pages
-import { Bio, Home, ContactPage } from "./pages";
+import { AboutMe, Home, Contact, Projects } from "./pages";
 //Components
 import { Divider, Footer, ScrollBtn, Topbar } from "./components";
 
@@ -23,7 +23,7 @@ const App = () => {
 
   let titlePrefix = `${location.pathname.replace("/", "")} | `;
 
-  const titleSuffix = `ŁK - I design and develop webpages & applications`;
+  const titleSuffix = `ŁK - I design and develop websites & apps`;
 
   return (
     <>
@@ -34,18 +34,21 @@ const App = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home titleSuffix={titleSuffix} />} />
           <Route
-            path="bio"
+            path="aboutme"
             element={
-              <Bio titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+              <AboutMe titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+            }
+          />
+          <Route
+            path="projects"
+            element={
+              <Projects titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
             }
           />
           <Route
             path="contact"
             element={
-              <ContactPage
-                titlePrefix={titlePrefix}
-                titleSuffix={titleSuffix}
-              />
+              <Contact titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
             }
           />
           <Route
