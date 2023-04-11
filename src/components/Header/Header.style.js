@@ -116,11 +116,9 @@ export const Title = styled(motion.div)`
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 300;
     color: var(--clr-middle);
-    /* transition: 0.3s ease-in-out; */
-
     display: inline-flex;
     gap: 0.5rem;
 
@@ -133,7 +131,7 @@ export const Title = styled(motion.div)`
     }
 
     span {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
 
       @media ${breakpoint.tablet} {
         font-size: 1.875rem;
