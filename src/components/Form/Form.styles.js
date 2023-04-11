@@ -115,4 +115,18 @@ export const ContactForm = styled.form`
       }
     }
   }
+
+  .success {
+    display: block;
+    padding-top: 2rem;
+    font-weight: 200;
+    color: var(--clr-accentPrimary);
+  }
+
+  .error {
+    display: block;
+    padding-top: 2rem;
+    font-weight: 200;
+    color: var(--clr-accentSecondary);
+  }
 `;
