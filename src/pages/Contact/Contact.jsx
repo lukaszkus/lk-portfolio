@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
-import { Divider, Heading } from "../../components";
+import { Divider, Form, Heading } from "../../components";
 
 import { Wrapper } from "./Contact.style";
 
@@ -16,6 +16,7 @@ const Contact = ({ titlePrefix, titleSuffix }) => {
       <Wrapper>
         <Heading title="Contact" />
         <Divider />
+        <Form />
       </Wrapper>
     </motion.div>
   );
