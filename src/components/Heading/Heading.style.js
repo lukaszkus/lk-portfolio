@@ -43,7 +43,7 @@ export const Title = styled.h1`
   background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
 
   @media ${breakpoint.tablet} {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   @media ${breakpoint.desktopXL} {
