@@ -1,5 +1,6 @@
 export { default as Button } from "./Button/Button";
 export { default as Divider } from "./Divider/Divider";
+export { default as Form } from "./Form/Form";
 export { default as Footer } from "./Footer/Footer";
 export { default as Header } from "./Header/Header";
 export { default as Heading } from "./Heading/Heading";
