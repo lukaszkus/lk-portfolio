@@ -21,7 +21,7 @@ import {
 const App = () => {
   const location = useLocation();
 
-  let titlePrefix = `${location.pathname.replace("/", "")} | `;
+  // let titlePrefix = `${location.pathname.replace("/", "")} | `;
 
   const titleSuffix = `ŁK - I design and develop websites & apps`;
 
@@ -36,32 +36,71 @@ const App = () => {
           <Route
             path="aboutme"
             element={
-              <AboutMe titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+              <AboutMe titlePrefix="About me | " titleSuffix={titleSuffix} />
             }
           />
           <Route
             path="projects"
             element={
-              <Projects titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+              <Projects titlePrefix="Projects | " titleSuffix={titleSuffix} />
             }
           />
           <Route
             path="contact"
             element={
-              <Contact titlePrefix={titlePrefix} titleSuffix={titleSuffix} />
+              <Contact titlePrefix="Contact | " titleSuffix={titleSuffix} />
             }
           />
           <Route
             path="work/inspiration-way"
-            element={<InspirationWay id={5} />}
+            element={
+              <InspirationWay
+                id={5}
+                titlePrefix="Inspiration Way | "
+                titleSuffix={titleSuffix}
+              />
+            }
           />
-          <Route path="work/top-albums" element={<TopAlbums id={4} />} />
+          <Route
+            path="work/top-albums"
+            element={
+              <TopAlbums
+                id={4}
+                titlePrefix="Top Albums | "
+                titleSuffix={titleSuffix}
+              />
+            }
+          />
           <Route
             path="work/informatyk-na-godziny"
-            element={<Informatyk id={3} />}
+            element={
+              <Informatyk
+                id={3}
+                titlePrefix="Informatyk na godziny | "
+                titleSuffix={titleSuffix}
+              />
+            }
           />
-          <Route path="work/todo-app" element={<TodoApp id={2} />} />
-          <Route path="work/fm-solutions" element={<FrontendMentor id={1} />} />
+          <Route
+            path="work/todo-app"
+            element={
+              <TodoApp
+                id={2}
+                titlePrefix="Todo App | "
+                titleSuffix={titleSuffix}
+              />
+            }
+          />
+          <Route
+            path="work/fm-solutions"
+            element={
+              <FrontendMentor
+                id={1}
+                titlePrefix="Frontend Mentor solutions | "
+                titleSuffix={titleSuffix}
+              />
+            }
+          />
         </Routes>
       </AnimatePresence>
       <Divider />

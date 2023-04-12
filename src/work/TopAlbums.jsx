@@ -1,3 +1,4 @@
+import useDocumentTitle from "../hooks/useDocumentTitle";
 import { motion } from "framer-motion";
 
 import { COLORS, images, portfolioItems } from "../utils";
@@ -17,7 +18,8 @@ import {
 
 import { Divider, PortfolioNav } from "../components";
 
-function TopAlbums({ id }) {
+const TopAlbums = ({ id, titlePrefix, titleSuffix }) => {
+  useDocumentTitle(`${titlePrefix}${titleSuffix}`);
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
 
@@ -26,14 +28,13 @@ function TopAlbums({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Content>
           <HeroImg>
             <img
               src={cover}
-              alt={title}
-              // alt={`${title} - ${category}`}
+              // alt={title}
+              alt={`${title} - ${category}`}
             />
           </HeroImg>
         </Content>
@@ -120,6 +121,6 @@ function TopAlbums({ id }) {
       <PortfolioNav id={id} />
     </>
   );
-}
+};
 
 export default TopAlbums;

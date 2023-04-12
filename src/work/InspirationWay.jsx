@@ -1,3 +1,4 @@
+import useDocumentTitle from "../hooks/useDocumentTitle";
 import { motion } from "framer-motion";
 
 import { COLORS, images, portfolioItems } from "../utils";
@@ -17,7 +18,8 @@ import {
 
 import { Divider, PortfolioNav } from "../components";
 
-function InspirationWay({ id }) {
+const InspirationWay = ({ id, titlePrefix, titleSuffix }) => {
+  useDocumentTitle(`${titlePrefix}${titleSuffix}`);
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
 
@@ -26,11 +28,14 @@ function InspirationWay({ id }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        exit={{ opacity: 0 }}>
         <Content>
           <HeroImg>
-            <img src={cover} alt={`${title} - ${category}`} />
+            <img
+              src={cover}
+              // alt={title}
+              alt={`${title} - ${category}`}
+            />
           </HeroImg>
         </Content>
         <Wrapper>
@@ -109,6 +114,6 @@ function InspirationWay({ id }) {
       <PortfolioNav id={id} />
     </>
   );
-}
+};
 
 export default InspirationWay;
