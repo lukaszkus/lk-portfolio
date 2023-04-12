@@ -220,6 +220,14 @@ export const ImageItem = styled.div`
   }
 `;
 
+export const FullWidth = styled.div`
+  padding: 4rem 0;
+
+  @media ${breakpoint.desktop} {
+    padding: 6rem 0;
+  }
+`;
+
 export const TextItem = styled.article`
   display: flex;
   flex-direction: column;

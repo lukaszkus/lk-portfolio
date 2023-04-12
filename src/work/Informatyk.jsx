@@ -8,7 +8,8 @@ import {
   Wrapper,
   Content,
   Description,
-  Grid,
+  FullWidth,
+  // Grid,
   Heading,
   HeroImg,
   ImageItem,
@@ -99,11 +100,20 @@ const Informatyk = ({ id, titlePrefix, titleSuffix }) => {
 
         <Wrapper>
           <Content>
-            <Grid>
+            <FullWidth>
               <ImageItem>
-                <img src={images.ta_brand_01} alt="Top Albums logo" />
+                <img src={images.inf_full} alt="Desktop" />
               </ImageItem>
-            </Grid>
+            </FullWidth>
+            {/* <Grid>
+              {[images.inf_desktop_01, images.inf_desktop_02].map(
+                (image, index) => (
+                  <ImageItem key={index}>
+                    <img src={image} alt="Desktop" />
+                  </ImageItem>
+                )
+              )}
+            </Grid> */}
           </Content>
         </Wrapper>
       </motion.div>

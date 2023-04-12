@@ -35,6 +35,10 @@ import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
 
 //Informatyk
 import inf_cover from "../assets/work/inf/inf_cover.jpg";
+import inf_full from "../assets/work/inf/inf_full.jpg";
+import inf_desktop_hero from "../assets/work/inf/inf_desktop_hero.jpg";
+import inf_desktop_01 from "../assets/work/inf/inf_desktop_01.jpg";
+import inf_desktop_02 from "../assets/work/inf/inf_desktop_02.jpg";
 
 //Inspiration Way
 import iw_cover from "../assets/work/iw/iw_cover.jpg";
@@ -73,6 +77,10 @@ const images = {
   fm_timetracking,
 
   inf_cover,
+  inf_full,
+  inf_desktop_hero,
+  inf_desktop_01,
+  inf_desktop_02,
 
   iw_cover,
   iw_desktop_home,
