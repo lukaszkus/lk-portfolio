@@ -49,32 +49,32 @@ export const Box = styled(motion.div)`
 
 export const Text = styled.div`
   h2 {
-    padding-top: 0.75rem;
-    font-size: 1rem;
+    padding-top: 0.875rem;
+    font-size: 1.125rem;
     font-weight: 300;
     color: var(--clr-light);
     text-decoration: none;
 
     @media ${breakpoint.tablet} {
       padding-top: 1rem;
-      font-size: 1.25rem;
+      font-size: 1.375rem;
     }
 
     @media ${breakpoint.desktopXL} {
       padding-top: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.625rem;
     }
   }
 
   p {
-    padding: 0.375rem 0;
+    padding: 0.5rem 0;
     font-size: 0.75rem;
     font-weight: 200;
     color: var(--clr-middle);
     text-decoration: none;
 
     @media ${breakpoint.tablet} {
-      font-size: 0.875rem;
+      font-size: 1rem;
     }
 
     @media ${breakpoint.desktopXL} {

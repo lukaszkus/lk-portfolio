@@ -95,12 +95,12 @@ export const ContactForm = styled.form`
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--clr-middle);
+    color: var(--clr-light);
     display: inline-flex;
     gap: 0.5rem;
 
     :hover {
-      color: var(--clr-light);
+      color: var(--clr-middle);
     }
 
     @media ${breakpoint.tablet} {

@@ -64,9 +64,9 @@ export const Title = styled(motion.div)`
     }
 
     :last-of-type {
-      font-size: 0.875rem;
+      font-size: 1rem;
       padding-bottom: 3.5rem;
-      width: 80%;
+      width: 90%;
       line-height: 1.5;
 
       @media ${breakpoint.tablet} {
@@ -118,12 +118,12 @@ export const Title = styled(motion.div)`
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--clr-middle);
+    color: var(--clr-light);
     display: inline-flex;
     gap: 0.5rem;
 
     :hover {
-      color: var(--clr-light);
+      color: var(--clr-middle);
     }
 
     @media ${breakpoint.tablet} {
