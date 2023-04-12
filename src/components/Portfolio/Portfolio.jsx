@@ -7,8 +7,12 @@ import { Wrapper, Content, Grid, Box, Text } from "./Portfolio.style";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
-function Portfolio() {
+function Portfolio({ showItems }) {
   const { portfolioList } = useContext(Context);
+
+  const showPortfolioList = showItems
+    ? portfolioList.slice(0, showItems)
+    : portfolioList;
 
   const container = {
     hidden: { opacity: 0 },
@@ -43,9 +47,8 @@ function Portfolio() {
           initial="hidden"
           whileInView="show"
           exit="hidden"
-          viewport={{ once: true }}
-        >
-          {portfolioList.map((item) => (
+          viewport={{ once: true }}>
+          {showPortfolioList.map((item) => (
             <Box key={item.id} variants={box} whileInView="show">
               <Link to={item.path}>
                 <div>

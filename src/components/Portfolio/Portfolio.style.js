@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
-  padding: 2.5rem 0;
+  padding: 4rem 0;
 
   @media ${breakpoint.desktop} {
     padding: 6rem 0;
@@ -23,7 +23,7 @@ export const Content = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  gap: 2.5rem;
+  gap: 4rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
