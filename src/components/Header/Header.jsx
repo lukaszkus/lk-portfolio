@@ -25,12 +25,12 @@ const Header = () => {
   };
 
   const btn = {
-    hidden: { x: -50, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     show: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
-        delay: 0.8,
+        delay: 0.6,
         ...transition,
       },
     },
@@ -48,7 +48,8 @@ const Header = () => {
           variants={container}
           initial="hidden"
           animate="show"
-          exit="hidden">
+          exit="hidden"
+        >
           <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
           <motion.h1 variants={title}>
             I <span>design</span> & <span>develop</span>
@@ -63,14 +64,16 @@ const Header = () => {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+          >
             <motion.button
               variants={btn}
               animate="show"
               initial="hidden"
               whileHover="hover"
               whileTap="hover"
-              exit={{ opacity: 0, y: 20 }}>
+              exit="hidden"
+            >
               View my projects
               <motion.span variants={arrow}>
                 <RxArrowBottomRight />

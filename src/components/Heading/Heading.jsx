@@ -8,8 +8,8 @@ const Heading = ({ title }) => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.4,
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
         ...transition,
         delay: 0.2,
       },
@@ -28,7 +28,8 @@ const Heading = ({ title }) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        exit="hidden">
+        exit="hidden"
+      >
         <Title variants={heading}>{title}</Title>
       </Content>
     </Wrapper>

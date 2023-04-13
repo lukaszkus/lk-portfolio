@@ -31,7 +31,7 @@ const container = {
 };
 
 const text = {
-  hidden: { opacity: 0, y: -10 },
+  hidden: { opacity: 0, y: 20 },
   show: {
     y: 0,
     opacity: 1,
@@ -43,16 +43,17 @@ const text = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: -10 },
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { ...transition } },
 };
 
 const btn = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 10 },
   show: {
+    y: 0,
     opacity: 1,
     transition: {
-      delay: 0.8,
+      delay: 0.5,
       ...transition,
     },
   },
@@ -127,7 +128,8 @@ const Form = () => {
             variants={text}
             initial="hidden"
             animate="show"
-            exit="hidden">
+            exit="hidden"
+          >
             Don't hesitate to contact me through the form or by direct email on{" "}
             <a href="mailto:hello.kusiu@gmail.com">hello.kusiu@gmail.com</a>.
           </motion.p>
@@ -136,7 +138,8 @@ const Form = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            exit="hidden">
+            exit="hidden"
+          >
             <motion.div className="input-group" variants={item}>
               <label>What is your name? *</label>
               <input
@@ -197,7 +200,9 @@ const Form = () => {
               animate="show"
               initial="hidden"
               whileHover="hover"
-              whileTap="hover">
+              whileTap="hover"
+              exit="hidden"
+            >
               Send message
               <motion.span variants={arrow}>
                 <RxArrowTopRight />

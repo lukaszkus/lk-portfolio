@@ -55,7 +55,7 @@ export const Grid = styled.div`
 `;
 
 export const ContactForm = styled(motion.form)`
-  margin-top: 8px;
+  margin-top: 6px;
 
   .input-group {
     display: flex;

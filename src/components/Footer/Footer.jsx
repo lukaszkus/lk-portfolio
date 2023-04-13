@@ -10,8 +10,8 @@ function Footer() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.4,
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
         ...transition,
         delay: 0.2,
       },
@@ -19,13 +19,18 @@ function Footer() {
   };
 
   const box = {
-    hidden: { opacity: 0, y: -10 },
+    hidden: { opacity: 0, y: 10 },
     show: { opacity: 1, y: 0, transition: { ...transition } },
   };
 
   return (
     <Wrapper>
-      <Content variants={container} initial="hidden" whileInView="show">
+      <Content
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        exit="hidden"
+      >
         <Box variants={box}>
           <p>&copy; Łukasz Kuś - lkus.pl</p>
         </Box>
