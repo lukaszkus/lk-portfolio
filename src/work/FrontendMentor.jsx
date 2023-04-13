@@ -19,6 +19,25 @@ import {
 
 import { Divider, PortfolioNav } from "../components";
 
+const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+      ...transition,
+    },
+  },
+};
+
+const child = {
+  hidden: { y: 20, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { ...transition } },
+};
+
 const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
   useDocumentTitle(`${titlePrefix}${titleSuffix}`);
   const item = portfolioItems.find((item) => item.id === id);
@@ -29,11 +48,18 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}>
+        exit={{ opacity: 0 }}
+      >
         <Content>
-          <HeroImg>
-            <img
+          <HeroImg
+            variants={container}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+          >
+            <motion.img
               src={cover}
+              variants={child}
               // alt={title}
               alt={`${title} - ${category}`}
             />
@@ -41,31 +67,48 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
         </Content>
         <Wrapper>
           <Content>
-            <Heading>
-              <h1>{title}</h1>
-              <h2>{category}</h2>
+            <Heading
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <motion.h1 variants={child}>{title}</motion.h1>
+              <motion.h2 variants={child}>{category}</motion.h2>
             </Heading>
             <Description>
-              <div>
-                <p>{project.description}</p>
-                <p>{project.details}</p>
-              </div>
+              <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                exit="hidden"
+                viewport={{ once: true }}
+              >
+                <motion.p variants={child}>{project.description}</motion.p>
+                <motion.p variants={child}>{project.details}</motion.p>
+              </motion.div>
 
-              <List>
-                <ul>
+              <List
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                exit="hidden"
+                viewport={{ once: true }}
+              >
+                <motion.ul variants={child}>
                   <p>My role:</p>
                   {project.role.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
-                </ul>
-                <ul>
+                </motion.ul>
+                <motion.ul variants={child}>
                   <p>Technology used:</p>
                   {project.technology.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
-                </ul>
-
-                <ul>
+                </motion.ul>
+                <motion.ul variants={child}>
                   <p>Links:</p>
                   <li>
                     <OuterLink
@@ -87,7 +130,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                       color={COLORS.accentPrimary}
                     />
                   </li>
-                </ul>
+                </motion.ul>
               </List>
             </Description>
           </Content>
@@ -96,17 +139,23 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
 
         <Wrapper>
           <Content>
-            <Grid>
-              <ImageItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <ImageItem variants={child}>
                 <img
                   src={images.fm_baseapparel}
                   alt="Base Apparel comming soon page"
                 />
               </ImageItem>
-              <TextItem data-aos="fade-up">
+              <TextItem variants={child}>
                 <h3>Base Apparel comming soon page</h3>
                 <p>
-                  A great project to practice responsive layout building and
+                  A great project to practice responsive layout builting and
                   simple form validation.
                   <br />
                   Users are able to view the optimal layout depending on their
@@ -115,7 +164,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   (if the input field is empty or email address is not formatted
                   correctly).
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -149,11 +198,20 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               </TextItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <TextItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <TextItem variants={child}>
                 <h3>Easybank landing page</h3>
                 <p>
                   A responisve landing page with mobile navigation menu toggle.
@@ -161,7 +219,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   depending on their device's screen size, see hover states for
                   all interactive elements on the page.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -193,19 +251,28 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   />
                 </LinkContainer>
               </TextItem>
-              <ImageItem data-aos="fade-up">
+              <ImageItem variants={child}>
                 <img src={images.fm_easybank} alt="Easybank landing page" />
               </ImageItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <ImageItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <ImageItem variants={child}>
                 <img src={images.fm_social} alt="Social media dashboard" />
               </ImageItem>
-              <TextItem data-aos="fade-up">
+              <TextItem variants={child}>
                 <h3>Social media dashboard</h3>
                 <p>
                   It is a responsive dashboard layout with color theme switcher.
@@ -216,7 +283,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   depending on their device's screen size, toggle color theme to
                   their preference.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -250,18 +317,27 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               </TextItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <TextItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <TextItem variants={child}>
                 <h3>Order summary component</h3>
                 <p>
-                  It is a simple component build to practice layout skills.
+                  It is a simple component built to practice layout skills.
                   <br /> Users are able to see hover states for interactive
                   elements.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -292,19 +368,28 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   />
                 </LinkContainer>
               </TextItem>
-              <ImageItem data-aos="fade-up">
+              <ImageItem variants={child}>
                 <img src={images.fm_order} alt="Order summary component" />
               </ImageItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <ImageItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <ImageItem variants={child}>
                 <img src={images.fm_huddle} alt="Huddle landing page" />
               </ImageItem>
-              <TextItem data-aos="fade-up">
+              <TextItem variants={child}>
                 <h3>Huddle landing page</h3>
                 <p>
                   A responisve landing page where users are able to view the
@@ -312,7 +397,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   size and see hover states for all interactive elements on the
                   page.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -345,11 +430,20 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               </TextItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <TextItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <TextItem variants={child}>
                 <h3>Pricing component</h3>
                 <p>
                   Responsive pricing component where users are able to toggle
@@ -357,7 +451,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   depending on their device's screen size and see hover states
                   for all interactive elements on the page.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -389,25 +483,34 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   />
                 </LinkContainer>
               </TextItem>
-              <ImageItem data-aos="fade-up">
+              <ImageItem variants={child}>
                 <img src={images.fm_pricing} alt="Pricing component" />
               </ImageItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <ImageItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <ImageItem variants={child}>
                 <img
                   src={images.fm_timetracking}
                   alt="Time tracking dashboard"
                 />
               </ImageItem>
-              <TextItem data-aos="fade-up">
+              <TextItem variants={child}>
                 <h3>Time tracking dashboard</h3>
                 <p>
-                  Dashboard layout build with CSS Grid. The data is pull from
+                  Dashboard layout built with CSS Grid. The data is pull from
                   local
                   <i> data.json</i> file.
                   <br />
@@ -416,7 +519,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   on the page and view the optimal layout for the site depending
                   on their device's screen size.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -450,11 +553,20 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               </TextItem>
             </Grid>
           </Content>
-          <Divider />
+        </Wrapper>
 
+        <Divider />
+
+        <Wrapper>
           <Content>
-            <Grid>
-              <TextItem data-aos="fade-up">
+            <Grid
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              viewport={{ once: true }}
+            >
+              <TextItem variants={child}>
                 <h3>3 column component</h3>
                 <p>
                   Simple, responsive 3 column component. Users are able to view
@@ -462,7 +574,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   screen size and see hover states for all interactive elements
                   on the page.
                 </p>
-                <p>Build with:</p>
+                <p>Built with:</p>
                 <ul>
                   {[
                     "Semantic HTML markup",
@@ -493,7 +605,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                   />
                 </LinkContainer>
               </TextItem>
-              <ImageItem data-aos="fade-up">
+              <ImageItem variants={child}>
                 <img src={images.fm_3column} alt="3 column component" />
               </ImageItem>
             </Grid>

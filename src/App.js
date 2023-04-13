@@ -5,7 +5,12 @@ import { GlobalStyle } from "./style/GlobalStyle";
 import { ScrollToTop } from "./utils";
 
 //Pages
-import { AboutMe, Home, Contact, Projects } from "./pages";
+import {
+  // AboutMe,
+  Home,
+  Contact,
+  // Projects
+} from "./pages";
 //Components
 import { Divider, Footer, ScrollBtn, Topbar } from "./components";
 
@@ -33,7 +38,7 @@ const App = () => {
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home titleSuffix={titleSuffix} />} />
-          <Route
+          {/* <Route
             path="aboutme"
             element={
               <AboutMe titlePrefix="About me | " titleSuffix={titleSuffix} />
@@ -44,7 +49,7 @@ const App = () => {
             element={
               <Projects titlePrefix="Projects | " titleSuffix={titleSuffix} />
             }
-          />
+          /> */}
           <Route
             path="contact"
             element={

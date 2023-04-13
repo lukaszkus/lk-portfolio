@@ -78,7 +78,7 @@ export const Content = styled.div`
   }
 `;
 
-export const HeroImg = styled.div`
+export const HeroImg = styled(motion.div)`
   width: 100%;
   max-height: 680px;
   margin-top: 80px;
@@ -102,7 +102,7 @@ export const HeroImg = styled.div`
   }
 `;
 
-export const Heading = styled.div`
+export const Heading = styled(motion.div)`
   padding: 4rem 0;
 
   @media ${breakpoint.desktop} {
@@ -125,7 +125,7 @@ export const Heading = styled.div`
 
   h2 {
     font-weight: 300;
-    font-size: 0.875rem;
+    font-size: 1rem;
     /* padding-bottom: 4rem; */
 
     @media ${breakpoint.desktop} {
@@ -136,23 +136,23 @@ export const Heading = styled.div`
 
 export const Description = styled.div`
   padding-bottom: 6rem;
-  line-height: 1.8;
+  line-height: 2;
 
   div {
     p {
-      font-size: 0.875rem;
+      font-size: 1rem;
       font-weight: 200;
       padding-bottom: 1rem;
 
       @media ${breakpoint.tablet} {
-        font-size: 1rem;
+        font-size: 1.125rem;
       }
     }
   }
 `;
 
-export const List = styled.div`
-  font-size: 0.875rem;
+export const List = styled(motion.div)`
+  font-size: 1rem;
 
   ul {
     list-style: none;
@@ -180,7 +180,7 @@ export const List = styled.div`
   }
 `;
 
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
   display: grid;
   gap: 2rem;
   padding: 6rem 0;
@@ -196,7 +196,7 @@ export const Grid = styled.div`
   }
 `;
 
-export const ImageItem = styled.div`
+export const ImageItem = styled(motion.div)`
   display: grid;
   order: 1;
 
@@ -205,12 +205,12 @@ export const ImageItem = styled.div`
     height: auto;
   }
   p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 200;
     padding: 2.5rem 0;
 
     @media ${breakpoint.tablet} {
-      font-size: 1rem;
+      font-size: 1.125rem;
       padding: 4rem 0;
     }
   }
@@ -228,23 +228,27 @@ export const FullWidth = styled.div`
   }
 `;
 
-export const TextItem = styled.article`
+export const TextItem = styled(motion.article)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1rem 0;
-  line-height: 1.8;
+  line-height: 2;
   color: var(--clr-light);
   order: 2;
 
   h3 {
-    font-weight: 200;
+    font-weight: 400;
   }
 
   p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 200;
-    padding: 1rem 0;
+    padding: 2rem 0;
+
+    @media ${breakpoint.tablet} {
+      font-size: 1.125rem;
+    }
   }
 
   ul {
@@ -257,11 +261,11 @@ export const TextItem = styled.article`
   }
 
   li {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 200;
     padding: 0.3rem 0.8rem;
     border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(48, 58, 72, 0.6);
   }
 
   @media ${breakpoint.tablet} {
