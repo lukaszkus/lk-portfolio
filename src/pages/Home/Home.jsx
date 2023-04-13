@@ -15,11 +15,30 @@ import {
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
-const btn = {
+const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+      ...transition,
+    },
+  },
+};
+
+const title = {
+  hidden: { y: 20, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { ...transition } },
+};
+
+const btn = {
+  hidden: { y: 20, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.3,
       ...transition,
     },
   },
@@ -36,7 +55,8 @@ const Home = ({ titleSuffix }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
+      exit={{ opacity: 0 }}
+    >
       <Header />
       <Divider label="Latest projects" />
       <Portfolio
@@ -70,17 +90,27 @@ const Home = ({ titleSuffix }) => {
       <Wrapper>
         <Content>
           <Contact>
-            <div>
-              <h3>Get in touch</h3>
-              <p>Want to discuss a project, collaborate or say hello?</p>
-            </div>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              exit="hidden"
+            >
+              <motion.h3 variants={title}>Get in touch</motion.h3>
+              <motion.p variants={title}>
+                Want to discuss a project, collaborate or say hello?
+              </motion.p>
+            </motion.div>
             <Link to="contact">
               <motion.button
                 variants={btn}
-                animate="show"
+                whileInView="show"
+                viewport={{ once: true }}
                 initial="hidden"
                 whileHover="hover"
-                whileTap="hover">
+                whileTap="hover"
+              >
                 Contact me
                 <motion.span variants={arrow}>
                   <RxArrowBottomRight />
