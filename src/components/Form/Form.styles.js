@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
@@ -31,11 +32,16 @@ export const Grid = styled.div`
   .contact-text {
     font-weight: 200;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 2;
     padding-bottom: 4rem;
+    margin: 0;
+
+    @media ${breakpoint.tablet} {
+      font-size: 1.125rem;
+    }
 
     a {
-      font-size: 1rem;
+      /* font-size: 1rem; */
       font-weight: 400;
       color: var(--clr-middle);
       text-decoration: none;
@@ -48,7 +54,9 @@ export const Grid = styled.div`
   }
 `;
 
-export const ContactForm = styled.form`
+export const ContactForm = styled(motion.form)`
+  margin-top: 8px;
+
   .input-group {
     display: flex;
     flex-direction: column;

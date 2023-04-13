@@ -34,7 +34,7 @@ export const Content = styled(motion.div)`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   width: 100%;
   font-size: 2.5rem;
   font-weight: 600;

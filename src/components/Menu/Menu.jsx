@@ -78,18 +78,17 @@ function Menu() {
             variants={container}
             initial="hidden"
             animate="show"
-            exit="hidden"
-          >
+            exit="hidden">
             <motion.ul variants={list}>
               <motion.li variants={item}>
-                <Link to="/">Home</Link>
+                <Link to="/">Projects</Link>
               </motion.li>
-              <motion.li variants={item}>
+              {/* <motion.li variants={item}>
                 <Link to="projects">Projects</Link>
               </motion.li>
               <motion.li variants={item}>
                 <Link to="aboutme">About me</Link>
-              </motion.li>
+              </motion.li> */}
               <motion.li variants={item}>
                 <Link to="contact">Contact</Link>
               </motion.li>
@@ -102,8 +101,7 @@ function Menu() {
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/lukasz-kus/"
-                variants={link}
-              >
+                variants={link}>
                 <SlSocialLinkedin size="1.8em" />
               </motion.a>
             </motion.div>

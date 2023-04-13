@@ -16,6 +16,11 @@ const Heading = ({ title }) => {
     },
   };
 
+  const heading = {
+    hidden: { y: 20, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { ...transition } },
+  };
+
   return (
     <Wrapper>
       <Content
@@ -23,8 +28,8 @@ const Heading = ({ title }) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-      >
-        <Title>{title}</Title>
+        exit="hidden">
+        <Title variants={heading}>{title}</Title>
       </Content>
     </Wrapper>
   );

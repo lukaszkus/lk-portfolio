@@ -5,7 +5,12 @@ import { RxArrowBottomRight } from "react-icons/rx";
 
 import { Divider, Header, Portfolio } from "../../components";
 
-import { Wrapper, Content, About, Contact } from "./Home.style";
+import {
+  Wrapper,
+  Content,
+  // About,
+  Contact,
+} from "./Home.style";
 // import { images } from "../../utils";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -31,21 +36,19 @@ const Home = ({ titleSuffix }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+      exit={{ opacity: 0 }}>
       <Header />
       <Divider label="Latest projects" />
-      <Portfolio showItems={4} />
-      <Divider label="About me" />
+      <Portfolio
+      // showItems={4}
+      />
+      {/* <Divider label="About me" />
       <Wrapper>
         <Content>
           <About>
             <p>
-              I am a frontend developer with a passion for creating user
-              interfaces and user experience. I have experience in creating web
-              and mobile applications especially in React technology. <br />I
-              create websites that are fast, easy to use and built with best
-              practices.
+              Get a brief look at who I am and what I do. If you would like to
+              know more about me and my interests, you can.
             </p>
             <Link to="aboutme">
               <motion.button
@@ -53,8 +56,7 @@ const Home = ({ titleSuffix }) => {
                 animate="show"
                 initial="hidden"
                 whileHover="hover"
-                whileTap="hover"
-              >
+                whileTap="hover">
                 More about me
                 <motion.span variants={arrow}>
                   <RxArrowBottomRight />
@@ -63,7 +65,7 @@ const Home = ({ titleSuffix }) => {
             </Link>
           </About>
         </Content>
-      </Wrapper>
+      </Wrapper> */}
       <Divider label="Contact" />
       <Wrapper>
         <Content>
@@ -78,8 +80,7 @@ const Home = ({ titleSuffix }) => {
                 animate="show"
                 initial="hidden"
                 whileHover="hover"
-                whileTap="hover"
-              >
+                whileTap="hover">
                 Contact me
                 <motion.span variants={arrow}>
                   <RxArrowBottomRight />

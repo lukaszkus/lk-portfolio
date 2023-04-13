@@ -75,9 +75,9 @@ export const Content = styled(motion.div)`
     }
   }
 
-  .active {
+  /* .active {
     color: var(--clr-middle);
-  }
+  } */
 
   div {
     display: flex;
