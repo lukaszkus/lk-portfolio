@@ -2,7 +2,6 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"; //if there are bugs, import from "framer-motion/dist/framer-motion"
 
 import { GlobalStyle } from "./style/GlobalStyle";
-import { ScrollToTop } from "./utils";
 
 //Pages
 import {
@@ -26,14 +25,11 @@ import {
 const App = () => {
   const location = useLocation();
 
-  // let titlePrefix = `${location.pathname.replace("/", "")} | `;
-
   const titleSuffix = `ŁK - I design and develop websites & apps`;
 
   return (
     <>
       <GlobalStyle />
-      <ScrollToTop />
       <Topbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>

@@ -13,7 +13,7 @@ const scrollY = keyframes`
 
 `;
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled.div`
   padding-inline: 2rem;
 `;
 
@@ -220,11 +220,11 @@ export const ImageItem = styled(motion.div)`
   }
 `;
 
-export const FullWidth = styled.div`
-  padding: 4rem 0;
+export const FullWidth = styled(motion.div)`
+  margin: 4rem 0;
 
   @media ${breakpoint.desktop} {
-    padding: 6rem 0;
+    margin: 6rem 0;
   }
 `;
 

@@ -1,16 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ContextProvider } from "./context/context";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { ScrollToTop } from "./utils";
+
 ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>
-      <BrowserRouter>
+      <Router>
+        <ScrollToTop />
         <App />
-      </BrowserRouter>
+      </Router>
     </ContextProvider>
   </React.StrictMode>,
   document.getElementById("root")

@@ -21,42 +21,36 @@ import { Divider, PortfolioNav } from "../components";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-      ...transition,
-    },
-  },
-};
-
-const child = {
-  hidden: { y: 20, opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { ...transition } },
-};
-
 const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
   useDocumentTitle(`${titlePrefix}${titleSuffix}`);
   const item = portfolioItems.find((item) => item.id === id);
   const { title, category, project, cover } = item;
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+        ...transition,
+      },
+    },
+  };
+
+  const child = {
+    hidden: { y: 20, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { ...transition } },
+  };
+
   return (
     <>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
+        animate={{ opacity: 1, transition: { ...transition } }}
+        exit={{ opacity: 0, transition: { ...transition } }}>
         <Content>
-          <HeroImg
-            variants={container}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-          >
+          <HeroImg variants={container} initial="hidden" animate="show">
             <motion.img
               src={cover}
               variants={child}
@@ -71,9 +65,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <motion.h1 variants={child}>{title}</motion.h1>
               <motion.h2 variants={child}>{category}</motion.h2>
             </Heading>
@@ -82,9 +74,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
-                exit="hidden"
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
                 <motion.p variants={child}>{project.description}</motion.p>
                 <motion.p variants={child}>{project.details}</motion.p>
               </motion.div>
@@ -93,9 +83,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
-                exit="hidden"
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
                 <motion.ul variants={child}>
                   <p>My role:</p>
                   {project.role.map((item, index) => (
@@ -143,9 +131,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <ImageItem variants={child}>
                 <img
                   src={images.fm_baseapparel}
@@ -208,9 +194,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <TextItem variants={child}>
                 <h3>Easybank landing page</h3>
                 <p>
@@ -266,9 +250,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <ImageItem variants={child}>
                 <img src={images.fm_social} alt="Social media dashboard" />
               </ImageItem>
@@ -327,9 +309,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <TextItem variants={child}>
                 <h3>Order summary component</h3>
                 <p>
@@ -383,9 +363,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <ImageItem variants={child}>
                 <img src={images.fm_huddle} alt="Huddle landing page" />
               </ImageItem>
@@ -440,9 +418,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <TextItem variants={child}>
                 <h3>Pricing component</h3>
                 <p>
@@ -498,9 +474,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <ImageItem variants={child}>
                 <img
                   src={images.fm_timetracking}
@@ -563,9 +537,7 @@ const FrontendMentor = ({ id, titlePrefix, titleSuffix }) => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              exit="hidden"
-              viewport={{ once: true }}
-            >
+              viewport={{ once: true }}>
               <TextItem variants={child}>
                 <h3>3 column component</h3>
                 <p>

@@ -48,8 +48,7 @@ const Header = () => {
           variants={container}
           initial="hidden"
           animate="show"
-          exit="hidden"
-        >
+          exit="hidden">
           <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
           <motion.h1 variants={title}>
             I <span>design</span> & <span>develop</span>
@@ -64,16 +63,14 @@ const Header = () => {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}
-          >
+            duration={500}>
             <motion.button
               variants={btn}
               animate="show"
               initial="hidden"
               whileHover="hover"
               whileTap="hover"
-              exit="hidden"
-            >
+              exit="hidden">
               View my projects
               <motion.span variants={arrow}>
                 <RxArrowBottomRight />

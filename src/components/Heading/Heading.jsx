@@ -28,8 +28,7 @@ const Heading = ({ title }) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        exit="hidden"
-      >
+        exit="hidden">
         <Title variants={heading}>{title}</Title>
       </Content>
     </Wrapper>
