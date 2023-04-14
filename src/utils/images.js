@@ -36,6 +36,7 @@ import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
 //Informatyk
 import inf_cover from "../assets/work/inf/inf_cover.jpg";
 import inf_full from "../assets/work/inf/inf_full.jpg";
+import inf_mobile_screens from "../assets/work/inf/inf_mobile_screens.jpg";
 import inf_desktop_hero from "../assets/work/inf/inf_desktop_hero.jpg";
 import inf_desktop_01 from "../assets/work/inf/inf_desktop_01.jpg";
 import inf_desktop_02 from "../assets/work/inf/inf_desktop_02.jpg";
@@ -81,6 +82,7 @@ const images = {
   inf_desktop_hero,
   inf_desktop_01,
   inf_desktop_02,
+  inf_mobile_screens,
 
   iw_cover,
   iw_desktop_home,

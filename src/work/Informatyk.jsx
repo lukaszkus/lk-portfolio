@@ -126,18 +126,23 @@ const Informatyk = ({ id, titlePrefix, titleSuffix }) => {
 
         <Wrapper>
           <Content>
-            <FullWidth
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}>
-              <ImageItem
-                variants={child}
-                whileInView="show"
-                viewport={{ once: true }}>
-                <img src={images.inf_full} alt="Desktop" />
-              </ImageItem>
-            </FullWidth>
+            {[images.inf_full, images.inf_mobile_screens].map(
+              (image, index) => (
+                <FullWidth
+                  variants={container}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}>
+                  <ImageItem
+                    key={index}
+                    variants={child}
+                    whileInView="show"
+                    viewport={{ once: true }}>
+                    <img src={image} alt="Informatyk na godziny" />
+                  </ImageItem>
+                </FullWidth>
+              )
+            )}
             {/* <Grid>
               {[images.inf_desktop_01, images.inf_desktop_02].map(
                 (image, index) => (

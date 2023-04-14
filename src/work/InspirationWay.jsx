@@ -121,12 +121,6 @@ const InspirationWay = ({ id, titlePrefix, titleSuffix }) => {
         <Divider />
         <Wrapper>
           <Content>
-            {/* <ScrollY>
-              <img src={images.browser} alt="" className="browser-tb" />
-              <div>
-                <img src={images.iw_desktop_home} alt="Home page" />
-              </div>
-            </ScrollY> */}
             <Grid
               variants={container}
               initial="hidden"
