@@ -51,7 +51,7 @@ const portfolioItems = [
       description:
         "Website landing page for IT specialists offering their services and support.",
       details:
-        "It is a single-page application that has a simple and clean design. The page is divided into several sections with different background colors.The first section contains a animated hero image and a call- to - action button.The next sections contains a brief description of the offered services and information about how the website works.The last section contains a contact information.",
+        "It is a single-page application that has a simple and clean design. The page is divided into several sections with different background colors. The first section contains a animated hero image and a call-to-action button.The next sections contains a brief description of the offered services and information about how the website works.The last section contains a contact information.",
       technology: [
         "React.js",
         "SCSS",
