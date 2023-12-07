@@ -31,7 +31,7 @@ const Divider = ({ label }) => {
             scaleX: 1,
             transition: {
               ease: "easeInOut",
-              delay: 0.4,
+              delay: 0.6,
               duration: 0.4,
             },
           }}

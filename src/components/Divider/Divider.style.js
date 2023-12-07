@@ -37,9 +37,16 @@ export const Content = styled.div`
   }
 
   .line {
-    background-color: var(--clr-middle);
+    border-top: 0.5px solid var(--clr-middle);
     height: 0.5px;
     flex: 1;
     transform-origin: left;
   }
+
+  // .line {
+  //   background-color: var(--clr-middle);
+  //   height: 0.5px;
+  //   flex: 1;
+  //   transform-origin: left;
+  // }
 `;
