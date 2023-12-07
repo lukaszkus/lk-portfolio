@@ -44,10 +44,7 @@ const InspirationWay = ({ id, titlePrefix, titleSuffix }) => {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { ...transition } }}
-        exit={{ opacity: 0, transition: { ...transition } }}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { ...transition } }} exit={{ opacity: 0, transition: { ...transition } }}>
         <Content>
           <HeroImg variants={container} initial="hidden" animate="show">
             <motion.img
@@ -60,29 +57,17 @@ const InspirationWay = ({ id, titlePrefix, titleSuffix }) => {
         </Content>
         <Wrapper>
           <Content>
-            <Heading
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}>
+            <Heading variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <motion.h1 variants={child}>{title}</motion.h1>
               <motion.h2 variants={child}>{category}</motion.h2>
             </Heading>
             <Description>
-              <motion.div
-                variants={container}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}>
+              <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
                 <motion.p variants={child}>{project.description}</motion.p>
                 <motion.p variants={child}>{project.details}</motion.p>
               </motion.div>
 
-              <List
-                variants={container}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}>
+              <List variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
                 <motion.ul variants={child}>
                   <p>My role:</p>
                   {project.role.map((item, index) => (
@@ -104,14 +89,7 @@ const InspirationWay = ({ id, titlePrefix, titleSuffix }) => {
                 <motion.ul variants={child}>
                   <p>Links:</p>
                   <li>
-                    <OuterLink
-                      href={project.links.liveSite}
-                      icon="liveSite"
-                      text="Live site"
-                      width="20px"
-                      height="20px"
-                      color={COLORS.accentPrimary}
-                    />
+                    <OuterLink href={project.links.liveSite} icon="liveSite" text="Live site" width="20px" height="20px" color={COLORS.accentPrimary} />
                   </li>
                 </motion.ul>
               </List>
@@ -121,23 +99,10 @@ const InspirationWay = ({ id, titlePrefix, titleSuffix }) => {
         <Divider />
         <Wrapper>
           <Content>
-            <Grid
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}>
-              {[
-                images.iw_desktop_home,
-                images.iw_desktop_about,
-                images.iw_desktop_services,
-                images.iw_desktop_contact,
-              ].map((image, index) => (
-                <ImageItem
-                  key={index}
-                  variants={child}
-                  whileInView="show"
-                  viewport={{ once: true }}>
-                  <img src={image} alt="Desktop" />
+            <Grid variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
+              {[images.iw_desktop_home, images.iw_desktop_about, images.iw_desktop_services, images.iw_desktop_contact].map((image, index) => (
+                <ImageItem key={index} variants={child} whileInView="show" viewport={{ once: true }}>
+                  <img src={image} alt="Desktop" loading="lazy" />
                 </ImageItem>
               ))}
             </Grid>
