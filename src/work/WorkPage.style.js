@@ -4,7 +4,7 @@ import { breakpoint } from "../utils";
 
 const scrollX = keyframes`
 	0% { transform: translateX(0) }
-	100% { transform: translateX(calc(-100%))}
+	100% { transform: translateX(-100%)}  
 `;
 
 const scrollY = keyframes`
@@ -22,12 +22,13 @@ export const ScrollX = styled(motion.div)`
   overflow-x: hidden;
 
   div {
+    position: relative;
     width: 100%;
     display: flex;
     animation: ${scrollX} 45s linear infinite;
 
     img {
-      width: 100%;
+      width: 100vw;
       height: auto;
     }
   }
