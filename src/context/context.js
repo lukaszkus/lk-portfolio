@@ -1,7 +1,6 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState } from "react";
 import useToggle from "../hooks/useToggle";
 import { useCycle } from "framer-motion";
-import AOS from "aos";
 
 import { portfolioItems } from "../utils";
 const Context = createContext();
@@ -11,11 +10,6 @@ export function ContextProvider({ children }) {
   const [open, cycleOpen] = useCycle(false, true);
   const [offset, setOffset] = useState(0);
   const [portfolioList, setPortfolioList] = useState(portfolioItems);
-
-  //Animate On Scroll
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   //Filter porfolio items
   const types = [...new Set(portfolioItems.map((item) => item.type))];
@@ -28,18 +22,6 @@ export function ContextProvider({ children }) {
     setPortfolioList(newPortfolioList);
   };
 
-  //Parallax effect
-  useEffect(() => {
-    function handleScroll() {
-      setOffset(window.pageYOffset);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [offset]);
   return (
     <Context.Provider
       value={{
