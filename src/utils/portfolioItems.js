@@ -2,6 +2,26 @@ import { images } from "./";
 
 const portfolioItems = [
   {
+    id: 6,
+    title: "TuliMamaFizjo",
+    type: "front-end",
+    category: "Website",
+    project: {
+      description:
+        "Tulimamfizjo.pl is a website tailored for Ola, a physiotherapy specialist.",
+      details:
+        "It is a valuable resource for those seeking physiotherapy information and services. Website is built with Gatsby JS for fast performance, styled using SCSS, and content is managed through Contentful. This combination ensures a user-friendly experience.",
+      technology: ["Gatsby.js", "SCSS"],
+      tools: ["Contentful", "EmailJS"],
+      role: ["Web design", "Web development"],
+      links: {
+        liveSite: "https://tulimamafizjo.pl",
+      },
+    },
+    cover: images.tulimama_cover,
+    path: "/work/tulimamafizjo",
+  },
+  {
     id: 5,
     title: "Inspiration Way",
     type: "front-end",

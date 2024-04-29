@@ -68,7 +68,7 @@ const link = {
 };
 
 function Menu() {
-  const { open, cycleOpen } = useContext(Context);
+  const { open, cycleOpen, toggleCursor } = useContext(Context);
 
   return (
     <AnimatePresence>
@@ -78,10 +78,15 @@ function Menu() {
             variants={container}
             initial="hidden"
             animate="show"
-            exit="hidden">
+            exit="hidden"
+          >
             <motion.ul variants={list}>
-              <motion.li variants={item}>
-                <Link to="/">Projects</Link>
+              <motion.li
+                variants={item}
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
+              >
+                <Link to="/">Home</Link>
               </motion.li>
               {/* <motion.li variants={item}>
                 <Link to="projects">Projects</Link>
@@ -89,19 +94,33 @@ function Menu() {
               <motion.li variants={item}>
                 <Link to="aboutme">About me</Link>
               </motion.li> */}
-              <motion.li variants={item}>
+              <motion.li
+                variants={item}
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
+              >
                 <Link to="contact">Contact</Link>
               </motion.li>
             </motion.ul>
 
             <motion.div className="line" variants={line}></motion.div>
             <motion.div variants={list}>
-              <motion.a href="https://github.com/lukaszkus" variants={link}>
+              <motion.a
+                href="https://github.com/lukaszkus"
+                target="_blank"
+                variants={link}
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
+              >
                 <VscGithubAlt size="2em" />
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/lukasz-kus/"
-                variants={link}>
+                target="_blank"
+                variants={link}
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
+              >
                 <SlSocialLinkedin size="1.8em" />
               </motion.a>
             </motion.div>

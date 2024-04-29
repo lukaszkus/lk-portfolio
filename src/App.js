@@ -11,7 +11,14 @@ import {
   // Projects
 } from "./pages";
 //Components
-import { Divider, Footer, ScrollBtn, Topbar } from "./components";
+import {
+  Aurora,
+  CustomCursor,
+  Divider,
+  Footer,
+  ScrollBtn,
+  Topbar,
+} from "./components";
 
 //Work
 import {
@@ -20,6 +27,7 @@ import {
   Informatyk,
   TodoApp,
   FrontendMentor,
+  TuliMamaFizjo,
 } from "./work";
 
 const App = () => {
@@ -30,6 +38,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <CustomCursor />
       <Topbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
@@ -50,6 +59,16 @@ const App = () => {
             path="contact"
             element={
               <Contact titlePrefix="Contact | " titleSuffix={titleSuffix} />
+            }
+          />
+          <Route
+            path="work/tulimamafizjo"
+            element={
+              <TuliMamaFizjo
+                id={6}
+                titlePrefix="TuliMamaFizjo | "
+                titleSuffix={titleSuffix}
+              />
             }
           />
           <Route
@@ -106,6 +125,7 @@ const App = () => {
       </AnimatePresence>
       <Divider />
       <Footer />
+      <Aurora />
       <ScrollBtn />
     </>
   );

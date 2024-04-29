@@ -25,8 +25,10 @@ export const Content = styled(motion.div)`
   gap: 3rem;
   width: 80%;
   height: 100%;
-  background: var(--clr-light);
   padding: 6rem 2rem 4rem 2rem;
+  background-color: rgba(195, 207, 226, 0.75); //--clr-light + opacity
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 
   @media ${breakpoint.tablet} {
     width: 50%;
@@ -44,6 +46,7 @@ export const Content = styled(motion.div)`
     list-style: none;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
     font-size: 1.75rem;
     font-weight: 400;
@@ -68,7 +71,7 @@ export const Content = styled(motion.div)`
   a {
     color: var(--clr-dark);
     text-decoration: none;
-    /* transition: 0.3s all ease-in-out; */
+    transition: color 0.3s ease-in-out;
 
     :hover {
       color: var(--clr-middle);

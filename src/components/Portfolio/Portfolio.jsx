@@ -7,37 +7,37 @@ import { Wrapper, Content, Grid, Box, Text } from "./Portfolio.style";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.5,
+      ...transition,
+      // delay: 0.6,
+    },
+  },
+};
+
+const box = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { ...transition } },
+};
+
+const img = {
+  hover: {
+    scale: 1.07,
+    transition: { ease: [0.43, 0.13, 0.23, 0.96] },
+  },
+};
+
 function Portfolio({ showItems }) {
-  const { portfolioList } = useContext(Context);
+  const { portfolioList, toggleCursor } = useContext(Context);
 
   const showPortfolioList = showItems
     ? portfolioList.slice(0, showItems)
     : portfolioList;
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.5,
-        ...transition,
-        delay: 0.6,
-      },
-    },
-  };
-
-  const box = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { ...transition } },
-  };
-
-  const img = {
-    hover: {
-      scale: 1.07,
-      transition: { ease: [0.43, 0.13, 0.23, 0.96] },
-    },
-  };
 
   return (
     <Wrapper id="portfolio">
@@ -47,10 +47,15 @@ function Portfolio({ showItems }) {
           initial="hidden"
           whileInView="show"
           exit="hidden"
-          viewport={{ once: true }}>
+          viewport={{ once: true }}
+        >
           {showPortfolioList.map((item) => (
             <Box key={item.id} variants={box} whileInView="show">
-              <Link to={item.path}>
+              <Link
+                to={item.path}
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
+              >
                 <div>
                   <motion.img
                     variants={img}

@@ -80,16 +80,19 @@ export const About = styled.div`
 export const Contact = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 3rem;
 
-  @media ${breakpoint.tablet} {
-    align-items: center;
-  }
+  // @media ${breakpoint.tablet} {
+  //   align-items: center;
+  //   text-align: center;
+  // }
 
   div {
     h3 {
       font-size: 2.5rem;
       font-weight: 600;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);

@@ -10,6 +10,10 @@ import browser from "../assets/browser.jpg";
 
 //WORK IMAGES
 
+//Tulimama
+import tulimama_cover from "../assets/work/tulimama/tulimama_cover.jpg";
+import tulimama_desktop_1 from "../assets/work/tulimama/tulimama_desktop_1.jpg";
+
 //Top Albums
 import ta_cover from "../assets/work/topAlbums/ta_cover.jpg";
 import ta_screens from "../assets/work/topAlbums/ta_screens.jpg";
@@ -56,6 +60,9 @@ const images = {
   icon_download,
   icon_fm,
   browser,
+
+  tulimama_cover,
+  tulimama_desktop_1,
 
   ta_cover,
   ta_screens,

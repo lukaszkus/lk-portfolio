@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
+import Context from "../../context/context";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -65,6 +66,7 @@ const arrow = {
 };
 
 const Form = () => {
+  const { toggleCursor } = useContext(Context);
   const [status, setStatus] = useState("");
   const {
     register,
@@ -75,27 +77,20 @@ const Form = () => {
 
   const sendEmail = (formData) => {
     console.log(formData);
-    emailjs
-      .send(
-        "service_ueusljw",
-        "template_a9alsgn",
-        formData,
-        "tFj1IO-_z-0dXRGbM"
-      )
-      .then(
-        (result) => {
-          console.log(result.status);
-          if (result.status === 200) {
-            setStatus("SUCCESS");
-          }
-        },
-        (error) => {
-          console.log(error);
-          if (error) {
-            setStatus("FAILD");
-          }
+    emailjs.send("service_ueusljw", "template_a9alsgn", formData, "tFj1IO-_z-0dXRGbM").then(
+      (result) => {
+        console.log(result.status);
+        if (result.status === 200) {
+          setStatus("SUCCESS");
         }
-      );
+      },
+      (error) => {
+        console.log(error);
+        if (error) {
+          setStatus("FAILD");
+        }
+      }
+    );
     reset();
   };
 
@@ -111,11 +106,7 @@ const Form = () => {
     if (status === "SUCCESS") {
       return <span className="success">Your message was send.</span>;
     } else if (status === "FAILD") {
-      return (
-        <span className="error">
-          Oops! Something went wrong. Please try again.
-        </span>
-      );
+      return <span className="error">Oops! Something went wrong. Please try again.</span>;
     } else return null;
   };
 
@@ -123,26 +114,19 @@ const Form = () => {
     <Wrapper>
       <Content>
         <Grid>
-          <motion.p
-            className="contact-text"
-            variants={text}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-          >
+          <motion.p className="contact-text" variants={text} initial="hidden" animate="show" exit="hidden">
             Don't hesitate to contact me through the form or by direct email on{" "}
-            <a href="mailto:hello.kusiu@gmail.com">hello.kusiu@gmail.com</a>.
+            <a href="mailto:hello.kusiu@gmail.com" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+              hello.kusiu@gmail.com
+            </a>
+            .
           </motion.p>
-          <ContactForm
-            onSubmit={handleSubmit(sendEmail)}
-            variants={container}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-          >
+          <ContactForm onSubmit={handleSubmit(sendEmail)} variants={container} initial="hidden" animate="show" exit="hidden">
             <motion.div className="input-group" variants={item}>
               <label>What is your name? *</label>
               <input
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
                 placeholder="Łukasz Kuś"
                 type="text"
                 id="name"
@@ -161,6 +145,8 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your email address? *</label>
               <input
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
                 placeholder="hello.kusiu@gmail.com"
                 type="email"
                 id="email"
@@ -179,6 +165,8 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your message? *</label>
               <textarea
+                onMouseEnter={toggleCursor}
+                onMouseLeave={toggleCursor}
                 placeholder="Hi Łukasz, let's work!"
                 id="message"
                 name="message"
@@ -194,15 +182,7 @@ const Form = () => {
               />
               <span>{errors.message?.message}</span>
             </motion.div>
-            <motion.button
-              type="submit"
-              variants={btn}
-              animate="show"
-              initial="hidden"
-              whileHover="hover"
-              whileTap="hover"
-              exit="hidden"
-            >
+            <motion.button type="submit" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
               Send message
               <motion.span variants={arrow}>
                 <RxArrowTopRight />

@@ -1,4 +1,6 @@
 // import { NavLink as Link } from "react-router-dom";
+import { useContext } from "react";
+import Context from "../../context/context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { RxArrowBottomRight } from "react-icons/rx";
@@ -6,40 +8,42 @@ import { Wrapper, Content, Title } from "./Header.style";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+      ...transition,
+    },
+  },
+};
+
+const title = {
+  hidden: { y: 20, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { ...transition } },
+};
+
+const btn = {
+  hidden: { y: 20, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.6,
+      ...transition,
+    },
+  },
+};
+
+const arrow = {
+  hidden: { x: 0, y: 0 },
+  hover: { x: 6, y: 6, transition: { ...transition } },
+};
+
 const Header = () => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-        ...transition,
-      },
-    },
-  };
-
-  const title = {
-    hidden: { y: 20, opacity: 0 },
-    show: { y: 0, opacity: 1, transition: { ...transition } },
-  };
-
-  const btn = {
-    hidden: { y: 20, opacity: 0 },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: 0.6,
-        ...transition,
-      },
-    },
-  };
-
-  const arrow = {
-    hidden: { x: 0, y: 0 },
-    hover: { x: 6, y: 6, transition: { ...transition } },
-  };
+  const { toggleCursor } = useContext(Context);
 
   return (
     <Wrapper>
@@ -48,12 +52,13 @@ const Header = () => {
           variants={container}
           initial="hidden"
           animate="show"
-          exit="hidden">
+          exit="hidden"
+        >
           <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
           <motion.h1 variants={title}>
             I <span>design</span> & <span>develop</span>
           </motion.h1>
-          <motion.h1 variants={title}>websites and apps.</motion.h1>
+          <motion.h1 variants={title}>websites and apps</motion.h1>
           <motion.p variants={title}>
             I'm a frontend developer with a passion for great design and user
             experience.
@@ -63,14 +68,18 @@ const Header = () => {
             spy={true}
             smooth={true}
             offset={-100}
-            duration={500}>
+            duration={500}
+            onMouseEnter={toggleCursor}
+            onMouseLeave={toggleCursor}
+          >
             <motion.button
               variants={btn}
               animate="show"
               initial="hidden"
               whileHover="hover"
               whileTap="hover"
-              exit="hidden">
+              exit="hidden"
+            >
               View my projects
               <motion.span variants={arrow}>
                 <RxArrowBottomRight />

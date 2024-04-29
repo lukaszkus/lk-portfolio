@@ -81,11 +81,8 @@ export const Content = styled.div`
 
 export const HeroImg = styled(motion.div)`
   width: 100%;
-  max-height: 680px;
+  aspect-ratio: 3 / 2;
   margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 
   @media ${breakpoint.desktop} {
@@ -98,8 +95,6 @@ export const HeroImg = styled(motion.div)`
 
   img {
     width: 100%;
-    height: auto;
-    display: block;
   }
 `;
 

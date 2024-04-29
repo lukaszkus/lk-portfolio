@@ -1,4 +1,4 @@
-import { Btn } from "./StyledButton";
+import { Btn } from "./Button.style";
 
 const Button = ({ label, click, children, size }) => {
   return (

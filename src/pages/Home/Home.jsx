@@ -1,9 +1,11 @@
+import { useContext } from "react";
+import Context from "../../context/context";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import { NavLink as Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { RxArrowBottomRight } from "react-icons/rx";
 
-import { Divider, Header, Portfolio } from "../../components";
+import { Divider, Header, Portfolio, Stack } from "../../components";
 
 import {
   Wrapper,
@@ -50,6 +52,7 @@ const arrow = {
 };
 
 const Home = ({ titleSuffix }) => {
+  const { toggleCursor } = useContext(Context);
   useDocumentTitle(`${titleSuffix}`);
   return (
     <motion.div
@@ -86,6 +89,12 @@ const Home = ({ titleSuffix }) => {
           </About>
         </Content>
       </Wrapper> */}
+      <Divider label="Tech stack & tools" />
+      <Wrapper>
+        <Content>
+          <Stack />
+        </Content>
+      </Wrapper>
       <Divider label="Contact" />
       <Wrapper>
         <Content>
@@ -102,7 +111,11 @@ const Home = ({ titleSuffix }) => {
                 Want to discuss a project, collaborate or say hello?
               </motion.p>
             </motion.div>
-            <Link to="contact">
+            <Link
+              to="contact"
+              onMouseEnter={toggleCursor}
+              onMouseLeave={toggleCursor}
+            >
               <motion.button
                 variants={btn}
                 whileInView="show"

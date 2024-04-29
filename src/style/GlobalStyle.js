@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     --clr-accentPrimary: #2575fc;
     --clr-accentSecondary: #ee609c;
     --clr-white: #ffffff;
+    
     //Fonts
     --ff-main: "Unbounded", cursive;
 
