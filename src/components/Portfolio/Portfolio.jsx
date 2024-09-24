@@ -13,6 +13,7 @@ const container = {
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
+
       delayChildren: 0.5,
       ...transition,
       // delay: 0.6,
@@ -35,34 +36,17 @@ const img = {
 function Portfolio({ showItems }) {
   const { portfolioList, toggleCursor } = useContext(Context);
 
-  const showPortfolioList = showItems
-    ? portfolioList.slice(0, showItems)
-    : portfolioList;
+  const showPortfolioList = showItems ? portfolioList.slice(0, showItems) : portfolioList;
 
   return (
     <Wrapper id="portfolio">
       <Content>
-        <Grid
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          exit="hidden"
-          viewport={{ once: true }}
-        >
+        <Grid variants={container} initial="hidden" whileInView="show" exit="hidden" viewport={{ once: true }}>
           {showPortfolioList.map((item) => (
             <Box key={item.id} variants={box} whileInView="show">
-              <Link
-                to={item.path}
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
-              >
+              <Link to={item.path} onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
                 <div>
-                  <motion.img
-                    variants={img}
-                    whileHover="hover"
-                    src={item.cover}
-                    alt={item.title}
-                  />
+                  <motion.img variants={img} whileHover="hover" src={item.cover} alt={item.title} />
                 </div>
               </Link>
               <Text>

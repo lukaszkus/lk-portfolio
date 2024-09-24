@@ -15,6 +15,10 @@ export const Circle = styled(motion.div)`
   width: 120px;
   transition: all 200ms ease-out;
   opacity: 0.3;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Dot = styled(motion.div)`
@@ -30,4 +34,8 @@ export const Dot = styled(motion.div)`
   width: 8px;
   transition: all 100ms ease-out;
   opacity: 0.9;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
