@@ -23,7 +23,7 @@ export const Content = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  gap: 4rem;
+  gap: 3rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);

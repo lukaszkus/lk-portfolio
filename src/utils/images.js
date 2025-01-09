@@ -1,5 +1,6 @@
 //MAIN ASSETS
-import logo from "../assets/ksu-light.svg";
+// import logo from "../assets/ksu-light.svg";
+import logo from "../assets/ksu.svg";
 import me from "../assets/me.jpg";
 
 import icon_github from "../assets/icon-github.svg";
