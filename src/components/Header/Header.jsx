@@ -1,6 +1,7 @@
 // import { NavLink as Link } from "react-router-dom";
 import { useContext } from "react";
 import Context from "../../context/context";
+import useDeviceSize from "../../hooks/useDeviceSize";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { RxArrowBottomRight } from "react-icons/rx";
@@ -44,42 +45,23 @@ const arrow = {
 
 const Header = () => {
   const { toggleCursor } = useContext(Context);
+  const [width] = useDeviceSize();
+
+  const breakLine = width < 540 ? <br /> : null;
 
   return (
     <Wrapper>
       <Content>
-        <Title
-          variants={container}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-        >
+        <Title variants={container} initial="hidden" animate="show" exit="hidden">
           <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
           <motion.h1 variants={title}>
-            I <span>design</span> & <span>develop</span>
+            I <span>design</span>
+            {breakLine} & <span>develop</span>
           </motion.h1>
-          <motion.h1 variants={title}>websites and apps</motion.h1>
-          <motion.p variants={title}>
-            I'm a frontend developer with a passion for great design and user
-            experience.
-          </motion.p>
-          <Link
-            to="portfolio"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            onMouseEnter={toggleCursor}
-            onMouseLeave={toggleCursor}
-          >
-            <motion.button
-              variants={btn}
-              animate="show"
-              initial="hidden"
-              whileHover="hover"
-              whileTap="hover"
-              exit="hidden"
-            >
+          <motion.h1 variants={title}>websites{breakLine} and apps</motion.h1>
+          <motion.p variants={title}>I'm a frontend developer with a passion for great design and user experience.</motion.p>
+          <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500} onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+            <motion.button variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
               View my projects
               <motion.span variants={arrow}>
                 <RxArrowBottomRight />

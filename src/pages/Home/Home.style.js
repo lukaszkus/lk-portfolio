@@ -102,9 +102,9 @@ export const Contact = styled.div`
         font-size: 4rem;
       }
 
-      @media ${breakpoint.desktopXL} {
+      /* @media ${breakpoint.desktopXL} {
         font-size: 5rem;
-      }
+      } */
     }
 
     p {

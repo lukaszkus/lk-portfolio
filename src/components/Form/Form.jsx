@@ -98,7 +98,7 @@ const Form = () => {
     if (status === "SUCCESS" || status === "FAILD") {
       setTimeout(() => {
         setStatus("");
-      }, 5000);
+      }, 3500);
     }
   }, [status]);
 

@@ -80,21 +80,31 @@ export const Content = styled.div`
 `;
 
 export const HeroImg = styled(motion.div)`
+  position: relative;
+  margin-top: 0;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  margin-top: 80px;
+  max-height: 70vh;
+  aspect-ratio: 4 / 2;
   overflow: hidden;
+  border-radius: 0 0 1rem 1rem;
 
   @media ${breakpoint.desktop} {
-    margin-top: 112px;
-  }
-
-  @media ${breakpoint.desktopXL} {
-    max-height: 900px;
+    border-radius: 0 0 2.5rem 2.5rem;
   }
 
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
   }
 `;
 
@@ -114,7 +124,7 @@ export const Heading = styled(motion.div)`
       font-size: 2.75rem;
     }
 
-    @media ${breakpoint.desktopXL} {
+    @media ${breakpoint.desktop} {
       font-size: 3.5rem;
     }
   }

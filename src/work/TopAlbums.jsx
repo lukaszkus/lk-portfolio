@@ -46,16 +46,11 @@ const TopAlbums = ({ id, titlePrefix, titleSuffix }) => {
   return (
     <>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { ...transition } }} exit={{ opacity: 0, transition: { ...transition } }}>
-        <Content>
-          <HeroImg variants={container} initial="hidden" animate="show">
-            <motion.img
-              src={cover}
-              variants={child}
-              // alt={title}
-              alt={`${title} - ${category}`}
-            />
-          </HeroImg>
-        </Content>
+        <HeroImg variants={container} initial="hidden" animate="show">
+          <motion.img src={cover} variants={child} alt={`${title} - ${category}`} />
+          <div></div>
+        </HeroImg>
+
         <Wrapper>
           <Content>
             <Heading variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>

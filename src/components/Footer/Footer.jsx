@@ -33,10 +33,10 @@ function Footer() {
           <p>&copy; Łukasz Kuś - lkus.pl</p>
         </Box>
         <Box variants={box}>
-          <a href="https://github.com/lukaszkus" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+          <a href="https://github.com/lukaszkus" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor} target="_blank" rel="noreferrer">
             Github
           </a>
-          <a href="https://www.linkedin.com/in/lukasz-kus/" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+          <a href="https://www.linkedin.com/in/lukasz-kus/" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor} target="_blank" rel="noreferrer">
             Linkedin
           </a>
         </Box>

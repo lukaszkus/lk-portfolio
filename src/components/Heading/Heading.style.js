@@ -39,6 +39,7 @@ export const Title = styled(motion.h1)`
   font-size: 2.5rem;
   font-weight: 600;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   /* background-image: linear-gradient(
     to right,
@@ -52,10 +53,10 @@ export const Title = styled(motion.h1)`
   background-image: linear-gradient(to right, #209cff 0%, #68e0cf 100%);
 
   @media ${breakpoint.tablet} {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 
-  @media ${breakpoint.desktopXL} {
-    font-size: 6rem;
+  @media ${breakpoint.desktop} {
+    font-size: 4.5rem;
   }
 `;

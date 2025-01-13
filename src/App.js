@@ -11,24 +11,10 @@ import {
   // Projects
 } from "./pages";
 //Components
-import {
-  Aurora,
-  CustomCursor,
-  Divider,
-  Footer,
-  ScrollBtn,
-  Topbar,
-} from "./components";
+import { Aurora, CustomCursor, Divider, Footer, ScrollBtn, Topbar } from "./components";
 
 //Work
-import {
-  InspirationWay,
-  TopAlbums,
-  Informatyk,
-  TodoApp,
-  FrontendMentor,
-  TuliMamaFizjo,
-} from "./work";
+import { InspirationWay, TopAlbums, Informatyk, TodoApp, FrontendMentor, TuliMamaFizjo, RichMedia } from "./work";
 
 const App = () => {
   const location = useLocation();
@@ -55,72 +41,14 @@ const App = () => {
               <Projects titlePrefix="Projects | " titleSuffix={titleSuffix} />
             }
           /> */}
-          <Route
-            path="contact"
-            element={
-              <Contact titlePrefix="Contact | " titleSuffix={titleSuffix} />
-            }
-          />
-          <Route
-            path="work/tulimamafizjo"
-            element={
-              <TuliMamaFizjo
-                id={6}
-                titlePrefix="TuliMamaFizjo | "
-                titleSuffix={titleSuffix}
-              />
-            }
-          />
-          <Route
-            path="work/inspiration-way"
-            element={
-              <InspirationWay
-                id={5}
-                titlePrefix="Inspiration Way | "
-                titleSuffix={titleSuffix}
-              />
-            }
-          />
-          <Route
-            path="work/top-albums"
-            element={
-              <TopAlbums
-                id={4}
-                titlePrefix="Top Albums | "
-                titleSuffix={titleSuffix}
-              />
-            }
-          />
-          <Route
-            path="work/informatyk-na-godziny"
-            element={
-              <Informatyk
-                id={3}
-                titlePrefix="Informatyk na godziny | "
-                titleSuffix={titleSuffix}
-              />
-            }
-          />
-          <Route
-            path="work/todo-app"
-            element={
-              <TodoApp
-                id={2}
-                titlePrefix="Todo App | "
-                titleSuffix={titleSuffix}
-              />
-            }
-          />
-          <Route
-            path="work/fm-solutions"
-            element={
-              <FrontendMentor
-                id={1}
-                titlePrefix="Frontend Mentor solutions | "
-                titleSuffix={titleSuffix}
-              />
-            }
-          />
+          <Route path="contact" element={<Contact titlePrefix="Contact | " titleSuffix={titleSuffix} />} />
+          <Route path="work/richmedia" element={<RichMedia id={7} titlePrefix="Rich Media | " titleSuffix={titleSuffix} />} />
+          <Route path="work/tulimamafizjo" element={<TuliMamaFizjo id={6} titlePrefix="TuliMamaFizjo | " titleSuffix={titleSuffix} />} />
+          <Route path="work/inspiration-way" element={<InspirationWay id={5} titlePrefix="Inspiration Way | " titleSuffix={titleSuffix} />} />
+          <Route path="work/top-albums" element={<TopAlbums id={4} titlePrefix="Top Albums | " titleSuffix={titleSuffix} />} />
+          <Route path="work/informatyk-na-godziny" element={<Informatyk id={3} titlePrefix="Informatyk na godziny | " titleSuffix={titleSuffix} />} />
+          <Route path="work/todo-app" element={<TodoApp id={2} titlePrefix="Todo App | " titleSuffix={titleSuffix} />} />
+          <Route path="work/fm-solutions" element={<FrontendMentor id={1} titlePrefix="Frontend Mentor solutions | " titleSuffix={titleSuffix} />} />
         </Routes>
       </AnimatePresence>
       <Divider />

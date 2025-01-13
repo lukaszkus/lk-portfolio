@@ -11,6 +11,17 @@ import browser from "../assets/browser.jpg";
 
 //WORK IMAGES
 
+//RichMedia
+import rm_cover from "../assets/work/RichMedia/rm_cover.jpg";
+import rm_renault from "../assets/work/RichMedia/rm_renault.png";
+import rm_taniey from "../assets/work/RichMedia/rm_taniey.png";
+import rm_ferrerorocher from "../assets/work/RichMedia/rm_ferrerorocher.png";
+import rm_tefal from "../assets/work/RichMedia/rm_tefal.png";
+import rm_lot from "../assets/work/RichMedia/rm_lot.png";
+import rm_ssangyong from "../assets/work/RichMedia/rm_ssangyong.png";
+import rm_bugatti from "../assets/work/RichMedia/rm_bugatti.png";
+import rm_kinder from "../assets/work/RichMedia/rm_kinder.png";
+
 //Tulimama
 import tulimama_cover from "../assets/work/tulimama/tulimama_cover.jpg";
 import tulimama_desktop_1 from "../assets/work/tulimama/tulimama_desktop_1.jpg";
@@ -61,6 +72,16 @@ const images = {
   icon_download,
   icon_fm,
   browser,
+
+  rm_cover,
+  rm_renault,
+  rm_taniey,
+  rm_ferrerorocher,
+  rm_tefal,
+  rm_lot,
+  rm_ssangyong,
+  rm_bugatti,
+  rm_kinder,
 
   tulimama_cover,
   tulimama_desktop_1,

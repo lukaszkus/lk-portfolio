@@ -52,7 +52,6 @@ export const Title = styled(motion.div)`
   p {
     font-weight: 200;
     font-size: 1.5rem;
-
     padding: 0.5rem 0;
 
     @media ${breakpoint.tablet} {
@@ -83,18 +82,11 @@ export const Title = styled(motion.div)`
 
     span {
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
 
       &:first-child {
-        background-image: linear-gradient(
-          to right,
-          #b8cbb8 0%,
-          #b8cbb8 0%,
-          #b465da 0%,
-          #cf6cc9 33%,
-          #ee609c 66%,
-          #ee609c 100%
-        );
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
       }
 
       &:last-child {
@@ -103,12 +95,16 @@ export const Title = styled(motion.div)`
     }
 
     @media ${breakpoint.tablet} {
+      font-size: 3.5rem;
+    }
+
+    @media ${breakpoint.desktop} {
       font-size: 4.5rem;
     }
 
-    @media ${breakpoint.desktopXL} {
+    /* @media ${breakpoint.desktopXL} {
       font-size: 6rem;
-    }
+    } */
   }
 
   button {

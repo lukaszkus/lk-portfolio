@@ -23,10 +23,14 @@ export const Content = styled.div`
 
 export const Grid = styled(motion.div)`
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
 
   @media ${breakpoint.tablet} {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${breakpoint.desktopXL} {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
@@ -36,6 +40,7 @@ export const Box = styled(motion.div)`
   }
 
   div {
+    border-radius: 1rem;
     overflow: hidden;
 
     img {
@@ -74,10 +79,6 @@ export const Text = styled.div`
     text-decoration: none;
 
     @media ${breakpoint.tablet} {
-      font-size: 1rem;
-    }
-
-    @media ${breakpoint.desktopXL} {
       font-size: 1rem;
     }
   }

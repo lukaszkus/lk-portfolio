@@ -32,14 +32,14 @@ export const Icon = styled(motion.div)`
   width: 60px;
   height: 60px;
 
-  @media ${breakpoint.tablet} {
-    width: 85px;
-    height: 85px;
+  @media ${breakpoint.desktop} {
+    width: 80px;
+    height: 80px;
   }
 
   @media ${breakpoint.desktopXL} {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 `;
 
