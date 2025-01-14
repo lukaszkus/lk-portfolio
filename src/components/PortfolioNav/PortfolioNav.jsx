@@ -7,7 +7,7 @@ import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 import { Wrapper, Content } from "./PortfolioNav.style";
 
 const PortfolioNav = ({ id }) => {
-  const { portfolioList, toggleCursor } = useContext(Context);
+  const { portfolioList } = useContext(Context);
 
   let currentIndex = portfolioList.findIndex((item) => {
     return item.id === id;
@@ -56,7 +56,7 @@ const PortfolioNav = ({ id }) => {
             viewport={{ once: true }}
           >
             {prevPath === null ? null : (
-              <Link to={prevPath} onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+              <Link to={prevPath}>
                 <VscArrowLeft size="1.5em" />
                 <h2>Previous</h2>
                 <p>{portfolioList[prevIndex].title}</p>
@@ -78,7 +78,7 @@ const PortfolioNav = ({ id }) => {
             viewport={{ once: true }}
           >
             {nextPath === null ? null : (
-              <Link to={nextPath} onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+              <Link to={nextPath}>
                 <VscArrowRight size="1.5em" />
                 <h2>Next</h2>
                 <p>{portfolioList[nextIndex].title}</p>

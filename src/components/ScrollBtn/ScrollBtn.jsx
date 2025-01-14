@@ -1,5 +1,4 @@
-import { useContext, useState, useEffect } from "react";
-import Context from "../../context/context";
+import { useState, useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
 import { VscArrowUp } from "react-icons/vsc";
 
@@ -8,7 +7,6 @@ import { ScrollButton } from "./ScrollBtn.style";
 const transition = { duration: 0.4, ease: [0.43, 0.13, 0.23, 0.96] };
 
 function ScrollBtn() {
-  const { toggleCursor } = useContext(Context);
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -34,7 +32,7 @@ function ScrollBtn() {
   };
 
   return (
-    <ScrollButton onClick={scrollToTop} variants={slide} initial="hidden" animate={isVisible ? "show" : "hidden"} whileHover="hover" whileTap="hover" exit="hidden" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+    <ScrollButton onClick={scrollToTop} variants={slide} initial="hidden" animate={isVisible ? "show" : "hidden"} whileHover="hover" whileTap="hover" exit="hidden">
       <VscArrowUp size="2em" color="white" />
     </ScrollButton>
   );

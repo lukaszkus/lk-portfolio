@@ -11,7 +11,7 @@ import {
   // Projects
 } from "./pages";
 //Components
-import { Aurora, CustomCursor, Divider, Footer, ScrollBtn, Topbar } from "./components";
+import { Aurora, Divider, Footer, ScrollBtn, Topbar } from "./components";
 
 //Work
 import { InspirationWay, TopAlbums, Informatyk, TodoApp, FrontendMentor, TuliMamaFizjo, RichMedia } from "./work";
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <Topbar />
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>

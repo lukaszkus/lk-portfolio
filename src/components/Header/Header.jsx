@@ -1,6 +1,4 @@
 // import { NavLink as Link } from "react-router-dom";
-import { useContext } from "react";
-import Context from "../../context/context";
 import useDeviceSize from "../../hooks/useDeviceSize";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -44,7 +42,6 @@ const arrow = {
 };
 
 const Header = () => {
-  const { toggleCursor } = useContext(Context);
   const [width] = useDeviceSize();
 
   const breakLine = width < 540 ? <br /> : null;
@@ -60,7 +57,7 @@ const Header = () => {
           </motion.h1>
           <motion.h1 variants={title}>websites{breakLine} and apps</motion.h1>
           <motion.p variants={title}>I'm a frontend developer with a passion for great design and user experience.</motion.p>
-          <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500} onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+          <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500}>
             <motion.button variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
               View my projects
               <motion.span variants={arrow}>

@@ -34,7 +34,7 @@ const img = {
 };
 
 function Portfolio({ showItems }) {
-  const { portfolioList, toggleCursor } = useContext(Context);
+  const { portfolioList } = useContext(Context);
 
   const showPortfolioList = showItems ? portfolioList.slice(0, showItems) : portfolioList;
 
@@ -44,7 +44,7 @@ function Portfolio({ showItems }) {
         <Grid variants={container} initial="hidden" whileInView="show" exit="hidden" viewport={{ once: true }}>
           {showPortfolioList.map((item) => (
             <Box key={item.id} variants={box} whileInView="show">
-              <Link to={item.path} onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+              <Link to={item.path}>
                 <div>
                   <motion.img variants={img} whileHover="hover" src={item.cover} alt={item.title} />
                 </div>

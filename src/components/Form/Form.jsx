@@ -1,5 +1,4 @@
-import { useContext, useState, useEffect } from "react";
-import Context from "../../context/context";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { RxArrowTopRight } from "react-icons/rx";
@@ -66,7 +65,6 @@ const arrow = {
 };
 
 const Form = () => {
-  const { toggleCursor } = useContext(Context);
   const [status, setStatus] = useState("");
   const {
     register,
@@ -115,18 +113,12 @@ const Form = () => {
       <Content>
         <Grid>
           <motion.p className="contact-text" variants={text} initial="hidden" animate="show" exit="hidden">
-            Don't hesitate to contact me through the form or by direct email on{" "}
-            <a href="mailto:hello.kusiu@gmail.com" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
-              hello.kusiu@gmail.com
-            </a>
-            .
+            Don't hesitate to contact me through the form or by direct email on <a href="mailto:hello.kusiu@gmail.com">hello.kusiu@gmail.com</a>.
           </motion.p>
           <ContactForm onSubmit={handleSubmit(sendEmail)} variants={container} initial="hidden" animate="show" exit="hidden">
             <motion.div className="input-group" variants={item}>
               <label>What is your name? *</label>
               <input
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
                 placeholder="Łukasz Kuś"
                 type="text"
                 id="name"
@@ -145,8 +137,6 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your email address? *</label>
               <input
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
                 placeholder="hello.kusiu@gmail.com"
                 type="email"
                 id="email"
@@ -165,8 +155,6 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your message? *</label>
               <textarea
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
                 placeholder="Hi Łukasz, let's work!"
                 id="message"
                 name="message"
@@ -182,7 +170,7 @@ const Form = () => {
               />
               <span>{errors.message?.message}</span>
             </motion.div>
-            <motion.button type="submit" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden" onMouseEnter={toggleCursor} onMouseLeave={toggleCursor}>
+            <motion.button type="submit" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
               Send message
               <motion.span variants={arrow}>
                 <RxArrowTopRight />

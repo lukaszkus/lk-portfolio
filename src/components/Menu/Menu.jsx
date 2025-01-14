@@ -68,24 +68,15 @@ const link = {
 };
 
 function Menu() {
-  const { open, cycleOpen, toggleCursor } = useContext(Context);
+  const { open, cycleOpen } = useContext(Context);
 
   return (
     <AnimatePresence>
       {open && (
         <Wrapper onClick={cycleOpen}>
-          <Content
-            variants={container}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-          >
+          <Content variants={container} initial="hidden" animate="show" exit="hidden">
             <motion.ul variants={list}>
-              <motion.li
-                variants={item}
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
-              >
+              <motion.li variants={item}>
                 <Link to="/">Home</Link>
               </motion.li>
               {/* <motion.li variants={item}>
@@ -94,33 +85,17 @@ function Menu() {
               <motion.li variants={item}>
                 <Link to="aboutme">About me</Link>
               </motion.li> */}
-              <motion.li
-                variants={item}
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
-              >
+              <motion.li variants={item}>
                 <Link to="contact">Contact</Link>
               </motion.li>
             </motion.ul>
 
             <motion.div className="line" variants={line}></motion.div>
             <motion.div variants={list}>
-              <motion.a
-                href="https://github.com/lukaszkus"
-                target="_blank"
-                variants={link}
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
-              >
+              <motion.a href="https://github.com/lukaszkus" target="_blank" variants={link}>
                 <VscGithubAlt size="2em" />
               </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/in/lukasz-kus/"
-                target="_blank"
-                variants={link}
-                onMouseEnter={toggleCursor}
-                onMouseLeave={toggleCursor}
-              >
+              <motion.a href="https://www.linkedin.com/in/lukasz-kus/" target="_blank" variants={link}>
                 <SlSocialLinkedin size="1.8em" />
               </motion.a>
             </motion.div>
