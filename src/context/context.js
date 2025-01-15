@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { useCycle } from "framer-motion";
-import useMousePosition from "../hooks/useMousePosition";
+// import useMousePosition from "../hooks/useMousePosition";
 
 import { portfolioItems } from "../utils";
 const Context = createContext();
@@ -9,12 +9,12 @@ export function ContextProvider({ children }) {
   const [open, cycleOpen] = useCycle(false, true);
   const [portfolioList, setPortfolioList] = useState(portfolioItems);
   //mousePosition for CustomCursor
-  const { mouseX, mouseY } = useMousePosition();
-  const [cursor, setCursor] = useState({ active: false });
+  // const { mouseX, mouseY } = useMousePosition();
+  // const [cursor, setCursor] = useState({ active: false });
 
-  const toggleCursor = () => {
-    setCursor(({ active }) => ({ active: !active }));
-  };
+  // const toggleCursor = () => {
+  //   setCursor(({ active }) => ({ active: !active }));
+  // };
 
   //Filter porfolio items
   // const types = [...new Set(portfolioItems.map((item) => item.type))];
@@ -36,10 +36,10 @@ export function ContextProvider({ children }) {
         setPortfolioList,
         // types,
         // filterPortfolioList,
-        mouseX,
-        mouseY,
-        cursor,
-        toggleCursor,
+        // mouseX,
+        // mouseY,
+        // cursor,
+        // toggleCursor,
       }}
     >
       {children}

@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ContextProvider } from "./context/context";
+import { AnimatePresence } from "framer-motion"; //if there are bugs, import from "framer-motion/dist/framer-motion"
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -11,8 +13,10 @@ ReactDOM.render(
   <React.StrictMode>
     <ContextProvider>
       <Router>
-        <ScrollToTop />
-        <App />
+        <AnimatePresence exitBeforeEnter>
+          <ScrollToTop />
+          <App />
+        </AnimatePresence>
       </Router>
     </ContextProvider>
   </React.StrictMode>,

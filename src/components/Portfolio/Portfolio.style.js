@@ -50,6 +50,10 @@ export const Box = styled(motion.div)`
       transition: 0.6s all ease-out;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Text = styled.div`
@@ -59,6 +63,11 @@ export const Text = styled.div`
     font-weight: 300;
     color: var(--clr-light);
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    :hover {
+      color: var(--clr-middle);
+    }
 
     @media ${breakpoint.tablet} {
       padding-top: 1rem;

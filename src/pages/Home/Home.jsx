@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import Context from "../../context/context";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import { NavLink as Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -52,14 +50,9 @@ const arrow = {
 };
 
 const Home = ({ titleSuffix }) => {
-  const { toggleCursor } = useContext(Context);
   useDocumentTitle(`${titleSuffix}`);
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <Header />
       <Divider label="Latest projects" />
       <Portfolio
@@ -99,31 +92,12 @@ const Home = ({ titleSuffix }) => {
       <Wrapper>
         <Content>
           <Contact>
-            <motion.div
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              exit="hidden"
-            >
+            <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} exit="hidden">
               <motion.h3 variants={title}>Get in touch</motion.h3>
-              <motion.p variants={title}>
-                Want to discuss a project, collaborate or say hello?
-              </motion.p>
+              <motion.p variants={title}>Want to discuss a project, collaborate or say hello?</motion.p>
             </motion.div>
-            <Link
-              to="contact"
-              onMouseEnter={toggleCursor}
-              onMouseLeave={toggleCursor}
-            >
-              <motion.button
-                variants={btn}
-                whileInView="show"
-                viewport={{ once: true }}
-                initial="hidden"
-                whileHover="hover"
-                whileTap="hover"
-              >
+            <Link to="contact">
+              <motion.button variants={btn} whileInView="show" viewport={{ once: true }} initial="hidden" whileHover="hover" whileTap="hover">
                 Contact me
                 <motion.span variants={arrow}>
                   <RxArrowBottomRight />

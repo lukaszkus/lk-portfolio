@@ -81,10 +81,10 @@ function Menu() {
               </motion.li>
               {/* <motion.li variants={item}>
                 <Link to="projects">Projects</Link>
-              </motion.li>
+              </motion.li> */}
               <motion.li variants={item}>
                 <Link to="aboutme">About me</Link>
-              </motion.li> */}
+              </motion.li>
               <motion.li variants={item}>
                 <Link to="contact">Contact</Link>
               </motion.li>

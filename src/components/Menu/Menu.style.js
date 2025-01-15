@@ -26,18 +26,19 @@ export const Content = styled(motion.div)`
   width: 80%;
   height: 100%;
   padding: 6rem 2rem 4rem 2rem;
-  background-color: rgba(195, 207, 226, 0.75); //--clr-light + opacity
+  background-color: rgba(195, 207, 226, 0.7); //--clr-light + opacity
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  border-radius: 1.5rem 0 0 0;
 
   @media ${breakpoint.tablet} {
-    width: 50%;
+    width: 40%;
     padding: 6rem 4rem 4rem 4rem;
     gap: 2rem;
   }
 
   @media ${breakpoint.desktop} {
-    width: 40%;
+    width: 30%;
     padding: 6rem 4rem 4rem 4rem;
     gap: 2rem;
   }

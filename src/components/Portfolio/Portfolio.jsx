@@ -16,7 +16,6 @@ const container = {
 
       delayChildren: 0.5,
       ...transition,
-      // delay: 0.6,
     },
   },
 };
@@ -28,7 +27,7 @@ const box = {
 
 const img = {
   hover: {
-    scale: 1.07,
+    scale: 1.1,
     transition: { ease: [0.43, 0.13, 0.23, 0.96] },
   },
 };
@@ -48,11 +47,11 @@ function Portfolio({ showItems }) {
                 <div>
                   <motion.img variants={img} whileHover="hover" src={item.cover} alt={item.title} />
                 </div>
+                <Text>
+                  <h2>{item.title}</h2>
+                  <p>{item.category}</p>
+                </Text>
               </Link>
-              <Text>
-                <h2>{item.title}</h2>
-                <p>{item.category}</p>
-              </Text>
             </Box>
           ))}
         </Grid>

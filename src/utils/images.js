@@ -1,7 +1,12 @@
 //MAIN ASSETS
 // import logo from "../assets/ksu-light.svg";
 import logo from "../assets/ksu.svg";
-import me from "../assets/me.jpg";
+import me_1 from "../assets/me/me-1.png";
+import me_2 from "../assets/me/me-2.png";
+import me_3 from "../assets/me/me-3.png";
+import me_mask from "../assets/me/me-mask.png";
+import me_black from "../assets/me/me-black.png";
+import me_shadow from "../assets/me/me-shadow.png";
 
 import icon_github from "../assets/icon-github.svg";
 import icon_web from "../assets/icon-web.svg";
@@ -66,7 +71,12 @@ import iw_desktop_contact from "../assets/work/iw/iw_desktop_contact.jpg";
 
 const images = {
   logo,
-  me,
+  me_1,
+  me_2,
+  me_3,
+  me_mask,
+  me_black,
+  me_shadow,
   icon_github,
   icon_web,
   icon_download,

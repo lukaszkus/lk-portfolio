@@ -2,7 +2,9 @@
 import useDeviceSize from "../../hooks/useDeviceSize";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { RxArrowBottomRight } from "react-icons/rx";
+import { Avatar } from "../";
 import { Wrapper, Content, Title } from "./Header.style";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -49,41 +51,39 @@ const Header = () => {
   return (
     <Wrapper>
       <Content>
-        <Title variants={container} initial="hidden" animate="show" exit="hidden">
-          <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
-          <motion.h1 variants={title}>
-            I <span>design</span>
-            {breakLine} & <span>develop</span>
-          </motion.h1>
-          <motion.h1 variants={title}>websites{breakLine} and apps</motion.h1>
-          <motion.p variants={title}>I'm a frontend developer with a passion for great design and user experience.</motion.p>
-          <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500}>
-            <motion.button variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
-              View my projects
-              <motion.span variants={arrow}>
-                <RxArrowBottomRight />
-              </motion.span>
-            </motion.button>
-          </Link>
-        </Title>
+        <div className="col-1">
+          <Avatar />
+        </div>
+        <div className="col-2">
+          <Title variants={container} initial="hidden" animate="show" exit="hidden">
+            <motion.p variants={title}>Hi, I'm Łukasz</motion.p>
+            <motion.h1 variants={title}>
+              I <span>design</span>
+              {breakLine} & <span>develop</span>
+            </motion.h1>
+            <motion.h1 variants={title}>websites{breakLine} and apps</motion.h1>
+            <motion.p variants={title}>I'm a frontend developer with a passion for great design and user experience.</motion.p>
+            <div className="links">
+              <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500}>
+                <motion.button className="projects" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
+                  My projects
+                  <motion.span variants={arrow}>
+                    <RxArrowBottomRight />
+                  </motion.span>
+                </motion.button>
+              </Link>
+              <NavLink to="aboutme">
+                <motion.button className="about" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
+                  More About me
+                  <motion.span variants={arrow}>
+                    <RxArrowBottomRight />
+                  </motion.span>
+                </motion.button>
+              </NavLink>
+            </div>
+          </Title>
+        </div>
       </Content>
-      {/* <div className="spin">
-        <svg viewBox="0 0 100 100" width="100" height="100">
-          <defs>
-            <path
-              id="circle"
-              d="
-        M 50, 50
-        m -37, 0
-        a 37,37 0 1,1 74,0
-        a 37,37 0 1,1 -74,0"
-            />
-          </defs>
-          <text font-size="12">
-            <textPath href="#circle">SCROLL-DOWN-</textPath>
-          </text>
-        </svg>
-      </div> */}
     </Wrapper>
   );
 };

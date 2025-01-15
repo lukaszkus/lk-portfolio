@@ -9,46 +9,43 @@ export const Wrapper = styled.header`
   display: grid;
   place-items: center;
   position: relative;
-
-  /* .spin {
-    position: fixed;
-    bottom: 2rem;
-    right: 0;
-    z-index: 9;
-
-    svg {
-      fill: currentColor;
-      height: auto;
-      max-width: 66vmin;
-      transform-origin: center;
-      width: 66%;
-      letter-spacing: 10px;
-      animation: spin 20s linear infinite;
-      font-weight: 200;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  } */
 `;
 
 export const Content = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
   width: 100%;
+  position: relative;
+
+  @media ${breakpoint.tablet} {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media ${breakpoint.desktop} {
+    gap: 4rem;
+  }
 
   @media ${breakpoint.desktopXL} {
     max-width: var(--maxWidthXL);
+    gap: 5rem;
+  }
+
+  .col-1 {
+    display: none;
+
+    @media ${breakpoint.tablet} {
+      display: block;
+    }
   }
 `;
 
 export const Title = styled(motion.div)`
+  position: relative;
+  z-index: 1;
+  /* padding-top: 3rem; */
+
   p {
     font-weight: 200;
     font-size: 1.5rem;
@@ -94,17 +91,25 @@ export const Title = styled(motion.div)`
       }
     }
 
-    @media ${breakpoint.tablet} {
-      font-size: 3.5rem;
-    }
-
     @media ${breakpoint.desktop} {
-      font-size: 4.5rem;
+      font-size: 3rem;
     }
 
-    /* @media ${breakpoint.desktopXL} {
-      font-size: 6rem;
-    } */
+    @media ${breakpoint.desktopXL} {
+      font-size: 4rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media ${breakpoint.tablet} {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+    }
   }
 
   button {
@@ -112,26 +117,62 @@ export const Title = styled(motion.div)`
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
-    color: var(--clr-light);
     display: inline-flex;
     gap: 0.5rem;
+
+    @media ${breakpoint.tablet} {
+      font-size: 1rem;
+    }
+
+    @media ${breakpoint.desktopXL} {
+      font-size: 1.25rem;
+    }
+
+    span {
+      font-size: 1.25rem;
+
+      @media ${breakpoint.tablet} {
+        font-size: 1.25rem;
+      }
+
+      @media ${breakpoint.desktopXL} {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .projects {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--clr-accentPrimary);
+    border-radius: 3rem;
+    transition: color 0.3s ease-in-out;
+    color: var(--clr-light);
+
+    :hover {
+      color: var(--clr-accentPrimary);
+    }
+
+    @media ${breakpoint.desktopXL} {
+      padding: 1rem 1.875rem;
+    }
+  }
+
+  .about {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--clr-middle);
+    border-radius: 3rem;
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--clr-light);
 
     :hover {
       color: var(--clr-middle);
     }
 
-    @media ${breakpoint.tablet} {
-      font-size: 1.5rem;
-    }
-
-    span {
-      font-size: 1.5rem;
-
-      @media ${breakpoint.tablet} {
-        font-size: 1.875rem;
-      }
+    @media ${breakpoint.desktopXL} {
+      padding: 1rem 1.875rem;
     }
   }
 `;

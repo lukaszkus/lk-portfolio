@@ -12,16 +12,20 @@ import reactnative from "../assets/stackIcons/reactnative.svg";
 import sass from "../assets/stackIcons/sass.svg";
 import styled from "../assets/stackIcons/styled.svg";
 import vscode from "../assets/stackIcons/vscode.svg";
+import wordpress from "../assets/stackIcons/wordpress.svg";
+import nextjs from "../assets/stackIcons/nextjs.svg";
 
 export const stackIcons = [
   { name: "React", src: react },
-  { name: "React Native", src: reactnative },
-  { name: "Gatsby", src: gatsby },
   { name: "JS", src: js },
+  { name: "Next.js", src: nextjs },
+  { name: "Gatsby", src: gatsby },
+  { name: "React Native", src: reactnative },
   { name: "HTML", src: html },
   { name: "CSS", src: css },
   { name: "SASS", src: sass },
   { name: "Styled Components", src: styled },
+  { name: "Wordpress", src: wordpress },
   { name: "Photoshop", src: ps },
   { name: "Illustrator", src: ai },
   { name: "Figma", src: figma },

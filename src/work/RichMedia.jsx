@@ -85,7 +85,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Renault Aftersales</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/901/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/901/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -103,7 +103,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Taniey Xmas</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/945/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/945/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -121,7 +121,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Ferrero Rocher</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/887/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/887/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -139,7 +139,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Tefal Optigrill</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/756/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/756/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -157,7 +157,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Lot - Journey wheel</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/844/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/844/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -175,7 +175,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Bugatti - Eleganza | Bella Donna</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/521/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/521/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -193,7 +193,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Ssang Yong Actyon</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/845/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/845/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>
@@ -211,7 +211,7 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
               <TextItem variants={child}>
                 <h3>Kinder Chocolate</h3>
                 <LinkContainer>
-                  <OuterLink href="https://prev.sataku.com/campaign/441/7" target="_blank" rel="noreferrer" icon="liveSite" text="Live" width="20px" height="20px" />
+                  <OuterLink href="https://prev.sataku.com/campaign/441/7" icon="liveSite" text="Live" width="20px" height="20px" />
                 </LinkContainer>
               </TextItem>
             </Grid>

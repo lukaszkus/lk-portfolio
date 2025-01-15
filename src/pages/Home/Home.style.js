@@ -33,6 +33,7 @@ export const Content = styled.div`
     color: var(--clr-light);
     display: inline-flex;
     gap: 0.5rem;
+    transition: color 0.3s ease-in-out;
 
     :hover {
       color: var(--clr-middle);
