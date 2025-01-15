@@ -119,7 +119,7 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your name? *</label>
               <input
-                placeholder="Łukasz Kuś"
+                placeholder="Enter your name"
                 type="text"
                 id="name"
                 name="name"
@@ -137,7 +137,7 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your email address? *</label>
               <input
-                placeholder="hello.kusiu@gmail.com"
+                placeholder="Enter your email address"
                 type="email"
                 id="email"
                 name="email"
@@ -155,7 +155,7 @@ const Form = () => {
             <motion.div className="input-group" variants={item}>
               <label>What is your message? *</label>
               <textarea
-                placeholder="Hi Łukasz, let's work!"
+                placeholder="Write something"
                 id="message"
                 name="message"
                 rows="8"

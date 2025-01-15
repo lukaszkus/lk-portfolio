@@ -60,7 +60,7 @@ export const ContactForm = styled(motion.form)`
   .input-group {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 
     label {
       font-size: 1rem;
@@ -70,22 +70,32 @@ export const ContactForm = styled(motion.form)`
 
     input,
     textarea {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--clr-middle-2);
+      background-color: transparent;
+      border: 1px solid var(--clr-middle-2);
+      border-radius: 1rem;
       padding: 1rem;
       font-family: var(--ff-main);
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 200;
       color: var(--clr-light);
       resize: vertical;
+      transition: background-color 0.3s ease-in-out;
+
+      &::placeholder {
+        color: var(--clr-middle-2);
+      }
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
 
       &:focus {
         outline: none;
+        background-color: rgba(0, 0, 0, 0.1);
       }
 
       @media ${breakpoint.tablet} {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
       }
     }
 
@@ -106,6 +116,7 @@ export const ContactForm = styled(motion.form)`
     color: var(--clr-light);
     display: inline-flex;
     gap: 0.5rem;
+    transition: color 0.3s ease-in-out;
 
     :hover {
       color: var(--clr-middle);
