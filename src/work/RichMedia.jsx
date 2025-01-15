@@ -35,10 +35,12 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
   return (
     <>
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { ...transition } }} exit={{ opacity: 0, transition: { ...transition } }}>
-        <HeroImg variants={container} initial="hidden" animate="show">
-          <motion.img src={cover} variants={child} alt={`${title} - ${category}`} />
-          <div></div>
-        </HeroImg>
+        <Content>
+          <HeroImg variants={container} initial="hidden" animate="show">
+            <motion.img src={cover} variants={child} alt={`${title} - ${category}`} />
+            <div></div>
+          </HeroImg>
+        </Content>
 
         <Wrapper>
           <Content>
