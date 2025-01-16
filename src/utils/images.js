@@ -26,6 +26,7 @@ import rm_lot from "../assets/work/RichMedia/rm_lot.png";
 import rm_ssangyong from "../assets/work/RichMedia/rm_ssangyong.png";
 import rm_bugatti from "../assets/work/RichMedia/rm_bugatti.png";
 import rm_kinder from "../assets/work/RichMedia/rm_kinder.png";
+import rm_mattel from "../assets/work/RichMedia/rm_mattel.png";
 
 //Tulimama
 import tulimama_cover from "../assets/work/tulimama/tulimama_cover.jpg";
@@ -86,6 +87,7 @@ const images = {
   rm_cover,
   rm_renault,
   rm_taniey,
+  rm_mattel,
   rm_ferrerorocher,
   rm_tefal,
   rm_lot,

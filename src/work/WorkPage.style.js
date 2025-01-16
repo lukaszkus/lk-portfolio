@@ -214,6 +214,7 @@ export const ImageItem = styled(motion.div)`
     width: 100%;
     height: auto;
   }
+
   p {
     font-size: 1rem;
     font-weight: 200;

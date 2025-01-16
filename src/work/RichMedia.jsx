@@ -118,6 +118,24 @@ const RichMedia = ({ id, titlePrefix, titleSuffix }) => {
           <Content>
             <Grid variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
               <ImageItem variants={child}>
+                <img src={images.rm_mattel} alt="Break The Egg - Minigame" />
+              </ImageItem>
+              <TextItem variants={child}>
+                <h3>Break The Egg - Minigame</h3>
+                <LinkContainer>
+                  <OuterLink href="https://break-the-egg.netlify.app/" icon="liveSite" text="Live" width="20px" height="20px" />
+                </LinkContainer>
+              </TextItem>
+            </Grid>
+          </Content>
+        </Wrapper>
+
+        <Divider />
+
+        <Wrapper>
+          <Content>
+            <Grid variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
+              <ImageItem variants={child}>
                 <img src={images.rm_ferrerorocher} alt="Ferrero Rocher" />
               </ImageItem>
               <TextItem variants={child}>
