@@ -65,7 +65,7 @@ const Header = () => {
             <motion.p variants={title}>I'm a frontend developer with a passion for great design and user experience.</motion.p>
             <div className="links">
               <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500}>
-                <motion.button className="projects" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
+                <motion.button className="projects" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden" name="my-projects">
                   My projects
                   <motion.span variants={arrow}>
                     <RxArrowBottomRight />
@@ -73,7 +73,7 @@ const Header = () => {
                 </motion.button>
               </Link>
               <NavLink to="aboutme">
-                <motion.button className="about" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden">
+                <motion.button className="about" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden" name="more-about-me">
                   More About me
                   <motion.span variants={arrow}>
                     <RxArrowBottomRight />

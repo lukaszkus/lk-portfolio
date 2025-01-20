@@ -32,7 +32,7 @@ function ScrollBtn() {
   };
 
   return (
-    <ScrollButton onClick={scrollToTop} variants={slide} initial="hidden" animate={isVisible ? "show" : "hidden"} whileHover="hover" whileTap="hover" exit="hidden">
+    <ScrollButton onClick={scrollToTop} variants={slide} initial="hidden" animate={isVisible ? "show" : "hidden"} whileHover="hover" whileTap="hover" exit="hidden" type="image" aria-labelledby="scroll-to-top">
       <VscArrowUp size="2em" color="white" />
     </ScrollButton>
   );

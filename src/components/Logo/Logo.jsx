@@ -4,7 +4,7 @@ import { LogoImg } from "./Logo.style";
 
 const Logo = () => {
   return (
-    <Link to="/">
+    <Link to="/" aria-label="Go to home page">
       <LogoImg animate={{ x: [-100, 0], opacity: [0, 1] }} transition={{ delay: 1.5, duration: 0.4 }} />
     </Link>
   );

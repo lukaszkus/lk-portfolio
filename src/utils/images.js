@@ -1,12 +1,12 @@
 //MAIN ASSETS
 // import logo from "../assets/ksu-light.svg";
 import logo from "../assets/ksu.svg";
-import me_1 from "../assets/me/me-1.png";
-import me_2 from "../assets/me/me-2.png";
-import me_3 from "../assets/me/me-3.png";
-import me_mask from "../assets/me/me-mask.png";
-import me_black from "../assets/me/me-black.png";
-import me_shadow from "../assets/me/me-shadow.png";
+import me_1 from "../assets/me/me-1.webp";
+import me_2 from "../assets/me/me-2.webp";
+import me_3 from "../assets/me/me-3.webp";
+import me_mask from "../assets/me/me-mask.webp";
+import me_black from "../assets/me/me-black.webp";
+import me_shadow from "../assets/me/me-shadow.webp";
 
 import icon_github from "../assets/icon-github.svg";
 import icon_web from "../assets/icon-web.svg";
@@ -17,58 +17,54 @@ import browser from "../assets/browser.jpg";
 //WORK IMAGES
 
 //RichMedia
-import rm_cover from "../assets/work/RichMedia/rm_cover.jpg";
-import rm_renault from "../assets/work/RichMedia/rm_renault.png";
-import rm_taniey from "../assets/work/RichMedia/rm_taniey.png";
-import rm_ferrerorocher from "../assets/work/RichMedia/rm_ferrerorocher.png";
-import rm_tefal from "../assets/work/RichMedia/rm_tefal.png";
-import rm_lot from "../assets/work/RichMedia/rm_lot.png";
-import rm_ssangyong from "../assets/work/RichMedia/rm_ssangyong.png";
-import rm_bugatti from "../assets/work/RichMedia/rm_bugatti.png";
-import rm_kinder from "../assets/work/RichMedia/rm_kinder.png";
-import rm_mattel from "../assets/work/RichMedia/rm_mattel.png";
+import rm_cover from "../assets/work/RichMedia/rm_cover.webp";
+import rm_renault from "../assets/work/RichMedia/rm_renault.webp";
+import rm_taniey from "../assets/work/RichMedia/rm_taniey.webp";
+import rm_ferrerorocher from "../assets/work/RichMedia/rm_ferrerorocher.webp";
+import rm_tefal from "../assets/work/RichMedia/rm_tefal.webp";
+import rm_lot from "../assets/work/RichMedia/rm_lot.webp";
+import rm_ssangyong from "../assets/work/RichMedia/rm_ssangyong.webp";
+import rm_bugatti from "../assets/work/RichMedia/rm_bugatti.webp";
+import rm_kinder from "../assets/work/RichMedia/rm_kinder.webp";
+import rm_mattel from "../assets/work/RichMedia/rm_mattel.webp";
 
 //Tulimama
-import tulimama_cover from "../assets/work/tulimama/tulimama_cover.jpg";
-import tulimama_desktop_1 from "../assets/work/tulimama/tulimama_desktop_1.jpg";
+import tulimama_cover from "../assets/work/tulimama/tulimama_cover.webp";
+import tulimama_desktop_1 from "../assets/work/tulimama/tulimama_desktop_1.webp";
 
 //Top Albums
-import ta_cover from "../assets/work/topAlbums/ta_cover.jpg";
-import ta_screens from "../assets/work/topAlbums/ta_screens.jpg";
-import ta_screens_lo from "../assets/work/topAlbums/ta_screens_lo.jpg";
-import ta_screens_hi from "../assets/work/topAlbums/ta_screens_hi.jpg";
+import ta_cover from "../assets/work/topAlbums/ta_cover.webp";
+import ta_screens from "../assets/work/topAlbums/ta_screens.webp";
+import ta_screens_lo from "../assets/work/topAlbums/ta_screens_lo.webp";
+import ta_screens_hi from "../assets/work/topAlbums/ta_screens_hi.webp";
 
 //Todo
-import todo_cover from "../assets/work/todo/todo_cover.jpg";
-import todo_light from "../assets/work/todo/todo_light.png";
-import todo_dark from "../assets/work/todo/todo_dark.png";
-import todo_mobile from "../assets/work/todo/todo_mobile.png";
+import todo_cover from "../assets/work/todo/todo_cover.webp";
+import todo_light from "../assets/work/todo/todo_light.webp";
+import todo_dark from "../assets/work/todo/todo_dark.webp";
 
 //FM solutions
-import fm_cover from "../assets/work/fm/fm_cover.jpg";
-import fm_3column from "../assets/work/fm/fm_3column.png";
-import fm_baseapparel from "../assets/work/fm/fm_baseapparel.png";
-import fm_easybank from "../assets/work/fm/fm_easybank.png";
-import fm_huddle from "../assets/work/fm/fm_huddle.png";
-import fm_order from "../assets/work/fm/fm_order.png";
-import fm_pricing from "../assets/work/fm/fm_pricing.png";
-import fm_social from "../assets/work/fm/fm_social.png";
-import fm_timetracking from "../assets/work/fm/fm_timetracking.png";
+import fm_cover from "../assets/work/fm/fm_cover.webp";
+import fm_3column from "../assets/work/fm/fm_3column.webp";
+import fm_baseapparel from "../assets/work/fm/fm_baseapparel.webp";
+import fm_easybank from "../assets/work/fm/fm_easybank.webp";
+import fm_huddle from "../assets/work/fm/fm_huddle.webp";
+import fm_order from "../assets/work/fm/fm_order.webp";
+import fm_pricing from "../assets/work/fm/fm_pricing.webp";
+import fm_social from "../assets/work/fm/fm_social.webp";
+import fm_timetracking from "../assets/work/fm/fm_timetracking.webp";
 
 //Informatyk
-import inf_cover from "../assets/work/inf/inf_cover.jpg";
-import inf_full from "../assets/work/inf/inf_full.jpg";
-import inf_mobile_screens from "../assets/work/inf/inf_mobile_screens.jpg";
-import inf_desktop_hero from "../assets/work/inf/inf_desktop_hero.jpg";
-import inf_desktop_01 from "../assets/work/inf/inf_desktop_01.jpg";
-import inf_desktop_02 from "../assets/work/inf/inf_desktop_02.jpg";
+import inf_cover from "../assets/work/inf/inf_cover.webp";
+import inf_full from "../assets/work/inf/inf_full.webp";
+import inf_mobile_screens from "../assets/work/inf/inf_mobile_screens.webp";
 
 //Inspiration Way
-import iw_cover from "../assets/work/iw/iw_cover.jpg";
-import iw_desktop_home from "../assets/work/iw/iw_desktop_home.jpg";
-import iw_desktop_about from "../assets/work/iw/iw_desktop_about.jpg";
-import iw_desktop_services from "../assets/work/iw/iw_desktop_services.jpg";
-import iw_desktop_contact from "../assets/work/iw/iw_desktop_contact.jpg";
+import iw_cover from "../assets/work/iw/iw_cover.webp";
+import iw_desktop_home from "../assets/work/iw/iw_desktop_home.webp";
+import iw_desktop_about from "../assets/work/iw/iw_desktop_about.webp";
+import iw_desktop_services from "../assets/work/iw/iw_desktop_services.webp";
+import iw_desktop_contact from "../assets/work/iw/iw_desktop_contact.webp";
 
 const images = {
   logo,
@@ -106,7 +102,6 @@ const images = {
   todo_cover,
   todo_light,
   todo_dark,
-  todo_mobile,
 
   fm_cover,
   fm_3column,
@@ -120,9 +115,6 @@ const images = {
 
   inf_cover,
   inf_full,
-  inf_desktop_hero,
-  inf_desktop_01,
-  inf_desktop_02,
   inf_mobile_screens,
 
   iw_cover,
