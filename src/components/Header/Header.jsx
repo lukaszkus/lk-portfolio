@@ -62,19 +62,19 @@ const Header = () => {
               {breakLine} & <span>develop</span>
             </motion.h1>
             <motion.h1 variants={title}>websites{breakLine} and apps</motion.h1>
-            <motion.p variants={title}>I'm a frontend developer with a passion for great design and user experience.</motion.p>
+            <motion.p variants={title}>I'm graphic designer and a frontend developer with a passion for great design and user experience.</motion.p>
             <div className="links">
               <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={500}>
                 <motion.button className="projects" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden" name="my-projects">
-                  My projects
+                  Frontend projects
                   <motion.span variants={arrow}>
                     <RxArrowBottomRight />
                   </motion.span>
                 </motion.button>
               </Link>
-              <NavLink to="aboutme">
+              <NavLink to="graphic-design">
                 <motion.button className="about" variants={btn} animate="show" initial="hidden" whileHover="hover" whileTap="hover" exit="hidden" name="more-about-me">
-                  More About me
+                  Graphic design
                   <motion.span variants={arrow}>
                     <RxArrowBottomRight />
                   </motion.span>

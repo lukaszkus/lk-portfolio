@@ -1,86 +1,18 @@
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import { Wrapper, Content, Image, Emoji } from "./Avatar.style";
 
 import IMAGES from "../../utils/images";
-
-const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
-
-const container = {
-  initial: { opacity: 0, scale: 0.5 },
-  animate: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      ...transition,
-    },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.5,
-    transition: {
-      ...transition,
-    },
-  },
-};
-
-const imgVars = {
-  initial: {
-    x: -1000,
-    opacity: 0,
-    scale: 0.7,
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    scale: 1,
-    transition: {
-      x: { type: "spring", stiffness: 200, damping: 20 },
-      opacity: { duration: 0.6 },
-    },
-  },
-  exit: {
-    x: 1000,
-    opacity: 0,
-    scale: 0.7,
-    transition: {
-      x: { type: "spring", stiffness: 200, damping: 20 },
-      opacity: { duration: 0.6 },
-    },
-  },
-};
-
-const iconVars = {
-  initial: {
-    y: 50,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { type: "spring", stiffness: 500, damping: 10 },
-      opacity: { duration: 0.3 },
-    },
-  },
-  exit: {
-    y: -50,
-    opacity: 0,
-    transition: {
-      y: { type: "spring", stiffness: 500, damping: 10 },
-      opacity: { duration: 0.3 },
-    },
-  },
-};
-
-const initialIndex = 0;
+gsap.registerPlugin(useGSAP);
 
 const Avatar = () => {
-  const [index, setIndex] = useState(initialIndex);
-
   const images = [IMAGES.me_1, IMAGES.me_2, IMAGES.me_3];
-  const imgAlts = ["My photo where I'm smiling", "My photo where I'm proud", "A photo of me doing the rock on gesture"];
+  const imgAlts = [
+    "My photo where I'm smiling",
+    "My photo where I'm proud",
+    "A photo of me doing the rock on gesture",
+  ];
 
   const icons = [
     { name: "Waving hand", icon: "👋" },
@@ -88,29 +20,97 @@ const Avatar = () => {
     { name: "Rock on", icon: "🤘" },
   ];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (index === images.length - 1) {
-        return setIndex(0);
-      }
-      setIndex(index + 1);
-    }, 3600);
+  useGSAP(() => {
+    let tl = gsap.timeline({ repeat: -1 });
+    let imgs = gsap.utils.toArray(".myimg");
+    let emojis = gsap.utils.toArray(".emoji");
 
-    return () => clearInterval(intervalId);
-  }, [index, images.length]);
+    for (let i = 0; i <= 2; i++) {
+      tl.fromTo(
+        imgs[i],
+        {
+          opacity: 0,
+          xPercent: -100,
+        },
+        {
+          opacity: 1,
+          xPercent: 0,
+          duration: 1.2,
+          ease: "elastic.out(0.9,0.23)",
+        }
+      )
+        .fromTo(
+          emojis[i],
+          {
+            opacity: 0,
+            yPercent: -50,
+          },
+          {
+            opacity: 1,
+            yPercent: 0,
+            duration: 1.2,
+            ease: "elastic.out(0.9,0.23)",
+          },
+          "<"
+        )
+        .to(
+          imgs[i],
+          {
+            opacity: 0,
+            xPercent: 100,
+            duration: 0.2,
+          },
+          "+=2,5"
+        )
+        .to(
+          emojis[i],
+          {
+            yPercent: -50,
+            opacity: 0,
+            duration: 0.2,
+          },
+          "<"
+        );
+    }
+  });
 
   return (
-    <Wrapper variants={container} initial="initial" animate="animate" exit="exit">
+    <Wrapper>
       <Content>
-        <AnimatePresence initial={true}>
-          <Image variants={imgVars} animate="animate" initial="initial" exit="exit" src={images[index]} alt={imgAlts[index]} key={images[index]} />
-        </AnimatePresence>
+        <Image
+          src={images[0]}
+          alt={imgAlts[0]}
+          key={images[0]}
+          className="myimg"
+        />
+        <Image
+          src={images[1]}
+          alt={imgAlts[1]}
+          key={images[1]}
+          className="myimg"
+        />
+        <Image
+          src={images[2]}
+          alt={imgAlts[2]}
+          key={images[2]}
+          className="myimg"
+        />
         <Image src={IMAGES.me_black} alt="" />
       </Content>
       <Image src={IMAGES.me_shadow} alt="" />
-      <Emoji variants={iconVars} animate="animate" initial="initial" exit="exit" key={images[index]}>
-        <span role="img" aria-label={icons[index].name}>
-          {icons[index].icon}
+      <Emoji key={images[0]} className="emoji">
+        <span role="img" aria-label={icons[0].name}>
+          {icons[0].icon}
+        </span>
+      </Emoji>
+      <Emoji key={images[1]} className="emoji">
+        <span role="img" aria-label={icons[1].name}>
+          {icons[1].icon}
+        </span>
+      </Emoji>
+      <Emoji key={images[2]} className="emoji">
+        <span role="img" aria-label={icons[2].name}>
+          {icons[2].icon}
         </span>
       </Emoji>
     </Wrapper>

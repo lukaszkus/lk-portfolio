@@ -55,7 +55,7 @@ export const Box = styled(motion.div)`
     text-decoration: none;
     transition: 0.3s ease-in-out;
 
-    :hover {
+    &:hover {
       color: var(--clr-light);
     }
   }

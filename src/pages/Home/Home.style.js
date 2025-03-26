@@ -35,7 +35,7 @@ export const Content = styled.div`
     gap: 0.5rem;
     transition: color 0.3s ease-in-out;
 
-    :hover {
+    &:hover {
       color: var(--clr-middle);
     }
 

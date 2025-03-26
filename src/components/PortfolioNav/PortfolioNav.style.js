@@ -28,7 +28,7 @@ export const Content = styled.div`
     }
 
     div {
-      :last-of-type {
+      &:last-of-type {
         text-align: right;
       }
 
@@ -37,7 +37,7 @@ export const Content = styled.div`
         text-decoration: none;
         transition: 0.3s ease-in-out;
 
-        :hover {
+        &:hover {
           color: var(--clr-light);
         }
 

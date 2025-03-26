@@ -86,6 +86,9 @@ function Menu() {
                 <Link to="aboutme">About me</Link>
               </motion.li>
               <motion.li variants={item}>
+                <Link to="graphic-design">Graphic design</Link>
+              </motion.li>
+              <motion.li variants={item}>
                 <Link to="contact">Contact</Link>
               </motion.li>
             </motion.ul>

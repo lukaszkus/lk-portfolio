@@ -65,7 +65,7 @@ export const Text = styled.div`
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 
-    :hover {
+    &:hover {
       color: var(--clr-middle);
     }
 

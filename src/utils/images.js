@@ -16,6 +16,12 @@ import browser from "../assets/browser.jpg";
 
 //WORK IMAGES
 
+//A!Selecta
+import aisel_cover from "../assets/work/aiselecta/aisel_cover.webp";
+import aisel_01 from "../assets/work/aiselecta/aisel_01.webp";
+import aisel_02 from "../assets/work/aiselecta/aisel_02.webp";
+import aisel_03 from "../assets/work/aiselecta/aisel_03.webp";
+
 //RichMedia
 import rm_cover from "../assets/work/RichMedia/rm_cover.webp";
 import rm_renault from "../assets/work/RichMedia/rm_renault.webp";
@@ -79,6 +85,11 @@ const images = {
   icon_download,
   icon_fm,
   browser,
+
+  aisel_cover,
+  aisel_01,
+  aisel_02,
+  aisel_03,
 
   rm_cover,
   rm_renault,

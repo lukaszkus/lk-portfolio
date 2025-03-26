@@ -5,6 +5,7 @@ export { default as CustomCursor } from "./CustomCursor/CustomCursor";
 export { default as Divider } from "./Divider/Divider";
 export { default as Form } from "./Form/Form";
 export { default as Footer } from "./Footer/Footer";
+export { default as Gallery } from "./Gallery/Gallery";
 export { default as Header } from "./Header/Header";
 export { default as Heading } from "./Heading/Heading";
 export { default as Logo } from "./Logo/Logo";

@@ -85,8 +85,8 @@ const TodoApp = ({ id, titlePrefix, titleSuffix }) => {
         <Wrapper>
           <Content>
             {[images.todo_light, images.todo_dark].map((image, index) => (
-              <FullWidth variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
-                <ImageItem key={index} variants={child} whileInView="show" viewport={{ once: true }}>
+              <FullWidth variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} key={index}>
+                <ImageItem variants={child} whileInView="show" viewport={{ once: true }}>
                   <img src={image} alt="Desktop" />
                 </ImageItem>
               </FullWidth>

@@ -59,10 +59,10 @@ export const Title = styled(motion.div)`
       font-size: 3rem;
     }
 
-    :last-of-type {
+    &:last-of-type {
       font-size: 1rem;
       padding-bottom: 3.5rem;
-      width: 90%;
+      max-width: 90%;
       line-height: 1.5;
 
       @media ${breakpoint.tablet} {
@@ -120,6 +120,7 @@ export const Title = styled(motion.div)`
     font-size: 1rem;
     font-weight: 300;
     display: inline-flex;
+    align-items: center;
     gap: 0.5rem;
 
     @media ${breakpoint.tablet} {
@@ -131,6 +132,7 @@ export const Title = styled(motion.div)`
     }
 
     span {
+      margin-top: 0.25rem;
       font-size: 1.25rem;
 
       @media ${breakpoint.tablet} {
@@ -150,7 +152,7 @@ export const Title = styled(motion.div)`
     transition: color 0.3s ease-in-out;
     color: var(--clr-light);
 
-    :hover {
+    &:hover {
       color: var(--clr-accentPrimary);
     }
 
@@ -167,7 +169,7 @@ export const Title = styled(motion.div)`
     text-decoration: none;
     color: var(--clr-light);
 
-    :hover {
+    &:hover {
       color: var(--clr-middle);
     }
 

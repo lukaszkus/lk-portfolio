@@ -3,30 +3,11 @@ import { motion } from "framer-motion";
 
 import { breakpoint } from "../../utils";
 
-export const Wrapper = styled.div`
-  padding-inline: 2rem;
-`;
-
-export const Content = styled.div`
-  max-width: var(--maxWidth);
-  margin: 0 auto;
-
-  @media ${breakpoint.desktopXL} {
-    max-width: var(--maxWidthXL);
-  }
-`;
-
 export const Grid = styled.div`
-  padding: 4rem 0;
-
   @media ${breakpoint.tablet} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-  }
-
-  @media ${breakpoint.desktop} {
-    padding: 6rem 0;
   }
 
   .contact-text {

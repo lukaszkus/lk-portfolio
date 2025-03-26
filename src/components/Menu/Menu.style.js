@@ -32,7 +32,7 @@ export const Content = styled(motion.div)`
   border-radius: 1.5rem 0 0 0;
 
   @media ${breakpoint.tablet} {
-    width: 40%;
+    width: 60%;
     padding: 6rem 4rem 4rem 4rem;
     gap: 2rem;
   }
@@ -49,16 +49,16 @@ export const Content = styled(motion.div)`
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 400;
 
     @media ${breakpoint.tablet} {
       font-size: 2.25rem;
     }
 
-    @media ${breakpoint.desktopXL} {
+    /* @media ${breakpoint.desktopXL} {
       font-size: 3rem;
-    }
+    } */
   }
 
   .line {
@@ -74,7 +74,7 @@ export const Content = styled(motion.div)`
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 
-    :hover {
+    &:hover {
       color: var(--clr-middle);
     }
   }

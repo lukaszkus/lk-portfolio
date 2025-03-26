@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useMotionTemplate, useMotionValue, animate } from "framer-motion";
 import { Wrapper } from "./Aurora.style";
 
@@ -10,13 +10,13 @@ const Aurora = () => {
   useEffect(() => {
     animate(color, COLORS_TOP, {
       ease: "easeInOut",
-      duration: 10,
+      duration: 15,
       repeat: Infinity,
       repeatType: "mirror",
     });
   }, [color]);
 
-  const backgroundImage = useMotionTemplate`radial-gradient(180% 135% at 25% 100%, #242930 55%, ${color})`;
+  const backgroundImage = useMotionTemplate`radial-gradient(170% 115% at 25% 100%, #242930 45%, ${color})`;
 
   return <Wrapper style={{ backgroundImage }} />;
 };

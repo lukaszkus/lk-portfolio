@@ -1,8 +1,8 @@
-import { ReactComponent as Web } from "../../assets/icon-web.svg";
-import { ReactComponent as Github } from "../../assets/icon-github.svg";
-import { ReactComponent as Download } from "../../assets/icon-download.svg";
-import { ReactComponent as FM } from "../../assets/icon-fm.svg";
-import { ReactComponent as Filter } from "../../assets/icon-filter.svg";
+import Web from "../../assets/icon-web.svg?react";
+import Github from "../../assets/icon-github.svg?react";
+import Download from "../../assets/icon-download.svg?react";
+import FM from "../../assets/icon-fm.svg?react";
+import Filter from "../../assets/icon-filter.svg?react";
 
 const OuterLink = ({ icon, color, height, width }) => {
   const getIcon = (icon) => {

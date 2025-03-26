@@ -1,0 +1,22 @@
+.pswp-gallery {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pswp-gallery a {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 200px;
+  flex-grow: 1;
+}
+
+.pswp-gallery a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

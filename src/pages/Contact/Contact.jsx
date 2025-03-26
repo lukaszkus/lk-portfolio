@@ -3,19 +3,20 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 import { Divider, Form, Heading } from "../../components";
 
-import { Wrapper } from "./Contact.style";
+import { Wrapper, Content } from "./Contact.style";
 
 const Contact = ({ titlePrefix, titleSuffix }) => {
   useDocumentTitle(`${titlePrefix}${titleSuffix}`);
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <Wrapper>
-        <Heading title="Contact" />
+        <Content>
+          <Heading title="Contact" />
+        </Content>
         <Divider />
-        <Form />
+        <Content>
+          <Form />
+        </Content>
       </Wrapper>
     </motion.div>
   );
